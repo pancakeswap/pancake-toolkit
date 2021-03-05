@@ -30,7 +30,6 @@
     "@types/react": "^17.0.2",
     "babel-loader": "^8.2.2",
     "husky": "4.3.5",
-    "lodash": "^4.17.21",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -75,7 +75,7 @@ export const TranslationProvider: React.FC<ProviderProps> = ({
           fileId,
           MAX_RECORDS_TO_FETCH
         );
-        const translations = response.data.reduce((accum, responseObject) => {
+        const crowdinTranslations = response.data.reduce((accum, responseObject) => {
           const { stringId } = responseObject.data as CrowdinTranslation;
 
           return {
@@ -84,7 +84,7 @@ export const TranslationProvider: React.FC<ProviderProps> = ({
           };
         }, {});
 
-        dispatch({ type: "FETCH_SUCCEEDED", translations, code });
+        dispatch({ type: "FETCH_SUCCEEDED", translations: crowdinTranslations, code });
       } catch (error) {
         // TODO: dispatch error
         console.error("An error occurred fetching translations:", error);
@@ -129,22 +129,20 @@ export const TranslationProvider: React.FC<ProviderProps> = ({
     [currentTranslationSet]
   );
 
-  const setLanguage = (language: Language) => {
+  const setLanguage = async (language: Language) => {
     dispatch({ type: "SET_LANG", language });
     localStorage.setItem(LS_KEY, language.code);
   };
 
   const setLanguageByCode = (code: LanguageCode) => {
     const language = languages[code];
-    dispatch({ type: "SET_LANG", language });
-    localStorage.setItem(LS_KEY, code);
+    setLanguage(language);
   };
 
+  // Fetch translations of the current language on initial load
   useEffect(() => {
-    if (!currentTranslationSet) {
-      fetchLanguageTranslations(currentLanguage.code);
-    }
-  }, [currentLanguage, currentTranslationSet, fetchLanguageTranslations]);
+    fetchLanguageTranslations(currentLanguage.code);
+  }, [currentLanguage.code, fetchLanguageTranslations]);
 
   return (
     <TranslationContext.Provider

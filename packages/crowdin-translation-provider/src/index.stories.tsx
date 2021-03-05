@@ -1,4 +1,3 @@
-import { random } from "lodash";
 import React from "react";
 import { TranslationProvider } from "./Provider";
 import useTranslations from "./useTranslations";
@@ -11,7 +10,7 @@ export default {
   title: "Translation Provider",
   component: TranslationProvider,
   decorators: [
-    (Story) => (
+    (Story): JSX.Element => (
       <TranslationProvider projectId={projectId} apiKey={apiKey} fileId={fileId}>
         <Story />
       </TranslationProvider>
@@ -19,15 +18,13 @@ export default {
   ],
 };
 
-const memberCount = random(3, 500);
+const memberCount = Math.random() * 4999 + 1;
 
 export const Default: React.FC = () => {
   const { currentLanguage, isFetching, t, setLanguageByCode, translations, languages } = useTranslations();
   const handleChange = (evt) => {
     setLanguageByCode(evt.target.value);
   };
-
-  console.log(translations);
 
   return (
     <div>
