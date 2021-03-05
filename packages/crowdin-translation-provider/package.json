@@ -1,6 +1,6 @@
 {
-  "name": "crowdin-translations",
-  "version": "0.0.1",
+  "name": "crowdin-translation-provider",
+  "version": "0.0.3",
   "description": "Crowdin context provider",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

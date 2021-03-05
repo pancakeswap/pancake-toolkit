@@ -95,14 +95,17 @@ export const TranslationProvider: React.FC<ProviderProps> = ({
 
   const translate = useCallback(
     (stringId: number, fallback: string, data?: ContextData) => {
-      const currentFallback = fallbacks.current.get(stringId) || fallback;
+      const fallbackWhileLoading = fallbacks.current.get(stringId) || fallback;
 
+      // Fall back to current translation shown while fetching new language
       if (!currentTranslationSet) {
-        return currentFallback;
+        return fallbackWhileLoading;
       }
 
+      // If no translation exists after loading new language fallback to
+      // the one provided by the consumer
       if (!currentTranslationSet[stringId]) {
-        return currentFallback;
+        return fallback;
       }
 
       const translatedText = currentTranslationSet[stringId].text;

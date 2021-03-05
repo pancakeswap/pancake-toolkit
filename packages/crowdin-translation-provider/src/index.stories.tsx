@@ -29,7 +29,7 @@ export const Default: React.FC = () => {
   return (
     <div>
       <div style={{ marginBottom: "16px" }}>{`Is Fetching?: ${isFetching ? "Yes" : "No"}`}</div>
-      <div style={{ marginBottom: "16px" }}>{t(292, "ENGLISH FALLBACK")}</div>
+      <div style={{ marginBottom: "16px" }}>{t(544, "ENGLISH FALLBACK")}</div>
       <div style={{ marginBottom: "16px" }}>{t(834, `${memberCount} members`, { count: memberCount })}</div>
       <div style={{ marginBottom: "16px" }}>
         <select name="lang" onChange={handleChange} value={currentLanguage.code}>
