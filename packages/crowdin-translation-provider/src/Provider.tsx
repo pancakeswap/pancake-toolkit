@@ -115,7 +115,7 @@ export const TranslationProvider: React.FC<ProviderProps> = ({
         let interpolatedText = translatedText;
 
         if (!data) {
-          return currentFallback;
+          return fallbackWhileLoading;
         }
 
         Object.keys(data).forEach((dataKey) => {
@@ -142,7 +142,6 @@ export const TranslationProvider: React.FC<ProviderProps> = ({
     setLanguage(language);
   };
 
-  // Fetch translations of the current language on initial load
   useEffect(() => {
     fetchLanguageTranslations(currentLanguage.code);
   }, [currentLanguage.code, fetchLanguageTranslations]);
