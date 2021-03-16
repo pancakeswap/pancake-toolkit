@@ -4,7 +4,7 @@ import { TabMenuProps } from "./types";
 
 const ButtonMenu: React.FC<TabMenuProps> = ({ activeIndex = 0, onItemClick, children }) => {
   return (
-    <StyledTabMenu p="0 16px">
+    <StyledTabMenu>
       {Children.map(children, (child: ReactElement, index) => {
         return cloneElement(child, {
           isActive: activeIndex === index,
