@@ -1,13 +1,8 @@
 import React from "react";
-import { ActiveTab, InactiveTab } from "./StyledTabs";
+import StyledTab from "./StyledTab";
 import { TabMenuItemProps } from "./types";
 
-const TabMenuItem: React.FC<TabMenuItemProps> = ({ isActive = false, children }) => {
-  if (!isActive) {
-    return <InactiveTab>{children}</InactiveTab>;
-  }
-  //
-  return <ActiveTab>{children}</ActiveTab>;
-};
-
+const TabMenuItem: React.FC<TabMenuItemProps> = ({ isActive = false, children }) => (
+  <StyledTab isActive={isActive}>{children}</StyledTab>
+);
 export default TabMenuItem;
