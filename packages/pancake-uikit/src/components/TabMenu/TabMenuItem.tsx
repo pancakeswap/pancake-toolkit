@@ -3,8 +3,8 @@ import StyledTab from "./StyledTab";
 import { TabMenuItemProps } from "./types";
 import { Text } from "../Text";
 
-const TabMenuItem: React.FC<TabMenuItemProps> = ({ isActive = false, children, ...props }) => (
-  <StyledTab {...props} isActive={isActive} bgColor={isActive ? "textSubtle" : "input"}>
+const TabMenuItem: React.FC<TabMenuItemProps> = ({ isActive = false, onClick, children }) => (
+  <StyledTab onClick={onClick} bgColor={isActive ? "textSubtle" : "input"} color={isActive ? "card" : "textSubtle"}>
     <Text fontWeight={600} color={isActive ? "card" : "textSubtle"}>
       {children}
     </Text>
