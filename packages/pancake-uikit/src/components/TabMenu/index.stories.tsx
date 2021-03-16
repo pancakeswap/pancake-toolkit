@@ -18,10 +18,10 @@ export const Default: React.FC = () => {
   return (
     <div>
       <TabMenu activeIndex={index} onItemClick={handleClick}>
-        <TabMenuItem>Button 1</TabMenuItem>
-        <TabMenuItem>Button 2</TabMenuItem>
-        <TabMenuItem>Button 3</TabMenuItem>
-        <TabMenuItem>Button 4</TabMenuItem>
+        <TabMenuItem>Total</TabMenuItem>
+        <TabMenuItem>Cakers</TabMenuItem>
+        <TabMenuItem>Flippers</TabMenuItem>
+        <TabMenuItem>Storm</TabMenuItem>
       </TabMenu>
     </div>
   );
