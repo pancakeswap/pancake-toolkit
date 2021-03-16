@@ -1,9 +1,15 @@
 import styled from "styled-components";
 import { TabMenuItemProps } from "./types";
 
-const StyledTab = styled.div<TabMenuItemProps>`
+const StyledTab = styled.button<TabMenuItemProps>`
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
   margin: 0 2px;
-  padding: 8px 22px;
+  width: 84px;
+  padding: 8px 0;
   border-radius: 16px 16px 0 0;
   color: ${({ theme, color }) => theme.colors[color]};
   background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
