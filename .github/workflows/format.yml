@@ -26,4 +26,4 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Run check
-        run: yarn format:check
+        run: cd ./packages/pancake-uikit && yarn format:check
