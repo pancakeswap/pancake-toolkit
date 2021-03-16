@@ -2,11 +2,12 @@ import styled from "styled-components";
 import Flex from "../Box/Flex";
 
 const StyledTabMenu = styled(Flex)`
-  display: inline-flex;
+  /* display: inline-flex; */
   border-bottom: 2px solid ${({ theme }) => theme.colors.textSubtle};
+  padding: 0 16px;
 
-  & > div + div {
-    margin-left: 2px; // To avoid focus shadow overlap
+  & > button + button {
+    margin-left: 4px;
   }
 `;
 

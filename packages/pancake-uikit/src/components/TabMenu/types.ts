@@ -1,7 +1,6 @@
 export interface TabMenuItemProps {
   isActive?: boolean;
-  color: "card" | "textSubtle";
-  bgColor: "textSubtle" | "input";
+  onClick?: () => void;
 }
 
 export interface TabMenuProps {
