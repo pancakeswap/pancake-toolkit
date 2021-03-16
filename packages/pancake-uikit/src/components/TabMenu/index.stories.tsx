@@ -12,7 +12,6 @@ export default {
 
 export const Default: React.FC = () => {
   const [index, setIndex] = useState(0);
-
   const handleClick = (newIndex) => setIndex(newIndex);
 
   return (
