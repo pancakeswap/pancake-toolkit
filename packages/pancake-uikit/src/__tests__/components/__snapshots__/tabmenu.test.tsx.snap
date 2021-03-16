@@ -3,14 +3,14 @@
 exports[`renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdfBwQ sc-gsTCUz sc-dlfnbm iwJkGQ ckYhbt eHsRod"
+    class="sc-bdfBwQ sc-gsTCUz sc-dlfnbm iwJkGQ ckYhbt gjsBuP"
   >
     <button
-      class="sc-hKgILt hXcrBa"
+      class="sc-hKgILt flOdUK"
       color="card"
     >
       <div
-        class="sc-eCssSg cbYozm"
+        class="sc-eCssSg iJPpdt"
         color="card"
         font-weight="600"
       >
@@ -18,11 +18,11 @@ exports[`renders correctly 1`] = `
       </div>
     </button>
     <button
-      class="sc-hKgILt IIJfg"
+      class="sc-hKgILt giymoc"
       color="textSubtle"
     >
       <div
-        class="sc-eCssSg leCYav"
+        class="sc-eCssSg gbqlTw"
         color="textSubtle"
         font-weight="600"
       >
