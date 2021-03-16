@@ -18,8 +18,10 @@ const Row = styled.div`
 export const Default: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [index2, setIndex2] = useState(0);
+  const [index3, setIndex3] = useState(0);
   const handleClick = (newIndex) => setIndex(newIndex);
   const handleClick2 = (newIndex) => setIndex2(newIndex);
+  const handleClick3 = (newIndex) => setIndex3(newIndex);
 
   return (
     <>
@@ -39,7 +41,7 @@ export const Default: React.FC = () => {
         </TabMenu>
       </Row>
       <Row>
-        <TabMenu activeIndex={index2} onItemClick={handleClick2}>
+        <TabMenu activeIndex={index3} onItemClick={handleClick3}>
           <Tab>Really long tab name</Tab>
           <Tab>Short</Tab>
           <Tab>Medium length</Tab>
