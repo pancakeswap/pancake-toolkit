@@ -1,5 +1,7 @@
 export interface TabMenuItemProps {
   isActive?: boolean;
+  color: "card" | "textSubtle";
+  bgColor: "textSubtle" | "input";
 }
 
 export interface TabMenuProps {
