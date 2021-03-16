@@ -9,6 +9,7 @@ const ButtonMenu: React.FC<TabMenuProps> = ({ activeIndex = 0, onItemClick, chil
         return cloneElement(child, {
           isActive: activeIndex === index,
           onClick: onItemClick ? () => onItemClick(index) : undefined,
+          tabMenuLength: children.length,
         });
       })}
     </StyledTabMenu>

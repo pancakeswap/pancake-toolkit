@@ -6,4 +6,5 @@ export interface TabMenuProps {
 export interface TabProps {
   isActive?: boolean;
   onClick?: () => void;
+  tabMenuLength?: number;
 }
