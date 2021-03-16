@@ -16,11 +16,13 @@ export const Default: React.FC = () => {
   const handleClick = (newIndex) => setIndex(newIndex);
 
   return (
-    <TabMenu activeIndex={index} onItemClick={handleClick}>
-      <TabMenuItem>Button 1</TabMenuItem>
-      <TabMenuItem>Button 2</TabMenuItem>
-      <TabMenuItem>Button 3</TabMenuItem>
-      <TabMenuItem>Button 4</TabMenuItem>
-    </TabMenu>
+    <div>
+      <TabMenu activeIndex={index} onItemClick={handleClick}>
+        <TabMenuItem>Button 1</TabMenuItem>
+        <TabMenuItem>Button 2</TabMenuItem>
+        <TabMenuItem>Button 3</TabMenuItem>
+        <TabMenuItem>Button 4</TabMenuItem>
+      </TabMenu>
+    </div>
   );
 };
