@@ -11,8 +11,5 @@ it("renders correctly", () => {
       <TabMenuItem>Item 2</TabMenuItem>
     </TabMenu>
   );
-  expect(asFragment()).toMatchInlineSnapshot(`
-    <DocumentFragment>
-    </DocumentFragment>
-  `);
+  expect(asFragment()).toMatchSnapshot();
 });

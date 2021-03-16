@@ -1,9 +1,5 @@
 import styled from "styled-components";
-
-interface StyledTabProps {
-  color: "card" | "textSubtle";
-  bgColor: "textSubtle" | "input";
-}
+import { StyledTabProps } from "./types";
 
 const StyledTab = styled.button<StyledTabProps>`
   display: inline-flex;
