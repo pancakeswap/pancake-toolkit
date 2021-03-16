@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdfBwQ sc-gsTCUz sc-dlfnbm iwJkGQ ckYhbt eHsRod"
+  >
+    <button
+      class="sc-hKgILt hXcrBa"
+      color="card"
+    >
+      <div
+        class="sc-eCssSg cbYozm"
+        color="card"
+        font-weight="600"
+      >
+        Item 1
+      </div>
+    </button>
+    <button
+      class="sc-hKgILt IIJfg"
+      color="textSubtle"
+    >
+      <div
+        class="sc-eCssSg leCYav"
+        color="textSubtle"
+        font-weight="600"
+      >
+        Item 2
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
