@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { StyledTabProps } from "./types";
+
+interface StyledTabProps {
+  color: "card" | "textSubtle";
+  bgColor: "textSubtle" | "input";
+}
 
 const StyledTab = styled.button<StyledTabProps>`
   display: inline-flex;
@@ -7,7 +11,7 @@ const StyledTab = styled.button<StyledTabProps>`
   cursor: pointer;
   border: 0;
   outline: 0;
-  width: 84px;
+  min-width: 84px;
   padding: 8px 0;
   border-radius: 16px 16px 0 0;
   color: ${({ theme, color }) => theme.colors[color]};
