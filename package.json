@@ -20,7 +20,7 @@
     "test": "lerna run test",
     "lint": "lerna run lint",
     "format:check": "lerna run format:check",
-    "build-storybook": "lerna run storybook:build"
+    "storybook:build": "lerna run storybook:build"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
