@@ -5,6 +5,13 @@ import { Text } from "../Text";
 import { ArrowDropDownIcon } from "../Svg";
 import { DropdownSearchOptionProps, DropdownSearchProps } from "./types";
 
+const StyledInput = styled(Input)`
+  border-radius: 16px;
+  border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
+  box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
+  margin-left: auto;
+`
+
 const DropDownHeader = styled.div`
   width: 100%;
   height: 40px;
@@ -96,13 +103,6 @@ const ListItem = styled.li`
   }
 `
 
-const StyledInput = styled(Input)`
-  border-radius: 16px;
-  border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-  box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
-  margin-left: auto;
-`
-
 const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChange }) => {
   const dropdownRef = useRef(null)
   const searchRef = useRef(null)
@@ -120,14 +120,14 @@ const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChang
     if (onChange) {
       onChange(option)
       setContent(options)
-      searchRef.current.value = option.label
+      searchRef.current?.value = option.label
     }
   }
 
   useEffect(() => {
     setContainerSize({
-      width: dropdownRef.current.offsetWidth, // Consider border
-      height: dropdownRef.current.offsetHeight,
+      width: dropdownRef.current?.offsetWidth, // Consider border
+      height: dropdownRef.current?.offsetHeight,
     })
   }, [])
 
