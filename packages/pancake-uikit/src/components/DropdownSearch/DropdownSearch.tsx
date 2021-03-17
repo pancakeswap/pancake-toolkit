@@ -119,10 +119,10 @@ const DropdownSearch: React.FunctionComponent<DropdownSearchProps> = ({ options,
 
     if (onChange) {
       onChange(option);
-      setContent(options);
-      if (searchRef.current) {
-        searchRef.current.value = option.label;
-      }
+    }
+    setContent(options);
+    if (searchRef.current) {
+      searchRef.current.value = option.label;
     }
   };
 
