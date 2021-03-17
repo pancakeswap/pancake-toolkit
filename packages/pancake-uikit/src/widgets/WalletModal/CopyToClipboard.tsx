@@ -19,7 +19,6 @@ const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   position: absolute;
   bottom: -22px;
   right: 0;
-  
   left: 0;
   text-align: center;
   background-color: ${({ theme }) => theme.colors.contrast};
