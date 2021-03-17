@@ -1,18 +1,31 @@
 import React, { cloneElement, Children, ReactElement } from "react";
+import Flex from "../Box/Flex";
+import styled from "styled-components";
 import StyledTabMenu from "./StyledTabMenu";
 import { TabMenuProps } from "./types";
 
+const Wrapper = styled(Flex)`
+  border-bottom: 2px solid ${({ theme }) => theme.colors.textSubtle};
+  padding: 0 16px;
+  justify-content: space-around;
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    justify-content: flex-start;
+  }
+`;
+
 const ButtonMenu: React.FC<TabMenuProps> = ({ activeIndex = 0, onItemClick, children }) => {
   return (
-    <StyledTabMenu>
-      {Children.map(children, (child: ReactElement, index) => {
-        return cloneElement(child, {
-          isActive: activeIndex === index,
-          onClick: onItemClick ? () => onItemClick(index) : undefined,
-          tabMenuLength: children.length,
-        });
-      })}
-    </StyledTabMenu>
+    <Wrapper>
+      <StyledTabMenu>
+        {Children.map(children, (child: ReactElement, index) => {
+          return cloneElement(child, {
+            isActive: activeIndex === index,
+            onClick: onItemClick ? () => onItemClick(index) : undefined,
+          });
+        })}
+      </StyledTabMenu>
+    </Wrapper>
   );
 };
 
