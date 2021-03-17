@@ -1,6 +1,6 @@
 import React, { cloneElement, Children, ReactElement } from "react";
-import Flex from "../Box/Flex";
 import styled from "styled-components";
+import Flex from "../Box/Flex";
 import StyledTabMenu from "./StyledTabMenu";
 import { TabMenuProps } from "./types";
 
