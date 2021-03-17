@@ -12,7 +12,7 @@ const StyledTab = styled.button<StyledTabProps>`
   border: 0;
   outline: 0;
   flex-grow: 1;
-  padding: 8px 0;
+  padding: 8px;
   border-radius: 16px 16px 0 0;
   color: ${({ theme, color }) => theme.colors[color]};
   background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
