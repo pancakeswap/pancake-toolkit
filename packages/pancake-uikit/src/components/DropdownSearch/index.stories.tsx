@@ -11,28 +11,31 @@ export default {
 export const Default: React.FC = () => {
   return (
     <div>
-      <DropdownSearch options={[
-        {
-          label: "Hot",
-          value: "hot"
-        },
-        {
-          label: "APR",
-          value: "apr"
-        },
-        {
-          label: "Multiplier",
-          value: "multiplier"
-        },
-        {
-          label: "Earned",
-          value: "earned"
-        },
-        {
-          label: "Liquidity",
-          value: "liquidity"
-        }
-      ]} target={<Button>Hover</Button>}>
+      <DropdownSearch
+        options={[
+          {
+            label: "Hot",
+            value: "hot",
+          },
+          {
+            label: "APR",
+            value: "apr",
+          },
+          {
+            label: "Multiplier",
+            value: "multiplier",
+          },
+          {
+            label: "Earned",
+            value: "earned",
+          },
+          {
+            label: "Liquidity",
+            value: "liquidity",
+          },
+        ]}
+        target={<Button>Hover</Button>}
+      >
         {[...Array(30)].map(() => (
           <div>Content</div>
         ))}

@@ -1,9 +1,9 @@
 export interface DropdownSearchProps {
-  options: DropdownSearchOptionProps[]
-  onChange?: (option: DropdownSearchOptionProps) => void
+  options: DropdownSearchOptionProps[];
+  onChange?: (option: DropdownSearchOptionProps) => void;
 }
 
 export interface DropdownSearchOptionProps {
-  label: string
-  value: any
+  label: string;
+  value: any;
 }
