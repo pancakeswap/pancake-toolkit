@@ -103,7 +103,7 @@ const ListItem = styled.li`
   }
 `;
 
-const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChange }) => {
+const DropdownSearch: React.FunctionComponent<DropdownSearchProps> = ({ options, onChange }) => {
   const dropdownRef = useRef<HTMLUListElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -170,4 +170,4 @@ const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChang
   );
 };
 
-export default Select;
+export default DropdownSearch;
