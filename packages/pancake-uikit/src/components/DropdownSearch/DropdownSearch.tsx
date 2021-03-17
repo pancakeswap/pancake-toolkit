@@ -104,8 +104,8 @@ const ListItem = styled.li`
 `
 
 const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChange }) => {
-  const dropdownRef = useRef(null)
-  const searchRef = useRef(null)
+  const dropdownRef = useRef<HTMLUListElement>(null)
+  const searchRef = useRef<HTMLInputElement>(null)
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState(options[0])
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 })
@@ -118,18 +118,22 @@ const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChang
     setIsOpen(false)
 
     if (onChange) {
-      onChange(option)
-      setContent(options)
-      searchRef.current?.value = option.label
+      onChange(option);
+      setContent(options);
+      if (searchRef.current) {
+        searchRef.current.value = option.label;
+      }
     }
   }
 
   useEffect(() => {
-    setContainerSize({
-      width: dropdownRef.current?.offsetWidth, // Consider border
-      height: dropdownRef.current?.offsetHeight,
-    })
-  }, [])
+    if (dropdownRef.current) {
+      setContainerSize({
+        width: dropdownRef.current.offsetWidth, // Consider border
+        height: dropdownRef.current.offsetHeight
+      });
+    }
+  }, []);
 
   const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
     const filteredContent = options.filter((option) =>
