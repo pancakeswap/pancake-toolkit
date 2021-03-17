@@ -57,28 +57,28 @@ const DropDownContainer = styled.div<{ isOpen: boolean; width: number; height: n
   }
 
   ${(props) =>
-          props.isOpen &&
-          css`
-            ${DropDownHeader} {
-              border-bottom: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-              box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
-              border-radius: 16px 16px 0 0;
-            }
+    props.isOpen &&
+    css`
+      ${DropDownHeader} {
+        border-bottom: 1px solid ${({ theme }) => theme.colors.inputSecondary};
+        box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
+        border-radius: 16px 16px 0 0;
+      }
 
-            ${DropDownListContainer} {
-              height: auto;
-              transform: scaleY(1);
-              opacity: 1;
-              border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-              border-top-width: 0;
-              border-radius: 0 0 16px 16px;
-              box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
-            }
+      ${DropDownListContainer} {
+        height: auto;
+        transform: scaleY(1);
+        opacity: 1;
+        border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
+        border-top-width: 0;
+        border-radius: 0 0 16px 16px;
+        box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
+      }
 
-            ${StyledInput} {
-              border-radius: 16px 16px 0 0;
-            }
-          `}
+      ${StyledInput} {
+        border-radius: 16px 16px 0 0;
+      }
+    `}
   svg {
     position: absolute;
     right: 16px;
@@ -130,14 +130,15 @@ const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChang
     if (dropdownRef.current) {
       setContainerSize({
         width: dropdownRef.current.offsetWidth, // Consider border
-        height: dropdownRef.current.offsetHeight
+        height: dropdownRef.current.offsetHeight,
       });
     }
   }, []);
 
   const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
     const filteredContent = options.filter((option) =>
-      option.label.toLowerCase().includes(event.target.value.toLowerCase()));
+      option.label.toLowerCase().includes(event.target.value.toLowerCase())
+    );
 
     if (filteredContent !== undefined) {
       setIsOpen(true);
@@ -158,11 +159,11 @@ const Select: React.FunctionComponent<DropdownSearchProps> = ({ options, onChang
       <ArrowDropDownIcon color="text" onClick={toggling} />
       <DropDownListContainer>
         <DropDownList ref={dropdownRef}>
-          {content.map((option) =>
+          {content.map((option) => (
             <ListItem onClick={onOptionClicked(option)} key={option.label}>
               <Text>{option.label}</Text>
             </ListItem>
-          )}
+          ))}
         </DropDownList>
       </DropDownListContainer>
     </DropDownContainer>
