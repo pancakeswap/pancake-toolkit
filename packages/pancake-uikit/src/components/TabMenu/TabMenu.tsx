@@ -13,10 +13,6 @@ const Wrapper = styled(Flex)`
   }
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-
-  ${({ theme }) => theme.mediaQueries.sm} {
-    justify-content: flex-start;
-  }
 `;
 
 const Inner = styled(Flex)`
@@ -27,7 +23,7 @@ const Inner = styled(Flex)`
     margin-left: 4px;
   }
 
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.md} {
     flex-grow: 0;
   }
 `;

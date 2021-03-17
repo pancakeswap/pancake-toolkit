@@ -17,7 +17,7 @@ const StyledTab = styled.button<StyledTabProps>`
   color: ${({ theme, color }) => theme.colors[color]};
   background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
 
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.md} {
     flex-grow: 0;
     padding: 8px 12px;
   }
