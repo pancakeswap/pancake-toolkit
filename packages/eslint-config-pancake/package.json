@@ -1,12 +1,12 @@
 {
   "name": "@pancakeswap-libs/eslint-config-pancake",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eslint config for PancakeSwap",
   "main": "lib/index.js",
   "files": [
     "lib"
   ],
-  "repository": "git@github.com:pancakeswap/eslint-config-pancake.git",
+  "repository": "https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/eslint-config-pancake",
   "license": "MIT",
   "author": "RabbitDoge",
   "private": false,
@@ -23,5 +23,8 @@
   "peerDependencies": {
     "eslint": "^7.2.0",
     "prettier": "^2.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
