@@ -6,7 +6,6 @@ import { ArrowDropDownIcon } from "../Svg";
 import { DropdownSearchOptionProps, DropdownSearchProps } from "./types";
 
 const StyledInput = styled(Input)`
-  border-radius: 16px;
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
   box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
   margin-left: auto;
@@ -133,7 +132,7 @@ const DropdownSearch: React.FunctionComponent<DropdownSearchProps> = ({ options,
         height: dropdownRef.current.offsetHeight,
       });
     }
-  }, []);
+  }, [dropdownRef]);
 
   const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
     const filteredContent = options.filter((option) =>
