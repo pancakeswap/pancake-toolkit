@@ -2,7 +2,6 @@ import React from "react";
 import styled, { keyframes, DefaultTheme } from "styled-components";
 import { Text } from "../../../components/Text";
 import { MENU_ENTRY_HEIGHT } from "../config";
-import { Colors } from "../../../theme/types";
 
 export interface Props {
   secondary?: boolean;
