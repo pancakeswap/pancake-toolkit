@@ -1,3 +1,4 @@
+import { Colors } from "../../theme/types";
 import { Login } from "../WalletModal/types";
 
 export interface LangType {
@@ -25,7 +26,7 @@ export interface NavTheme {
 
 export interface LinkStatus {
   text: string;
-  color: "failure" | "warning";
+  color: keyof Colors;
 }
 
 export interface MenuSubEntry {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes, DefaultTheme } from "styled-components";
 import { Text } from "../../../components/Text";
+import { Colors } from "../../../theme/types";
 import { MENU_ENTRY_HEIGHT } from "../config";
 
 export interface Props {
@@ -67,7 +68,7 @@ MenuEntry.defaultProps = {
   role: "button",
 };
 
-const LinkStatus = styled(Text)<{ color: "failure" | "warning" }>`
+const LinkStatus = styled(Text)<{ color: keyof Colors }>`
   border-radius: 16px;
   padding: 0 8px;
   border: 2px solid;

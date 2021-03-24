@@ -1,4 +1,4 @@
-import { SOON, LIVE } from "./statusConsts";
+import { SOON, LIVE, NEW } from "./statusConsts";
 
 export const links = [
   {
@@ -54,7 +54,7 @@ export const links = [
       {
         label: "Leaderboard",
         href: "/teams",
-        status: SOON,
+        status: NEW,
       },
       {
         label: "YourProfile",
