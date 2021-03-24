@@ -12,6 +12,7 @@ export { default as BunnyPlaceholderIcon } from "./Icons/BunnyPlaceholder";
 export { default as Cards } from "./Icons/Cards";
 export { default as CardViewIcon } from "./Icons/CardView";
 export { default as CalculateIcon } from "./Icons/Calculate";
+export { default as CircleOutlineIcon } from "./Icons/CircleOutline";
 export { default as ChartIcon } from "./Icons/Chart";
 export { default as CheckmarkIcon } from "./Icons/Checkmark";
 export { default as CheckmarkCircleIcon } from "./Icons/CheckmarkCircle";
