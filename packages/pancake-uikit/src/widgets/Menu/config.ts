@@ -1,3 +1,5 @@
+import { SOON, LIVE } from "./statusConsts";
+
 export const links = [
   {
     label: "Home",
@@ -22,6 +24,7 @@ export const links = [
     label: "Farms",
     icon: "FarmIcon",
     href: "/farms",
+    status: LIVE,
   },
   {
     label: "Pools",
@@ -39,12 +42,19 @@ export const links = [
     href: "/nft",
   },
   {
+    label: "Team Battle",
+    icon: "TeamBattleIcon",
+    href: "/competition",
+    status: SOON,
+  },
+  {
     label: "Profile & Teams",
     icon: "GroupsIcon",
     items: [
       {
         label: "Leaderboard",
         href: "/teams",
+        status: SOON,
       },
       {
         label: "YourProfile",

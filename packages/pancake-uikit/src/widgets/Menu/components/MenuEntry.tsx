@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { keyframes, DefaultTheme } from "styled-components";
+import { Text } from "../../../components/Text";
 import { MENU_ENTRY_HEIGHT } from "../config";
+import { Colors } from "../../../theme/types";
 
 export interface Props {
   secondary?: boolean;
@@ -66,6 +68,15 @@ MenuEntry.defaultProps = {
   role: "button",
 };
 
+const LinkStatus = styled(Text)<{ color: "failure" | "warning" }>`
+  border-radius: 16px;
+  padding: 0 8px;
+  border: 2px solid;
+  border-color: ${({ theme, color }) => theme.colors[color]};
+  box-shadow: none;
+  color: ${({ theme, color }) => theme.colors[color]};
+`;
+
 const LinkLabelMemo = React.memo(LinkLabel, (prev, next) => prev.isPushed === next.isPushed);
 
-export { MenuEntry, LinkLabelMemo as LinkLabel };
+export { MenuEntry, LinkStatus, LinkLabelMemo as LinkLabel };

@@ -23,10 +23,16 @@ export interface NavTheme {
   hover: string;
 }
 
+export interface LinkStatus {
+  text: string;
+  color: "failure" | "warning";
+}
+
 export interface MenuSubEntry {
   label: string;
   href: string;
   calloutClass?: string;
+  status?: LinkStatus;
 }
 
 export interface MenuEntry {
@@ -36,6 +42,7 @@ export interface MenuEntry {
   href?: string;
   calloutClass?: string;
   initialOpenState?: boolean;
+  status?: LinkStatus;
 }
 
 export interface PanelProps {
