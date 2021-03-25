@@ -1,4 +1,19 @@
-import { SOON, LIVE, NEW } from "./statusConsts";
+import { LinkStatus } from "./types";
+
+export const LIVE: LinkStatus = {
+  text: "LIVE",
+  color: "failure",
+};
+
+export const SOON: LinkStatus = {
+  text: "SOON",
+  color: "warning",
+};
+
+export const NEW: LinkStatus = {
+  text: "NEW",
+  color: "success",
+};
 
 export const links = [
   {
