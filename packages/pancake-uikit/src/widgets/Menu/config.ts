@@ -1,6 +1,6 @@
 import { LinkStatus } from "./types";
 
-export const menuStatuses = {
+export const status = {
   LIVE: <LinkStatus>{
     text: "LIVE",
     color: "failure",
@@ -39,7 +39,7 @@ export const links = [
     label: "Farms",
     icon: "FarmIcon",
     href: "/farms",
-    status: menuStatuses.LIVE,
+    status: status.LIVE,
   },
   {
     label: "Pools",
@@ -60,7 +60,7 @@ export const links = [
     label: "Team Battle",
     icon: "TeamBattleIcon",
     href: "/competition",
-    status: menuStatuses.SOON,
+    status: status.SOON,
   },
   {
     label: "Profile & Teams",
@@ -69,7 +69,7 @@ export const links = [
       {
         label: "Leaderboard",
         href: "/teams",
-        status: menuStatuses.NEW,
+        status: status.NEW,
       },
       {
         label: "YourProfile",
