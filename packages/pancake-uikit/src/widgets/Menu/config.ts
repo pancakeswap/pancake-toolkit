@@ -1,18 +1,18 @@
 import { LinkStatus } from "./types";
 
-export const LIVE: LinkStatus = {
-  text: "LIVE",
-  color: "failure",
-};
-
-export const SOON: LinkStatus = {
-  text: "SOON",
-  color: "warning",
-};
-
-export const NEW: LinkStatus = {
-  text: "NEW",
-  color: "success",
+export const menuStatuses = {
+  LIVE: <LinkStatus>{
+    text: "LIVE",
+    color: "failure",
+  },
+  SOON: <LinkStatus>{
+    text: "SOON",
+    color: "warning",
+  },
+  NEW: <LinkStatus>{
+    text: "NEW",
+    color: "success",
+  },
 };
 
 export const links = [
@@ -39,7 +39,7 @@ export const links = [
     label: "Farms",
     icon: "FarmIcon",
     href: "/farms",
-    status: LIVE,
+    status: menuStatuses.LIVE,
   },
   {
     label: "Pools",
@@ -60,7 +60,7 @@ export const links = [
     label: "Team Battle",
     icon: "TeamBattleIcon",
     href: "/competition",
-    status: SOON,
+    status: menuStatuses.SOON,
   },
   {
     label: "Profile & Teams",
@@ -69,7 +69,7 @@ export const links = [
       {
         label: "Leaderboard",
         href: "/teams",
-        status: NEW,
+        status: menuStatuses.NEW,
       },
       {
         label: "YourProfile",
