@@ -2,7 +2,6 @@ import React from "react";
 import noop from "lodash/noop";
 import { renderWithTheme } from "../../testHelpers";
 import ConnectModal from "../../widgets/WalletModal/ConnectModal";
-import AccountModal from "../../widgets/WalletModal/AccountModal";
 
 it("renders ConnectModal correctly", () => {
   const { asFragment } = renderWithTheme(<ConnectModal login={noop} />);
