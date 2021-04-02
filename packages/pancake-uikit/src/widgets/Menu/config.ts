@@ -72,11 +72,14 @@ export const links = [
         status: status.NEW,
       },
       {
-        label: "YourProfile",
-        href: "/",
+        label: "Task Center",
+        href: "/profile/tasks",
+      },
+      {
+        label: "Your Profile",
+        href: "/profile",
       },
     ],
-    calloutClass: "rainbow",
   },
   {
     label: "Info",
