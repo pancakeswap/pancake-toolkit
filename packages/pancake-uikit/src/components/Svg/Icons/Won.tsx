@@ -5,7 +5,7 @@ import { SvgProps } from "../types";
 const Icon: React.FC<SvgProps> = (props) => {
   return (
     <Svg viewBox="0 0 64 64" {...props}>
-      <g clipPath="url(#clip0)">
+      <g clipPath="url(#clip-won)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -95,7 +95,7 @@ const Icon: React.FC<SvgProps> = (props) => {
           <stop stopColor="#53DEE9" />
           <stop offset="1" stopColor="#1FC7D4" />
         </linearGradient>
-        <clipPath id="clip0">
+        <clipPath id="clip-won">
           <rect width="64" height="64" fill="white" />
         </clipPath>
       </defs>
