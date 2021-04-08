@@ -131,6 +131,10 @@ export const PancakeInput = styled.input<InputProps>`
   top: 0;
   width: 40px;
 
+  &:focus + label {
+    box-shadow: ${({ theme }) => theme.shadows.focus};
+  }
+
   &:checked + label .pancakes {
     transform: translateX(${getScale("travelDistance")});
   }
