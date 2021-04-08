@@ -71,9 +71,9 @@ export const PancakeStack = styled.div<HandleProps>`
   }
 
   .pancake:nth-child(1) {
-    background: ${({ theme }) => theme.toggle.handleBackground};
+    background: ${({ theme }) => theme.pancakeToggle.handleBackground};
     box-shadow: 0 ${getScale("pancakeThickness")} 0 ${getScale("pancakeThickness")}
-      ${({ theme }) => theme.colors.textDisabled};
+      ${({ theme }) => theme.pancakeToggle.handleShadow};
   }
 
   .pancake:nth-child(2) {

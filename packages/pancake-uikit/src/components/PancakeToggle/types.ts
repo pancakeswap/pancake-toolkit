@@ -1,5 +1,10 @@
 import { InputHTMLAttributes } from "react";
 
+export type PancakeToggleTheme = {
+  handleBackground: string;
+  handleShadow: string;
+};
+
 export const scales = {
   SM: "sm",
   MD: "md",
