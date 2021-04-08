@@ -7,17 +7,337 @@ it("renders ConnectModal correctly", () => {
   const { asFragment } = renderWithTheme(<ConnectModal login={noop} />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
-      <div
-        class="sc-eCssSg sc-kEjbxe Ozdtv bdUZCS"
+      .c5 {
+      color: #452A7A;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .c13 {
+      color: #1FC7D4;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-right: 16px;
+    }
+
+    .c16 {
+      color: #1FC7D4;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .c17 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+    .c17:hover {
+      -webkit-text-decoration: underline;
+      text-decoration: underline;
+    }
+
+    .c9 {
+      fill: #1FC7D4;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+    }
+
+    .c14 {
+      fill: #452A7A;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+    }
+
+    .c19 {
+      fill: #1FC7D4;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      margin-right: 6px;
+    }
+
+    .c6 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    .c0 {
+      min-width: 360px;
+    }
+
+    .c10 {
+      padding: 24px;
+    }
+
+    .c3 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .c7 {
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0px -1px 0px 0px rgba(14,14,44,0.4) inset;
+      cursor: pointer;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-letter-spacing: 0.03em;
+      -moz-letter-spacing: 0.03em;
+      -ms-letter-spacing: 0.03em;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      opacity: 1;
+      outline: 0;
+      -webkit-transition: background-color 0.2s,opacity 0.2s;
+      transition: background-color 0.2s,opacity 0.2s;
+      height: 48px;
+      padding: 0 24px;
+      background-color: transparent;
+      color: #1FC7D4;
+      box-shadow: none;
+    }
+
+    .c7:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+      opacity: 0.65;
+    }
+
+    .c7:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+      opacity: 0.85;
+    }
+
+    .c7:disabled,
+    .c7.pancake-button--disabled {
+      background-color: #E9EAEB;
+      border-color: #E9EAEB;
+      box-shadow: none;
+      color: #BDC2C4;
+      cursor: not-allowed;
+    }
+
+    .c12 {
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0px -1px 0px 0px rgba(14,14,44,0.4) inset;
+      cursor: pointer;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-letter-spacing: 0.03em;
+      -moz-letter-spacing: 0.03em;
+      -ms-letter-spacing: 0.03em;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      opacity: 1;
+      outline: 0;
+      -webkit-transition: background-color 0.2s,opacity 0.2s;
+      transition: background-color 0.2s,opacity 0.2s;
+      height: 48px;
+      padding: 0 24px;
+      background-color: #EFF4F5;
+      box-shadow: none;
+      color: #1FC7D4;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .c12:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+      opacity: 0.65;
+    }
+
+    .c12:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+      opacity: 0.85;
+    }
+
+    .c12:disabled,
+    .c12.pancake-button--disabled {
+      background-color: #E9EAEB;
+      border-color: #E9EAEB;
+      box-shadow: none;
+      color: #BDC2C4;
+      cursor: not-allowed;
+    }
+
+    .c15 {
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0px -1px 0px 0px rgba(14,14,44,0.4) inset;
+      cursor: pointer;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-letter-spacing: 0.03em;
+      -moz-letter-spacing: 0.03em;
+      -ms-letter-spacing: 0.03em;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      opacity: 1;
+      outline: 0;
+      -webkit-transition: background-color 0.2s,opacity 0.2s;
+      transition: background-color 0.2s,opacity 0.2s;
+      height: 48px;
+      padding: 0 24px;
+      background-color: #EFF4F5;
+      box-shadow: none;
+      color: #1FC7D4;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .c15:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+      opacity: 0.65;
+    }
+
+    .c15:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+      opacity: 0.85;
+    }
+
+    .c15:disabled,
+    .c15.pancake-button--disabled {
+      background-color: #E9EAEB;
+      border-color: #E9EAEB;
+      box-shadow: none;
+      color: #BDC2C4;
+      cursor: not-allowed;
+    }
+
+    .c8 {
+      padding: 0;
+      width: 48px;
+    }
+
+    .c2 {
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background: transparent;
+      border-bottom: 1px solid #E9EAEB;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 12px 24px;
+    }
+
+    .c4 {
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+
+    .c11 {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .c1 {
+      background: #FFFFFF;
+      box-shadow: 0px 20px 36px -8px rgba(14,14,44,0.1),0px 1px 1px rgba(0,0,0,0.05);
+      border: 1px solid #E9EAEB;
+      border-radius: 32px;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .c18 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    @media screen and (min-width:968px) {
+      .c6 {
+        font-size: 20px;
+      }
+    }
+
+    @media screen and (min-width:370px) {
+      .c1 {
+        width: auto;
+        min-width: 360px;
+        max-width: 100%;
+      }
+    }
+
+    <div
+        class="c0 c1"
       >
         <div
-          class="sc-fubCfw kITuMA"
+          class="c2"
         >
           <div
-            class="sc-eCssSg sc-jSgupP sc-pFZIQ jnvqfy cjuMmG ePMCIJ"
+            class="c3 c4"
           >
             <h2
-              class="sc-bdfBwQ sc-hKgILt gWEhOj bCnOmg"
+              class="c5 c6"
               color="text"
             >
               Connect to a wallet
@@ -25,11 +345,11 @@ it("renders ConnectModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-gKsewC ZInsY sc-iBPRYJ ifcXSU"
+            class="c7 c8"
             scale="md"
           >
             <svg
-              class="sc-dlfnbm kPlhyw"
+              class="c9"
               color="primary"
               viewBox="0 0 24 24"
               width="20px"
@@ -42,23 +362,23 @@ it("renders ConnectModal correctly", () => {
           </button>
         </div>
         <div
-          class="sc-eCssSg sc-jSgupP sc-jrAGrp eYcDys cjuMmG eRPoVE"
+          class="c10 c3 c11"
         >
           <button
-            class="sc-gKsewC hLJvid"
+            class="c12"
             id="wallet-connect-metamask"
             scale="md"
             style="justify-content: space-between;"
             width="100%"
           >
             <div
-              class="sc-bdfBwQ fEwDKZ"
+              class="c13"
               color="primary"
             >
               Metamask
             </div>
             <svg
-              class="sc-dlfnbm cqTLJf"
+              class="c14"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -189,27 +509,27 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-gKsewC hLJvid"
+            class="c12"
             id="wallet-connect-trustwallet"
             scale="md"
             style="justify-content: space-between;"
             width="100%"
           >
             <div
-              class="sc-bdfBwQ fEwDKZ"
+              class="c13"
               color="primary"
             >
               TrustWallet
             </div>
             <svg
-              class="sc-dlfnbm cqTLJf"
+              class="c14"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#clip0)"
+                clip-path="url(#clip-trustwallet)"
               >
                 <path
                   d="M48.0048 96.0097C74.5172 96.0097 96.0097 74.5172 96.0097 48.0048C96.0097 21.4925 74.5172 0 48.0048 0C21.4925 0 0 21.4925 0 48.0048C0 74.5172 21.4925 96.0097 48.0048 96.0097Z"
@@ -234,20 +554,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-gKsewC hLJvid"
+            class="c12"
             id="wallet-connect-mathwallet"
             scale="md"
             style="justify-content: space-between;"
             width="100%"
           >
             <div
-              class="sc-bdfBwQ fEwDKZ"
+              class="c13"
               color="primary"
             >
               MathWallet
             </div>
             <svg
-              class="sc-dlfnbm cqTLJf"
+              class="c14"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -268,20 +588,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-gKsewC hLJvid"
+            class="c12"
             id="wallet-connect-tokenpocket"
             scale="md"
             style="justify-content: space-between;"
             width="100%"
           >
             <div
-              class="sc-bdfBwQ fEwDKZ"
+              class="c13"
               color="primary"
             >
               TokenPocket
             </div>
             <svg
-              class="sc-dlfnbm cqTLJf"
+              class="c14"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -304,20 +624,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-gKsewC hLJvid"
+            class="c12"
             id="wallet-connect-walletconnect"
             scale="md"
             style="justify-content: space-between;"
             width="100%"
           >
             <div
-              class="sc-bdfBwQ fEwDKZ"
+              class="c13"
               color="primary"
             >
               WalletConnect
             </div>
             <svg
-              class="sc-dlfnbm cqTLJf"
+              class="c14"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -334,20 +654,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-gKsewC hLJvid"
+            class="c12"
             id="wallet-connect-binance chain wallet"
             scale="md"
             style="justify-content: space-between;"
             width="100%"
           >
             <div
-              class="sc-bdfBwQ fEwDKZ"
+              class="c13"
               color="primary"
             >
               Binance Chain Wallet
             </div>
             <svg
-              class="sc-dlfnbm cqTLJf"
+              class="c14"
               color="text"
               viewBox="0 0 32 32"
               width="32px"
@@ -400,20 +720,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-gKsewC iJyjSZ"
+            class="c15"
             id="wallet-connect-safepal wallet"
             scale="md"
             style="justify-content: space-between;"
             width="100%"
           >
             <div
-              class="sc-bdfBwQ fEwDKZ"
+              class="c13"
               color="primary"
             >
               SafePal Wallet
             </div>
             <svg
-              class="sc-dlfnbm cqTLJf"
+              class="c14"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -432,14 +752,14 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <a
-            class="sc-bdfBwQ sc-gsTCUz eiaRqE djpNeP sc-dQppl dICEdq"
+            class="c16 c17 c18"
             color="primary"
             href="https://docs.pancakeswap.finance/guides/faq#how-do-i-set-up-my-wallet-on-binance-smart-chain"
             rel="noreferrer noopener"
             target="_blank"
           >
             <svg
-              class="sc-dlfnbm gYbuYc"
+              class="c19"
               color="primary"
               viewBox="0 0 24 24"
               width="20px"
