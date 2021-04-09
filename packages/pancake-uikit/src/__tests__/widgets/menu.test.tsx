@@ -133,6 +133,10 @@ it("renders correctly", () => {
 
     .c3:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
       opacity: 0.85;
+      -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+      transform: translateY(1px);
+      box-shadow: none;
     }
 
     .c3:disabled,
@@ -186,6 +190,10 @@ it("renders correctly", () => {
 
     .c8:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
       opacity: 0.85;
+      -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+      transform: translateY(1px);
+      box-shadow: none;
     }
 
     .c8:disabled,
@@ -239,6 +247,10 @@ it("renders correctly", () => {
 
     .c24:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
       opacity: 0.85;
+      -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+      transform: translateY(1px);
+      box-shadow: none;
     }
 
     .c24:disabled,
@@ -409,6 +421,7 @@ it("renders correctly", () => {
       border-color: #ED4B9E;
       box-shadow: none;
       color: #ED4B9E;
+      margin-left: 8px;
     }
 
     .c21 {
@@ -418,6 +431,7 @@ it("renders correctly", () => {
       border-color: #FFB237;
       box-shadow: none;
       color: #FFB237;
+      margin-left: 8px;
     }
 
     .c15 {
@@ -502,14 +516,15 @@ it("renders correctly", () => {
       background-color: #FFFFFF;
       width: 0;
       height: 100vh;
-      -webkit-transition: padding-top 0.2s,width 0.2s;
-      transition: padding-top 0.2s,width 0.2s;
+      -webkit-transition: padding-top 0.2s,width 0.2s cubic-bezier(0.4,0,0.2,1);
+      transition: padding-top 0.2s,width 0.2s cubic-bezier(0.4,0,0.2,1);
       border-right: 0;
       z-index: 11;
       overflow: hidden;
       -webkit-transform: translate3d(0,0,0);
       -ms-transform: translate3d(0,0,0);
       transform: translate3d(0,0,0);
+      white-space: nowrap;
     }
 
     .c0 {
@@ -561,8 +576,8 @@ it("renders correctly", () => {
       -ms-flex-positive: 1;
       flex-grow: 1;
       margin-top: 64px;
-      -webkit-transition: margin-top 0.2s;
-      transition: margin-top 0.2s;
+      -webkit-transition: margin-top 0.2s,margin-left 0.2s cubic-bezier(0.4,0,0.2,1);
+      transition: margin-top 0.2s,margin-left 0.2s cubic-bezier(0.4,0,0.2,1);
       -webkit-transform: translate3d(0,0,0);
       -ms-transform: translate3d(0,0,0);
       transform: translate3d(0,0,0);
