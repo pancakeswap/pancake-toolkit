@@ -3,26 +3,26 @@ import { scales, PancakeToggleProps, HandleProps, InputProps, ScaleKeys } from "
 
 const scaleKeyValues = {
   sm: {
-    handleSize: "16px",
-    travelDistance: "16px",
-    toggleHeight: "20px",
-    toggleWidth: "36px",
-    pancakeThickness: "1px",
-    pancakeTwoOffset: "0px",
-    pancakeThreeOffset: "-3px",
-    butterTop: "3px",
+    pancakeSize: "16px", // The size of a pancake
+    travelDistance: "16px", // How far pancakes should travel horizontally
+    toggleHeight: "20px", // General Height and
+    toggleWidth: "36px", // Width of a toggle box
+    pancakeThickness: "1px", // Bottom shadow of a pancake
+    pancakeTwoOffset: "0px", // Pancakes don't look good when they are concentric
+    pancakeThreeOffset: "-3px", // so pancake 2 and 3 are shifted a little bit
+    butterTop: "3px", // Fine adjustments for butter position
     butterLeft: "10px",
-    butterWidth: "6px",
-    butterHeight: "5px",
-    butterThickness: "0.5px",
-    butterRadius: "2px",
-    butterSmearOneTop: "10px",
-    butterSmearOneLeft: "2.5px",
-    butterSmearTwoTop: "11px",
-    butterSmearTwoRight: "2.5px",
+    butterWidth: "6px", // Widht and
+    butterHeight: "5px", // Height of a butter block on top of pancakes
+    butterThickness: "0.5px", // Shadow on the bottom of the butter block
+    butterRadius: "2px", // Rounded corners for the butter
+    butterSmearOneTop: "10px", // There is melted butter
+    butterSmearOneLeft: "2.5px", // next to the butter block
+    butterSmearTwoTop: "11px", // implemented with :before and :after
+    butterSmearTwoRight: "2.5px", // these values adjust the position of it
   },
   md: {
-    handleSize: "32px",
+    pancakeSize: "32px",
     travelDistance: "34px",
     toggleHeight: "40px",
     toggleWidth: "72px",
@@ -61,8 +61,8 @@ export const PancakeStack = styled.div<HandleProps>`
   .pancake {
     background: #e27c31;
     border-radius: 50%;
-    width: ${getScale("handleSize")};
-    height: ${getScale("handleSize")};
+    width: ${getScale("pancakeSize")};
+    height: ${getScale("pancakeSize")};
     position: absolute;
     transition: 0.4s ease;
     top: 2px;

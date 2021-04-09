@@ -26,7 +26,7 @@ export interface InputProps {
 }
 
 export const scaleKeys = {
-  handleSize: "handleSize",
+  pancakeSize: "pancakeSize",
   travelDistance: "travelDistance",
   toggleHeight: "toggleHeight",
   toggleWidth: "toggleWidth",
