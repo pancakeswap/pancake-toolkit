@@ -141,7 +141,7 @@ const useTooltip = (
         name: "arrow",
         options: { element: arrowElement, padding: arrowPadding || 16 },
       },
-      { name: "offset", options: { offset: tooltipOffset || [0, 8] } },
+      { name: "offset", options: { offset: tooltipOffset || [0, 10] } },
       { name: "preventOverflow", options: { padding: tooltipPadding || { left: 16, right: 16 } } },
     ],
   });
