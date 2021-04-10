@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Input from "../../components/Input/Input";
 import Text from "../../components/Text/Text";
+import HelpIcon from "../../components/Svg/Icons/Help";
 import useTooltip from "./useTooltip";
 
 const GridCell = styled.div`
@@ -22,6 +23,23 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(4, 200px);
+`;
+
+const ExpandableCard = styled.div`
+  width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(70, 70, 80, 0.2) 0px 7px 29px 0px;
+`;
+
+const ExpandableHeader = styled.div`
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export default {
@@ -107,14 +125,6 @@ export const Placement: React.FC = () => {
         <ReferenceElement ref={targetRefBottomEnd} />
         {tooltipBottomEnd}
       </GridCell>
-      {/* <ReferenceElement ref={targetRefBottom}>
-        <HelpIcon width="48px" />
-      </ReferenceElement>
-      {tooltipBottom}
-      <ReferenceElement ref={targetRefBottomStart}>
-        <HelpIcon width="48px" />
-      </ReferenceElement>
-      {tooltipBottomStart} */}
     </Container>
   );
 };
@@ -146,16 +156,75 @@ export const Triggers: React.FC = () => {
         justifyContent: "space-evenly",
       }}
     >
-      <div ref={targetRefClick}>
-        <Input placeholder="click" />
-        {tooltipVisibleClick && tooltipClick}
-      </div>
-      <div ref={targetRefHover}>
-        <Input placeholder="hover" />
-        {tooltipVisibleHover && tooltipHover}
-      </div>
+      <Input ref={targetRefClick} placeholder="click" />
+      {tooltipVisibleClick && tooltipClick}
+      <Input ref={targetRefHover} placeholder="hover" />
+      {tooltipVisibleHover && tooltipHover}
       <Input ref={targetRefFocus} placeholder="focus" />
       {tooltipVisibleFocus && tooltipFocus}
+    </div>
+  );
+};
+
+export const EventPropagationAndMobile: React.FC = () => {
+  const [showExpandedClick, setShowExpandedClick] = useState(false);
+  const [showExpandedHover, setShowExpandedHover] = useState(false);
+  const { tooltipVisible: tooltipVisibleClick, targetRef: targetRefClick, tooltip: tooltipClick } = useTooltip(
+    "You clicked on the help icon but the card did not expand",
+    "right",
+    "click"
+  );
+  const { tooltipVisible: tooltipVisibleHover, targetRef: targetRefHover, tooltip: tooltipHover } = useTooltip(
+    "You hovered over the help icon",
+    "right",
+    "hover"
+  );
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "600px",
+        width: "500px",
+        justifyContent: "space-evenly",
+      }}
+    >
+      <Text>
+        Events do not propagate to other elements in the tree. This helps to not cause unwanted bahaviour like expanding
+        the cards when clicking on the tooltip target.
+      </Text>
+
+      <ExpandableCard onClick={() => setShowExpandedClick(!showExpandedClick)}>
+        <ExpandableHeader>
+          On click {showExpandedClick ? "▴" : "▾"}
+          <span ref={targetRefClick}>
+            <HelpIcon />
+          </span>
+        </ExpandableHeader>
+        {showExpandedClick && (
+          <div style={{ margin: "15px 0" }}>You clicked on the header but not on the help icon inside the header</div>
+        )}
+        {tooltipVisibleClick && tooltipClick}
+      </ExpandableCard>
+      <Text>
+        On touch screen devices hover interactions are also properly handled with `touchstart` and `touchend` events
+        (`mouseenter` and `mouseleave` cause unwated behaviour on some mobile browsers).
+      </Text>
+      <ExpandableCard onClick={() => setShowExpandedHover(!showExpandedHover)}>
+        <ExpandableHeader>
+          On hover {showExpandedHover ? "▴" : "▾"}
+          <span ref={targetRefHover}>
+            <HelpIcon />
+          </span>
+        </ExpandableHeader>
+        {showExpandedHover && (
+          <div style={{ margin: "15px 0" }}>
+            On mobile hovering (or more specifically touching and holding) over the help icon does not trigger expansion
+            of this card
+          </div>
+        )}
+        {tooltipVisibleHover && tooltipHover}
+      </ExpandableCard>
     </div>
   );
 };

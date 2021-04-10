@@ -4,6 +4,10 @@ import { usePopper } from "react-popper";
 import { StyledTooltip, Arrow } from "./StyledTooltip";
 import { TooltipRefs, TriggerType } from "./types";
 
+function isTouchDevice() {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+}
+
 // TODO try non-string content
 // TODO check how good auto works
 // TODO: FineTune
@@ -20,37 +24,47 @@ const useTooltip = (
 
   const [visible, setVisible] = useState(false);
 
-  // React guarantess that setState won't change on re-renders
-  // https://reactjs.org/docs/hooks-reference.html#usestate
-  // So it's not necessary to wrap setTooltipVisible in useCallaback
-  // However, I found that plugging () => setTooltipVisible(false) into event listeners
-  // produces decent amount of lag, especially if you click the button rapidly
-  const hideTooltip = React.useCallback(() => {
+  const hideTooltip = React.useCallback((e: Event) => {
+    e.stopPropagation();
+    e.preventDefault();
     setVisible(false);
   }, []);
 
-  const showTooltip = React.useCallback(() => {
+  const showTooltip = React.useCallback((e: Event) => {
+    e.stopPropagation();
+    e.preventDefault();
     setVisible(true);
   }, []);
 
   // TODO perf test if use getLatest()?
-  const toggleTooltip = React.useCallback(() => {
-    if (visible) {
-      hideTooltip();
-    } else {
-      showTooltip();
-    }
-  }, [visible, hideTooltip, showTooltip]);
+  const toggleTooltip = React.useCallback(
+    (e: Event) => {
+      e.stopPropagation();
+      if (visible) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+    },
+    [visible]
+  );
 
   // Trigger = hover
   React.useEffect(() => {
     if (targetElement === null || trigger !== "hover") return undefined;
 
-    targetElement.addEventListener("mouseenter", showTooltip);
-    targetElement.addEventListener("mouseleave", hideTooltip);
+    if (isTouchDevice()) {
+      targetElement.addEventListener("touchstart", showTooltip);
+      targetElement.addEventListener("touchend", hideTooltip);
+    } else {
+      targetElement.addEventListener("mouseenter", showTooltip);
+      targetElement.addEventListener("mouseleave", hideTooltip);
+    }
     return () => {
+      targetElement.removeEventListener("touchstart", showTooltip);
+      targetElement.removeEventListener("touchend", hideTooltip);
       targetElement.removeEventListener("mouseenter", showTooltip);
-      targetElement.removeEventListener("mouseleave", hideTooltip);
+      targetElement.removeEventListener("mouseleave", showTooltip);
     };
   }, [trigger, targetElement, hideTooltip, showTooltip]);
 
