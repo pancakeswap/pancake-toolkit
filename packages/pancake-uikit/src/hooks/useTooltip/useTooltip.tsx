@@ -8,9 +8,6 @@ function isTouchDevice() {
   return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 }
 
-// TODO try non-string content
-// TODO check how good auto works
-// TODO: FineTune
 const useTooltip = (
   content: string | React.ReactNode,
   placement: Placement = "auto",
@@ -37,7 +34,6 @@ const useTooltip = (
     setVisible(true);
   }, []);
 
-  // TODO perf test if use getLatest()?
   const toggleTooltip = React.useCallback(
     (e: Event) => {
       e.stopPropagation();
@@ -91,7 +87,6 @@ const useTooltip = (
   }, [trigger, targetElement, visible, toggleTooltip]);
 
   // Handle click outside
-  // TODO: lags? lags seems to go away after useCallback
   React.useEffect(() => {
     if (trigger !== "click") return undefined;
 
