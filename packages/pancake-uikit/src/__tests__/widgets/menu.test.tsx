@@ -288,6 +288,24 @@ it("renders correctly", () => {
       display: none;
     }
 
+    .c6 .right-eye {
+      -webkit-animation-delay: 20ms;
+      animation-delay: 20ms;
+    }
+
+    .c6:hover .left-eye,
+    .c6:hover .right-eye {
+      -webkit-transform-origin: center 60%;
+      -ms-transform-origin: center 60%;
+      transform-origin: center 60%;
+      -webkit-animation-name: beoKdG;
+      animation-name: beoKdG;
+      -webkit-animation-duration: 350ms;
+      animation-duration: 350ms;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+    }
+
     .c18 {
       color: #ED4B9E;
       font-size: 14px;
@@ -677,10 +695,12 @@ it("renders correctly", () => {
                   fill-rule="evenodd"
                 />
                 <path
+                  class="left-eye"
                   d="M11.9595 18.9091C11.9595 20.248 11.2359 21.3333 10.3433 21.3333C9.45075 21.3333 8.72717 20.248 8.72717 18.9091C8.72717 17.5702 9.45075 16.4849 10.3433 16.4849C11.2359 16.4849 11.9595 17.5702 11.9595 18.9091Z"
                   fill="#633001"
                 />
                 <path
+                  class="right-eye"
                   d="M23.1111 18.9091C23.1111 20.248 22.3875 21.3333 21.4949 21.3333C20.6024 21.3333 19.8788 20.248 19.8788 18.9091C19.8788 17.5702 20.6024 16.4849 21.4949 16.4849C22.3875 16.4849 23.1111 17.5702 23.1111 18.9091Z"
                   fill="#633001"
                 />
