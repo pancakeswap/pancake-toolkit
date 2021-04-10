@@ -16,6 +16,7 @@ const useTooltip = (
   placement: Placement = "auto",
   trigger: TriggerType = "hover",
   arrowPadding?: Padding,
+  tooltipPadding?: Padding,
   tooltipOffset?: [number | null | undefined, number | null | undefined]
 ): TooltipRefs => {
   const [targetElement, setTargetElement] = useState<HTMLElement | null>(null);
@@ -123,6 +124,16 @@ const useTooltip = (
     };
   }, [trigger, targetElement, showTooltip, hideTooltip]);
 
+  // On small screens Popper.js tries to squeeze the tooltip to available space without overflowing beyound the edge
+  // of the screen. While it works fine when the element is in the middle of the screen it does not handle well the
+  // cases when the target element is very close to the edge of the screen - no margin is applied between the tooltip
+  // and the screen edge.
+  // preventOverflow mitigates this behaviour, default 16px paddings on left and right solve the problem for all screen sizes
+  // that we support.
+  // Note that in the farm page where there are tooltips very close to the edge of the screen this padding works perfectly
+  // even on the iPhone 5 screen (320px wide), BUT in the storybook with the contrived example ScreenEdges example
+  // iPhone 5 behaves differently overflowing beyound the edge. All paddings are identical so I have no idea why it is,
+  // and fixing that seems like a very bad use of time.
   const { styles, attributes } = usePopper(targetElement, tooltipElement, {
     placement,
     modifiers: [
@@ -131,6 +142,7 @@ const useTooltip = (
         options: { element: arrowElement, padding: arrowPadding || 16 },
       },
       { name: "offset", options: { offset: tooltipOffset || [0, 8] } },
+      { name: "preventOverflow", options: { padding: tooltipPadding || { left: 16, right: 16 } } },
     ],
   });
 

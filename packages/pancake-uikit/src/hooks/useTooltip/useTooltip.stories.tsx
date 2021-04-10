@@ -239,7 +239,7 @@ export const FineTuning: React.FC = () => {
     tooltipVisible: tooltipVisibleFineTuned,
     targetRef: targetRefFineTuned,
     tooltip: tooltipFineTuned,
-  } = useTooltip("Didn't you know that 6 comes before 7?", "top-start", "hover", { right: 221 }, [0, -8]);
+  } = useTooltip("Didn't you know that 6 comes before 7?", "top-start", "hover", { right: 221 }, undefined, [0, -8]);
   return (
     <div style={{ width: "500px", height: "500px" }}>
       <Text fontSize="20px">Hover over inputs</Text>
@@ -259,6 +259,47 @@ export const Flipping: React.FC = () => {
     <div style={{ padding: "200px", width: "500px", height: "2000px" }}>
       <ReferenceElement ref={targetRef} />
       {tooltip}
+    </div>
+  );
+};
+
+export const ScreenEdges: React.FC = () => {
+  const { targetRef: targetRefLeft, tooltip: tooltipLeft, tooltipVisible: leftVisible } = useTooltip(
+    "I should not touch the edge of the screen",
+    "top",
+    "click"
+  );
+  const { targetRef: targetRefRight, tooltip: tooltipRight, tooltipVisible: rightVisible } = useTooltip(
+    "I should not touch the edge of the screen",
+    "top",
+    "click"
+  );
+  const { targetRef: targetRefMiddle, tooltip: tooltipMiddle, tooltipVisible: middleVisible } = useTooltip(
+    "I should not touch the edge of the screen",
+    "top",
+    "click"
+  );
+  return (
+    <div style={{ padding: "16px", height: "800px", backgroundColor: "#EEE" }}>
+      <Text>
+        This story can be used to visually tooltip behavior when the target element is positioned close to the screen
+        edge. Open this screen on the phone or in browser with responsive mode. Tooltips should not touch the screen
+        edge.
+      </Text>
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "24px" }}>
+        <span ref={targetRefLeft}>
+          <HelpIcon />
+        </span>
+        {leftVisible && tooltipLeft}
+        <span ref={targetRefMiddle}>
+          <HelpIcon />
+        </span>
+        {middleVisible && tooltipMiddle}
+        <span ref={targetRefRight}>
+          <HelpIcon />
+        </span>
+        {rightVisible && tooltipRight}
+      </div>
     </div>
   );
 };
