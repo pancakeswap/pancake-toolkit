@@ -9,9 +9,9 @@ export const light: CardTheme = {
   boxShadowSuccess: shadows.success,
   boxShadowWarning: shadows.warning,
   cardHeaderBackground: {
-    default: lightColors.gradients.cardBackground.default,
-    blue: lightColors.gradients.cardBackground.blue,
-    violet: lightColors.gradients.cardBackground.violet,
+    default: lightColors.gradients.cardHeader,
+    blue: lightColors.gradients.blue,
+    violet: lightColors.gradients.violet,
   },
   dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
@@ -23,9 +23,9 @@ export const dark: CardTheme = {
   boxShadowSuccess: shadows.success,
   boxShadowWarning: shadows.warning,
   cardHeaderBackground: {
-    default: darkColors.gradients.cardBackground.default,
-    blue: darkColors.gradients.cardBackground.blue,
-    violet: darkColors.gradients.cardBackground.violet,
+    default: darkColors.gradients.cardHeader,
+    blue: darkColors.gradients.blue,
+    violet: darkColors.gradients.violet,
   },
   dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
