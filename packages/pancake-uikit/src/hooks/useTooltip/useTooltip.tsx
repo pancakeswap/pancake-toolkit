@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Placement, Padding } from "@popperjs/core";
 import { usePopper } from "react-popper";
 import { StyledTooltip, Arrow } from "./StyledTooltip";
@@ -9,12 +9,12 @@ function isTouchDevice() {
 }
 
 const useTooltip = (
-  content: string | React.ReactNode,
+  content: React.ReactNode,
   placement: Placement = "auto",
   trigger: TriggerType = "hover",
   arrowPadding?: Padding,
   tooltipPadding?: Padding,
-  tooltipOffset?: [number | null | undefined, number | null | undefined]
+  tooltipOffset?: [number, number]
 ): TooltipRefs => {
   const [targetElement, setTargetElement] = useState<HTMLElement | null>(null);
   const [tooltipElement, setTooltipElement] = useState<HTMLElement | null>(null);
@@ -22,32 +22,28 @@ const useTooltip = (
 
   const [visible, setVisible] = useState(false);
 
-  const hideTooltip = React.useCallback((e: Event) => {
+  const hideTooltip = useCallback((e: Event) => {
     e.stopPropagation();
     e.preventDefault();
     setVisible(false);
   }, []);
 
-  const showTooltip = React.useCallback((e: Event) => {
+  const showTooltip = useCallback((e: Event) => {
     e.stopPropagation();
     e.preventDefault();
     setVisible(true);
   }, []);
 
-  const toggleTooltip = React.useCallback(
+  const toggleTooltip = useCallback(
     (e: Event) => {
       e.stopPropagation();
-      if (visible) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
+      setVisible(!visible);
     },
     [visible]
   );
 
   // Trigger = hover
-  React.useEffect(() => {
+  useEffect(() => {
     if (targetElement === null || trigger !== "hover") return undefined;
 
     if (isTouchDevice()) {
@@ -66,7 +62,7 @@ const useTooltip = (
   }, [trigger, targetElement, hideTooltip, showTooltip]);
 
   // Keep tooltip open when cursor moves from the targetElement to the tooltip
-  React.useEffect(() => {
+  useEffect(() => {
     if (tooltipElement === null || trigger !== "hover") return undefined;
 
     tooltipElement.addEventListener("mouseenter", showTooltip);
@@ -78,7 +74,7 @@ const useTooltip = (
   }, [trigger, tooltipElement, hideTooltip, showTooltip]);
 
   // Trigger = click
-  React.useEffect(() => {
+  useEffect(() => {
     if (targetElement === null || trigger !== "click") return undefined;
 
     targetElement.addEventListener("click", toggleTooltip);
@@ -87,7 +83,7 @@ const useTooltip = (
   }, [trigger, targetElement, visible, toggleTooltip]);
 
   // Handle click outside
-  React.useEffect(() => {
+  useEffect(() => {
     if (trigger !== "click") return undefined;
 
     const handleClickOutside = ({ target }: Event) => {
@@ -108,7 +104,7 @@ const useTooltip = (
   }, [trigger, targetElement, tooltipElement]);
 
   // Trigger = focus
-  React.useEffect(() => {
+  useEffect(() => {
     if (targetElement === null || trigger !== "focus") return undefined;
 
     targetElement.addEventListener("focus", showTooltip);

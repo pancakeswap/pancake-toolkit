@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Arrow = styled.div`
   &,
@@ -18,30 +18,28 @@ export const Arrow = styled.div`
 `;
 
 export const StyledTooltip = styled.div`
-  ${() => css`
-    padding: 16px; // Figma ✔️
-    font-size: 16px; // Figma ✔️ Use pre-defined
-    line-height: 130%; // Figma ✔️ Use pre-defined
-    border-radius: 16px; // Figma ✔️
-    max-width: 320px;
-    background: ${({ theme }) => theme.tooltip.background};
-    color: ${({ theme }) => theme.tooltip.text};
-    box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
+  padding: 16px;
+  font-size: 16px;
+  line-height: 130%;
+  border-radius: 16px;
+  max-width: 320px;
+  background: ${({ theme }) => theme.tooltip.background};
+  color: ${({ theme }) => theme.tooltip.text};
+  box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
 
-    &[data-popper-placement^="top"] > ${Arrow} {
-      bottom: -4px;
-    }
+  &[data-popper-placement^="top"] > ${Arrow} {
+    bottom: -4px;
+  }
 
-    &[data-popper-placement^="bottom"] > ${Arrow} {
-      top: -4px;
-    }
+  &[data-popper-placement^="bottom"] > ${Arrow} {
+    top: -4px;
+  }
 
-    &[data-popper-placement^="left"] > ${Arrow} {
-      right: -4px;
-    }
+  &[data-popper-placement^="left"] > ${Arrow} {
+    right: -4px;
+  }
 
-    &[data-popper-placement^="right"] > ${Arrow} {
-      left: -4px;
-    }
-  `}
+  &[data-popper-placement^="right"] > ${Arrow} {
+    left: -4px;
+  }
 `;
