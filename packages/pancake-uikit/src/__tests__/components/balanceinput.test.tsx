@@ -103,6 +103,7 @@ it("renders correctly", () => {
           placeholder="0.0"
           scale="md"
           type="number"
+          inputmode="numeric"
           value="14"
         />
         <div
