@@ -100,10 +100,10 @@ it("renders correctly", () => {
       >
         <input
           class="c1 c2"
+          inputmode="numeric"
           placeholder="0.0"
           scale="md"
           type="number"
-          inputmode="numeric"
           value="14"
         />
         <div
