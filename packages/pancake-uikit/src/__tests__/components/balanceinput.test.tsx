@@ -100,7 +100,8 @@ it("renders correctly", () => {
       >
         <input
           class="c1 c2"
-          inputmode="numeric"
+          inputmode="decimal"
+          min="0"
           placeholder="0.0"
           scale="md"
           type="number"

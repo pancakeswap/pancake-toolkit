@@ -9,7 +9,6 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
   onChange,
   currencyValue,
   inputProps,
-  inputMode = "numeric",
   isWarning = false,
   ...props
 }) => {
@@ -17,7 +16,8 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
     <StyledBalanceInput isWarning={isWarning} {...props}>
       <StyledInput
         type="number"
-        inputMode={inputMode}
+        inputMode="decimal"
+        min="0"
         value={value}
         onChange={onChange}
         placeholder={placeholder}
