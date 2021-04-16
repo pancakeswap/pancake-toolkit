@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactElement, ReactNode, useState } from "react";
 import styled from "styled-components";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { LinkLabel, MenuEntry } from "./MenuEntry";
@@ -42,6 +42,8 @@ const Accordion: React.FC<Props> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(initialOpenState);
 
+  console.log("render")
+
   const handleClick = () => {
     if (isPushed) {
       setIsOpen((prevState) => !prevState);
@@ -69,7 +71,21 @@ const Accordion: React.FC<Props> = ({
   );
 };
 
-export default React.memo(
-  Accordion,
-  (prev, next) => prev.isPushed === next.isPushed && prev.isActive === next.isActive
-);
+export default React.memo(Accordion, (prev, next) => {
+  const prevChildren = prev.children;
+  const nextChildren = next.children;
+
+  const isChildrenSame = ((Array.isArray(prevChildren) &&
+    Array.isArray(nextChildren))
+    ? prevChildren.every(
+      (value, index) => {
+        const prevMenuEntry = value as ReactElement
+        const nextMenuEntry = nextChildren[index] as ReactElement
+        return prevMenuEntry.props.isActive === nextMenuEntry.props.isActive &&
+          prevMenuEntry.props.isPushed === nextMenuEntry.props.isPushed;
+      }
+    )
+    : true);
+
+  return prev.isPushed === next.isPushed && prev.isActive === next.isActive && isChildrenSame;
+});
