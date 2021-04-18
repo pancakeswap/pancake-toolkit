@@ -19,36 +19,36 @@ export const Default: React.FC = () => {
     })} USD`;
   };
 
-  const handleDecimalChange = (evt) => {
-    setDecimalValue(evt.target.value);
+  const handleDecimalChange = (input) => {
+    setDecimalValue(input);
   };
 
-  const handleNumericChange = (evt) => {
-    setNumericValue(evt.target.value);
+  const handleNumericChange = (input) => {
+    setNumericValue(input);
   };
 
   return (
     <Box width="300px">
       <BalanceInput
+        onUserInput={handleDecimalChange}
         value={decimalValue}
         currencyValue={currencyValue(decimalValue)}
-        onChange={handleDecimalChange}
         placeholder="0.0"
         mb="32px"
       />
       <BalanceInput
         value={decimalValue * 1.5}
+        onUserInput={handleDecimalChange}
         currencyValue={currencyValue(decimalValue * 1.5)}
-        onChange={handleDecimalChange}
         placeholder="1.5"
         isWarning
         mb="32px"
       />
       <BalanceInput
         value={numericValue}
+        onUserInput={handleNumericChange}
         inputProps={{ inputMode: "numeric" }}
         currencyValue={currencyValue(numericValue)}
-        onChange={handleNumericChange}
         placeholder="0"
         mb="32px"
       />

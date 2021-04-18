@@ -6,20 +6,26 @@ import { BalanceInputProps } from "./types";
 const BalanceInput: React.FC<BalanceInputProps> = ({
   value,
   placeholder = "0.0",
-  onChange,
+  onUserInput,
   currencyValue,
   inputProps,
   isWarning = false,
   ...props
 }) => {
+  const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.validity.valid) {
+      onUserInput(e.currentTarget.value.replace(/,/g, "."));
+    }
+  };
+
   return (
     <StyledBalanceInput isWarning={isWarning} {...props}>
       <StyledInput
-        type="number"
+        pattern="^[0-9]*[.,]?[0-9]*$"
         inputMode="decimal"
         min="0"
         value={value}
-        onChange={onChange}
+        onChange={handleOnChange}
         placeholder={placeholder}
         {...inputProps}
       />
