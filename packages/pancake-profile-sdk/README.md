@@ -28,7 +28,7 @@ or yarn:
 yarn add @pancakeswap-libs/profile-sdk
 ```
 
-This package requires `web3` to be installed in your project. If you're using TypeScript you also should instal `web3-eth-contract` and `web3-utils` to avoid type errors, although depending on your TypeScript and ESlint configuration you might skip installing those (since they are sub-packages of web3).
+This package requires `web3` to be installed in your project. If you're using TypeScript you also should install `web3-eth-contract` and `web3-utils` to avoid type errors, although depending on your TypeScript and ESlint configuration you might skip installing those (since they are sub-packages of web3).
 
 ```bash
 # npm
@@ -59,7 +59,7 @@ Returns team information for the team ID. In case of network error returns null.
 ```js
 import { getTeam } from "@pancakeswap-libs/profile-sdk";
 
-const team = getUsername(1);
+const team = getTeam(1);
 console.log(team);
 // {
 //   id: 1,
