@@ -12,7 +12,7 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
   isWarning = false,
   ...props
 }) => {
-  const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.currentTarget.validity.valid) {
       onUserInput(e.currentTarget.value.replace(/,/g, "."));
     }
