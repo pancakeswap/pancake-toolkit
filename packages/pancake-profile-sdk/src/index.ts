@@ -1,5 +1,4 @@
-export { default as getUsername } from "./functions/getUsername";
-export { default as getProfile, GetProfileResponse } from "./functions/getProfile";
-export { default as getTeam } from "./functions/getTeam";
-export { default as getAchievements } from "./functions/getAchievements";
+import PancakeProfileSdk from "./profile-sdk";
+
 export * from "./types";
+export default PancakeProfileSdk;

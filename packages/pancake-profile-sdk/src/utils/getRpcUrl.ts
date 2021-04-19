@@ -7,7 +7,7 @@ export const nodes = [
 
 const getRandomIndex = () => {
   const lower = 0;
-  const upper = nodes.length;
+  const upper = nodes.length - 1;
   return Math.floor(lower + Math.random() * (upper - lower + 1));
 };
 

@@ -44,6 +44,11 @@ export type Team = {
   textColor: string;
 };
 
+export interface GetProfileResponse {
+  hasRegistered: boolean;
+  profile?: Profile;
+}
+
 export interface Profile {
   userId: number;
   points: number;

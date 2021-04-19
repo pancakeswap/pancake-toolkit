@@ -183,3 +183,4 @@ Current version of this SDK is 90% copy of existing from [pancake-frontend](http
 
 - [ ] Better error handling (common bad status codes or broken internet connection)
 - [ ] Allow username & avatar cookie to be configurable or optional
+- [ ] Validate addresses with regex and don't attempt to fetch data if address is not valid
