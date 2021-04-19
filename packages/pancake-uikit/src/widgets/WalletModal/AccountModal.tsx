@@ -15,14 +15,14 @@ interface Props {
 }
 
 const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => {
-  const clearCache = useCallback(() => {
+  const clearCache = () => {
     window.localStorage.removeItem(connectorLocalStorageKey);
     if (window.localStorage.getItem(ConnectorNames.WalletConnect)) {
       window.localStorage.removeItem(ConnectorNames.WalletConnect);
       // Reload the webpage to disconnect walletconnect websocket.
       window.location.reload();
     }
-  }, []);
+  };
 
   return (
     <Modal title="Your wallet" onDismiss={onDismiss}>
