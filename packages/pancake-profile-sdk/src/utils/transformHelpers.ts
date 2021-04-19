@@ -1,6 +1,6 @@
 import { Campaign, TranslatableText, Profile } from "../types";
 
-type ProfileResponse = {
+export type ProfileResponse = {
   0: string;
   1: string;
   2: string;

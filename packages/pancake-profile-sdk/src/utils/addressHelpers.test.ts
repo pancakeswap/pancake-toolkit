@@ -1,25 +1,18 @@
 import addresses from "../constants/contracts";
-import { getAddress } from "./addressHelpers";
-
-const OLD_ENV = process.env;
+import { MAINNET_CHAIN_ID, TESTNET_CHAIN_ID } from "../constants/common";
+import { getPancakeProfileAddress, getPancakeRabbitsAddress } from "./addressHelpers";
 
 describe("addressHelpers", () => {
-  beforeEach(() => {
-    jest.resetModules();
-    process.env = { ...OLD_ENV }; // Make a copy
-  });
-
-  afterAll(() => {
-    process.env = OLD_ENV; // Restore old environment
-  });
-
   it("getAddress returns correct mainnet address", () => {
-    const address = getAddress(addresses.pancakeProfile);
-    expect(address).toBe(addresses.pancakeProfile["56"]);
+    const profileAddress = getPancakeProfileAddress(MAINNET_CHAIN_ID);
+    const rabbitAddress = getPancakeRabbitsAddress(MAINNET_CHAIN_ID);
+    expect(profileAddress).toBe(addresses.pancakeProfile[MAINNET_CHAIN_ID]);
+    expect(rabbitAddress).toBe(addresses.pancakeRabbits[MAINNET_CHAIN_ID]);
   });
   it("getAddress returns correct testnet address", () => {
-    process.env.REACT_APP_CHAIN_ID = "97";
-    const address = getAddress(addresses.pancakeProfile);
-    expect(address).toBe(addresses.pancakeProfile["97"]);
+    const profileAddress = getPancakeProfileAddress(TESTNET_CHAIN_ID);
+    const rabbitAddress = getPancakeRabbitsAddress(TESTNET_CHAIN_ID);
+    expect(profileAddress).toBe(addresses.pancakeProfile[TESTNET_CHAIN_ID]);
+    expect(rabbitAddress).toBe(addresses.pancakeRabbits[TESTNET_CHAIN_ID]);
   });
 });

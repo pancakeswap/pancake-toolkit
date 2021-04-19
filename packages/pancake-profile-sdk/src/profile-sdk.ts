@@ -36,8 +36,8 @@ class PancakeProfileSdk {
   constructor(args?: SdkConstructorArguments) {
     if (args?.web3) this.web3 = args.web3;
     if (args?.chainId) this.chainId = args.chainId;
-    this.profileContract = getProfileContract(this.web3);
-    this.rabbitContract = getPancakeRabbitContract(this.web3);
+    this.profileContract = getProfileContract(this.web3, this.chainId);
+    this.rabbitContract = getPancakeRabbitContract(this.web3, this.chainId);
   }
 
   /**
