@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import LinkExternal from "../../components/Link/LinkExternal";
