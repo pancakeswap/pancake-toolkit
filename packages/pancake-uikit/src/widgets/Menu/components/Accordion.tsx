@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import styled from "styled-components";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { LinkLabel, MenuEntry } from "./MenuEntry";
@@ -69,4 +69,4 @@ const Accordion: React.FC<Props> = ({
   );
 };
 
-export default Accordion
+export default Accordion;
