@@ -69,21 +69,4 @@ const Accordion: React.FC<Props> = ({
   );
 };
 
-export default React.memo(Accordion, (prev, next) => {
-  const prevChildren = prev.children;
-  const nextChildren = next.children;
-
-  const isChildrenSame =
-    Array.isArray(prevChildren) && Array.isArray(nextChildren)
-      ? prevChildren.every((value, index) => {
-          const prevMenuEntry = value as ReactElement;
-          const nextMenuEntry = nextChildren[index] as ReactElement;
-          return (
-            prevMenuEntry.props.isActive === nextMenuEntry.props.isActive &&
-            prevMenuEntry.props.isPushed === nextMenuEntry.props.isPushed
-          );
-        })
-      : true;
-
-  return prev.isPushed === next.isPushed && prev.isActive === next.isActive && isChildrenSame;
-});
+export default Accordion
