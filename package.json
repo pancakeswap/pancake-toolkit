@@ -23,12 +23,6 @@
     "storybook:build": "lerna run storybook:build",
     "release": "yarn build && yarn lerna publish"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format:check",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
