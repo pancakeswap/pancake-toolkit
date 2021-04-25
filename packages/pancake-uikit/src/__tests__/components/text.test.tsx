@@ -3,7 +3,7 @@ import { renderWithTheme } from "../../testHelpers";
 import Text from "../../components/Text/Text";
 
 it("renders correctly", () => {
-  const { asFragment } = renderWithTheme(<Text>pancake</Text>);
+  const { asFragment } = renderWithTheme(<Text>root</Text>);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
@@ -17,7 +17,7 @@ it("renders correctly", () => {
         class="c0"
         color="text"
       >
-        pancake
+        root
       </div>
     </DocumentFragment>
   `);

@@ -58,7 +58,7 @@ export const WithAction: React.FC = () => {
       description: "A description of a toast with a call to action",
       action: {
         text: "Action Button",
-        url: "https://pancakeswap.finance",
+        url: "https://app.rootswap.finance",
       },
       type: alertVariants[sample(Object.keys(alertVariants))],
     };
