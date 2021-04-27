@@ -3,7 +3,6 @@ import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import { Alert, alertVariants } from "../../components/Alert";
 import { Text } from "../../components/Text";
-import ToastAction from "./ToastAction";
 import { ToastProps, types } from "./types";
 
 const alertTypeMap = {
@@ -29,7 +28,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
   const timer = useRef<number>();
   const ref = useRef(null);
   const removeHandler = useRef(onRemove);
-  const { id, title, description, type, action } = toast;
+  const { id, title, description, type } = toast;
 
   const handleRemove = useCallback(() => removeHandler.current(id), [id, removeHandler]);
 
@@ -65,16 +64,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
     <CSSTransition nodeRef={ref} timeout={250} style={style} {...props}>
       <StyledToast ref={ref} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <Alert title={title} variant={alertTypeMap[type]} onClick={handleRemove}>
-          {action ? (
-            <>
-              <Text as="p" mb="8px">
-                {description}
-              </Text>
-              <ToastAction action={action} />
-            </>
-          ) : (
-            description
-          )}
+          {description}
         </Alert>
       </StyledToast>
     </CSSTransition>
