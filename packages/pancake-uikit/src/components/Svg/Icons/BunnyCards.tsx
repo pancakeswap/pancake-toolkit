@@ -5,7 +5,7 @@ import { SvgProps } from "../types";
 const Icon: React.FC<SvgProps> = (props) => {
   return (
     <Svg viewBox="0 0 64 64" {...props}>
-      <g clipPath="url(#clip0)">
+      <g clipPath="url(#clip-bunnycards)">
         <rect
           width="32"
           height="40"
@@ -69,7 +69,7 @@ const Icon: React.FC<SvgProps> = (props) => {
         </g>
       </g>
       <defs>
-        <clipPath id="clip0">
+        <clipPath id="clip-bunnycards">
           <rect width="64" height="64" fill="white" />
         </clipPath>
       </defs>
