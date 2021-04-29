@@ -24,39 +24,45 @@ const useTooltip = (
   const tooltipHoverRef = useRef(false);
   const tooltipHoverTimeoutRef = useRef<number>();
 
-  const hideTooltip = useCallback((e: Event) => {
-    const hide = () => {
-      e.stopPropagation();
-      e.preventDefault();
-      setVisible(false);
-    };
+  const hideTooltip = useCallback(
+    (e: Event) => {
+      const hide = () => {
+        e.stopPropagation();
+        e.preventDefault();
+        setVisible(false);
+      };
 
-    if (trigger === "hover") {
-      if (e.target === targetElement) {
-        clearTimeout(tooltipHoverTimeoutRef.current);
-        tooltipHoverTimeoutRef.current = window.setTimeout(() => {
-          if (!tooltipHoverRef.current) {
-            hide();
-          }
-        }, 1000);
-      } else if (e.target === tooltipElement) {
-        clearTimeout(tooltipHoverTimeoutRef.current);
-        tooltipHoverRef.current = false;
+      if (trigger === "hover") {
+        if (e.target === targetElement) {
+          clearTimeout(tooltipHoverTimeoutRef.current);
+          tooltipHoverTimeoutRef.current = window.setTimeout(() => {
+            if (!tooltipHoverRef.current) {
+              hide();
+            }
+          }, 1000);
+        } else if (e.target === tooltipElement) {
+          clearTimeout(tooltipHoverTimeoutRef.current);
+          tooltipHoverRef.current = false;
+          hide();
+        }
+      } else {
         hide();
       }
-    } else {
-      hide();
-    }
-  }, [targetElement, tooltipElement, trigger]);
+    },
+    [targetElement, tooltipElement, trigger]
+  );
 
-  const showTooltip = useCallback((e: Event) => {
-    e.stopPropagation();
-    e.preventDefault();
-    setVisible(true);
-    if (e.target === tooltipElement && trigger === "hover") {
-      tooltipHoverRef.current = true;
-    }
-  }, [tooltipElement, trigger]);
+  const showTooltip = useCallback(
+    (e: Event) => {
+      e.stopPropagation();
+      e.preventDefault();
+      setVisible(true);
+      if (e.target === tooltipElement && trigger === "hover") {
+        tooltipHoverRef.current = true;
+      }
+    },
+    [tooltipElement, trigger]
+  );
 
   const toggleTooltip = useCallback(
     (e: Event) => {
