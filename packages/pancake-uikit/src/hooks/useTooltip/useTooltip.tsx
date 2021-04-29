@@ -33,15 +33,14 @@ const useTooltip = (
       };
 
       if (trigger === "hover") {
+        clearTimeout(tooltipHoverTimeoutRef.current);
         if (e.target === targetElement) {
-          clearTimeout(tooltipHoverTimeoutRef.current);
           tooltipHoverTimeoutRef.current = window.setTimeout(() => {
             if (!tooltipHoverRef.current) {
               hide();
             }
-          }, 1000);
+          }, 500);
         } else if (e.target === tooltipElement) {
-          clearTimeout(tooltipHoverTimeoutRef.current);
           tooltipHoverRef.current = false;
           hide();
         }
@@ -57,11 +56,15 @@ const useTooltip = (
       e.stopPropagation();
       e.preventDefault();
       setVisible(true);
-      if (e.target === tooltipElement && trigger === "hover") {
-        tooltipHoverRef.current = true;
+      if (trigger === "hover") {
+        if (e.target === targetElement) {
+          clearTimeout(tooltipHoverTimeoutRef.current);
+        } else if (e.target === tooltipElement) {
+          tooltipHoverRef.current = true;
+        }
       }
     },
-    [tooltipElement, trigger]
+    [tooltipElement, targetElement, trigger]
   );
 
   const toggleTooltip = useCallback(
