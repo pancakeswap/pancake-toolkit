@@ -1,21 +1,20 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { Placement, Padding } from "@popperjs/core";
 import { usePopper } from "react-popper";
 import { StyledTooltip, Arrow } from "./StyledTooltip";
-import { TooltipRefs, TriggerType } from "./types";
+import { TooltipOptions, TooltipRefs } from "./types";
 
 function isTouchDevice() {
   return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 }
 
-const useTooltip = (
-  content: React.ReactNode,
-  placement: Placement = "auto",
-  trigger: TriggerType = "hover",
-  arrowPadding?: Padding,
-  tooltipPadding?: Padding,
-  tooltipOffset?: [number, number]
-): TooltipRefs => {
+const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipRefs => {
+  const {
+    placement = "auto",
+    trigger = "hover",
+    arrowPadding = 16,
+    tooltipPadding = { left: 16, right: 16 },
+    tooltipOffset = [0, 10],
+  } = options;
   const [targetElement, setTargetElement] = useState<HTMLElement | null>(null);
   const [tooltipElement, setTooltipElement] = useState<HTMLElement | null>(null);
   const [arrowElement, setArrowElement] = useState<HTMLElement | null>(null);
@@ -163,10 +162,10 @@ const useTooltip = (
     modifiers: [
       {
         name: "arrow",
-        options: { element: arrowElement, padding: arrowPadding || 16 },
+        options: { element: arrowElement, padding: arrowPadding },
       },
-      { name: "offset", options: { offset: tooltipOffset || [0, 10] } },
-      { name: "preventOverflow", options: { padding: tooltipPadding || { left: 16, right: 16 } } },
+      { name: "offset", options: { offset: tooltipOffset } },
+      { name: "preventOverflow", options: { padding: tooltipPadding } },
     ],
   });
 
