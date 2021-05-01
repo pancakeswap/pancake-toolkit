@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Input from "../../components/Input/Input";
+import Toggle from "../../components/Toggle/Toggle";
 import Text from "../../components/Text/Text";
 import HelpIcon from "../../components/Svg/Icons/Help";
 import useTooltip from "./useTooltip";
+import BalanceInput from "../../components/BalanceInput/BalanceInput";
 
 const GridCell = styled.div`
   display: flex;
@@ -313,6 +315,32 @@ export const ScreenEdges: React.FC = () => {
         </span>
         {rightVisible && tooltipRight}
       </div>
+    </div>
+  );
+};
+
+export const ThemeInversion: React.FC = () => {
+  const tooltipContent = (
+    <>
+      <Text>Tooltips have inverted theme</Text>
+      <Toggle />
+      <BalanceInput value="1.0" currencyValue="~623.45 USD" placeholder="0.0" />
+    </>
+  );
+  const { targetRef, tooltip } = useTooltip(tooltipContent, { placement: "bottom" });
+  return (
+    <div style={{ padding: "60px 25px", width: "550px", display: "flex", gap: "15px" }}>
+      <div style={{ flex: "1" }}>
+        <Text>Current theme looks like this</Text>
+        <Toggle />
+        <BalanceInput value="1.0" currencyValue="~623.45 USD" placeholder="0.0" />
+      </div>
+      <div style={{ flex: "1", textAlign: "center" }}>
+        <span ref={targetRef}>
+          <HelpIcon />
+        </span>
+      </div>
+      {tooltip}
     </div>
   );
 };
