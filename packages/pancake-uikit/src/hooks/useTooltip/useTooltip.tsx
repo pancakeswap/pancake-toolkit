@@ -30,7 +30,7 @@ const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipR
 
   const [visible, setVisible] = useState(false);
   const isHoveringOverTooltip = useRef(false);
-  const hideTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hideTimeout = useRef<number>();
 
   const hideTooltip = useCallback(
     (e: Event) => {
@@ -42,13 +42,13 @@ const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipR
 
       if (trigger === "hover") {
         if (hideTimeout.current) {
-          clearTimeout(hideTimeout.current);
+          window.clearTimeout(hideTimeout.current);
         }
         if (e.target === tooltipElement) {
           isHoveringOverTooltip.current = false;
         }
         if (!isHoveringOverTooltip.current) {
-          hideTimeout.current = setTimeout(() => {
+          hideTimeout.current = window.setTimeout(() => {
             if (!isHoveringOverTooltip.current) {
               hide();
             }
