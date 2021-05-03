@@ -23,12 +23,6 @@ const Text = styled.div<TextProps>`
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
   ${space}
   ${typography}
-  ${({ theme, hasTooltip }) =>
-    hasTooltip &&
-    `
-    text-decoration: underline dotted ${theme.colors.textSubtle};
-    text-underline-offset: 0.1em;
-  `}
 `;
 
 Text.defaultProps = {
