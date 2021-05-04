@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Web3 from "web3";
-import { existingAddress1, nonexistentAddress } from "../../mocks/mockAddresses";
+import { existingAddress1 } from "../../mocks/mockAddresses";
 
 const getProfileContract = jest.fn((web3?: Web3) => {
   return {
@@ -19,7 +19,7 @@ const getProfileContract = jest.fn((web3?: Web3) => {
                 0: 123,
                 1: 3000,
                 2: 2,
-                3: "0x4444444444444444444444444444444444444444",
+                3: "0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07",
                 4: 555,
                 5: true,
               })
@@ -47,14 +47,16 @@ const getProfileContract = jest.fn((web3?: Web3) => {
   };
 });
 
-const getPancakeRabbitContract = jest.fn((web3?: Web3) => {
+const getErc721Contract = jest.fn((web3?: Web3) => {
   return {
     methods: {
-      getBunnyId: jest.fn((callAddress: string) => {
-        return { call: jest.fn(() => Promise.resolve("5")) };
+      tokenURI: jest.fn((tokenId: string) => {
+        return {
+          call: jest.fn(() => Promise.resolve("ipfs://QmYsTqbmGA3H5cgouCkh8tswJAQE1AsEko9uBZX9jZ3oTC/sleepy.json")),
+        };
       }),
     },
   };
 });
 
-module.exports = { getProfileContract, getPancakeRabbitContract };
+module.exports = { getProfileContract, getErc721Contract };

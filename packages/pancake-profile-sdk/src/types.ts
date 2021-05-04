@@ -24,8 +24,36 @@ export type Nft = {
   description: string;
   images: NftImages;
   sortOrder: number;
-  bunnyId: number;
+  type: NftType;
   video?: NftVideo;
+
+  // Uniquely identifies the nft.
+  // Used for matching an NFT from the config with the data from the NFT's tokenURI
+  identifier: string;
+
+  // Used to be "bunnyId". Used when minting NFT
+  variationId?: number | string;
+};
+
+export enum NftType {
+  PANCAKE = "pancake",
+  MIXIE = "mixie",
+}
+
+export type NftUriData = {
+  name: string;
+  description: string;
+  image: string;
+  attributes: {
+    bunnyId: string;
+  };
+};
+
+export type NftSource = {
+  [key in NftType]: {
+    address: Address;
+    identifierKey: string;
+  };
 };
 
 export type TeamImages = {

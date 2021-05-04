@@ -1,16 +1,15 @@
 import Web3 from "web3";
 import { Contract } from "web3-eth-contract";
 import { request, gql } from "graphql-request";
-import merge from "lodash/merge";
 import Cookies from "js-cookie";
 import web3NoAccount from "./utils/web3";
-import { getPancakeRabbitContract, getProfileContract } from "./utils/contractHelpers";
+import { getProfileContract } from "./utils/contractHelpers";
 import { profileApi, profileSubgraphApi } from "./constants/common";
 import { campaignMap } from "./constants/campaings";
-import nfts from "./constants/nfts";
 import teamsList from "./constants/teams";
 import { Achievement, Team, GetProfileResponse, Profile, Nft } from "./types";
 import { getAchievementDescription, getAchievementTitle, transformProfileResponse } from "./utils/transformHelpers";
+import { getNftByTokenId } from "./utils/collectibles";
 
 type SdkConstructorArguments = {
   web3?: Web3;
@@ -31,13 +30,10 @@ class PancakeProfileSdk {
 
   profileContract: Contract;
 
-  rabbitContract: Contract;
-
   constructor(args?: SdkConstructorArguments) {
     if (args?.web3) this.web3 = args.web3;
     if (args?.chainId) this.chainId = args.chainId;
     this.profileContract = getProfileContract(this.web3, this.chainId);
-    this.rabbitContract = getPancakeRabbitContract(this.web3, this.chainId);
   }
 
   /**
@@ -116,12 +112,7 @@ class PancakeProfileSdk {
       } = await this.profileContract.methods.getTeamProfile(teamId).call();
       const staticTeamInfo = teamsList.find((staticTeam) => staticTeam.id === teamId);
 
-      return merge({}, staticTeamInfo, {
-        isJoinable,
-        name: teamName,
-        users: numberUsers,
-        points: numberPoints,
-      });
+      return { ...staticTeamInfo, isJoinable, name: teamName, users: numberUsers, points: numberPoints };
     } catch (error) {
       return null;
     }
@@ -151,16 +142,15 @@ class PancakeProfileSdk {
       // so only fetch the nft data if active
       let nft: Nft;
       if (isActive) {
-        const bunnyId = await this.rabbitContract.methods.getBunnyId(tokenId).call();
-        nft = nfts.find((nftItem) => nftItem.bunnyId === Number(bunnyId));
-
+        nft = await getNftByTokenId(nftAddress, tokenId, this.web3, this.chainId);
+        const avatar = nft ? `https://pancakeswap.finance/images/nfts/${nft.images.sm}` : undefined;
         // Save the preview image in a cookie so it can be used on the exchange
         // TODO v2: optional (and configurable) Cookies.set
         Cookies.set(
           `profile_${address}`,
           {
             username,
-            avatar: `https://pancakeswap.finance/images/nfts/${nft.images.sm}`,
+            avatar,
           },
           { domain: "pancakeswap.finance", secure: true, expires: 30 }
         );
@@ -180,6 +170,7 @@ class PancakeProfileSdk {
 
       return { hasRegistered, profile };
     } catch (error) {
+      console.log("> > > My Error: ", error);
       return null;
     }
   };

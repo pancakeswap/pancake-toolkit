@@ -1,6 +1,7 @@
 import { rest, graphql } from "msw";
 import { existingAddress1, existingAddress2, nonexistentAddress } from "./mockAddresses";
 import { profileApi } from "../constants/common";
+import { IPFS_GATEWAY } from "../constants/nfts";
 
 const subgraph = graphql.link("https://api.thegraph.com/subgraphs/name/pancakeswap/profile");
 
@@ -15,6 +16,19 @@ const handlers = [
   }),
   rest.get(`${profileApi}/api/users/${nonexistentAddress}`, (req, res, ctx) => {
     return res(ctx.status(404), ctx.json({ error: { message: "Entity not found." } }));
+  }),
+  rest.get(`${IPFS_GATEWAY}/ipfs/QmYsTqbmGA3H5cgouCkh8tswJAQE1AsEko9uBZX9jZ3oTC/sleepy.json`, (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({
+        name: "Sleepy",
+        description: "Aww, looks like eating pancakes all day is tough work. Sweet dreams!",
+        image: "ipfs://QmYD9AtzyQPjSa9jfZcZq88gSaRssdhGmKqQifUDjGFfXm/sleepy.png",
+        attributes: {
+          bunnyId: "5",
+        },
+      })
+    );
   }),
   subgraph.query("getUser", (req, res, ctx) => {
     const address = req.variables.id;

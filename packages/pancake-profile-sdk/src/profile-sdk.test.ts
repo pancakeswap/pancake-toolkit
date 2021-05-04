@@ -145,7 +145,7 @@ describe("PancakeProfileSdk", () => {
     });
 
     describe("getProfile", () => {
-      const sleepyNft = nfts.find((nft) => nft.bunnyId === 5);
+      const sleepyNft = nfts.find((nft) => nft.identifier === "sleepy");
       beforeEach(() => {
         jest.clearAllMocks();
       });
@@ -164,7 +164,7 @@ describe("PancakeProfileSdk", () => {
             teamId: 2,
             points: 3000,
             tokenId: 555,
-            nftAddress: "0x4444444444444444444444444444444444444444",
+            nftAddress: "0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07",
             nft: sleepyNft,
             team: { ...teamsList[1], users: 77000, points: 341500, isJoinable: true },
           },
