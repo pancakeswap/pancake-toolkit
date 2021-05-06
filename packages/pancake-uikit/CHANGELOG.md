@@ -3,6 +3,113 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.29.4](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.29.3...@pancakeswap-libs/uikit@0.29.4) (2021-05-06)
+
+
+### Bug Fixes
+
+* Copy clipboard on mobile devices ([#2](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/2)) ([a64bfd8](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/a64bfd8b998f9ab9ee4daac9b42fa8c7a7eb53a7))
+
+
+
+
+
+## [0.29.3](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.29.2...@pancakeswap-libs/uikit@0.29.3) (2021-05-03)
+
+**Note:** Version bump only for package @pancakeswap-libs/uikit
+
+
+
+
+
+## [0.29.2](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.29.1...@pancakeswap-libs/uikit@0.29.2) (2021-04-30)
+
+
+### Bug Fixes
+
+* Tooltip on hover disappear immediately when mouse leaves target element ([#90](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/90)) ([97642eb](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/97642eb9f5b9d58a23107e692219362c83711917))
+
+
+
+
+
+## [0.29.1](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.29.0...@pancakeswap-libs/uikit@0.29.1) (2021-04-29)
+
+
+### Bug Fixes
+
+* **card-ribbon:** Add z-index value to ribbon and spread props to improve flexibility of component ([#88](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/88)) ([2fb19f1](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/2fb19f19ffef89a7abc73d1e77734b1a46a99d29))
+
+
+
+
+
+# [0.29.0](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.28.1...@pancakeswap-libs/uikit@0.29.0) (2021-04-28)
+
+
+### Features
+
+* **uikit:** Prediction icons ([#87](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/87)) ([25b03ce](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/25b03ce2eb2bab14fc48cd8d8b5de212e12e3ee4))
+
+
+
+
+
+## [0.28.1](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.28.0...@pancakeswap-libs/uikit@0.28.1) (2021-04-27)
+
+**Note:** Version bump only for package @pancakeswap-libs/uikit
+
+
+
+
+
+# [0.28.0](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.27.1...@pancakeswap-libs/uikit@0.28.0) (2021-04-23)
+
+
+### Bug Fixes
+
+* Accordion menu not showing new result when children changed ([#77](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/77)) ([57ff149](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/57ff1493987c0928d7d9f3cf04fc013331f65ab5))
+
+
+### Features
+
+* **menu:** Add support for top level tags on accordion ([#84](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/84)) ([a15257b](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/a15257ba0460d116bfeaa5ffdad1b9e2c20b4872))
+
+
+
+
+
+## [0.27.1](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.27.0...@pancakeswap-libs/uikit@0.27.1) (2021-04-22)
+
+**Note:** Version bump only for package @pancakeswap-libs/uikit
+
+
+
+
+
+# [0.27.0](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.26.0...@pancakeswap-libs/uikit@0.27.0) (2021-04-22)
+
+
+### Features
+
+* **modal-bg:** Add overflow hidden prop to Modal container and update storybook ([#82](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/82)) ([2233499](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/22334997bf9dde0dcfb551bc26e78a3a92c8e5db))
+* Add VisibilityOn and VisibilityOff icons ([#81](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/81)) ([6635681](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/6635681402de7c43fa429808a46b733fb415ac5f))
+
+
+
+
+
+# [0.26.0](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.25.3...@pancakeswap-libs/uikit@0.26.0) (2021-04-20)
+
+
+### Features
+
+* **progress:** Scale ([#79](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/issues/79)) ([1adc8f2](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/1adc8f255af8b0d61ab3f847468de36667385af6))
+
+
+
+
+
 ## [0.25.3](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap-libs/uikit@0.25.2...@pancakeswap-libs/uikit@0.25.3) (2021-04-15)
 
 
