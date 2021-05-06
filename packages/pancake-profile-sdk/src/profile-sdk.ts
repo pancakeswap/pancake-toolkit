@@ -7,7 +7,7 @@ import { getProfileContract } from "./utils/contractHelpers";
 import { profileApi, profileSubgraphApi } from "./constants/common";
 import { campaignMap } from "./constants/campaings";
 import teamsList from "./constants/teams";
-import { Achievement, Team, GetProfileResponse, Profile, Nft } from "./types";
+import { Achievement, Team, GetProfileResponse, Profile, Nft, UserPointIncreaseEvent } from "./types";
 import { getAchievementDescription, getAchievementTitle, transformProfileResponse } from "./utils/transformHelpers";
 import { getNftByTokenId } from "./utils/collectibles";
 
@@ -15,13 +15,6 @@ type SdkConstructorArguments = {
   web3?: Web3;
   chainId?: number;
 };
-
-// move to types
-interface UserPointIncreaseEvent {
-  campaignId: string;
-  id: string; // wallet address
-  points: string;
-}
 
 class PancakeProfileSdk {
   web3 = web3NoAccount;

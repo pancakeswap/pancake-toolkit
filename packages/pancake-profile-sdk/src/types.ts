@@ -119,3 +119,9 @@ export interface Achievement {
   badge: string;
   points: number;
 }
+
+export interface UserPointIncreaseEvent {
+  campaignId: string;
+  id: string; // wallet address
+  points: string;
+}
