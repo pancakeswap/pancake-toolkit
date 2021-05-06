@@ -1,4 +1,3 @@
-import addresses from "../constants/contracts";
 import {
   transformProfileResponse,
   getAchievementTitle,
