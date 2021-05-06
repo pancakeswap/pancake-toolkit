@@ -170,7 +170,7 @@ class PancakeProfileSdk {
 
       return { hasRegistered, profile };
     } catch (error) {
-      console.log("> > > My Error: ", error);
+      console.error("getProfile error: ", error);
       return null;
     }
   };
