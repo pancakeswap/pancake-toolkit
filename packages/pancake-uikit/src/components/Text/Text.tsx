@@ -21,6 +21,7 @@ const Text = styled.div<TextProps>`
   font-weight: ${({ bold }) => (bold ? 600 : 400)};
   line-height: 1.5;
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
+  ${({ inline }) => inline && "display: inline;"}
   ${space}
   ${typography}
 `;
@@ -28,6 +29,7 @@ const Text = styled.div<TextProps>`
 Text.defaultProps = {
   color: "text",
   small: false,
+  inline: false,
 };
 
 export default Text;
