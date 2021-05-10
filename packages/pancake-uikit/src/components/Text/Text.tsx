@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-import { space, typography } from "styled-system";
+import { space, typography, layout } from "styled-system";
 import getThemeValue from "../../util/getThemeValue";
 import { TextProps } from "./types";
 
@@ -21,15 +21,14 @@ const Text = styled.div<TextProps>`
   font-weight: ${({ bold }) => (bold ? 600 : 400)};
   line-height: 1.5;
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
-  ${({ inline }) => inline && "display: inline;"}
   ${space}
   ${typography}
+  ${layout}
 `;
 
 Text.defaultProps = {
   color: "text",
   small: false,
-  inline: false,
 };
 
 export default Text;
