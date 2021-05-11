@@ -30,8 +30,8 @@ export const Default: React.FC = () => {
     <>
       <Row>
         <ButtonMenu activeIndex={index} onItemClick={handleClick}>
-          <ButtonMenuItem color="red">Button 1</ButtonMenuItem>
-          <ButtonMenuItem color="red">Button 2</ButtonMenuItem>
+          <ButtonMenuItem>Button 1</ButtonMenuItem>
+          <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
           <ButtonMenuItem>Button 4</ButtonMenuItem>
         </ButtonMenu>
