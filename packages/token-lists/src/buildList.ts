@@ -14,7 +14,8 @@ export const buildList = (): TokenList => {
       minor,
       patch,
     },
-    logoURI: "https://assets.coingecko.com/coins/images/12632/small/IMG_0440.PNG?1602654093",
+    logoURI:
+      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
     keywords: ["pancakeswap", "default"],
     tokens: pancakeswap
       // sort them by symbol for easy readability
