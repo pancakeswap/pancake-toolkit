@@ -28,6 +28,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
 
+
   return (
     <Container>
       {links.map((entry) => {
@@ -49,11 +50,11 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               status={entry.status}
               initialOpenState={initialOpenState}
               className={calloutClass}
-              isActive={entry.items.some((item) => item.href === location.pathname)}
+              isActive={entry.items.some((item) => item.href === location.pathname || (item.href.length > 1 && location.pathname.startsWith(item.href)))}
             >
               {isPushed &&
                 entry.items.map((item) => (
-                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname || (item.href.length > 1 && location.pathname.startsWith(item.href)) } onClick={handleClick}>
                     <MenuLink href={item.href}>
                       <LinkLabel isPushed={isPushed}>{item.label}</LinkLabel>
                       {item.status && (
@@ -68,7 +69,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           );
         }
         return (
-          <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+          <MenuEntry key={entry.label} isActive={ entry.href === location.pathname || (entry !== undefined && entry.href !== undefined && entry.href.length > 1 && location.pathname.startsWith(entry.href)) } className={calloutClass}>
             <MenuLink href={entry.href} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
