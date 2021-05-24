@@ -1,9 +1,9 @@
 import { rest, graphql } from "msw";
 import { existingAddress1, existingAddress2, nonexistentAddress } from "./mockAddresses";
-import { profileApi } from "../constants/common";
+import { profileApi, profileSubgraphApi } from "../constants/common";
 import { IPFS_GATEWAY } from "../constants/nfts";
 
-const subgraph = graphql.link("https://api.thegraph.com/subgraphs/name/pancakeswap/profile");
+const subgraph = graphql.link(profileSubgraphApi);
 
 const handlers = [
   rest.get(`${profileApi}/api/users/${existingAddress1}`, (req, res, ctx) => {
