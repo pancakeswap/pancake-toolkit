@@ -4,7 +4,7 @@ import { request, gql } from "graphql-request";
 import Cookies from "js-cookie";
 import web3NoAccount from "./utils/web3";
 import { getProfileContract } from "./utils/contractHelpers";
-import { profileApi, profileSubgraphApi } from "./constants/common";
+import { profileApi, profileSubgraphApi, MAINNET_CHAIN_ID } from "./constants/common";
 import { campaignMap } from "./constants/campaigns";
 import teamsList from "./constants/teams";
 import { Achievement, Team, GetProfileResponse, Profile, Nft, UserPointIncreaseEvent } from "./types";
@@ -19,7 +19,7 @@ type SdkConstructorArguments = {
 class PancakeProfileSdk {
   web3 = web3NoAccount;
 
-  chainId = 56;
+  chainId = MAINNET_CHAIN_ID;
 
   profileContract: Contract;
 
