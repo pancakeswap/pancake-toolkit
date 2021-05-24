@@ -1,5 +1,5 @@
 import { Nft, NftType, NftSource } from "../types";
-import { IPFS_GATEWAY } from './common'
+import { IPFS_GATEWAY } from "./common";
 
 export const nftSources: NftSource = {
   [NftType.PANCAKE]: {

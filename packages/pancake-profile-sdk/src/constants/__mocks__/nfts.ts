@@ -1,5 +1,5 @@
 import { Nft, NftSource, NftType } from "../../types";
-import { IPFS_GATEWAY } from '../common'
+import { IPFS_GATEWAY } from "../common";
 
 // This mock file is needed to properly test different NFT types
 // and also not rely in tests on any value changes in the future
