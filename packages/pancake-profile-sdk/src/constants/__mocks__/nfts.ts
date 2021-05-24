@@ -1,9 +1,8 @@
 import { Nft, NftSource, NftType } from "../../types";
+import { IPFS_GATEWAY } from '../common'
 
 // This mock file is needed to properly test different NFT types
 // and also not rely in tests on any value changes in the future
-
-export const IPFS_GATEWAY = "https://gateway.pinata.cloud";
 
 export const nftSources: NftSource = {
   [NftType.PANCAKE]: {
@@ -30,7 +29,7 @@ const Nfts: Nft[] = [
       lg: "mixie-1-lg.png",
       md: "mixie-1-md.png",
       sm: "mixie-1-sm.png",
-      ipfs: "https://gateway.pinata.cloud/ipfs/QmQiRpr7ZMkzV7qbqVaUZ1LiuHTTdpWmapUhaY6ZGmVLQ4/001-Chef-Mixie.png",
+      ipfs: `${IPFS_GATEWAY}/ipfs/QmQiRpr7ZMkzV7qbqVaUZ1LiuHTTdpWmapUhaY6ZGmVLQ4/001-Chef-Mixie.png`,
     },
     sortOrder: 999,
     identifier: "001-Chef-Mixie",
@@ -44,7 +43,7 @@ const Nfts: Nft[] = [
       lg: "sleepy-lg.png",
       md: "sleepy-md.png",
       sm: "sleepy-sm.png",
-      ipfs: "https://gateway.pinata.cloud/ipfs/QmYD9AtzyQPjSa9jfZcZq88gSaRssdhGmKqQifUDjGFfXm/sleepy.png",
+      ipfs: `${IPFS_GATEWAY}/ipfs/QmYD9AtzyQPjSa9jfZcZq88gSaRssdhGmKqQifUDjGFfXm/sleepy.png`,
       blur: "sleepy-blur.png",
     },
     sortOrder: 999,
@@ -59,7 +58,7 @@ const Nfts: Nft[] = [
       lg: "swapsies-lg.png",
       md: "swapsies-md.png",
       sm: "swapsies-sm.png",
-      ipfs: "https://gateway.pinata.cloud/ipfs/QmXdHqg3nywpNJWDevJQPtkz93vpfoHcZWQovFz2nmtPf5/swapsies.png",
+      ipfs: `${IPFS_GATEWAY}/ipfs/QmXdHqg3nywpNJWDevJQPtkz93vpfoHcZWQovFz2nmtPf5/swapsies.png`,
       blur: "swapsies-blur.png",
     },
     sortOrder: 999,

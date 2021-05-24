@@ -1,5 +1,6 @@
 import Web3 from "web3";
-import Nfts, { IPFS_GATEWAY, nftSources } from "../constants/nfts";
+import Nfts, { nftSources } from "../constants/nfts";
+import { IPFS_GATEWAY } from '../constants/common';
 import { Nft, NftUriData } from "../types";
 import { getNftAddress } from "./addressHelpers";
 import { getErc721Contract } from "./contractHelpers";

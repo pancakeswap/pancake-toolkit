@@ -1,7 +1,6 @@
 import { rest, graphql } from "msw";
 import { existingAddress1, existingAddress2, nonexistentAddress } from "./mockAddresses";
-import { profileApi, profileSubgraphApi } from "../constants/common";
-import { IPFS_GATEWAY } from "../constants/nfts";
+import { profileApi, profileSubgraphApi, IPFS_GATEWAY } from "../constants/common";
 
 const subgraph = graphql.link(profileSubgraphApi);
 

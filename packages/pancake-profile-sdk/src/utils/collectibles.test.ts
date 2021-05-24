@@ -1,7 +1,7 @@
-import { MAINNET_CHAIN_ID } from "../constants/common";
+import { MAINNET_CHAIN_ID, IPFS_GATEWAY } from "../constants/common";
 import web3NoAccount from "./web3";
 import { getIdentifierKeyFromAddress, getTokenUrl, getTokenUriData, getNftByTokenId } from "./collectibles";
-import nfts, { IPFS_GATEWAY } from "../constants/nfts";
+import nfts from "../constants/nfts";
 import { server, rest } from "../mocks/server";
 
 jest.mock("../constants/nfts");
