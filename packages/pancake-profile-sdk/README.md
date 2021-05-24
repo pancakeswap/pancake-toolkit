@@ -17,16 +17,16 @@ If you're looking for React-ready solution - take a look at the [profile-hook](h
 
 ## Installation
 
-Install `@pancakeswap-libs/profile-sdk` into your project with npm:
+Install `@pancakeswap/profile-sdk` into your project with npm:
 
 ```bash
-npm install @pancakeswap-libs/profile-sdk --save
+npm install @pancakeswap/profile-sdk --save
 ```
 
 or yarn:
 
 ```bash
-yarn add @pancakeswap-libs/profile-sdk
+yarn add @pancakeswap/profile-sdk
 ```
 
 This package requires `web3` to be installed in your project. If you're using TypeScript you also should install `web3-eth-contract` and `web3-utils` to avoid type errors, although depending on your TypeScript and ESlint configuration you might skip installing those (since they are sub-packages of web3).
@@ -45,7 +45,7 @@ yarn add web3
 First set is to initialize the SDK with the following:
 
 ```js
-import PancakeProfileSdk from "@pancakeswap-libs/profile-sdk";
+import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 ```
@@ -59,7 +59,7 @@ You can pass optional arguments to the constructor:
 - `chainId` - what chain ID to use, if not provided defaults to `56`
 
 ```js
-import PancakeProfileSdk from "@pancakeswap-libs/profile-sdk";
+import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 import Web3 from "web3";
 
 const httpProvider = new Web3.providers.HttpProvider("https://mycustomnode.com", {
@@ -75,7 +75,7 @@ const pancakeSdk = new PancakeProfileSdk(myWeb3, 97);
 Returns username for a given address. If the address does not have a profile or there is an error - returns empty string `""`.
 
 ```js
-import PancakeProfileSdk from "@pancakeswap-libs/profile-sdk";
+import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 const username = pancakeSdk.getUsername("0x123456789");
@@ -87,7 +87,7 @@ console.log(username); // "Matatabi"
 Returns team information for the team ID. In case of network error returns null. Note that at the moment `points` will return `0` for all teams (total team points will be calculated soon).
 
 ```js
-import PancakeProfileSdk from "@pancakeswap-libs/profile-sdk";
+import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 const team = pancakeSdk.getTeam(1);
@@ -118,7 +118,7 @@ Returns full profile data for a given address. Under the hood retrieves username
 It also sets `profile_${address}` cookie containing username and avatar (now only for pancakeswap.finance domain, maybe configurable in future versions)
 
 ```js
-import PancakeProfileSdk from "@pancakeswap-libs/profile-sdk";
+import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 const profile = pancakeSdk.getProfile("0x123456789");
@@ -174,7 +174,7 @@ console.log(profile);
 Returns array of achievements for a given address. If address has no achievements or no profile at all - returns empty array `[]`.
 
 ```js
-import PancakeProfileSdk from "@pancakeswap-libs/profile-sdk";
+import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 
