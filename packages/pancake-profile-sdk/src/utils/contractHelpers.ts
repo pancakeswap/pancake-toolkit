@@ -10,9 +10,9 @@ const getContract = (abi: AbiItem, address: string, web3: Web3): Contract => {
 };
 
 export const getErc721Contract = (address: string, web3?: Web3): Contract => {
-  return getContract((erc721Abi as unknown) as AbiItem, address, web3);
+  return getContract(erc721Abi as unknown as AbiItem, address, web3);
 };
 
 export const getProfileContract = (web3: Web3, chainId: number): Contract => {
-  return getContract((profileABI as unknown) as AbiItem, getPancakeProfileAddress(chainId), web3);
+  return getContract(profileABI as unknown as AbiItem, getPancakeProfileAddress(chainId), web3);
 };
