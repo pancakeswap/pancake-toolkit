@@ -1,0 +1,9 @@
+[build]
+  base = "packages/token-lists/"
+  publish = "lists/"
+
+[[redirects]]
+  from = "/"
+  to = "/pancakeswap-default.json"
+  status = 301
+  force = false
