@@ -1,11 +1,18 @@
 import fs from "fs";
 import path from "path";
 import { getAddress } from "@ethersproject/address";
-import pancakeswap from "./tokens/pancakeswap.json";
+import pancakeswapDefault from "./tokens/pancakeswap-default.json";
+import pancakeswapExtended from "./tokens/pancakeswap-extended.json";
 
-const checksumAddresses = (): void => {
+const lists = {
+  "pancakeswap-default": pancakeswapDefault,
+  "pancakeswap-extended": pancakeswapExtended,
+};
+
+const checksumAddresses = (listName: string): void => {
   let badChecksumCount = 0;
-  const updatedList = pancakeswap.reduce((tokenList, token) => {
+  const listToChecksum = lists[listName];
+  const updatedList = listToChecksum.reduce((tokenList, token) => {
     const checksummedAddress = getAddress(token.address);
     if (checksummedAddress !== token.address) {
       badChecksumCount += 1;
@@ -17,7 +24,7 @@ const checksumAddresses = (): void => {
 
   if (badChecksumCount > 0) {
     console.info(`Found and fixed ${badChecksumCount} non-checksummed addreses`);
-    const tokenListPath = `${path.resolve()}/src/tokens/pancakeswap.json`;
+    const tokenListPath = `${path.resolve()}/src/tokens/${listName}.json`;
     console.info("Saving updated list to ", tokenListPath);
     const stringifiedList = JSON.stringify(updatedList, null, 2);
     fs.writeFileSync(tokenListPath, stringifiedList);

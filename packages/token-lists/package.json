@@ -6,9 +6,12 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && rollup -c",
-    "checksum:pcs": "yarn build && node ./dist checksum",
-    "generate:pcs": "yarn test && yarn build && node ./dist generate",
-    "makelist:pcs": "yarn checksum:pcs && yarn generate:pcs",
+    "checksum:pcs-default": "yarn build && node ./dist checksum pancakeswap-default",
+    "generate:pcs-default": "yarn test && yarn build && node ./dist generate pancakeswap-default",
+    "makelist:pcs-default": "yarn checksum:pcs-default && yarn generate:pcs-default",
+    "checksum:pcs-extended": "yarn build && node ./dist checksum pancakeswap-extended",
+    "generate:pcs-extended": "yarn test && yarn build && node ./dist generate pancakeswap-extended",
+    "makelist:pcs-extended": "yarn checksum:pcs-extended && yarn generate:pcs-extended",
     "test": "jest"
   },
   "devDependencies": {

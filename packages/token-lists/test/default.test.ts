@@ -45,8 +45,8 @@ expect.extend({
 const ajv = new Ajv({ allErrors: true, format: "full" });
 const validate = ajv.compile(schema);
 
-describe("buildList", () => {
-  const defaultTokenList = buildList();
+describe.each([["pancakeswap-default"], ["pancakeswap-extended"]])("buildList %s", (listName) => {
+  const defaultTokenList = buildList(listName);
 
   it("validates", () => {
     expect(validate(defaultTokenList)).toBeValid(validate.errors);
