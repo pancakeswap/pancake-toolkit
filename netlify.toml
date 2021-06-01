@@ -7,3 +7,9 @@
   to = "/pancakeswap-default.json"
   status = 301
   force = false
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
