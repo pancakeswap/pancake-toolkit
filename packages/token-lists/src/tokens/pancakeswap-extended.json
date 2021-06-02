@@ -208,14 +208,6 @@
     "logoURI": "https://tokens.pancakeswap.finance/images/0x1ba42e5193dfa8b03d15dd1b86a3113bbbef8eeb.png"
   },
   {
-    "name": "Dai Token",
-    "symbol": "DAI",
-    "address": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png"
-  },
-  {
     "name": "YFII.finance Token",
     "symbol": "YFII",
     "address": "0x7F70642d88cf1C4a3a7abb072B53B929b653edA5",
@@ -246,14 +238,6 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x007ea5c0ea75a8df45d288a4debdd5bb633f9e56.png"
-  },
-  {
-    "name": "Polkadot Token",
-    "symbol": "DOT",
-    "address": "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x7083609fce4d1d8dc0c979aab8c869ea2c873402.png"
   },
   {
     "name": "Ankr",
@@ -1414,14 +1398,6 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x4FA7163E153419E0E1064e418dd7A99314Ed27b6.png"
-  },
-  {
-    "name": "Refinable",
-    "symbol": "FINE",
-    "address": "0x4e6415a5727ea08aAE4580057187923aeC331227",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x4e6415a5727ea08aae4580057187923aec331227.png"
   },
   {
     "name": "XEND",
