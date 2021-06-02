@@ -794,9 +794,9 @@
   {
     "name": "Wault",
     "symbol": "WAULTx",
-    "address": "0xB64E638E60D154B43f660a6BF8fD8a3b249a6a2",
+    "address": "0xB64E638E60D154B43f660a6BF8fD8a3b249a6a21",
     "chainId": 56,
     "decimals": 18,
-    "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xB64E638E60D154B43f660a6BF8fD8a3b249a6a2/logo.png"
+    "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xB64E638E60D154B43f660a6BF8fD8a3b249a6a21/logo.png"
   }
 ]
