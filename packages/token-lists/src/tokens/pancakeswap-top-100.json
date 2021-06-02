@@ -1,15 +1,4 @@
-{
-  "name": "PancakeSwap Top 100",
-  "timestamp": "2021-03-17T09:56:23Z",
-  "version": {
-    "major": 2,
-    "minor": 10,
-    "patch": 0
-  },
-  "tags": {},
-  "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
-  "keywords": ["pancake", "top 100"],
-  "tokens": [
+[
     {
       "name": "Binance Pegged BUSD",
       "symbol": "BUSD",
@@ -811,4 +800,3 @@
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xb64e638e60d154b43f660a6bf8fd8a3b249a6a21/logo.png"
     }
   ]
-}
