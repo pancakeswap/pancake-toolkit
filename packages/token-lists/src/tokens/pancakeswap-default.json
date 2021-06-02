@@ -114,7 +114,7 @@
   {
     "name": "Dopple Finance",
     "symbol": "DOP",
-    "address": "0x844fa82f1e54824655470970f7004dd90546bb28",
+    "address": "0x844FA82f1E54824655470970F7004Dd90546bB28",
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x844fa82f1e54824655470970f7004dd90546bb28.png"
