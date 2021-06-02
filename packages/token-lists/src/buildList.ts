@@ -8,7 +8,7 @@ import pancakeswapExtended from "./tokens/pancakeswap-extended.json";
 const lists = {
   "pancakeswap-default": {
     list: pancakeswapDefault,
-    name: "PancakeSwap Default Token List",
+    name: "PancakeSwap Default",
     keywords: ["pancakeswap", "default"],
     logoURI:
       "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
@@ -16,7 +16,7 @@ const lists = {
   },
   "pancakeswap-extended": {
     list: pancakeswapExtended,
-    name: "PancakeSwap Extended Token List",
+    name: "PancakeSwap Extended",
     keywords: ["pancakeswap", "extended"],
     logoURI:
       "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
