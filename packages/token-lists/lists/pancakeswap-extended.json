@@ -1,6 +1,6 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2021-06-02T08:15:15.541Z",
+  "timestamp": "2021-06-02T08:19:14.660Z",
   "version": {
     "major": 2,
     "minor": 10,
@@ -869,6 +869,14 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0xa04F060077D90Fe2647B61e4dA4aD1F97d6649dc.png"
     },
     {
+      "name": "Meter",
+      "symbol": "MTRG",
+      "address": "0xBd2949F67DcdC549c6Ebe98696449Fa79D988A9F",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbd2949f67dcdc549c6ebe98696449fa79d988a9f.png"
+    },
+    {
       "name": "Mirror TSLA Token",
       "symbol": "mTSLA",
       "address": "0xF215A127A196e3988C09d052e16BcFD365Cd7AA3",
@@ -1157,6 +1165,14 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0xc5a49b4cbe004b6fd55b30ba1de6ac360ff9765d.png"
     },
     {
+      "name": "SWGToken",
+      "symbol": "SWG",
+      "address": "0xe792f64C582698b8572AAF765bDC426AC3aEfb6B",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe792f64c582698b8572aaf765bdc426ac3aefb6b.png"
+    },
+    {
       "name": "Swirge Pay",
       "symbol": "SWGb",
       "address": "0xE40255C5d7fa7ceEc5120408C78C787CECB4cfdb",
@@ -1251,6 +1267,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x85eac5ac2f758618dfa09bdbe0cf174e7d574d5b.png"
+    },
+    {
+      "name": "True USD",
+      "symbol": "TUSD",
+      "address": "0x14016E85a25aeb13065688cAFB43044C2ef86784",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x14016e85a25aeb13065688cafb43044c2ef86784.png"
     },
     {
       "name": "Trust Wallet",
