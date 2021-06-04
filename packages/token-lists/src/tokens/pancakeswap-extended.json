@@ -344,6 +344,14 @@
     "logoURI": "https://tokens.pancakeswap.finance/images/0x5F88AB06e8dfe89DF127B2430Bba4Af600866035.png"
   },
   {
+      "name": "Kesef Finance",
+      "symbol": "KSF",
+      "address": "0xf056c78AE863b08808c1FE3c0f8a7dB2a4FDcf28",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xf056c78AE863b08808c1FE3c0f8a7dB2a4FDcf28.png"
+  },
+  {
     "name": "USDX",
     "symbol": "USDX",
     "address": "0x1203355742e76875154C0D13eB81DCD7711dC7d9",

@@ -1,9 +1,9 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2021-06-04T12:20:21.994Z",
+  "timestamp": "2021-06-04T21:07:17.397Z",
   "version": {
     "major": 2,
-    "minor": 13,
+    "minor": 14,
     "patch": 0
   },
   "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
@@ -747,6 +747,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0xDAe6c2A48BFAA66b43815c5548b10800919c993E.png"
+    },
+    {
+      "name": "Kesef Finance",
+      "symbol": "KSF",
+      "address": "0xf056c78AE863b08808c1FE3c0f8a7dB2a4FDcf28",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xf056c78AE863b08808c1FE3c0f8a7dB2a4FDcf28.png"
     },
     {
       "name": "Qian Governance Token",
