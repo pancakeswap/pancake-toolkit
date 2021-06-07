@@ -31,7 +31,7 @@ For list to be considered valid it need to satisfy the following criteria:
 ## How to update Top100 Token list
 
 Note - this is not something we expect pull requests for. 
- 
+
 ```shell script
 # Fetch the Top100 Tokens on PancakeSwap v2, and update list.
 $ yarn fetch:pcs-top-100
