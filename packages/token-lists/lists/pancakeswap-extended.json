@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2021-06-08T02:49:42.813Z",
+  "timestamp": "2021-06-08T08:04:37.907Z",
   "version": {
     "major": 2,
     "minor": 14,
-    "patch": 1
+    "patch": 2
   },
   "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
   "keywords": [
@@ -278,7 +278,7 @@
     },
     {
       "name": "BoringDAO",
-      "symbol": "BOR",
+      "symbol": "BORING",
       "address": "0xffEecbf8D7267757c2dc3d13D730E97E15BfdF7F",
       "chainId": 56,
       "decimals": 18,

@@ -1521,7 +1521,7 @@
   },
   {
     "name": "BoringDAO",
-    "symbol": "BOR",
+    "symbol": "BORING",
     "address": "0xffEecbf8D7267757c2dc3d13D730E97E15BfdF7F",
     "chainId": 56,
     "decimals": 18,
