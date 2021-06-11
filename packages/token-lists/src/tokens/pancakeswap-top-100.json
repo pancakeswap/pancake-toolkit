@@ -736,8 +736,8 @@
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x8b303d5BbfBbf46F1a4d9741E491e06986894e18/logo.png"
   },
   {
-    "name": "τDogecoin",
-    "symbol": "ΤDOGE",
+    "name": "tDogecoin",
+    "symbol": "tDOGE",
     "address": "0xe550a593d09FBC8DCD557b5C88Cea6946A8b404A",
     "chainId": 56,
     "decimals": 8,
