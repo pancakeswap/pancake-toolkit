@@ -48,54 +48,6 @@
     "logoURI": "https://tokens.pancakeswap.finance/images/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
   },
   {
-    "name": "Bunny Token",
-    "symbol": "BUNNY",
-    "address": "0xC9849E6fdB743d08fAeE3E34dd2D1bc69EA11a51",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51.png"
-  },
-  {
-    "name": "Venus Token",
-    "symbol": "XVS",
-    "address": "0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63.png"
-  },
-  {
-    "name": "SafeMoon",
-    "symbol": "SAFEMOON",
-    "address": "0x8076C74C5e3F5852037F31Ff0093Eeb8c8ADd8D3",
-    "chainId": 56,
-    "decimals": 9,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x8076c74c5e3f5852037f31ff0093eeb8c8add8d3.png"
-  },
-  {
-    "name": "Alpaca",
-    "symbol": "ALPACA",
-    "address": "0x8F0528cE5eF7B51152A59745bEfDD91D97091d2F",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x8f0528ce5ef7b51152a59745befdd91d97091d2f.png"
-  },
-  {
-    "name": "Polkadot Token",
-    "symbol": "DOT",
-    "address": "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x7083609fce4d1d8dc0c979aab8c869ea2c873402.png"
-  },
-  {
-    "name": "Refinable",
-    "symbol": "FINE",
-    "address": "0x4e6415a5727ea08aAE4580057187923aeC331227",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x4e6415a5727ea08aae4580057187923aec331227.png"
-  },
-  {
     "name": "Binance Pegged DAI",
     "symbol": "DAI",
     "address": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
@@ -110,13 +62,5 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png"
-  },
-  {
-    "name": "Dopple Finance",
-    "symbol": "DOP",
-    "address": "0x844FA82f1E54824655470970F7004Dd90546bB28",
-    "chainId": 56,
-    "decimals": 18,
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x844fa82f1e54824655470970f7004dd90546bb28.png"
   }
 ]
