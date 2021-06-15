@@ -1,8 +1,13 @@
 import React from "react";
-import times from "lodash/times";
+import { random, times } from "lodash";
+import styled from "styled-components";
 import Flex from "../Box/Flex";
+import Box from "../Box/Box";
 import BackgroundImage from "./BackgroundImage";
 import Img from "./Image";
+import TokenImage from "./TokenImage";
+import TokenPairImage from "./TokenPairImage";
+import tokenList from "./tokens";
 
 export default {
   title: "Components/Image",
@@ -75,6 +80,46 @@ export const LazyBackgrounds: React.FC = () => {
           mr="16px"
         />
       ))}
+    </Flex>
+  );
+};
+
+const StyledBox = styled(Box)`
+  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+`;
+
+export const TokenImages: React.FC = () => {
+  const tokens = Object.values(tokenList).filter((token) => !!token?.address);
+  return (
+    <Flex flexWrap="wrap">
+      {tokens.map((token) => {
+        return (
+          <StyledBox key={token.symbol} p="16px">
+            <TokenImage tokenAddress={token.address[56]} height={64} width={64} />
+          </StyledBox>
+        );
+      })}
+    </Flex>
+  );
+};
+
+export const TokenPairImages: React.FC = () => {
+  const tokens = Object.values(tokenList).filter((token) => !!token?.address);
+  return (
+    <Flex flexWrap="wrap">
+      {tokens.map((token) => {
+        const randomTokenIndex = random(0, tokens.length - 1);
+        return (
+          <StyledBox key={token.symbol} p="16px">
+            <TokenPairImage
+              primaryTokenAddress={token.address[56]}
+              secondaryTokenAddress={tokens[randomTokenIndex].address[56]}
+              height={64}
+              width={64}
+            />
+          </StyledBox>
+        );
+      })}
     </Flex>
   );
 };
