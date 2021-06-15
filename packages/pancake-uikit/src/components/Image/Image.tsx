@@ -22,24 +22,29 @@ const Placeholder = styled.div`
 `;
 
 const Image: React.FC<ImageProps> = ({ src, alt, ...otherProps }) => {
-  const imgRef = useRef(null);
+  const imgRef = useRef<HTMLImageElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const img = imgRef.current as unknown as HTMLImageElement;
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const { isIntersecting } = entry;
-        if (isIntersecting) {
-          setIsLoaded(true);
-          observer.disconnect();
-        }
-      });
-    }, observerOptions);
-    observer.observe(img);
+    let observer: IntersectionObserver;
+
+    if (imgRef.current) {
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const { isIntersecting } = entry;
+          if (isIntersecting) {
+            setIsLoaded(true);
+            observer.disconnect();
+          }
+        });
+      }, observerOptions);
+      observer.observe(imgRef.current);
+    }
 
     return () => {
-      observer.disconnect();
+      if (observer) {
+        observer.disconnect();
+      }
     };
   }, [src]);
 
