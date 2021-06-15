@@ -1549,6 +1549,14 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0x44754455564474a89358b2c2265883df993b12f0.png"
     },
     {
+      "name": "Zenfuse",
+      "symbol": "ZEFU",
+      "address": "0x23EC58e45ac5313BCB6681F4f7827B8a8453AC45",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x23ec58e45ac5313bcb6681f4f7827b8a8453ac45.png"
+    },
+    {
       "name": "Zilliqa",
       "symbol": "ZIL",
       "address": "0xb86AbCb37C3A4B64f74f59301AFF131a1BEcC787",
