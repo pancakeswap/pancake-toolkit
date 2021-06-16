@@ -1,34 +1,38 @@
 import React from "react";
-import styled from "styled-components";
-import Flex from "../Box/Flex";
-import TokenImage from "./TokenImage";
-import { TokenPairImageProps } from "./types";
-
-const StyledSecondaryImage = styled(TokenImage)`
-  bottom: -4px;
-  position: absolute;
-  right: -4px;
-  z-index: 6;
-`;
+import Box from "../Box/Box";
+import { TokenPairImageProps, variants } from "./types";
+import { StyledPrimaryImage, StyledSecondaryImage } from "./styles";
 
 const TokenPairImage: React.FC<TokenPairImageProps> = ({
-  primaryTokenAddress,
   secondaryTokenAddress,
+  primaryTokenAddress,
   width,
   height,
+  variant = variants.DEFAULT,
+  primaryImageProps = {},
+  secondaryImageProps = {},
   ...props
 }) => {
+  const primaryImageSize = Math.floor(width * 0.83); // Arbitrary ratio
   const secondaryImageSize = Math.floor(width / 2);
 
   return (
-    <Flex alignItems="center" position="relative" display="inline-flex" width={width} height={height}>
-      <TokenImage tokenAddress={primaryTokenAddress} width={width} height={height} {...props} />
+    <Box position="relative" display="inline-block" width={width} height={height} {...props}>
+      <StyledPrimaryImage
+        variant={variant}
+        tokenAddress={primaryTokenAddress}
+        width={primaryImageSize}
+        height={primaryImageSize}
+        {...primaryImageProps}
+      />
       <StyledSecondaryImage
+        variant={variant}
         tokenAddress={secondaryTokenAddress}
         width={secondaryImageSize}
         height={secondaryImageSize}
+        {...secondaryImageProps}
       />
-    </Flex>
+    </Box>
   );
 };
 

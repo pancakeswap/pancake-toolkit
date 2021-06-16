@@ -95,7 +95,7 @@ export const TokenImages: React.FC = () => {
       {tokens.map((token) => {
         return (
           <StyledBox key={token.symbol} p="16px">
-            <TokenImage tokenAddress={token.address[56]} height={64} width={64} />
+            <TokenImage tokenAddress={token.address[56]} height={64} width={64} title={token.symbol} />
           </StyledBox>
         );
       })}
@@ -116,6 +116,17 @@ export const TokenPairImages: React.FC = () => {
               secondaryTokenAddress={tokens[randomTokenIndex].address[56]}
               height={64}
               width={64}
+              title={token.symbol}
+              mr="16px"
+            />
+
+            <TokenPairImage
+              variant="inverted"
+              primaryTokenAddress={token.address[56]}
+              secondaryTokenAddress={tokens[randomTokenIndex].address[56]}
+              height={64}
+              width={64}
+              title={token.symbol}
             />
           </StyledBox>
         );

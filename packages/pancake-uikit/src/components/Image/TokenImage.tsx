@@ -11,7 +11,6 @@ const StyledTokenImage = styled(BackgroundImage)`
   display: inline-flex;
   height: ${({ height }) => `${height}px`};
   width: ${({ width }) => `${width}px`};
-  z-index: 5;
 `;
 
 const TokenImage: React.FC<TokenImageProps> = ({

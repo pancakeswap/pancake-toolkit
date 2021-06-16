@@ -35,7 +35,6 @@ it("renders correctly", () => {
       display: inline-flex;
       height: 48px;
       width: 48px;
-      z-index: 5;
     }
 
     <div
