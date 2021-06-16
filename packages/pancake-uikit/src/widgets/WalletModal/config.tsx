@@ -45,6 +45,11 @@ const connectors: Config[] = [
     icon: SafePalWallet,
     connectorId: ConnectorNames.Injected,
   },
+  {
+    title: "imToken Wallet",
+    icon: imToken,
+    connectorId: ConnectorNames.Injected,
+  }
 ];
 
 export default connectors;
