@@ -3,7 +3,7 @@ import observerOptions from "./options";
 import Wrapper from "./Wrapper";
 import { ImageProps } from "./types";
 
-const BackgroundImage: React.FC<ImageProps> = ({ src, ...otherProps }) => {
+const BackgroundImage: React.FC<ImageProps> = ({ src, responsive, width, height, ...props }) => {
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const BackgroundImage: React.FC<ImageProps> = ({ src, ...otherProps }) => {
     };
   }, [src]);
 
-  return <Wrapper ref={imgRef} {...otherProps} />;
+  return <Wrapper ref={imgRef} responsive={responsive} $width={width} $height={height} {...props} />;
 };
 
 export default BackgroundImage;

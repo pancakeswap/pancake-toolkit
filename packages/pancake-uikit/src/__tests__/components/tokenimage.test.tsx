@@ -10,38 +10,43 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
-      position: relative;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 48px;
-      max-width: 48px;
+      height: 100%;
       max-height: 48px;
+      max-width: 48px;
+      position: relative;
       width: 100%;
-      padding-top: 0%;
+    }
+
+    .c0:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+      width: 100%;
+    }
+
+    .c2 {
+      bottom: 0;
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
     }
 
     .c1 {
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
       background-origin: border-box;
-      border: 2px solid rgba(0,0,0,0.25);
+      border: 1px solid rgba(0,0,0,0.25);
       border-radius: 50%;
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      height: 48px;
-      width: 48px;
     }
 
     <div
         class="c0 c1"
-        height="48"
-        width="48"
-      />
+      >
+        <div
+          class="c2"
+        />
+      </div>
     </DocumentFragment>
   `);
 });

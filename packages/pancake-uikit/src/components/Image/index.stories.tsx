@@ -17,7 +17,7 @@ export default {
 export const Image: React.FC = () => {
   return (
     <div>
-      <Img src="https://via.placeholder.com/800x400" width={800} height={400} alt="test" />
+      <Img src="https://via.placeholder.com/800x400" width={800} height={400} alt="test" responsive={false} />
       <div>Image</div>
     </div>
   );
@@ -26,7 +26,7 @@ export const Image: React.FC = () => {
 export const ImageResponsive: React.FC = () => {
   return (
     <div>
-      <Img src="https://via.placeholder.com/800x400" width={800} height={400} responsive />
+      <Img src="https://via.placeholder.com/800x400" width={800} height={400} />
       <div>Image</div>
     </div>
   );
@@ -86,6 +86,8 @@ export const LazyBackgrounds: React.FC = () => {
 
 const StyledBox = styled(Box)`
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  flex-basis: 100px;
+  text-align: center;
 `;
 const tokenProps = { baseUrl: "https://pancakeswap.finance/images/tokens" };
 
@@ -110,6 +112,20 @@ export const TokenImages: React.FC = () => {
   );
 };
 
+export const ResponsiveTokenImage: React.FC = () => {
+  return (
+    <Box width="10%" style={{ backgroundColor: "salmon" }}>
+      <TokenImage
+        baseUrl="https://pancakeswap.finance/images/tokens"
+        tokenAddress={tokenList.cake.address[56]}
+        height={64}
+        width={64}
+        title={tokenList.cake.symbol}
+      />
+    </Box>
+  );
+};
+
 export const TokenPairImages: React.FC = () => {
   const tokens = Object.values(tokenList).filter((token) => !!token?.address);
   return (
@@ -124,7 +140,7 @@ export const TokenPairImages: React.FC = () => {
               height={64}
               width={64}
               title={token.symbol}
-              mr="16px"
+              mb="16px"
               primaryImageProps={tokenProps}
               secondaryImageProps={tokenProps}
             />

@@ -1,10 +1,10 @@
-import { ImgHTMLAttributes } from "react";
+import { HTMLAttributes, ImgHTMLAttributes } from "react";
 import { SpaceProps } from "styled-system";
 import { BoxProps } from "../Box";
 
-export interface ContainerProps {
-  width: number;
-  height: number;
+export interface WrapperProps extends SpaceProps, HTMLAttributes<HTMLDivElement> {
+  $width: number;
+  $height: number;
   responsive?: boolean;
 }
 
@@ -12,6 +12,7 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement>, SpacePr
   width: number;
   height: number;
   responsive?: boolean;
+  wrapperProps?: WrapperProps;
 }
 
 export interface TokenImageBaseProps extends Omit<ImageProps, "src"> {

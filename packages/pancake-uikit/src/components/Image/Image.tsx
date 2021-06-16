@@ -5,23 +5,26 @@ import Wrapper from "./Wrapper";
 import { ImageProps } from "./types";
 
 const StyledImage = styled.img`
-  position: absolute;
-  top: 0;
+  bottom: 0;
+  height: auto;
   left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
-  height: 100%;
-  max-width: 100%;
 `;
 
 const Placeholder = styled.div`
-  position: absolute;
-  top: 0;
+  bottom: 0;
+  height: auto;
   left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
-  height: 100%;
 `;
 
-const Image: React.FC<ImageProps> = ({ src, alt, ...otherProps }) => {
+const Image: React.FC<ImageProps> = ({ responsive, src, alt, width, height, ...props }) => {
   const imgRef = useRef<HTMLImageElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -49,7 +52,7 @@ const Image: React.FC<ImageProps> = ({ src, alt, ...otherProps }) => {
   }, [src]);
 
   return (
-    <Wrapper ref={imgRef} {...otherProps}>
+    <Wrapper ref={imgRef} responsive={responsive} $height={height} $width={width} {...props}>
       {isLoaded ? <StyledImage src={src} alt={alt} /> : <Placeholder />}
     </Wrapper>
   );
