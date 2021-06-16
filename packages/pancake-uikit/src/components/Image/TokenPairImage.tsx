@@ -13,8 +13,8 @@ const TokenPairImage: React.FC<TokenPairImageProps> = ({
   secondaryImageProps = {},
   ...props
 }) => {
-  const primaryImageSize = Math.floor(width * 0.83); // Arbitrary ratio
-  const secondaryImageSize = Math.floor(width / 2);
+  const primaryImageSize = Math.floor(width * (variant === variants.DEFAULT ? 0.92 : 0.85)); // Arbitrary ratio
+  const secondaryImageSize = Math.floor(primaryImageSize / 2);
 
   return (
     <Box position="relative" display="inline-block" width={width} height={height} {...props}>

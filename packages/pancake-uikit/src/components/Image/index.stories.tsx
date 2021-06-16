@@ -87,6 +87,7 @@ export const LazyBackgrounds: React.FC = () => {
 const StyledBox = styled(Box)`
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
 `;
+const tokenProps = { baseUrl: "https://pancakeswap.finance/images/tokens" };
 
 export const TokenImages: React.FC = () => {
   const tokens = Object.values(tokenList).filter((token) => !!token?.address);
@@ -95,7 +96,13 @@ export const TokenImages: React.FC = () => {
       {tokens.map((token) => {
         return (
           <StyledBox key={token.symbol} p="16px">
-            <TokenImage tokenAddress={token.address[56]} height={64} width={64} title={token.symbol} />
+            <TokenImage
+              baseUrl="https://pancakeswap.finance/images/tokens"
+              tokenAddress={token.address[56]}
+              height={64}
+              width={64}
+              title={token.symbol}
+            />
           </StyledBox>
         );
       })}
@@ -118,6 +125,8 @@ export const TokenPairImages: React.FC = () => {
               width={64}
               title={token.symbol}
               mr="16px"
+              primaryImageProps={tokenProps}
+              secondaryImageProps={tokenProps}
             />
 
             <TokenPairImage
@@ -127,6 +136,8 @@ export const TokenPairImages: React.FC = () => {
               height={64}
               width={64}
               title={token.symbol}
+              primaryImageProps={tokenProps}
+              secondaryImageProps={tokenProps}
             />
           </StyledBox>
         );

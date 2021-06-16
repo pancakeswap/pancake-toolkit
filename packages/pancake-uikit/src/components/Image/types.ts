@@ -1,5 +1,6 @@
 import { ImgHTMLAttributes } from "react";
 import { SpaceProps } from "styled-system";
+import { BoxProps } from "../Box";
 
 export interface ContainerProps {
   width: number;
@@ -25,14 +26,14 @@ export const variants = {
 
 export type Variant = typeof variants[keyof typeof variants];
 
-export interface TokenPairImageProps extends SpaceProps {
+export interface TokenPairImageProps extends BoxProps {
   primaryTokenAddress: string;
   secondaryTokenAddress: string;
   variant?: Variant;
   height: number;
   width: number;
-  primaryImageProps?: TokenImageBaseProps;
-  secondaryImageProps?: TokenImageBaseProps;
+  primaryImageProps?: Omit<TokenImageBaseProps, "width" | "height">;
+  secondaryImageProps?: Omit<TokenImageBaseProps, "width" | "height">;
 }
 
 export interface TokenImageProps extends TokenImageBaseProps {

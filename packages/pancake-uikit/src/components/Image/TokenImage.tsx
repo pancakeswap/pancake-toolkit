@@ -6,7 +6,7 @@ import { TokenImageProps } from "./types";
 const StyledTokenImage = styled(BackgroundImage)`
   align-items: center;
   background-origin: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 50%;
   display: inline-flex;
   height: ${({ height }) => `${height}px`};
@@ -15,11 +15,11 @@ const StyledTokenImage = styled(BackgroundImage)`
 
 const TokenImage: React.FC<TokenImageProps> = ({
   tokenAddress,
-  baseUrl = "https://pancakeswap.finance/images/tokens",
+  baseUrl = "/images/tokens",
   imageFormat = "png",
   ...props
 }) => {
-  return <StyledTokenImage src={`${baseUrl}/${tokenAddress}.${imageFormat}`} {...props} />;
+  return <StyledTokenImage src={`${baseUrl}/${tokenAddress}.${imageFormat}`} responsive {...props} />;
 };
 
 export default TokenImage;
