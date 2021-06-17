@@ -147,8 +147,8 @@ export const TokenPairImages: React.FC = () => {
 
             <TokenPairImage
               variant="inverted"
-              primaryTokenAddress={token.address[56]}
-              secondaryTokenAddress={tokens[randomTokenIndex].address[56]}
+              primaryTokenAddress={tokens[randomTokenIndex].address[56]}
+              secondaryTokenAddress={token.address[56]}
               height={64}
               width={64}
               title={token.symbol}

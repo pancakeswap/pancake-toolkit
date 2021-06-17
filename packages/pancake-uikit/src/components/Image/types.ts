@@ -3,8 +3,8 @@ import { SpaceProps } from "styled-system";
 import { BoxProps } from "../Box";
 
 export interface WrapperProps extends SpaceProps, HTMLAttributes<HTMLDivElement> {
-  $width: number;
-  $height: number;
+  width: number;
+  height: number;
   responsive?: boolean;
 }
 
