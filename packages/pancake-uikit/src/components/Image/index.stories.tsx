@@ -3,6 +3,7 @@ import { random, times } from "lodash";
 import styled from "styled-components";
 import Flex from "../Box/Flex";
 import Box from "../Box/Box";
+import Text from "../Text/Text";
 import BackgroundImage from "./BackgroundImage";
 import Img from "./Image";
 import TokenImage from "./TokenImage";
@@ -17,16 +18,7 @@ export default {
 export const Image: React.FC = () => {
   return (
     <div>
-      <Img src="https://via.placeholder.com/800x400" width={800} height={400} alt="test" responsive={false} />
-      <div>Image</div>
-    </div>
-  );
-};
-
-export const ImageResponsive: React.FC = () => {
-  return (
-    <div>
-      <Img src="https://via.placeholder.com/800x400" width={800} height={400} />
+      <Img src="https://via.placeholder.com/800x400" width={800} height={400} alt="test" />
       <div>Image</div>
     </div>
   );
@@ -36,15 +28,6 @@ export const Background: React.FC = () => {
   return (
     <div>
       <BackgroundImage src="https://via.placeholder.com/800x400" width={800} height={400} mr="16px" />
-      <div>Background Image</div>
-    </div>
-  );
-};
-
-export const BackgroundResponsive: React.FC = () => {
-  return (
-    <div>
-      <BackgroundImage src="https://via.placeholder.com/800x400" width={800} height={400} responsive mr="16px" />
       <div>Background Image</div>
     </div>
   );
@@ -98,6 +81,9 @@ export const TokenImages: React.FC = () => {
       {tokens.map((token) => {
         return (
           <StyledBox key={token.symbol} p="16px">
+            <Text fontSize="14px" color="textSubtle">
+              {token.symbol}
+            </Text>
             <TokenImage
               baseUrl="https://pancakeswap.finance/images/tokens"
               tokenAddress={token.address[56]}
@@ -109,20 +95,6 @@ export const TokenImages: React.FC = () => {
         );
       })}
     </Flex>
-  );
-};
-
-export const ResponsiveTokenImage: React.FC = () => {
-  return (
-    <Box width="10%" style={{ backgroundColor: "salmon" }}>
-      <TokenImage
-        baseUrl="https://pancakeswap.finance/images/tokens"
-        tokenAddress={tokenList.cake.address[56]}
-        height={64}
-        width={64}
-        title={tokenList.cake.symbol}
-      />
-    </Box>
   );
 };
 
@@ -144,7 +116,6 @@ export const TokenPairImages: React.FC = () => {
               primaryImageProps={tokenProps}
               secondaryImageProps={tokenProps}
             />
-
             <TokenPairImage
               variant="inverted"
               primaryTokenAddress={tokens[randomTokenIndex].address[56]}

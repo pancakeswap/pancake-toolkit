@@ -5,13 +5,11 @@ import { BoxProps } from "../Box";
 export interface WrapperProps extends SpaceProps, HTMLAttributes<HTMLDivElement> {
   width: number;
   height: number;
-  responsive?: boolean;
 }
 
 export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement>, SpaceProps {
   width: number;
   height: number;
-  responsive?: boolean;
   wrapperProps?: WrapperProps;
 }
 

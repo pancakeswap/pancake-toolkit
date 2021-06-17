@@ -9,7 +9,7 @@ const StyledBackgroundImage = styled(Wrapper)`
   background-size: contain;
 `;
 
-const BackgroundImage: React.FC<ImageProps> = ({ src, responsive, width, height, ...props }) => {
+const BackgroundImage: React.FC<ImageProps> = ({ src, width, height, ...props }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const BackgroundImage: React.FC<ImageProps> = ({ src, responsive, width, height,
     };
   }, [src]);
 
-  return <StyledBackgroundImage ref={ref} responsive={responsive} width={width} height={height} {...props} />;
+  return <StyledBackgroundImage ref={ref} width={width} height={height} {...props} />;
 };
 
 export default BackgroundImage;

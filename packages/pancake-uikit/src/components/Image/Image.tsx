@@ -20,7 +20,7 @@ const Placeholder = styled.div`
   width: 100%;
 `;
 
-const Image: React.FC<ImageProps> = ({ responsive, src, alt, width, height, ...props }) => {
+const Image: React.FC<ImageProps> = ({ src, alt, width, height, ...props }) => {
   const imgRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -48,7 +48,7 @@ const Image: React.FC<ImageProps> = ({ responsive, src, alt, width, height, ...p
   }, [src]);
 
   return (
-    <Wrapper ref={imgRef} responsive={responsive} height={height} width={width} {...props}>
+    <Wrapper ref={imgRef} height={height} width={width} {...props}>
       {isLoaded ? <StyledImage src={src} alt={alt} /> : <Placeholder />}
     </Wrapper>
   );
