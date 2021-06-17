@@ -10,34 +10,39 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
-      height: 100%;
+      -webkit-align-self: start;
+      -ms-flex-item-align: start;
+      align-self: start;
       max-height: 48px;
       max-width: 48px;
       position: relative;
       width: 100%;
     }
 
-    .c0:before {
+    .c0:after {
       content: "";
       display: block;
       padding-top: 100%;
-      width: 100%;
     }
 
     .c2 {
-      bottom: 0;
-      height: auto;
+      height: 100%;
       left: 0;
       position: absolute;
-      right: 0;
       top: 0;
       width: 100%;
     }
 
-    .c1 {
-      background-origin: border-box;
-      border: 1px solid rgba(0,0,0,0.25);
+    .c1:before {
       border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.25);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 7;
     }
 
     <div
