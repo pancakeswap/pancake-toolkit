@@ -1,4 +1,9 @@
+// Common
+
+import bunnyPlaceholder from "./bunny-placeholder.svg";
+
 // Achievements
+
 import easterChampionBronze from "./achievements/easter-champion-bronze.svg";
 import easterChampionGold from "./achievements/easter-champion-gold.svg";
 import easterChampionSilver from "./achievements/easter-champion-silver.svg";
@@ -23,7 +28,31 @@ import ifoTen from "./achievements/ifo-ten.svg";
 import ifoWatch from "./achievements/ifo-watch.svg";
 import ifoWsote from "./achievements/ifo-wsote.svg";
 
-export const ifoBadges = {
+// Team images
+
+import syrupStormSm from "./teams/syrup-storm-sm.png";
+import syrupStormMd from "./teams/syrup-storm-md.png";
+import syrupStormLg from "./teams/syrup-storm-lg.png";
+import syrupStormAlt from "./teams/syrup-storm-alt.png";
+import syrupStormBg from "./teams/syrup-storm-bg.svg";
+
+import fearsomeFlippersSm from "./teams/fearsome-flippers-sm.png";
+import fearsomeFlippersMd from "./teams/fearsome-flippers-md.png";
+import fearsomeFlippersLg from "./teams/fearsome-flippers-lg.png";
+import fearsomeFlippersAlt from "./teams/fearsome-flippers-alt.png";
+import fearsomeFlippersBg from "./teams/fearsome-flippers-bg.svg";
+
+import chaoticCakersSm from "./teams/chaotic-cakers-sm.png";
+import chaoticCakersMd from "./teams/chaotic-cakers-md.png";
+import chaoticCakersLg from "./teams/chaotic-cakers-lg.png";
+import chaoticCakersAlt from "./teams/chaotic-cakers-alt.png";
+import chaoticCakersBg from "./teams/chaotic-cakers-bg.svg";
+
+interface ImageMap {
+  [key: string]: string;
+}
+
+const achievementBadges: ImageMap = {
   "easter-champion-bronze.svg": easterChampionBronze,
   "easter-champion-gold.svg": easterChampionGold,
   "easter-champion-silver.svg": easterChampionSilver,
@@ -44,24 +73,25 @@ export const ifoBadges = {
   "ifo-ten.svg": ifoTen,
   "ifo-watch.svg": ifoWatch,
   "ifo-wsote.svg": ifoWsote,
+  unknown: bunnyPlaceholder,
 };
 
-// Team images
+const teamImages: ImageMap = {
+  "syrup-storm-sm.png": syrupStormSm,
+  "syrup-storm-md.png": syrupStormMd,
+  "syrup-storm-lg.png": syrupStormLg,
+  "syrup-storm-alt.png": syrupStormAlt,
+  "syrup-storm-bg.svg": syrupStormBg,
+  "fearsome-flippers-sm.png": fearsomeFlippersSm,
+  "fearsome-flippers-md.png": fearsomeFlippersMd,
+  "fearsome-flippers-lg.png": fearsomeFlippersLg,
+  "fearsome-flippers-alt.png": fearsomeFlippersAlt,
+  "fearsome-flippers-bg.svg": fearsomeFlippersBg,
+  "chaotic-cakers-sm.png": chaoticCakersSm,
+  "chaotic-cakers-md.png": chaoticCakersMd,
+  "chaotic-cakers-lg.png": chaoticCakersLg,
+  "chaotic-cakers-alt.png": chaoticCakersAlt,
+  "chaotic-cakers-bg.svg": chaoticCakersBg,
+};
 
-export { default as chaoticCakersAlt } from "./teams/chaotic-cakers-alt.png";
-export { default as chaoticCakersSm } from "./teams/chaotic-cakers-sm.png";
-export { default as chaoticCakersMd } from "./teams/chaotic-cakers-md.png";
-export { default as chaoticCakersLg } from "./teams/chaotic-cakers-lg.png";
-export { default as chaoticCakersBg } from "./teams/chaotic-cakers-bg.svg";
-
-export { default as fearsomeFlippersAlt } from "./teams/fearsome-flippers-alt.png";
-export { default as fearsomeFlippersSm } from "./teams/fearsome-flippers-sm.png";
-export { default as fearsomeFlippersMd } from "./teams/fearsome-flippers-md.png";
-export { default as fearsomeFlippersLg } from "./teams/fearsome-flippers-lg.png";
-export { default as fearsomeFlippersBg } from "./teams/fearsome-flippers-bg.svg";
-
-export { default as syrupStormAlt } from "./teams/syrup-storm-alt.png";
-export { default as syrupStormSm } from "./teams/syrup-storm-sm.png";
-export { default as syrupStormMd } from "./teams/syrup-storm-md.png";
-export { default as syrupStormLg } from "./teams/syrup-storm-lg.png";
-export { default as syrupStormBg } from "./teams/syrup-storm-bg.svg";
+export { achievementBadges, teamImages, bunnyPlaceholder };
