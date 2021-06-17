@@ -20,7 +20,7 @@ const StyledTokenImage = styled(Image)`
 const TokenImage: React.FC<TokenImageProps> = ({
   tokenAddress,
   baseUrl = "/images/tokens",
-  imageFormat = "png",
+  imageFormat = "svg",
   ...props
 }) => {
   return <StyledTokenImage src={`${baseUrl}/${tokenAddress}.${imageFormat}`} {...props} />;
