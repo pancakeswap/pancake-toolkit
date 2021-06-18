@@ -2,8 +2,6 @@
 
 This package provides some handy functions to retrieve data for Pancakeswap Profile system.
 
-If you're looking for React-ready solution - take a look at the [profile-hook](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-profile-hook).
-
 ##### Table of Contents
 
 - [Installation](#installation)
