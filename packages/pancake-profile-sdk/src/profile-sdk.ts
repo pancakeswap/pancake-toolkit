@@ -79,7 +79,7 @@ class PancakeProfileSdk {
             address: userPoint.id,
             title: getAchievementTitle(campaignMeta, userPoint.campaignId),
             description: getAchievementDescription(campaignMeta),
-            badge: campaignMeta.badge ?? "unknown",
+            badge: campaignMeta?.badge ?? "unknown",
             points: Number(userPoint.points),
           },
         ];
