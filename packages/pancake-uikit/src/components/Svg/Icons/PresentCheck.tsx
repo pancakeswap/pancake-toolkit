@@ -1,11 +1,14 @@
+import { uniqueId } from "lodash";
 import React from "react";
 import Svg from "../Svg";
 import { SvgProps } from "../types";
 
 const Icon: React.FC<SvgProps> = (props) => {
+  const id = uniqueId("svg");
+
   return (
     <Svg viewBox="0 0 64 64" {...props}>
-      <g clipPath="url(#clip_present_0)">
+      <g clipPath={`url(#${id})`}>
         <g opacity="0.5">
           <path
             fillRule="evenodd"
