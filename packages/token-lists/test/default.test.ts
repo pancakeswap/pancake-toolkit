@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 import Ajv from "ajv";
 import fs from "fs";
+import path from "path";
 import { getAddress } from "@ethersproject/address";
 import { schema } from "@uniswap/token-lists";
 import currentPancakeswapDefaultList from "../lists/pancakeswap-default.json";
@@ -19,11 +20,16 @@ const currentLists = {
 const ajv = new Ajv({ allErrors: true, format: "full" });
 const validate = ajv.compile(schema);
 
+const pathToImages = process.env.CI
+  ? path.join(process.env.GITHUB_WORKSPACE, "packages", "token-lists", "lists", "images")
+  : path.join(path.resolve(), "lists", "images");
+const logoFiles = fs.readdirSync(pathToImages);
+
 // Modified https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_get
-const getByAjvPath = (obj, path: string, defaultValue = undefined) => {
+const getByAjvPath = (obj, propertyPath: string, defaultValue = undefined) => {
   const travel = (regexp) =>
     String.prototype.split
-      .call(path.substring(1), regexp)
+      .call(propertyPath.substring(1), regexp)
       .filter(Boolean)
       .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
   const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
@@ -81,9 +87,13 @@ expect.extend({
     const refersToLocalLogo =
       token.logoURI === `https://tokens.pancakeswap.finance/images/${token.address}.png` ||
       token.logoURI === `https://tokens.pancakeswap.finance/images/${token.address.toLowerCase()}.png`;
+    if (token.logoURI === "https://tokens.pancakeswap.finance/images/0x4e6415a5727ea08aae4580057187923aec331227.png") {
+      console.log("refersToLocalLogo", refersToLocalLogo);
+    }
     if (refersToLocalLogo) {
       const fileName = token.logoURI.split("/").pop();
-      hasLocalLogo = fs.existsSync(`./lists/images/${fileName}`);
+      // Note: fs.existsSync can't be used here because its not case sensetive
+      hasLocalLogo = logoFiles.includes(fileName);
     }
     if (hasTWLogo || hasLocalLogo) {
       return {
