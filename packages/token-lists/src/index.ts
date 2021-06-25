@@ -7,6 +7,7 @@ const command = process.argv[2];
 const listName = process.argv[3];
 const versionBump = process.argv[4];
 
+// Non-token change test
 switch (command) {
   case "checksum":
     checksumAddresses(listName);
