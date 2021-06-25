@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 import Ajv from "ajv";
+import fs from "fs";
 import { getAddress } from "@ethersproject/address";
 import { schema } from "@uniswap/token-lists";
 import currentPancakeswapDefaultList from "../lists/pancakeswap-default.json";
@@ -20,7 +21,8 @@ declare global {
   namespace jest {
     interface Matchers<R> {
       toBeDeclaredOnce(type: string, parameter: string, chainId: number): CustomMatcherResult;
-      toBeValid(validationErrors): CustomMatcherResult;
+      toBeValidTokenList(validationErrors): CustomMatcherResult;
+      toBeValidLogo(): CustomMatcherResult;
     }
   }
 }
@@ -38,7 +40,7 @@ expect.extend({
       pass: false,
     };
   },
-  toBeValid(received, validationErrors) {
+  toBeValidTokenList(received, validationErrors) {
     if (received) {
       return {
         message: () => ``,
@@ -47,6 +49,29 @@ expect.extend({
     }
     return {
       message: () => `Validation failed: ${JSON.stringify(validationErrors, null, 2)}`,
+      pass: false,
+    };
+  },
+  toBeValidLogo(token) {
+    // TW logos are always checksummed
+    const hasTWLogo =
+      token.logoURI === `https://assets.trustwalletapp.com/blockchains/smartchain/assets/${token.address}/logo.png`;
+    let hasLocalLogo = false;
+    const refersToLocalLogo =
+      token.logoURI === `https://tokens.pancakeswap.finance/images/${token.address}.png` ||
+      token.logoURI === `https://tokens.pancakeswap.finance/images/${token.address.toLowerCase()}.png`;
+    if (refersToLocalLogo) {
+      const fileName = token.logoURI.split("/").pop();
+      hasLocalLogo = fs.existsSync(`./lists/images/${fileName}`);
+    }
+    if (hasTWLogo || hasLocalLogo) {
+      return {
+        message: () => ``,
+        pass: true,
+      };
+    }
+    return {
+      message: () => `Token ${token.symbol} (${token.address}) has invalid logo: ${token.logoURI}`,
       pass: false,
     };
   },
@@ -61,7 +86,7 @@ describe.each([["pancakeswap-default"], ["pancakeswap-extended"], ["pancakeswap-
     const defaultTokenList = buildList(listName);
 
     it("validates", () => {
-      expect(validate(defaultTokenList)).toBeValid(validate.errors);
+      expect(validate(defaultTokenList)).toBeValidTokenList(validate.errors);
     });
 
     it("contains no duplicate addresses", () => {
@@ -96,6 +121,12 @@ describe.each([["pancakeswap-default"], ["pancakeswap-extended"], ["pancakeswap-
     it("all addresses are valid and checksummed", () => {
       for (const token of defaultTokenList.tokens) {
         expect(getAddress(token.address)).toBe(token.address);
+      }
+    });
+
+    it("all tokens have correct logos", () => {
+      for (const token of defaultTokenList.tokens) {
+        expect(token).toBeValidLogo();
       }
     });
 
