@@ -20,6 +20,9 @@ Unless you've been specifically asked by someone from PCS team please do no subm
 - Update version in `package.json`
 - Add new tokens to `src/tokens/pancakeswap-extended.json` file
 - Run `yarn makelist:pcs-extended`
+  - By default new list will have patch version number bumped by 1 (e.g. `2.0.1` -> `2.0.2`).
+  - If you want to bump minor version add `minor` after makelist command `yarn makelist:pcs-extended minor`
+  - If you want to bump major version add `major` after makelist command `yarn makelist:pcs-extended major`
 - If tests pass - new token list will be created under `lists` directory
 
 For list to be considered valid it need to satisfy the following criteria:
@@ -30,7 +33,7 @@ For list to be considered valid it need to satisfy the following criteria:
 
 ## How to update Top100 Token list
 
-Note - this is not something we expect pull requests for. 
+Note - this is not something we expect pull requests for.
 
 ```shell script
 # Fetch the Top100 Tokens on PancakeSwap v2, and update list.
