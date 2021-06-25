@@ -32,6 +32,14 @@
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x8F0528cE5eF7B51152A59745bEfDD91D97091d2F/logo.png"
   },
   {
+    "name": "LOLKEK",
+    "symbol": "LOLKEK",
+    "address": "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C874444",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C874444/logo.png"
+  },
+  {
     "name": "Venus",
     "symbol": "XVS",
     "address": "0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63",
