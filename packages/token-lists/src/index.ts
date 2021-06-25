@@ -1,5 +1,6 @@
 import { buildList, saveList, VersionBump } from "./buildList";
 import checksumAddresses from "./checksum";
+import ciCheck from "./ci-check";
 import topTokens from "./top-100";
 
 const command = process.argv[2];
@@ -15,6 +16,9 @@ switch (command) {
     break;
   case "fetch":
     topTokens();
+    break;
+  case "ci-check":
+    ciCheck();
     break;
   default:
     console.info("Unknown command");
