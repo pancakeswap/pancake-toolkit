@@ -16,12 +16,26 @@ const currentLists = {
   "pancakeswap-top-15": currentPancakeswapTop15List,
 };
 
+const ajv = new Ajv({ allErrors: true, format: "full" });
+const validate = ajv.compile(schema);
+
+// Modified https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_get
+const getByAjvPath = (obj, path: string, defaultValue = undefined) => {
+  const travel = (regexp) =>
+    String.prototype.split
+      .call(path.substring(1), regexp)
+      .filter(Boolean)
+      .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
+  const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
+  return result === undefined || result === obj ? defaultValue : result;
+};
+
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
     interface Matchers<R> {
       toBeDeclaredOnce(type: string, parameter: string, chainId: number): CustomMatcherResult;
-      toBeValidTokenList(validationErrors): CustomMatcherResult;
+      toBeValidTokenList(): CustomMatcherResult;
       toBeValidLogo(): CustomMatcherResult;
     }
   }
@@ -40,15 +54,22 @@ expect.extend({
       pass: false,
     };
   },
-  toBeValidTokenList(received, validationErrors) {
-    if (received) {
+  toBeValidTokenList(tokenList) {
+    const isValid = validate(tokenList);
+    if (isValid) {
       return {
         message: () => ``,
         pass: true,
       };
     }
+    const validationSummary = validate.errors
+      .map((error) => {
+        const value = getByAjvPath(tokenList, error.dataPath);
+        return `- ${error.dataPath.split(".").pop()} ${value} ${error.message}`;
+      })
+      .join("\n");
     return {
-      message: () => `Validation failed: ${JSON.stringify(validationErrors, null, 2)}`,
+      message: () => `Validation failed:\n${validationSummary}`,
       pass: false,
     };
   },
@@ -77,16 +98,13 @@ expect.extend({
   },
 });
 
-const ajv = new Ajv({ allErrors: true, format: "full" });
-const validate = ajv.compile(schema);
-
 describe.each([["pancakeswap-default"], ["pancakeswap-extended"], ["pancakeswap-top-100"], ["pancakeswap-top-15"]])(
   "buildList %s",
   (listName) => {
     const defaultTokenList = buildList(listName);
 
     it("validates", () => {
-      expect(validate(defaultTokenList)).toBeValidTokenList(validate.errors);
+      expect(defaultTokenList).toBeValidTokenList();
     });
 
     it("contains no duplicate addresses", () => {
