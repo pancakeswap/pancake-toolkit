@@ -5,8 +5,6 @@ import { SvgProps } from "../../../components/Svg/types";
 const Icon: React.FC<SvgProps> = (props) => {
   return (
     <Svg
-      data-name="Layer 1"
-      xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1000 1000"
       {...props}
     >
