@@ -9,6 +9,7 @@ export { default as ArrowLastIcon } from "./Icons/ArrowLast";
 export { default as ArrowUpIcon } from "./Icons/ArrowUp";
 export { default as AutoRenewIcon } from "./Icons/AutoRenew";
 export { default as BinanceIcon } from "./Icons/Binance";
+export { default as BinanceChainIcon } from "./Icons/BinanceChain";
 export { default as BlockIcon } from "./Icons/Block";
 export { default as BnbUsdtPairTokenIcon } from "./Icons/BnbUsdtPairToken";
 export { default as BunnyCardsIcon } from "./Icons/BunnyCards";
