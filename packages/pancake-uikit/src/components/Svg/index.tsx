@@ -50,6 +50,7 @@ export { default as MedalSilverIcon } from "./Icons/MedalSilver";
 export { default as MedalTealIcon } from "./Icons/MedalTeal";
 export { default as MetamaskIcon } from "./Icons/Metamask";
 export { default as MinusIcon } from "./Icons/Minus";
+export { default as MoreVertIcon } from "./Icons/MoreVert";
 export { default as NoProfileAvatarIcon } from "./Icons/NoProfileAvatar";
 export { default as OpenNewIcon } from "./Icons/OpenNew";
 export { default as PancakesIcon } from "./Icons/Pancakes";
