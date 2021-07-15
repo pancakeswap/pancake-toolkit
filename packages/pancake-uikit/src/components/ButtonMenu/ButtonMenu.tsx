@@ -31,6 +31,19 @@ const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
   & a {
     box-shadow: none;
   }
+
+  ${({ disabled, theme, variant }) => {
+    if (disabled) {
+      return `
+        opacity: 0.5;
+
+        & > button:disabled {
+          background-color: transparent;
+          color: ${variant === variants.PRIMARY ? theme.colors.primary : theme.colors.textSubtle};
+        }
+    `;
+    }
+  }}
   ${space}
 `;
 
@@ -39,17 +52,19 @@ const ButtonMenu: React.FC<ButtonMenuProps> = ({
   scale = scales.MD,
   variant = variants.PRIMARY,
   onItemClick,
+  disabled,
   children,
   ...props
 }) => {
   return (
-    <StyledButtonMenu variant={variant} {...props}>
+    <StyledButtonMenu disabled={disabled} variant={variant} {...props}>
       {Children.map(children, (child: ReactElement, index) => {
         return cloneElement(child, {
           isActive: activeIndex === index,
           onClick: onItemClick ? () => onItemClick(index) : undefined,
           scale,
           variant,
+          disabled,
         });
       })}
     </StyledButtonMenu>
