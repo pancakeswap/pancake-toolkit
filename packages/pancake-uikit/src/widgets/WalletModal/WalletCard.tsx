@@ -55,9 +55,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
       <Icon width="40px" mb="8px" />
-      <Text bold color="textSubtle" fontSize="14px">
-        {title}
-      </Text>
+      <Text fontSize="14px">{title}</Text>
     </WalletButton>
   );
 };

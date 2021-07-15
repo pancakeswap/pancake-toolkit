@@ -22,7 +22,7 @@ it("renders ConnectModal correctly", () => {
       padding-bottom: 24px;
     }
 
-    .c21 {
+    .c20 {
       padding: 24px;
     }
 
@@ -39,14 +39,6 @@ it("renders ConnectModal correctly", () => {
     }
 
     .c18 {
-      color: #7A6EAA;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.5;
-      font-size: 14px;
-    }
-
-    .c20 {
       color: #280D5F;
       font-size: 14px;
       font-weight: 400;
@@ -54,7 +46,7 @@ it("renders ConnectModal correctly", () => {
       font-size: 14px;
     }
 
-    .c22 {
+    .c21 {
       color: #7A6EAA;
       font-size: 16px;
       font-weight: 400;
@@ -186,7 +178,7 @@ it("renders ConnectModal correctly", () => {
       cursor: not-allowed;
     }
 
-    .c23 {
+    .c22 {
       -webkit-align-items: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -222,11 +214,11 @@ it("renders ConnectModal correctly", () => {
       width: 100%;
     }
 
-    .c23:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+    .c22:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
       opacity: 0.65;
     }
 
-    .c23:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+    .c22:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
       opacity: 0.85;
       -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
@@ -234,8 +226,8 @@ it("renders ConnectModal correctly", () => {
       box-shadow: none;
     }
 
-    .c23:disabled,
-    .c23.pancake-button--disabled {
+    .c22:disabled,
+    .c22.pancake-button--disabled {
       background-color: #E9EAEB;
       border-color: #E9EAEB;
       box-shadow: none;
@@ -558,7 +550,7 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                   <div
                     class="c18"
-                    color="textSubtle"
+                    color="text"
                     font-size="14px"
                   >
                     Metamask
@@ -588,7 +580,7 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                   <div
                     class="c18"
-                    color="textSubtle"
+                    color="text"
                     font-size="14px"
                   >
                     WalletConnect
@@ -619,7 +611,7 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                   <div
                     class="c18"
-                    color="textSubtle"
+                    color="text"
                     font-size="14px"
                   >
                     TrustWallet
@@ -643,7 +635,7 @@ it("renders ConnectModal correctly", () => {
                   />
                 </svg>
                 <div
-                  class="c20"
+                  class="c18"
                   color="text"
                   font-size="14px"
                 >
@@ -653,16 +645,16 @@ it("renders ConnectModal correctly", () => {
             </div>
           </div>
           <div
-            class="c21"
+            class="c20"
           >
             <p
-              class="c22"
+              class="c21"
               color="textSubtle"
             >
               Haven't got a crypto wallet yet?
             </p>
             <a
-              class="c23"
+              class="c22"
               href="https://docs.pancakeswap.finance/get-started/connection-guide"
               rel="noreferrer noopener"
               scale="md"
