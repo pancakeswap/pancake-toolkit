@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
-import MoreVert from "../../components/Svg/Icons/MoreVert";
+import MoreHoriz from "../../components/Svg/Icons/MoreHoriz";
 import { ButtonProps } from "../../components/Button";
 import { connectorLocalStorageKey } from "./config";
 import { Login, Config } from "./types";
@@ -16,8 +16,8 @@ interface Props {
 const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: "16px" })`
   align-items: center;
   display: flex;
-  height: 80px;
   flex-direction: column;
+  height: auto;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +26,7 @@ const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: 
 export const MoreWalletCard: React.FC<ButtonProps> = (props) => {
   return (
     <WalletButton variant="tertiary" {...props}>
-      <MoreVert width="40px" />
+      <MoreHoriz width="40px" mb="8px" color="textSubtle" />
       <Text bold color="textSubtle" fontSize="14px">
         More
       </Text>
@@ -46,7 +46,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
       }}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Icon width="40px" />
+      <Icon width="40px" mb="8px" />
       <Text bold color="textSubtle" fontSize="14px">
         {title}
       </Text>
