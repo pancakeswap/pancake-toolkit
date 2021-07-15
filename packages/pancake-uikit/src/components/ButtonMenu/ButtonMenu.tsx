@@ -26,6 +26,11 @@ const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
   & > a + a {
     margin-left: 2px; // To avoid focus shadow overlap
   }
+
+  & > button,
+  & a {
+    box-shadow: none;
+  }
   ${space}
 `;
 
