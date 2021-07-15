@@ -23,7 +23,7 @@ const connectors: Config[] = [
     priority: 2,
   },
   {
-    title: "TrustWallet",
+    title: "Trust Wallet",
     icon: TrustWallet,
     connectorId: ConnectorNames.Injected,
     priority: 3,

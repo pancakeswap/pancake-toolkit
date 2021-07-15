@@ -9,7 +9,7 @@ import { Button } from "../../components/Button";
 import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } from "../Modal";
 import WalletCard, { MoreWalletCard } from "./WalletCard";
 import config from "./config";
-import { Login } from "./types";
+import { Login, Config } from "./types";
 
 interface Props {
   login: Login;
@@ -22,6 +22,23 @@ const WalletWrapper = styled(Box)`
 `;
 
 const sortedConfig = config.sort((a, b) => a.priority - b.priority);
+
+/**
+ * Trust Wallet is not supported on iOS. Default to Wallet Connect
+ */
+const getSupportedWallet = (wallet: Config) => {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  if (wallet.title === "Trust Wallet" && isIOS) {
+    const walletConnect = config.find((configItem) => configItem.title === "WalletConnect");
+
+    if (walletConnect) {
+      return walletConnect;
+    }
+  }
+
+  return wallet;
+};
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayCount = 3 }) => {
   const [showMore, setShowMore] = useState(false);
@@ -41,7 +58,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
           <Grid gridTemplateColumns="1fr 1fr" gridGap="8px">
             {displayListConfig.map((wallet) => (
               <Box key={wallet.title}>
-                <WalletCard walletConfig={wallet} login={login} onDismiss={onDismiss} />
+                <WalletCard walletConfig={getSupportedWallet(wallet)} login={login} onDismiss={onDismiss} />
               </Box>
             ))}
             {!showMore && <MoreWalletCard onClick={() => setShowMore(true)} />}
