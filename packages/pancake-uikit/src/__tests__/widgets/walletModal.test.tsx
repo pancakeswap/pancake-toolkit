@@ -16,20 +16,19 @@ it("renders ConnectModal correctly", () => {
     }
 
     .c12 {
-      max-height: 394px;
+      max-height: 453px;
       overflow-y: auto;
       padding-top: 24px;
       padding-bottom: 24px;
     }
 
-    .c19 {
+    .c20 {
       padding: 24px;
     }
 
     .c14 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 8px;
     }
 
     .c5 {
@@ -40,14 +39,14 @@ it("renders ConnectModal correctly", () => {
     }
 
     .c18 {
-      color: #7A6EAA;
+      color: #280D5F;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 1.5;
       font-size: 14px;
     }
 
-    .c20 {
+    .c21 {
       color: #7A6EAA;
       font-size: 16px;
       font-weight: 400;
@@ -179,7 +178,7 @@ it("renders ConnectModal correctly", () => {
       cursor: not-allowed;
     }
 
-    .c21 {
+    .c22 {
       -webkit-align-items: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -215,11 +214,11 @@ it("renders ConnectModal correctly", () => {
       width: 100%;
     }
 
-    .c21:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+    .c22:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
       opacity: 0.65;
     }
 
-    .c21:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+    .c22:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
       opacity: 0.85;
       -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
@@ -227,8 +226,8 @@ it("renders ConnectModal correctly", () => {
       box-shadow: none;
     }
 
-    .c21:disabled,
-    .c21.pancake-button--disabled {
+    .c22:disabled,
+    .c22.pancake-button--disabled {
       background-color: #E9EAEB;
       border-color: #E9EAEB;
       box-shadow: none;
@@ -259,6 +258,18 @@ it("renders ConnectModal correctly", () => {
       -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
       flex-shrink: 0;
+      margin-bottom: 8px;
+    }
+
+    .c19 {
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      fill: #7A6EAA;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      margin-bottom: 8px;
     }
 
     .c3 {
@@ -320,10 +331,10 @@ it("renders ConnectModal correctly", () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      height: 80px;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      height: auto;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -539,7 +550,7 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                   <div
                     class="c18"
-                    color="textSubtle"
+                    color="text"
                     font-size="14px"
                   >
                     Metamask
@@ -569,7 +580,7 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                   <div
                     class="c18"
-                    color="textSubtle"
+                    color="text"
                     font-size="14px"
                   >
                     WalletConnect
@@ -600,7 +611,7 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                   <div
                     class="c18"
-                    color="textSubtle"
+                    color="text"
                     font-size="14px"
                   >
                     TrustWallet
@@ -613,19 +624,19 @@ it("renders ConnectModal correctly", () => {
                 width="100%"
               >
                 <svg
-                  class="c17"
-                  color="text"
+                  class="c19"
+                  color="textSubtle"
                   viewBox="0 0 24 24"
                   width="40px"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
+                    d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"
                   />
                 </svg>
                 <div
                   class="c18"
-                  color="textSubtle"
+                  color="text"
                   font-size="14px"
                 >
                   More
@@ -634,16 +645,16 @@ it("renders ConnectModal correctly", () => {
             </div>
           </div>
           <div
-            class="c19"
+            class="c20"
           >
             <p
-              class="c20"
+              class="c21"
               color="textSubtle"
             >
               Haven't got a crypto wallet yet?
             </p>
             <a
-              class="c21"
+              class="c22"
               href="https://docs.pancakeswap.finance/get-started/connection-guide"
               rel="noreferrer noopener"
               scale="md"
