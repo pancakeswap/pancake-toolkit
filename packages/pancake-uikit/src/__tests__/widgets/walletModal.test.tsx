@@ -592,7 +592,7 @@ it("renders ConnectModal correctly", () => {
               >
                 <button
                   class="c15 c16"
-                  id="wallet-connect-trustwallet"
+                  id="wallet-connect-trust wallet"
                   scale="md"
                   width="100%"
                 >
@@ -614,7 +614,7 @@ it("renders ConnectModal correctly", () => {
                     color="text"
                     font-size="14px"
                   >
-                    TrustWallet
+                    Trust Wallet
                   </div>
                 </button>
               </div>
