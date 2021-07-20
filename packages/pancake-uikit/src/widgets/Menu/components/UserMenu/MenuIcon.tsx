@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Variant, variants } from "./types";
 import { Image } from "../../../../components/Image";
-import { ProposalIcon, RefreshIcon, WarningIcon } from "../../../../components/Svg";
+import { RefreshIcon, WalletFilledIcon, WarningIcon } from "../../../../components/Svg";
 import { Colors } from "../../../../theme/types";
 
 const MenuIconWrapper = styled.div<{ borderColor: keyof Colors }>`
@@ -19,12 +19,14 @@ const MenuIconWrapper = styled.div<{ borderColor: keyof Colors }>`
   position: absolute;
   top: -4px;
   width: 40px;
+  z-index: 102;
 `;
 
 const ProfileIcon = styled(Image)`
   left: 0;
   position: absolute;
   top: -4px;
+  z-index: 102;
 
   & > img {
     border-radius: 50%;
@@ -33,7 +35,7 @@ const ProfileIcon = styled(Image)`
 
 export const NoProfileMenuIcon: React.FC = () => (
   <MenuIconWrapper borderColor="primary">
-    <ProposalIcon color="primary" width="24px" />
+    <WalletFilledIcon color="primary" width="24px" />
   </MenuIconWrapper>
 );
 
