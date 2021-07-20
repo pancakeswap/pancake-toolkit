@@ -16,7 +16,13 @@ export const UserMenuItem = styled(Button).attrs({ variant: "text", width: "100%
 
   &:disabled,
   &.pancake-button--disabled {
-    background: transparent;
+    background-color: transparent;
+  }
+
+  &:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
   }
 `;
 
