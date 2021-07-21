@@ -1,6 +1,6 @@
 {
   "name": "@pancakeswap/uikit",
-  "version": "0.40.3",
+  "version": "0.40.6",
   "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
+    "@rollup/plugin-typescript": "^8.2.3",
     "@types/lodash": "^4.14.168",
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
