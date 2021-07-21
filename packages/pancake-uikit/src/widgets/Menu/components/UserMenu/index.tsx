@@ -6,6 +6,7 @@ import { ChevronDownIcon } from "../../../../components/Svg";
 import isTouchDevice from "../../../../util/isTouchDevice";
 import { UserMenuProps, variants } from "./types";
 import MenuIcon from "./MenuIcon";
+import { UserMenuItem } from "./styles";
 
 const StyledUserMenu = styled(Flex)`
   align-items: center;
@@ -18,6 +19,10 @@ const StyledUserMenu = styled(Flex)`
   padding-left: 40px;
   padding-right: 8px;
   position: relative;
+
+  &:hover {
+    opacity: 0.65;
+  }
 `;
 
 const LabelText = styled.div`
@@ -40,6 +45,14 @@ const Menu = styled.div`
   padding-top: 4px;
   width: 280px;
   z-index: 101;
+
+  ${UserMenuItem}:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
+  ${UserMenuItem}:last-child {
+    border-radius: 0 0 8px 8px;
+  }
 `;
 
 const UserMenu: React.FC<UserMenuProps> = ({
@@ -50,7 +63,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   children,
   ...props
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [targetRef, setTargetRef] = useState<HTMLDivElement | null>(null);
   const [tooltipRef, setTooltipRef] = useState<HTMLDivElement | null>(null);
   const hideTimeout = useRef<number>();
@@ -89,7 +102,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
       if (!isHoveringOverTooltip.current) {
         hideTimeout.current = window.setTimeout(() => {
           if (!isHoveringOverTooltip.current) {
-            setIsOpen(false);
+            // setIsOpen(false);
           }
         }, 100);
       }
