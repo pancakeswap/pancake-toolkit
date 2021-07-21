@@ -11,7 +11,7 @@ import { Language } from "./types";
 import { links } from "./config";
 import { MenuEntry } from "./components/MenuEntry";
 import UserMenuComponent from "./components/UserMenu";
-import { UserMenuDivider, UserMenuItem, UserMenuItemLink } from "./components/UserMenu/styles";
+import { UserMenuDivider, UserMenuItem } from "./components/UserMenu/styles";
 import { variants, Variant } from "./components/UserMenu/types";
 import Menu from "./Menu";
 import { LogoutIcon } from "../../components/Svg";
@@ -201,16 +201,14 @@ export const UserMenu: React.FC = () => {
             <UserMenuDivider />
             <UserMenuItem disabled>Dashboard</UserMenuItem>
             <UserMenuItem disabled>Portfolio</UserMenuItem>
-            <UserMenuItemLink as={Link} to="/profile" disabled>
-              Your Profile
-            </UserMenuItemLink>
-            <UserMenuDivider />
-            <UserMenuItem>
-              <Flex alignItems="center" justifyContent="space-between" width="100%">
-                Disconnect
-                <LogoutIcon />
-              </Flex>
+            <UserMenuItem as={Link} to="/profile">
+              React Router Link
             </UserMenuItem>
+            <UserMenuItem as="a" href="https://pancakeswap.finance">
+              Link
+            </UserMenuItem>
+            <UserMenuDivider />
+            <UserMenuItem endIcon={<LogoutIcon />}>Disconnect</UserMenuItem>
           </UserMenuComponent>
         </Flex>
       </Box>

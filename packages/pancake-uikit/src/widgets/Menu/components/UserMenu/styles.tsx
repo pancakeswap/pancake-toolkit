@@ -1,5 +1,6 @@
+import React from "react";
 import styled from "styled-components";
-import { Button } from "../../../../components/Button";
+import { UserMenuItemProps } from "./types";
 
 export const UserMenuDivider = styled.hr`
   border-color: ${({ theme }) => theme.colors.cardBorder};
@@ -7,28 +8,28 @@ export const UserMenuDivider = styled.hr`
   border-width: 1px 0 0;
 `;
 
-export const UserMenuItem = styled(Button).attrs({ variant: "text", width: "100%" })`
-  color: ${({ theme }) => theme.colors.textSubtle};
-  font-weight: normal;
-  height: auto;
-  justify-content: start;
-  padding: 16px;
+export const BaseUserMenuItem: React.FC<UserMenuItemProps> = ({ children, endIcon, ...props }) => (
+  <button type="button" {...props}>
+    {children}
+    {endIcon}
+  </button>
+);
 
-  &:disabled,
-  &.pancake-button--disabled {
-    background-color: transparent;
-  }
-
-  &:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
-    opacity: 1;
-    transform: none;
-    box-shadow: none;
-  }
-`;
-
-export const UserMenuItemLink = styled.a<{ disabled?: boolean }>`
+export const UserMenuItem = styled(BaseUserMenuItem)`
+  align-items: center;
+  border: 0;
+  background: transparent;
   color: ${({ theme, disabled }) => theme.colors[disabled ? "textDisabled" : "textSubtle"]};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  display: block;
-  padding: 16px;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  outline: 0;
+  padding: 8px 16px;
+  width: 100%;
+
+  &:active:not(:disabled) {
+    opacity: 0.85;
+    transform: translateY(1px);
+  }
 `;
