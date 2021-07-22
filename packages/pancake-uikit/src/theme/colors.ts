@@ -37,9 +37,9 @@ export const lightColors: Colors = {
   input: "#eeeaf4",
   inputSecondary: "#d7caec",
   tertiary: "#EFF4F5",
-  text: "#280D5F",
+  text: "#161F28",
   textDisabled: "#BDC2C4",
-  textSubtle: "#008FBC",
+  textSubtle: "#262F48",
   disabled: "#E9EAEB",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #EAE200 0%, #FE97d5 100%)",
