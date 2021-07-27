@@ -20,10 +20,6 @@ const MenuIconWrapper = styled.div<{ borderColor: keyof Colors }>`
   top: -4px;
   width: 40px;
   z-index: 102;
-
-  &:hover {
-    opacity: 0.65;
-  }
 `;
 
 const ProfileIcon = styled(Image)`
