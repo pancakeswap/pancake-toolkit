@@ -208,7 +208,12 @@ export const UserMenu: React.FC = () => {
               Link
             </UserMenuItem>
             <UserMenuDivider />
-            <UserMenuItem endIcon={<LogoutIcon />}>Disconnect</UserMenuItem>
+            <UserMenuItem as="button" onClick={noop}>
+              <Flex alignItems="center" justifyContent="space-between" width="100%">
+                Disconnect
+                <LogoutIcon />
+              </Flex>
+            </UserMenuItem>
           </UserMenuComponent>
         </Flex>
       </Box>

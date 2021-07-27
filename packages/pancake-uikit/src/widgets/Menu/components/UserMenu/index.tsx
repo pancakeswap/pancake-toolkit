@@ -63,7 +63,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   children,
   ...props
 }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [targetRef, setTargetRef] = useState<HTMLDivElement | null>(null);
   const [tooltipRef, setTooltipRef] = useState<HTMLDivElement | null>(null);
   const hideTimeout = useRef<number>();
@@ -102,7 +102,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
       if (!isHoveringOverTooltip.current) {
         hideTimeout.current = window.setTimeout(() => {
           if (!isHoveringOverTooltip.current) {
-            // setIsOpen(false);
+            setIsOpen(false);
           }
         }, 100);
       }

@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { UserMenuItemProps } from "./types";
 
@@ -9,14 +8,7 @@ export const UserMenuDivider = styled.hr`
   margin: 4px 0;
 `;
 
-export const BaseUserMenuItem: React.FC<UserMenuItemProps> = ({ children, endIcon, ...props }) => (
-  <button type="button" {...props}>
-    {children}
-    {endIcon}
-  </button>
-);
-
-export const UserMenuItem = styled(BaseUserMenuItem)`
+export const UserMenuItem = styled.button<UserMenuItemProps>`
   align-items: center;
   border: 0;
   background: transparent;
