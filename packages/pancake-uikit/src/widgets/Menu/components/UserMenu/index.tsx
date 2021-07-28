@@ -37,13 +37,15 @@ const LabelText = styled.div`
   }
 `;
 
-const Menu = styled.div`
+const Menu = styled.div<{ isOpen: boolean }>`
   background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 16px;
   padding-bottom: 4px;
   padding-top: 4px;
+  pointer-events: ${({ isOpen }) => (isOpen ? "initial" : "none")};
   width: 280px;
+  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
   z-index: 101;
 
   ${UserMenuItem}:first-child {
@@ -104,36 +106,38 @@ const UserMenu: React.FC<UserMenuProps> = ({
           if (!isHoveringOverTooltip.current) {
             setIsOpen(false);
           }
-        }, 100);
+        }, 150);
       }
     };
 
-    if (targetRef) {
-      if (isTouchDevice()) {
-        targetRef.addEventListener("touchstart", showTooltip);
-        targetRef.addEventListener("touchend", hideTooltip);
-      } else {
-        targetRef.addEventListener("mouseenter", showTooltip);
-        targetRef.addEventListener("mouseleave", hideTooltip);
-      }
-    }
+    const toggleTouch = (evt: TouchEvent) => {
+      const target = evt.target as Node;
+      const isTouchingTargetRef = target && targetRef?.contains(target);
 
-    if (tooltipRef) {
-      tooltipRef.addEventListener("mouseenter", showTooltip);
-      tooltipRef.addEventListener("mouseleave", hideTooltip);
+      if (isTouchingTargetRef) {
+        setIsOpen((prevOpen) => !prevOpen);
+      } else {
+        setIsOpen(false);
+      }
+    };
+
+    if (isTouchDevice()) {
+      document.addEventListener("touchstart", toggleTouch);
+    } else {
+      targetRef?.addEventListener("mouseenter", showTooltip);
+      targetRef?.addEventListener("mouseleave", hideTooltip);
+      tooltipRef?.addEventListener("mouseenter", showTooltip);
+      tooltipRef?.addEventListener("mouseleave", hideTooltip);
     }
 
     return () => {
-      if (targetRef) {
-        targetRef.removeEventListener("touchstart", showTooltip);
-        targetRef.removeEventListener("touchend", hideTooltip);
-        targetRef.removeEventListener("mouseenter", showTooltip);
-        targetRef.removeEventListener("mouseleave", hideTooltip);
-      }
-
-      if (tooltipRef) {
-        tooltipRef.removeEventListener("mouseenter", showTooltip);
-        tooltipRef.removeEventListener("mouseleave", hideTooltip);
+      if (isTouchDevice()) {
+        document.removeEventListener("touchstart", toggleTouch);
+      } else {
+        targetRef?.removeEventListener("mouseenter", showTooltip);
+        targetRef?.removeEventListener("mouseleave", hideTooltip);
+        tooltipRef?.removeEventListener("mouseenter", showTooltip);
+        tooltipRef?.removeEventListener("mouseleave", hideTooltip);
       }
     };
   }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen]);
@@ -145,11 +149,9 @@ const UserMenu: React.FC<UserMenuProps> = ({
         <LabelText title={text || account}>{text || accountEllipsis}</LabelText>
         <ChevronDownIcon color="text" width="24px" />
       </StyledUserMenu>
-      {isOpen && children && (
-        <Menu style={styles.popper} ref={setTooltipRef} {...attributes.popper}>
-          {children}
-        </Menu>
-      )}
+      <Menu style={styles.popper} ref={setTooltipRef} {...attributes.popper} isOpen={isOpen}>
+        {children}
+      </Menu>
     </>
   );
 };
