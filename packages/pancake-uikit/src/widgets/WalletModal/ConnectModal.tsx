@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled, { useTheme } from "styled-components";
+import getExternalLinkProps from "../../util/getExternalLinkProps";
 import Grid from "../../components/Box/Grid";
 import Box from "../../components/Box/Box";
 import getThemeValue from "../../util/getThemeValue";
@@ -81,8 +82,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
             href="https://docs.pancakeswap.finance/get-started/connection-guide"
             variant="subtle"
             width="100%"
-            target="_blank"
-            rel="noreferrer noopener"
+            {...getExternalLinkProps()}
           >
             Learn How to Connect
           </Button>
