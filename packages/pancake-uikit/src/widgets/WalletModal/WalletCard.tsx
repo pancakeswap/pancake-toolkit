@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
-import MoreHoriz from "../../components/Svg/Icons/MoreHoriz";
+import MoreHorizontal from "../../components/Svg/Icons/MoreHorizontal";
 import { ButtonProps } from "../../components/Button";
 import { connectorLocalStorageKey, walletLocalStorageKey } from "./config";
 import { Login, Config, ConnectorNames } from "./types";
@@ -26,7 +26,7 @@ const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: 
 export const MoreWalletCard: React.FC<ButtonProps> = (props) => {
   return (
     <WalletButton variant="tertiary" {...props}>
-      <MoreHoriz width="40px" mb="8px" color="textSubtle" />
+      <MoreHorizontal width="40px" mb="8px" color="textSubtle" />
       <Text fontSize="14px">More</Text>
     </WalletButton>
   );
