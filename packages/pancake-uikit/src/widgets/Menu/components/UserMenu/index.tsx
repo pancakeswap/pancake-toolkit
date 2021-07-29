@@ -43,10 +43,17 @@ const Menu = styled.div<{ isOpen: boolean }>`
   border-radius: 16px;
   padding-bottom: 4px;
   padding-top: 4px;
-  pointer-events: ${({ isOpen }) => (isOpen ? "initial" : "none")};
+  pointer-events: auto;
   width: 280px;
-  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
-  z-index: 101;
+  visibility: visible;
+  z-index: 1001;
+
+  ${({ isOpen }) =>
+    !isOpen &&
+    `
+    pointer-events: none;
+    visibility: hidden;
+  `}
 
   ${UserMenuItem}:first-child {
     border-radius: 8px 8px 0 0;
@@ -113,9 +120,15 @@ const UserMenu: React.FC<UserMenuProps> = ({
     const toggleTouch = (evt: TouchEvent) => {
       const target = evt.target as Node;
       const isTouchingTargetRef = target && targetRef?.contains(target);
+      const isTouchingTooltipRef = target && tooltipRef?.contains(target);
 
       if (isTouchingTargetRef) {
         setIsOpen((prevOpen) => !prevOpen);
+      } else if (isTouchingTooltipRef) {
+        // Don't close the menu immediately so it catches the event
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 100);
       } else {
         setIsOpen(false);
       }

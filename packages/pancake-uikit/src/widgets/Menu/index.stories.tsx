@@ -196,15 +196,21 @@ export const UserMenu: React.FC = () => {
             </Box>
           </Box>
           <UserMenuComponent variant={variant} text={text} account="0x8b017905DC96B38f817473dc885F84D4C76bC113">
-            <UserMenuItem>Wallet</UserMenuItem>
-            <UserMenuItem>Transactions</UserMenuItem>
+            <UserMenuItem type="button" onClick={() => alert("clicked")}>
+              Wallet
+            </UserMenuItem>
+            <UserMenuItem type="button">Transactions</UserMenuItem>
             <UserMenuDivider />
-            <UserMenuItem disabled>Dashboard</UserMenuItem>
-            <UserMenuItem disabled>Portfolio</UserMenuItem>
+            <UserMenuItem type="button" disabled>
+              Dashboard
+            </UserMenuItem>
+            <UserMenuItem type="button" disabled>
+              Portfolio
+            </UserMenuItem>
             <UserMenuItem as={Link} to="/profile">
               React Router Link
             </UserMenuItem>
-            <UserMenuItem as="a" href="https://pancakeswap.finance">
+            <UserMenuItem as="a" href="https://pancakeswap.finance" target="_blank">
               Link
             </UserMenuItem>
             <UserMenuDivider />

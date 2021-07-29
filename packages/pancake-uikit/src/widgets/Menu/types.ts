@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import { Colors } from "../../theme/types";
-import { Login } from "../WalletModal/types";
 
 export interface Language {
   code: string;
