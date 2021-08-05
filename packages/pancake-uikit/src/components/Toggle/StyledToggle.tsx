@@ -13,6 +13,15 @@ const scaleKeyValues = {
     toggleWidth: "36px",
   },
   md: {
+    handleHeight: "26px",
+    handleWidth: "26px",
+    handleLeft: "3px",
+    handleTop: "3px",
+    checkedLeft: "calc(100% - 30px)",
+    toggleHeight: "32px",
+    toggleWidth: "56px",
+  },
+  lg: {
     handleHeight: "32px",
     handleWidth: "32px",
     handleLeft: "4px",
@@ -23,11 +32,9 @@ const scaleKeyValues = {
   },
 };
 
-const getScale =
-  (property: ScaleKeys) =>
-  ({ scale = scales.MD }: ToggleProps) => {
-    return scaleKeyValues[scale][property];
-  };
+const getScale = (property: ScaleKeys) => ({ scale = scales.LG }: ToggleProps) => {
+  return scaleKeyValues[scale][property];
+};
 
 export const Handle = styled.div<HandleProps>`
   background-color: ${({ theme }) => theme.toggle.handleBackground};
