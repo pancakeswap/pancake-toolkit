@@ -11,4 +11,5 @@ export interface BalanceInputProps extends BoxProps {
   isWarning?: boolean;
   decimals?: number;
   unit?: string;
+  switchEditingUnits?: () => void;
 }
