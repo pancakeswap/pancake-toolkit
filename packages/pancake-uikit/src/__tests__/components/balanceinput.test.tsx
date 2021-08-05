@@ -8,7 +8,29 @@ it("renders correctly", () => {
   const { asFragment } = renderWithTheme(<BalanceInput value="14" currencyValue="15 USD" onUserInput={handleChange} />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
-      .c3 {
+      .c1 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+
+    .c2 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .c5 {
       color: #7A6EAA;
       font-size: 12px;
       font-weight: 400;
@@ -17,7 +39,7 @@ it("renders correctly", () => {
       text-align: right;
     }
 
-    .c1 {
+    .c3 {
       background-color: #eeeaf4;
       border: 0;
       border-radius: 16px;
@@ -32,30 +54,30 @@ it("renders correctly", () => {
       border: 1px solid #d7caec;
     }
 
-    .c1::-webkit-input-placeholder {
+    .c3::-webkit-input-placeholder {
       color: #7A6EAA;
     }
 
-    .c1::-moz-placeholder {
+    .c3::-moz-placeholder {
       color: #7A6EAA;
     }
 
-    .c1:-ms-input-placeholder {
+    .c3:-ms-input-placeholder {
       color: #7A6EAA;
     }
 
-    .c1::placeholder {
+    .c3::placeholder {
       color: #7A6EAA;
     }
 
-    .c1:disabled {
+    .c3:disabled {
       background-color: #E9EAEB;
       box-shadow: none;
       color: #BDC2C4;
       cursor: not-allowed;
     }
 
-    .c1:focus:not(:disabled) {
+    .c3:focus:not(:disabled) {
       box-shadow: 0px 0px 0px 1px #7645D9,0px 0px 0px 4px rgba(118,69,217,0.6);
     }
 
@@ -67,7 +89,7 @@ it("renders correctly", () => {
       padding: 8px 16px;
     }
 
-    .c2 {
+    .c4 {
       background: transparent;
       border-radius: 0;
       box-shadow: none;
@@ -77,44 +99,56 @@ it("renders correctly", () => {
       border: none;
     }
 
-    .c2::-webkit-input-placeholder {
+    .c4::-webkit-input-placeholder {
       color: #7A6EAA;
     }
 
-    .c2::-moz-placeholder {
+    .c4::-moz-placeholder {
       color: #7A6EAA;
     }
 
-    .c2:-ms-input-placeholder {
+    .c4:-ms-input-placeholder {
       color: #7A6EAA;
     }
 
-    .c2::placeholder {
+    .c4::placeholder {
       color: #7A6EAA;
     }
 
-    .c2:focus:not(:disabled) {
+    .c4:focus:not(:disabled) {
       box-shadow: none;
     }
 
     <div
         class="c0"
       >
-        <input
-          class="c1 c2"
-          inputmode="decimal"
-          min="0"
-          pattern="^[0-9]*[.,]?[0-9]{0,18}$"
-          placeholder="0.0"
-          scale="md"
-          value="14"
-        />
         <div
-          class="c3"
-          color="textSubtle"
-          font-size="12px"
+          class="c1"
         >
-          15 USD
+          <div
+            class=""
+          >
+            <div
+              class="c2"
+            >
+              <input
+                class="c3 c4"
+                inputmode="decimal"
+                min="0"
+                pattern="^[0-9]*[.,]?[0-9]{0,18}$"
+                placeholder="0.0"
+                scale="md"
+                value="14"
+              />
+            </div>
+            <div
+              class="c5"
+              color="textSubtle"
+              font-size="12px"
+            >
+              15 USD
+            </div>
+          </div>
         </div>
       </div>
     </DocumentFragment>
