@@ -112,14 +112,12 @@ const Menu: React.FC<NavProps> = ({
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu}>
-        <Flex>
-          <Logo
-            isPushed={isPushed}
-            togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-            isDark={isDark}
-            href={homeLink?.href ?? "/"}
-          />
-        </Flex>
+        <Logo
+          isPushed={isPushed}
+          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
+          isDark={isDark}
+          href={homeLink?.href ?? "/"}
+        />
         <Flex>
           {globalMenu} {userMenu}
         </Flex>
