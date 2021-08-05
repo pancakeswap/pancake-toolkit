@@ -55,3 +55,32 @@ export const Default: React.FC = () => {
     </Box>
   );
 };
+
+export const UnitDisplay: React.FC = () => {
+  const CAKE_PRICE = 69;
+  const [cakeValue, setCakeValue] = useState("1006.086956");
+
+  const cakeToUSD = (input: string) => {
+    const convertedToUSD = parseFloat(input) * CAKE_PRICE;
+    return `~${convertedToUSD.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })} USD`;
+  };
+
+  const handleCakeChange = (input: string) => {
+    setCakeValue(input);
+  };
+
+  return (
+    <Box width="300px">
+      <BalanceInput
+        onUserInput={handleCakeChange}
+        value={cakeValue}
+        currencyValue={cakeToUSD(cakeValue)}
+        placeholder="0.0"
+        unit="CAKE"
+      />
+    </Box>
+  );
+};
