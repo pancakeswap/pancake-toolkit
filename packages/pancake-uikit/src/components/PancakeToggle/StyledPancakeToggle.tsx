@@ -3,8 +3,8 @@ import { scales, PancakeToggleProps, HandleProps, InputProps, ScaleKeys } from "
 
 const scaleKeyValues = {
   sm: {
-    pancakeSize: "16px", // The size of a pancake (the handle)
-    travelDistance: "15px", // How far pancakes should travel horizontally
+    pancakeSize: "14px", // The size of a pancake (the handle)
+    travelDistance: "14px", // How far pancakes should travel horizontally
     toggleHeight: "20px", // General Height and
     toggleWidth: "36px", // Width of a toggle box
     pancakeThickness: "1px", // Bottom shadow of a pancake
@@ -22,8 +22,8 @@ const scaleKeyValues = {
     butterSmearTwoRight: "2.5px", // these values adjust the position of it
   },
   md: {
-    pancakeSize: "26px",
-    travelDistance: "25px",
+    pancakeSize: "24px",
+    travelDistance: "24px",
     toggleHeight: "32px",
     toggleWidth: "56px",
     pancakeThickness: "1.5px",
@@ -41,8 +41,8 @@ const scaleKeyValues = {
     butterSmearTwoRight: "3.75px",
   },
   lg: {
-    pancakeSize: "32px",
-    travelDistance: "34px",
+    pancakeSize: "31px",
+    travelDistance: "31px",
     toggleHeight: "40px",
     toggleWidth: "72px",
     pancakeThickness: "2px",
