@@ -23,7 +23,7 @@ const scaleKeyValues = {
   },
   md: {
     pancakeSize: "26px",
-    travelDistance: "24px",
+    travelDistance: "25px",
     toggleHeight: "32px",
     toggleWidth: "56px",
     pancakeThickness: "1.5px",
@@ -74,6 +74,7 @@ export const PancakeStack = styled.div<HandleProps>`
   }
 
   .pancakes {
+    position: absolute;
     transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 

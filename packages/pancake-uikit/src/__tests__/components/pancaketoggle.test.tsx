@@ -18,6 +18,7 @@ it("renders correctly", () => {
     }
 
     .c0 .pancakes {
+      position: absolute;
       -webkit-transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
       transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
     }
@@ -109,9 +110,9 @@ it("renders correctly", () => {
     }
 
     .c1:checked + label .pancakes {
-      -webkit-transform: translateX(24px);
-      -ms-transform: translateX(24px);
-      transform: translateX(24px);
+      -webkit-transform: translateX(25px);
+      -ms-transform: translateX(25px);
+      transform: translateX(25px);
     }
 
     .c1:checked + label .pancake:nth-child(1) {
@@ -213,6 +214,7 @@ it("renders correctly scale sm", () => {
     }
 
     .c0 .pancakes {
+      position: absolute;
       -webkit-transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
       transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
     }
