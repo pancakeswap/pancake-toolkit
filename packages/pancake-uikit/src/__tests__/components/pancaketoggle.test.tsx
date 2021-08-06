@@ -109,9 +109,9 @@ it("renders correctly", () => {
     }
 
     .c1:checked + label .pancakes {
-      -webkit-transform: translateX(28px);
-      -ms-transform: translateX(28px);
-      transform: translateX(28px);
+      -webkit-transform: translateX(24px);
+      -ms-transform: translateX(24px);
+      transform: translateX(24px);
     }
 
     .c1:checked + label .pancake:nth-child(1) {
@@ -304,9 +304,9 @@ it("renders correctly scale sm", () => {
     }
 
     .c1:checked + label .pancakes {
-      -webkit-transform: translateX(16px);
-      -ms-transform: translateX(16px);
-      transform: translateX(16px);
+      -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+      transform: translateX(15px);
     }
 
     .c1:checked + label .pancake:nth-child(1) {

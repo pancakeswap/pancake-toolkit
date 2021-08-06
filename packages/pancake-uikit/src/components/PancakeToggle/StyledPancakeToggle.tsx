@@ -4,7 +4,7 @@ import { scales, PancakeToggleProps, HandleProps, InputProps, ScaleKeys } from "
 const scaleKeyValues = {
   sm: {
     pancakeSize: "16px", // The size of a pancake (the handle)
-    travelDistance: "16px", // How far pancakes should travel horizontally
+    travelDistance: "15px", // How far pancakes should travel horizontally
     toggleHeight: "20px", // General Height and
     toggleWidth: "36px", // Width of a toggle box
     pancakeThickness: "1px", // Bottom shadow of a pancake
@@ -23,7 +23,7 @@ const scaleKeyValues = {
   },
   md: {
     pancakeSize: "26px",
-    travelDistance: "28px",
+    travelDistance: "24px",
     toggleHeight: "32px",
     toggleWidth: "56px",
     pancakeThickness: "1.5px",
@@ -61,11 +61,9 @@ const scaleKeyValues = {
   },
 };
 
-const getScale =
-  (property: ScaleKeys) =>
-  ({ scale = scales.LG }: PancakeToggleProps) => {
-    return scaleKeyValues[scale][property];
-  };
+const getScale = (property: ScaleKeys) => ({ scale = scales.LG }: PancakeToggleProps) => {
+  return scaleKeyValues[scale][property];
+};
 
 export const PancakeStack = styled.div<HandleProps>`
   position: relative;
