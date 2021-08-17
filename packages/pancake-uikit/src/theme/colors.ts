@@ -57,16 +57,21 @@ export const darkColors: Colors = {
   ...additionalColors,
   secondary: "#9A6AFF",
   color1: "#FFF",
+  // blue
   color2: "#008FBC",
+  // orange
   color3: "#E78D1F",
-  color4: "#DE5795",
+  // pink
+  color4: "#0058A3",
+  // yellow
   color5: "#EAE200",
   color6: "#FFFFFF",
+  // lighter blue
   color7: "#00B1E2",
   color8: "#00B1E2",
   background: "#212429",
   backgroundDisabled: "#3c3742",
-  backgroundAlt: "#27262c",
+  backgroundAlt: "#5F69AC",
   cardBorder: "#383241",
   contrast: "#FFFFFF",
   dropdown: "#1E1D20",
