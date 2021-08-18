@@ -1790,5 +1790,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x07663837218A003e66310a01596af4bf4e44623D.png"
+  },
+  {
+    "name": "Flux",
+    "symbol": "FLUX",
+    "address": "0xaFF9084f2374585879e8B434C399E29E80ccE635",
+    "chainId": 56,
+    "decimals": 8,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xaFF9084f2374585879e8B434C399E29E80ccE635.png"
   }
 ]

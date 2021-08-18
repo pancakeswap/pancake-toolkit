@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2021-08-18T10:48:45.651Z",
+  "timestamp": "2021-08-18T15:15:21.131Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 17
+    "patch": 18
   },
   "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
   "keywords": [
@@ -667,6 +667,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x4e6415a5727ea08aae4580057187923aec331227.png"
+    },
+    {
+      "name": "Flux",
+      "symbol": "FLUX",
+      "address": "0xaFF9084f2374585879e8B434C399E29E80ccE635",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xaFF9084f2374585879e8B434C399E29E80ccE635.png"
     },
     {
       "name": "ForTube",
