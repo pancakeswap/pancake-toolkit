@@ -149,6 +149,13 @@ describe.each([["pancakeswap-default"], ["pancakeswap-extended"], ["pancakeswap-
       }
     });
 
+    it("all logos addresses are valid and checksummed", () => {
+      for (const logo of logoFiles) {
+        const sanitizedLogo = logo.split(".")[0];
+        expect(sanitizedLogo).toBe(getAddress(sanitizedLogo));
+      }
+    });
+
     it("all tokens have correct logos", () => {
       for (const token of defaultTokenList.tokens) {
         expect(token).toBeValidLogo();
