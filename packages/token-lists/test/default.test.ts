@@ -145,7 +145,7 @@ describe.each([["pancakeswap-default"], ["pancakeswap-extended"], ["pancakeswap-
 
     it("all addresses are valid and checksummed", () => {
       for (const token of defaultTokenList.tokens) {
-        expect(getAddress(token.address)).toBe(token.address);
+        expect(token.address).toBe(getAddress(token.address));
       }
     });
 
