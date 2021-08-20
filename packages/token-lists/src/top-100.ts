@@ -133,11 +133,11 @@ const main = async (): Promise<void> => {
       const updatedToken = {
         name: slugify(item.baseCurrency.name, {
           replacement: " ",
-          remove: /[^\w\s\.]/g,
+          remove: /[^\w\s.]/g,
         }),
         symbol: slugify(item.baseCurrency.symbol, {
           replacement: "-",
-          remove: /[^\w\s\.]/g,
+          remove: /[^\w\s.]/g,
         }).toUpperCase(),
         address: checksummedAddress,
         chainId: 56,
