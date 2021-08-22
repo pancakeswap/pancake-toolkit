@@ -6,6 +6,7 @@ export type MediaQueries = {
   md: string;
   lg: string;
   xl: string;
+  xxl: string;
   nav: string;
 };
 
@@ -68,6 +69,7 @@ export type Colors = {
   binance: string;
   overlay: string;
 
+
   color1: string;
   color2: string;
   color3: string;
@@ -76,6 +78,10 @@ export type Colors = {
   color6: string;
   color7: string;
   color8: string;
+
+  gold: string;
+  silver: string;
+  bronze: string;
 };
 
 export type ZIndices = {

@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.13](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.12...@pancakeswap/token-lists@2.17.13) (2021-08-19)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
+## [2.17.12](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.11...@pancakeswap/token-lists@2.17.12) (2021-08-11)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
+## [2.17.11](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.10...@pancakeswap/token-lists@2.17.11) (2021-08-05)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
+## [2.17.10](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.9...@pancakeswap/token-lists@2.17.10) (2021-08-02)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
+## [2.17.9](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.8...@pancakeswap/token-lists@2.17.9) (2021-07-29)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
+## [2.17.8](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.7...@pancakeswap/token-lists@2.17.8) (2021-07-28)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
+## [2.17.7](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.6...@pancakeswap/token-lists@2.17.7) (2021-07-21)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
+## [2.17.6](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.5...@pancakeswap/token-lists@2.17.6) (2021-07-16)
+
+**Note:** Version bump only for package @pancakeswap/token-lists
+
+
+
+
+
 ## [2.17.5](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.17.4...@pancakeswap/token-lists@2.17.5) (2021-07-13)
 
 **Note:** Version bump only for package @pancakeswap/token-lists

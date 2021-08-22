@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { SpaceProps } from "styled-system";
 import { BaseButtonProps, Scale, variants } from "../Button/types";
 
@@ -10,5 +11,7 @@ export interface ButtonMenuProps extends SpaceProps {
   activeIndex?: number;
   onItemClick?: (index: number) => void;
   scale?: Scale;
-  children: React.ReactElement[];
+  disabled?: boolean;
+  children: ReactElement[];
+  fullWidth?: boolean;
 }

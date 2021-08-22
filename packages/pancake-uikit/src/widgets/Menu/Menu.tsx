@@ -6,9 +6,7 @@ import Flex from "../../components/Box/Flex";
 import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./components/Logo";
 import Panel from "./components/Panel";
-import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
-import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 
 const Wrapper = styled.div`
@@ -62,9 +60,8 @@ const MobileOnlyOverlay = styled(Overlay)`
 `;
 
 const Menu: React.FC<NavProps> = ({
-  account,
-  login,
-  logout,
+  userMenu,
+  globalMenu,
   isDark,
   toggleTheme,
   langs,
@@ -72,12 +69,11 @@ const Menu: React.FC<NavProps> = ({
   currentLang,
   cakePriceUsd,
   links,
-  profile,
   children,
 }) => {
-  const { isXl } = useMatchBreakpoints();
-  const isMobile = isXl === false;
-  const [isPushed, setIsPushed] = useState(!isMobile);
+  const { isMobile, isTablet } = useMatchBreakpoints();
+  const isSmallerScreen = isMobile || isTablet;
+  const [isPushed, setIsPushed] = useState(!isSmallerScreen);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
 
@@ -122,17 +118,14 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        {!!login && !!logout && (
-          <Flex>
-            <UserBlock account={account} login={login} logout={logout} />
-            {profile && <Avatar profile={profile} />}
-          </Flex>
-        )}
+        <Flex>
+          {globalMenu} {userMenu}
+        </Flex>
       </StyledNav>
       <BodyWrapper>
         <Panel
           isPushed={isPushed}
-          isMobile={isMobile}
+          isMobile={isSmallerScreen}
           showMenu={showMenu}
           isDark={isDark}
           toggleTheme={toggleTheme}

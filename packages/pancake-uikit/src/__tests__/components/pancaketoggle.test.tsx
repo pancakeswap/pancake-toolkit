@@ -18,6 +18,7 @@ it("renders correctly", () => {
     }
 
     .c0 .pancakes {
+      position: absolute;
       -webkit-transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
       transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
     }
@@ -25,24 +26,24 @@ it("renders correctly", () => {
     .c0 .pancake {
       background: #e27c31;
       border-radius: 50%;
-      width: 32px;
-      height: 32px;
+      width: 24px;
+      height: 24px;
       position: absolute;
       -webkit-transition: 0.4s ease;
       transition: 0.4s ease;
       top: 2px;
       left: 4px;
-      box-shadow: 0 2px 0 2px #fbbe7c;
+      box-shadow: 0 1.5px 0 1.5px #fbbe7c;
     }
 
     .c0 .pancake:nth-child(1) {
       background: #FFFFFF;
-      box-shadow: 0 2px 0 2px #BDC2C4;
+      box-shadow: 0 1.5px 0 1.5px #BDC2C4;
     }
 
     .c0 .pancake:nth-child(2) {
       left: 0;
-      top: -3px;
+      top: -1px;
       -webkit-transform: scale(0);
       -ms-transform: scale(0);
       transform: scale(0);
@@ -51,7 +52,7 @@ it("renders correctly", () => {
     }
 
     .c0 .pancake:nth-child(3) {
-      top: -8px;
+      top: -6px;
       -webkit-transform: scale(0);
       -ms-transform: scale(0);
       transform: scale(0);
@@ -70,24 +71,24 @@ it("renders correctly", () => {
     }
 
     .c0 .pancake:nth-child(3):before {
-      top: 20px;
-      left: 5px;
+      top: 15px;
+      left: 3.75px;
     }
 
     .c0 .pancake:nth-child(3):after {
-      top: 22px;
-      right: 5px;
+      top: 16px;
+      right: 3.75px;
     }
 
     .c0 .butter {
-      width: 12px;
-      height: 11px;
+      width: 10px;
+      height: 8px;
       background: #fbdb60;
-      top: 3px;
-      left: 16px;
+      top: 5px;
+      left: 13px;
       position: absolute;
-      border-radius: 4px;
-      box-shadow: 0 1px 0 1px #d67823;
+      border-radius: 3px;
+      box-shadow: 0 0.75px 0 0.75px #d67823;
       -webkit-transform: scale(0);
       -ms-transform: scale(0);
       transform: scale(0);
@@ -109,14 +110,14 @@ it("renders correctly", () => {
     }
 
     .c1:checked + label .pancakes {
-      -webkit-transform: translateX(34px);
-      -ms-transform: translateX(34px);
-      transform: translateX(34px);
+      -webkit-transform: translateX(24px);
+      -ms-transform: translateX(24px);
+      transform: translateX(24px);
     }
 
     .c1:checked + label .pancake:nth-child(1) {
       background: #e27c31;
-      box-shadow: 0 2px 0 2px #fbbe7c;
+      box-shadow: 0 1.5px 0 1.5px #fbbe7c;
       -webkit-transition-delay: 0.2s;
       transition-delay: 0.2s;
     }
@@ -146,8 +147,8 @@ it("renders correctly", () => {
     }
 
     .c2 {
-      width: 72px;
-      height: 40px;
+      width: 56px;
+      height: 32px;
       background: #31D0AA;
       box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,0.1);
       display: inline-block;
@@ -213,6 +214,7 @@ it("renders correctly scale sm", () => {
     }
 
     .c0 .pancakes {
+      position: absolute;
       -webkit-transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
       transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
     }
@@ -220,8 +222,8 @@ it("renders correctly scale sm", () => {
     .c0 .pancake {
       background: #e27c31;
       border-radius: 50%;
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
       position: absolute;
       -webkit-transition: 0.4s ease;
       transition: 0.4s ease;
@@ -304,9 +306,9 @@ it("renders correctly scale sm", () => {
     }
 
     .c1:checked + label .pancakes {
-      -webkit-transform: translateX(16px);
-      -ms-transform: translateX(16px);
-      transform: translateX(16px);
+      -webkit-transform: translateX(14px);
+      -ms-transform: translateX(14px);
+      transform: translateX(14px);
     }
 
     .c1:checked + label .pancake:nth-child(1) {
