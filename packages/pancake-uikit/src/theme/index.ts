@@ -6,7 +6,7 @@ import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";
 import { NavThemeType } from "../widgets/Menu/theme";
 import { ModalTheme } from "../widgets/Modal/types";
-import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
+import { Breakpoints, Colors, MediaQueries, Radii, Shadows, Spacing, ZIndices } from "./types";
 
 export interface PancakeTheme {
   siteWidth: number;
@@ -28,9 +28,7 @@ export interface PancakeTheme {
   zIndices: ZIndices;
 }
 
+export { darkColors, lightColors } from "./colors";
 export { default as dark } from "./dark";
 export { default as light } from "./light";
-
-export { lightColors } from "./colors";
-export { darkColors } from "./colors";
 export * from "./types";

@@ -1,4 +1,3 @@
-import React from "react";
 import { noop } from "lodash";
 import { DropdownMenuItems, DropdownMenuItemType } from "../../components/DropdownMenu/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
@@ -81,6 +80,26 @@ export const links: MenuItemsType[] = [
     href: "/",
     icon: "MoreIcon",
     items: [
+      {
+        label: "Info & Analytics",
+        href: "/",
+      },
+      {
+        label: "IFO Token Sales",
+        href: "/",
+        status: status.SOON,
+      },
+      {
+        type: DropdownMenuItemType.DIVIDER,
+      },
+      {
+        label: "NFT Collectibles",
+        href: "/",
+      },
+      {
+        label: "Team Leaderboard",
+        href: "/",
+      },
       {
         label: "Info & Analytics",
         href: "/",
