@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { MenuItemsType } from "../../components/MenuItems/types";
 import { Colors } from "../../theme/types";
 
 export interface Language {
@@ -10,10 +11,6 @@ export interface Language {
 export interface PushedProps {
   isPushed: boolean;
   pushNav: (isPushed: boolean) => void;
-}
-
-export interface NavTheme {
-  background: string;
 }
 
 export interface LinkStatus {
@@ -45,10 +42,11 @@ export interface PanelProps {
   currentLang: string;
   langs: Language[];
   setLang: (lang: Language) => void;
-  links: Array<MenuEntry>;
+  oldLinks: Array<MenuEntry>;
 }
 
 export interface NavProps extends PanelProps {
   userMenu?: ReactElement;
   globalMenu?: ReactElement;
+  links: Array<MenuItemsType>;
 }

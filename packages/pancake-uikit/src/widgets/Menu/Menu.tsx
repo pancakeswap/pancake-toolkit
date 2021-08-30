@@ -8,6 +8,9 @@ import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import MenuItems from "../../components/MenuItems/MenuItems";
+import CakePrice from "./components/CakePrice";
+import { Box } from "../../components/Box";
 
 const Wrapper = styled.div`
   position: relative;
@@ -68,10 +71,11 @@ const Menu: React.FC<NavProps> = ({
   setLang,
   currentLang,
   cakePriceUsd,
+  oldLinks,
   links,
   children,
 }) => {
-  const { isMobile, isTablet } = useMatchBreakpoints();
+  const { isMobile, isTablet, isDesktop } = useMatchBreakpoints();
   const isSmallerScreen = isMobile || isTablet;
   const [isPushed, setIsPushed] = useState(!isSmallerScreen);
   const [showMenu, setShowMenu] = useState(true);
@@ -112,35 +116,22 @@ const Menu: React.FC<NavProps> = ({
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu}>
-        <Logo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-          isDark={isDark}
-          href={homeLink?.href ?? "/"}
-        />
         <Flex>
+          <Logo
+            isPushed={isPushed}
+            togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
+            isDark={isDark}
+            href={homeLink?.href ?? "/"}
+          />
+          {isDesktop && <MenuItems items={links} ml="24px" />}
+        </Flex>
+        <Flex alignItems="center">
+          <Box mr="12px">
+            <CakePrice cakePriceUsd={cakePriceUsd} />
+          </Box>
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>
-      <BodyWrapper>
-        <Panel
-          isPushed={isPushed}
-          isMobile={isSmallerScreen}
-          showMenu={showMenu}
-          isDark={isDark}
-          toggleTheme={toggleTheme}
-          langs={langs}
-          setLang={setLang}
-          currentLang={currentLang}
-          cakePriceUsd={cakePriceUsd}
-          pushNav={setIsPushed}
-          links={links}
-        />
-        <Inner isPushed={isPushed} showMenu={showMenu}>
-          {children}
-        </Inner>
-        <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
-      </BodyWrapper>
     </Wrapper>
   );
 };

@@ -1,3 +1,7 @@
+import React from "react";
+import { noop } from "lodash";
+import { DropdownMenuItems, DropdownMenuItemType } from "../../components/DropdownMenu/types";
+import { MenuItemsType } from "../../components/MenuItems/types";
 import { LinkStatus } from "./types";
 
 export const status = {
@@ -15,7 +19,144 @@ export const status = {
   },
 };
 
-export const links = [
+export const links: MenuItemsType[] = [
+  {
+    label: "Trade",
+    href: "/",
+    icon: "TradeIcon",
+    items: [
+      {
+        label: "Exchange",
+        href: "https://exchange.pancakeswap.finance",
+      },
+      {
+        label: "Liquidity",
+        href: "https://exchange.pancakeswap.finance/#/pool",
+      },
+    ],
+  },
+  {
+    label: "Earn",
+    href: "/",
+    icon: "EarnIcon",
+    items: [
+      {
+        label: "Earn",
+        href: "/",
+      },
+      {
+        label: "Yield Farms",
+        href: "/",
+      },
+      {
+        label: "Syrup pools",
+        href: "/",
+      },
+    ],
+  },
+  {
+    label: "Win",
+    href: "/",
+    icon: "WinIcon",
+    items: [
+      {
+        label: "Win",
+        href: "/",
+      },
+      {
+        label: "Predictions",
+        href: "/",
+      },
+      {
+        label: "Lottery",
+        href: "/",
+      },
+    ],
+  },
+  {
+    label: "...",
+    href: "/",
+    icon: "MoreIcon",
+    items: [
+      {
+        label: "Info & Analystics",
+        href: "/",
+      },
+      {
+        label: "IFO TOken Sales",
+        href: "/",
+        status: status.SOON,
+      },
+      {
+        type: DropdownMenuItemType.DIVIDER,
+      },
+      {
+        label: "NFT Collectibles",
+        href: "/",
+      },
+      {
+        label: "Team Leaderboard",
+        href: "/",
+      },
+      {
+        type: DropdownMenuItemType.DIVIDER,
+      },
+      {
+        label: "Blog",
+        href: "/",
+      },
+      {
+        label: "Docs & Guides",
+        href: "/",
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+    ],
+  },
+];
+
+export const userMenulinks: DropdownMenuItems[] = [
+  {
+    label: "Wallet",
+    onClick: noop,
+    type: DropdownMenuItemType.BUTTON,
+  },
+  {
+    label: "Transactions",
+    type: DropdownMenuItemType.BUTTON,
+  },
+  {
+    type: DropdownMenuItemType.DIVIDER,
+  },
+  {
+    type: DropdownMenuItemType.BUTTON,
+    disabled: true,
+    label: "Dashboard",
+  },
+  {
+    type: DropdownMenuItemType.BUTTON,
+    disabled: true,
+    label: "Portfolio",
+  },
+  {
+    label: "Profile",
+    href: "/profile",
+  },
+  {
+    type: DropdownMenuItemType.EXTERNAL_LINK,
+    href: "https://pancakeswap.finance",
+    label: "Link",
+  },
+  {
+    type: DropdownMenuItemType.DIVIDER,
+  },
+  {
+    type: DropdownMenuItemType.BUTTON,
+    onClick: noop,
+    label: "Disconnect",
+  },
+];
+
+export const oldLinks = [
   {
     label: "Home",
     icon: "HomeIcon",

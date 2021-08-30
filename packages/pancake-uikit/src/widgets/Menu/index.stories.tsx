@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
 import noop from "lodash/noop";
-import { BrowserRouter, Link, MemoryRouter } from "react-router-dom";
-import Flex from "../../components/Box/Flex";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import Box from "../../components/Box/Box";
-import Heading from "../../components/Heading/Heading";
-import Text from "../../components/Text/Text";
-import Input from "../../components/Input/Input";
+import Flex from "../../components/Box/Flex";
 import Button from "../../components/Button/Button";
-import { Language } from "./types";
-import { links } from "./config";
-import { MenuEntry } from "./components/MenuEntry";
-import UserMenu from "./components/UserMenu";
-import { UserMenuDivider, UserMenuItem } from "./components/UserMenu/styles";
-import { variants, Variant } from "./components/UserMenu/types";
-import Menu from "./Menu";
-import { CogIcon, LanguageCurrencyIcon, LogoutIcon } from "../../components/Svg";
 import IconButton from "../../components/Button/IconButton";
+import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
+import Heading from "../../components/Heading/Heading";
+import Input from "../../components/Input/Input";
+import { CogIcon, LanguageCurrencyIcon, ChevronDownIcon } from "../../components/Svg";
+import Text from "../../components/Text/Text";
 import { Modal, ModalProps, useModal } from "../Modal";
+import { MenuEntry } from "./components/MenuEntry";
+import { LabelText, StyledUserMenu } from "./components/UserMenu";
+import MenuIcon from "./components/UserMenu/MenuIcon";
+import { Variant, variants } from "./components/UserMenu/types";
+import { links, oldLinks, userMenulinks } from "./config";
+import Menu from "./Menu";
+import { Language } from "./types";
 
 export default {
   title: "Widgets/Menu",
@@ -34,34 +35,18 @@ const UserMenuComponent: React.FC<{ variant?: Variant; text?: string; account?: 
   variant = variants.DEFAULT,
   text,
   account = "0x8b017905DC96B38f817473dc885F84D4C76bC113",
-}) => (
-  <UserMenu variant={variant} text={text} account={account}>
-    <UserMenuItem type="button" onClick={noop}>
-      Wallet
-    </UserMenuItem>
-    <UserMenuItem type="button">Transactions</UserMenuItem>
-    <UserMenuDivider />
-    <UserMenuItem type="button" disabled>
-      Dashboard
-    </UserMenuItem>
-    <UserMenuItem type="button" disabled>
-      Portfolio
-    </UserMenuItem>
-    <UserMenuItem as={Link} to="/profile">
-      React Router Link
-    </UserMenuItem>
-    <UserMenuItem as="a" href="https://pancakeswap.finance" target="_blank">
-      Link
-    </UserMenuItem>
-    <UserMenuDivider />
-    <UserMenuItem as="button" onClick={noop}>
-      <Flex alignItems="center" justifyContent="space-between" width="100%">
-        Disconnect
-        <LogoutIcon />
-      </Flex>
-    </UserMenuItem>
-  </UserMenu>
-);
+}) => {
+  const accountEllipsis = account ? `${account.substring(0, 2)}...${account.substring(account.length - 4)}` : null;
+  return (
+    <DropdownMenu items={userMenulinks} py="12px">
+      <StyledUserMenu>
+        <MenuIcon avatarSrc="" variant={variant} />
+        <LabelText title={text || account}>{text || accountEllipsis}</LabelText>
+        <ChevronDownIcon color="text" width="24px" />
+      </StyledUserMenu>
+    </DropdownMenu>
+  );
+};
 
 const GlobalMenuModal: React.FC<ModalProps> = ({ title, onDismiss, ...props }) => (
   <Modal title={title} onDismiss={onDismiss} {...props}>
@@ -99,6 +84,7 @@ const useProps = () => {
     currentLang: "EN",
     cakePriceUsd: 0.023158668932877668,
     links,
+    oldLinks,
     profile: null,
     userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
     globalMenu: <GlobalMenuComponent />,
@@ -117,6 +103,7 @@ const useProps = () => {
         currentLang: "EN",
         cakePriceUsd: 0.023158668932877668,
         links,
+        oldLinks,
         profile: null,
         userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
         globalMenu: <GlobalMenuComponent />,
