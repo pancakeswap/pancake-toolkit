@@ -35,17 +35,20 @@ export interface MenuEntry {
   status?: LinkStatus;
 }
 
-export interface PanelProps {
+export interface CommonNavProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
   cakePriceUsd?: number;
   currentLang: string;
   langs: Language[];
   setLang: (lang: Language) => void;
-  oldLinks: Array<MenuEntry>;
 }
 
-export interface NavProps extends PanelProps {
+export interface PanelProps extends CommonNavProps {
+  links: Array<MenuEntry>;
+}
+
+export interface NavProps extends CommonNavProps {
   userMenu?: ReactElement;
   globalMenu?: ReactElement;
   links: Array<MenuItemsType>;

@@ -17,7 +17,7 @@ import MenuIcon from "./components/UserMenu/MenuIcon";
 import { Variant, variants } from "./components/UserMenu/types";
 import { links, oldLinks, userMenulinks } from "./config";
 import Menu from "./Menu";
-import { Language } from "./types";
+import { Language, NavProps } from "./types";
 
 export default {
   title: "Widgets/Menu",
@@ -71,24 +71,26 @@ const GlobalMenuComponent: React.FC = () => {
   );
 };
 
+const defaultProps = {
+  account: "0xbdda50183d817c3289f895a4472eb475967dc980",
+  login: noop,
+  logout: noop,
+  isDark: false,
+  toggleTheme: noop,
+  langs,
+  setLang: noop,
+  currentLang: "EN",
+  cakePriceUsd: 0.023158668932877668,
+  links,
+  oldLinks,
+  profile: null,
+  userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
+  globalMenu: <GlobalMenuComponent />,
+};
+
 // This hook is used to simulate a props change, and force a re rendering
 const useProps = () => {
-  const [props, setProps] = useState({
-    account: "0xbdda50183d817c3289f895a4472eb475967dc980",
-    login: noop,
-    logout: noop,
-    isDark: false,
-    toggleTheme: noop,
-    langs,
-    setLang: noop,
-    currentLang: "EN",
-    cakePriceUsd: 0.023158668932877668,
-    links,
-    oldLinks,
-    profile: null,
-    userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
-    globalMenu: <GlobalMenuComponent />,
-  });
+  const [props, setProps] = useState(defaultProps);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -117,11 +119,10 @@ const useProps = () => {
   return props;
 };
 
-export const Connected: React.FC = () => {
-  const props = useProps();
+const ConnectedTemplate: React.FC<NavProps> = (args) => {
   return (
     <BrowserRouter>
-      <Menu {...props}>
+      <Menu {...args}>
         <div>
           <Heading as="h1" mb="8px">
             Page body
@@ -144,6 +145,8 @@ export const Connected: React.FC = () => {
     </BrowserRouter>
   );
 };
+export const Connected = ConnectedTemplate.bind({});
+Connected.args = defaultProps;
 
 export const NotConnected: React.FC = () => {
   return (

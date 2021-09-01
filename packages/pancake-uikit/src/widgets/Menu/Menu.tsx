@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
 import throttle from "lodash/throttle";
-import Overlay from "../../components/Overlay/Overlay";
-import Flex from "../../components/Box/Flex";
-import { useMatchBreakpoints } from "../../hooks";
-import Logo from "./components/Logo";
-import Panel from "./components/Panel";
-import { NavProps } from "./types";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
-import MenuItems from "../../components/MenuItems/MenuItems";
-import CakePrice from "./components/CakePrice";
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
 import { Box } from "../../components/Box";
+import Flex from "../../components/Box/Flex";
+import MenuItems from "../../components/MenuItems/MenuItems";
+import { useMatchBreakpoints } from "../../hooks";
+import CakePrice from "./components/CakePrice";
+import Logo from "./components/Logo";
+import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { NavProps } from "./types";
 
 const Wrapper = styled.div`
   position: relative;
@@ -53,28 +51,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   }
 `;
 
-const MobileOnlyOverlay = styled(Overlay)`
-  position: fixed;
-  height: 100%;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    display: none;
-  }
-`;
-
-const Menu: React.FC<NavProps> = ({
-  userMenu,
-  globalMenu,
-  isDark,
-  toggleTheme,
-  langs,
-  setLang,
-  currentLang,
-  cakePriceUsd,
-  oldLinks,
-  links,
-  children,
-}) => {
+const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, links, children }) => {
   const { isMobile, isTablet, isDesktop } = useMatchBreakpoints();
   const isSmallerScreen = isMobile || isTablet;
   const [isPushed, setIsPushed] = useState(!isSmallerScreen);
@@ -132,6 +109,11 @@ const Menu: React.FC<NavProps> = ({
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>
+      <BodyWrapper>
+        <Inner isPushed={false} showMenu={showMenu}>
+          {children}
+        </Inner>
+      </BodyWrapper>
     </Wrapper>
   );
 };

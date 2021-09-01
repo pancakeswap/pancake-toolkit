@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Flex } from "../Box";
 import MenuItems from "./MenuItems";
 import MenuItemsMock from "./mock";
 import { MenuItemsProps } from "./types";
