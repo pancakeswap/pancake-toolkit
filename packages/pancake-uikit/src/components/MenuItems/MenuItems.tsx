@@ -7,9 +7,11 @@ import { MenuItemsProps } from "./types";
 const MenuItems: React.FC<MenuItemsProps> = ({ items = [], ...props }) => {
   return (
     <StyledMenuItems {...props}>
-      {items.map((menuItem) => (
-        <DropdownMenu key={menuItem.label} items={menuItem.items} py="12px">
-          <MenuItem label={menuItem.label} href={menuItem.href} />
+      {items.map(({ label, items: menuItems, href, isActive }) => (
+        <DropdownMenu key={label} items={menuItems} py="12px">
+          <MenuItem href={href} isActive={isActive}>
+            {label}
+          </MenuItem>
         </DropdownMenu>
       ))}
     </StyledMenuItems>

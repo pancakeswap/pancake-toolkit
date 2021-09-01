@@ -5,6 +5,5 @@ export type MenuItemTheme = {
 
 export interface MenuItemProps {
   isActive?: boolean;
-  label: string;
   href: string;
 }
