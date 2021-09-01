@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { MenuItemProps } from "./types";
+import { MenuItemHoverVariant, MenuItemProps } from "./types";
 
-type StyledMenuItemProps = Pick<MenuItemProps, "isActive">;
+type StyledMenuItemProps = Pick<MenuItemProps, "isActive" | "hoverVariant">;
 
 const StyledMenuItem = styled.a<StyledMenuItemProps>`
   display: block;
@@ -11,8 +11,16 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   padding: 8px 16px;
 
   &:hover {
-    background: ${({ theme }) => theme.menuItem.backgroundColor};
-    border-radius: 16px;
+    ${({ hoverVariant, theme }) =>
+      hoverVariant === "default"
+        ? `
+          background: ${theme.menuItem.backgroundColor};
+          border-radius: 16px;
+        `
+        : `
+          border-radius: 2px;
+          border-bottom: 4px solid ${theme.menuItem.borderColor};
+        `}
   }
 `;
 
