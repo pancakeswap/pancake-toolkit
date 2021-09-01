@@ -2,12 +2,17 @@
 
 exports[`renders correctly 1`] = `
 <DocumentFragment>
-  .c3 {
-  margin-left: 16px;
+  .c6 {
+  margin-right: 12px;
 }
 
-.c7 {
-  margin-right: 12px;
+.c10 {
+  margin-top: 58px;
+  padding-left: 12px;
+}
+
+.c13 {
+  margin-right: 20px;
 }
 
 .c2 {
@@ -17,7 +22,7 @@ exports[`renders correctly 1`] = `
   display: flex;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,14 +33,82 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.c9 {
   color: #7A6EAA;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
 }
 
-.c5 {
+.c14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #7645D9;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 4px solid transparent;
+  padding: 4px 4px 0px 4px;
+  height: 42px;
+  border-radius: 2px;
+  border-bottom: 4px solid #1FC7D4;
+}
+
+.c14:hover {
+  background: #EFF4F5;
+}
+
+.c15 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #7A6EAA;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 4px solid transparent;
+  padding: 4px 4px 0px 4px;
+  height: 42px;
+}
+
+.c15:hover {
+  background: #EFF4F5;
+}
+
+.c12 {
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: inset 0px -2px 0px -8px rgba(133,133,133,0.1);
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+}
+
+.c12::-webkit-scrollbar {
+  display: none;
+}
+
+.c4 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -45,7 +118,7 @@ exports[`renders correctly 1`] = `
   flex-shrink: 0;
 }
 
-.c9 {
+.c8 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -56,7 +129,7 @@ exports[`renders correctly 1`] = `
   margin-right: 8px;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,19 +140,19 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c8 svg {
+.c7 svg {
   -webkit-transition: -webkit-transform 0.3s;
   -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
 }
 
-.c8:hover svg {
+.c7:hover svg {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,22 +163,22 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c4 .mobile-icon {
+.c3 .mobile-icon {
   width: 32px;
 }
 
-.c4 .desktop-icon {
+.c3 .desktop-icon {
   width: 160px;
   display: none;
 }
 
-.c4 .right-eye {
+.c3 .right-eye {
   -webkit-animation-delay: 20ms;
   animation-delay: 20ms;
 }
 
-.c4:hover .left-eye,
-.c4:hover .right-eye {
+.c3:hover .left-eye,
+.c3:hover .right-eye {
   -webkit-transform-origin: center 60%;
   -ms-transform-origin: center 60%;
   transform-origin: center 60%;
@@ -140,19 +213,19 @@ exports[`renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 8px;
-  padding-right: 16px;
   width: 100%;
-  height: 64px;
+  height: 56px;
   background-color: #FFFFFF;
-  border-bottom: solid 2px rgba(133,133,133,0.1);
+  box-shadow: inset 0px -2px 0px -8px rgba(133,133,133,0.1);
   z-index: 20;
   -webkit-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+  padding-left: 12px;
+  padding-right: 8px;
 }
 
-.c11 {
+.c16 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,12 +233,12 @@ exports[`renders correctly 1`] = `
   display: flex;
 }
 
-.c12 {
+.c17 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-top: 64px;
+  margin-top: 56px;
   -webkit-transition: margin-top 0.2s,margin-left 0.2s cubic-bezier(0.4,0,0.2,1);
   transition: margin-top 0.2s,margin-left 0.2s cubic-bezier(0.4,0,0.2,1);
   -webkit-transform: translate3d(0,0,0);
@@ -175,25 +248,63 @@ exports[`renders correctly 1`] = `
 }
 
 @media screen and (min-width:370px) {
-  .c3 {
-    margin-left: 12px;
+  .c10 {
+    padding-left: 12px;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c10 {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (min-width:370px) {
+  .c11 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c11 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width:968px) {
-  .c4 .mobile-icon {
+  .c3 .mobile-icon {
     display: none;
   }
 }
 
 @media screen and (min-width:968px) {
-  .c4 .desktop-icon {
+  .c3 .desktop-icon {
     display: block;
   }
 }
 
+@media screen and (min-width:852px) {
+  .c1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 @media screen and (min-width:968px) {
-  .c12 {
+  .c1 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width:968px) {
+  .c17 {
     margin-left: 56px;
     max-width: calc(100% - 56px);
   }
@@ -209,15 +320,15 @@ exports[`renders correctly 1`] = `
         class="c2"
       >
         <div
-          class="c3 c2"
+          class="c2"
         >
           <a
             aria-label="Pancake home page"
-            class="c4"
+            class="c3"
             href="/"
           >
             <svg
-              class="c5 mobile-icon"
+              class="c4 mobile-icon"
               color="text"
               viewBox="0 0 32 32"
               width="20px"
@@ -251,7 +362,7 @@ exports[`renders correctly 1`] = `
               />
             </svg>
             <svg
-              class="c5 desktop-icon"
+              class="c4 desktop-icon"
               color="text"
               viewBox="0 0 160 26"
               width="20px"
@@ -332,18 +443,18 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="c6"
+        class="c5"
       >
         <div
-          class="c7"
+          class="c6"
         >
           <a
-            class="c8"
+            class="c7"
             href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
             target="_blank"
           >
             <svg
-              class="c9"
+              class="c8"
               color="text"
               viewBox="0 0 90 90"
               width="24px"
@@ -485,7 +596,7 @@ exports[`renders correctly 1`] = `
               </defs>
             </svg>
             <div
-              class="c10"
+              class="c9"
               color="textSubtle"
             >
               $0.232
@@ -496,10 +607,36 @@ exports[`renders correctly 1`] = `
       </div>
     </nav>
     <div
-      class="c11"
+      class="c10 c11 c12"
     >
       <div
-        class="c12"
+        class="c13"
+      >
+        <a
+          class="c14"
+          href="/"
+          variant="subMenu"
+        >
+          Exchange
+        </a>
+      </div>
+      <div
+        class="c13"
+      >
+        <a
+          class="c15"
+          href="/"
+          variant="subMenu"
+        >
+          Liquidity
+        </a>
+      </div>
+    </div>
+    <div
+      class="c16"
+    >
+      <div
+        class="c17"
       >
         body
       </div>

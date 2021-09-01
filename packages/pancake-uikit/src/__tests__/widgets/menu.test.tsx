@@ -2,7 +2,7 @@ import React from "react";
 import noop from "lodash/noop";
 import { BrowserRouter } from "react-router-dom";
 import { renderWithTheme } from "../../testHelpers";
-import { Menu, menuConfig, Language } from "../../widgets/Menu";
+import { Menu, menuConfig, subMenuConfig, Language } from "../../widgets/Menu";
 
 /**
  * @see https://jestjs.io/docs/en/manual-mocks
@@ -38,6 +38,7 @@ it("renders correctly", () => {
         currentLang="en-US"
         cakePriceUsd={0.23158668932877668}
         links={menuConfig}
+        subLinks={subMenuConfig}
       >
         body
       </Menu>
