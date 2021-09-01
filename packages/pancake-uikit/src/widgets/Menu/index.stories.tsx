@@ -1,5 +1,5 @@
 import noop from "lodash/noop";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import Box from "../../components/Box/Box";
 import Flex from "../../components/Box/Flex";
@@ -8,14 +8,14 @@ import IconButton from "../../components/Button/IconButton";
 import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 import Heading from "../../components/Heading/Heading";
 import Input from "../../components/Input/Input";
-import { CogIcon, LanguageCurrencyIcon, ChevronDownIcon } from "../../components/Svg";
+import { ChevronDownIcon, CogIcon, LanguageCurrencyIcon } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import { Modal, ModalProps, useModal } from "../Modal";
 import { MenuEntry } from "./components/MenuEntry";
 import { LabelText, StyledUserMenu } from "./components/UserMenu";
 import MenuIcon from "./components/UserMenu/MenuIcon";
 import { Variant, variants } from "./components/UserMenu/types";
-import { links, oldLinks, userMenulinks } from "./config";
+import { links, userMenulinks } from "./config";
 import Menu from "./Menu";
 import { Language, NavProps } from "./types";
 
@@ -82,41 +82,9 @@ const defaultProps = {
   currentLang: "EN",
   cakePriceUsd: 0.023158668932877668,
   links,
-  oldLinks,
   profile: null,
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
-};
-
-// This hook is used to simulate a props change, and force a re rendering
-const useProps = () => {
-  const [props, setProps] = useState(defaultProps);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProps({
-        account: "0xbdda50183d817c3289f895a4472eb475967dc980",
-        login: noop,
-        logout: noop,
-        isDark: false,
-        toggleTheme: noop,
-        langs,
-        setLang: noop,
-        currentLang: "EN",
-        cakePriceUsd: 0.023158668932877668,
-        links,
-        oldLinks,
-        profile: null,
-        userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
-        globalMenu: <GlobalMenuComponent />,
-      });
-    }, 2000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  return props;
 };
 
 const ConnectedTemplate: React.FC<NavProps> = (args) => {

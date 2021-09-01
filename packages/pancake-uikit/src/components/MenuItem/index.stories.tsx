@@ -9,11 +9,11 @@ export default {
   component: MenuItem,
 };
 
-const Template: React.FC<MenuItemProps> = ({ label, ...args }) => {
+const Template: React.FC<MenuItemProps> = ({ children, ...args }) => {
   return (
     <BrowserRouter>
       <Flex>
-        <MenuItem {...args}>{label}</MenuItem>
+        <MenuItem {...args}>{children}</MenuItem>
       </Flex>
     </BrowserRouter>
   );
@@ -22,5 +22,5 @@ const Template: React.FC<MenuItemProps> = ({ label, ...args }) => {
 export const Default = Template.bind({});
 Default.args = {
   isActive: false,
-  label: "Trade",
+  children: "Trade",
 };

@@ -38,7 +38,6 @@ it("renders correctly", () => {
         currentLang="en-US"
         cakePriceUsd={0.23158668932877668}
         links={menuConfig}
-        oldLinks={[]}
       >
         body
       </Menu>
