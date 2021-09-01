@@ -114,6 +114,21 @@ export const links: MenuItemsType[] = [
   },
 ];
 
+export const subLinks = [
+  {
+    label: "Overview",
+    href: "/",
+  },
+  {
+    label: "Farms",
+    href: "/",
+  },
+  {
+    label: "Syrup Pools",
+    href: "/",
+  },
+];
+
 export const userMenulinks: DropdownMenuItems[] = [
   {
     label: "Wallet",

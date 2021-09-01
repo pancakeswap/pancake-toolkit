@@ -4,10 +4,10 @@ export type MenuItemTheme = {
   borderColor: string;
 };
 
-export type MenuItemHoverVariant = "default" | "border";
+export type MenuItemVariant = "default" | "subMenu";
 
 export interface MenuItemProps {
   isActive?: boolean;
   href: string;
-  hoverVariant?: MenuItemHoverVariant;
+  variant?: MenuItemVariant;
 }

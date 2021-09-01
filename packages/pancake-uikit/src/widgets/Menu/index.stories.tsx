@@ -15,7 +15,7 @@ import { MenuEntry } from "./components/MenuEntry";
 import { LabelText, StyledUserMenu } from "./components/UserMenu";
 import MenuIcon from "./components/UserMenu/MenuIcon";
 import { Variant, variants } from "./components/UserMenu/types";
-import { links, userMenulinks } from "./config";
+import { links, subLinks, userMenulinks } from "./config";
 import Menu from "./Menu";
 import { Language, NavProps } from "./types";
 
@@ -82,6 +82,7 @@ const defaultProps = {
   currentLang: "EN",
   cakePriceUsd: 0.023158668932877668,
   links,
+  subLinks,
   profile: null,
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
@@ -119,7 +120,15 @@ Connected.args = defaultProps;
 export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
-      <Menu isDark={false} toggleTheme={noop} langs={langs} setLang={noop} currentLang="EN" links={links}>
+      <Menu
+        isDark={false}
+        toggleTheme={noop}
+        langs={langs}
+        setLang={noop}
+        currentLang="EN"
+        links={links}
+        subLinks={subLinks}
+      >
         <div>
           <h1>Page body</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -140,7 +149,15 @@ export const NotConnected: React.FC = () => {
 export const WithoutConnectButton: React.FC = () => {
   return (
     <BrowserRouter>
-      <Menu isDark={false} toggleTheme={noop} langs={langs} setLang={noop} currentLang="EN" links={links}>
+      <Menu
+        isDark={false}
+        toggleTheme={noop}
+        langs={langs}
+        setLang={noop}
+        currentLang="EN"
+        links={links}
+        subLinks={subLinks}
+      >
         <div>
           <h1>No connect button on top</h1>
           This variant is needed for info site
@@ -171,6 +188,7 @@ export const WithSubmenuSelected: React.FC = () => {
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
         links={links}
+        subLinks={subLinks}
       >
         <div>
           <Heading as="h1" mb="8px">

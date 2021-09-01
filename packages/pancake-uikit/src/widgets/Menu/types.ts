@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { MenuItemsType } from "../../components/MenuItems/types";
+import { SubMenuItemsType } from "../../components/SubMenuItems/types";
 import { Colors } from "../../theme/types";
 
 export interface Language {
@@ -52,4 +53,5 @@ export interface NavProps extends CommonNavProps {
   userMenu?: ReactElement;
   globalMenu?: ReactElement;
   links: Array<MenuItemsType>;
+  subLinks: Array<SubMenuItemsType>;
 }

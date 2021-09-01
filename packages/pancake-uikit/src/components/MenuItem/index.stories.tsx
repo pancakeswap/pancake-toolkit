@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Flex } from "../Box";
 import MenuItem from "./MenuItem";
-import { MenuItemHoverVariant, MenuItemProps } from "./types";
+import { MenuItemProps } from "./types";
 
 export default {
   title: "Components/Menu/MenuItem",

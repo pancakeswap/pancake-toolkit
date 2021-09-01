@@ -4,10 +4,11 @@ import styled from "styled-components";
 import { Box } from "../../components/Box";
 import Flex from "../../components/Box/Flex";
 import MenuItems from "../../components/MenuItems/MenuItems";
+import SubMenuItems from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
 import CakePrice from "./components/CakePrice";
 import Logo from "./components/Logo";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL, MENU_ENTRY_HEIGHT } from "./config";
 import { NavProps } from "./types";
 
 const Wrapper = styled.div`
@@ -28,7 +29,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  box-shadow: inset 0px -2px 0px -8px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
@@ -51,7 +52,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   }
 `;
 
-const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, links, children }) => {
+const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, links, subLinks, children }) => {
   const { isMobile, isTablet, isDesktop } = useMatchBreakpoints();
   const isSmallerScreen = isMobile || isTablet;
   const [isPushed, setIsPushed] = useState(!isSmallerScreen);
@@ -109,6 +110,7 @@ const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, 
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>
+      <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 2}px`} />
       <BodyWrapper>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
