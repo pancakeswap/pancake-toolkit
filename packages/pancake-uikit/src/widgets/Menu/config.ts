@@ -3,6 +3,7 @@ import { noop } from "lodash";
 import { DropdownMenuItems, DropdownMenuItemType } from "../../components/DropdownMenu/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
 import { LinkStatus } from "./types";
+import { SubMenuItemsType } from "../../components/SubMenuItems/types";
 
 export const status = {
   LIVE: <LinkStatus>{
@@ -24,6 +25,7 @@ export const links: MenuItemsType[] = [
     label: "Trade",
     href: "/",
     icon: "TradeIcon",
+    isActive: true,
     items: [
       {
         label: "Exchange",
@@ -114,17 +116,14 @@ export const links: MenuItemsType[] = [
   },
 ];
 
-export const subLinks = [
+export const subLinks: SubMenuItemsType[] = [
   {
-    label: "Overview",
+    label: "Exchange",
     href: "/",
+    isActive: true,
   },
   {
-    label: "Farms",
-    href: "/",
-  },
-  {
-    label: "Syrup Pools",
+    label: "Liquidity",
     href: "/",
   },
 ];
@@ -237,7 +236,7 @@ export const socials = [
   },
 ];
 
-export const MENU_HEIGHT = 64;
+export const MENU_HEIGHT = 56;
 export const MENU_ENTRY_HEIGHT = 48;
 export const SIDEBAR_WIDTH_FULL = 240;
 export const SIDEBAR_WIDTH_REDUCED = 56;

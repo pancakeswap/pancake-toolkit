@@ -29,4 +29,5 @@ export interface DropdownMenuItems {
   type?: DropdownMenuItemType;
   status?: LinkStatus;
   disabled?: boolean;
+  isActive?: boolean;
 }

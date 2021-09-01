@@ -8,7 +8,7 @@ import SubMenuItems from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
 import CakePrice from "./components/CakePrice";
 import Logo from "./components/Logo";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL, MENU_ENTRY_HEIGHT } from "./config";
+import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 import { NavProps } from "./types";
 
 const Wrapper = styled.div`
@@ -24,14 +24,25 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 8px;
-  padding-right: 16px;
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
   box-shadow: inset 0px -2px 0px -8px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
+
+  padding-left: 12px;
+  padding-right: 8px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 `;
 
 const BodyWrapper = styled.div`
@@ -53,9 +64,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 `;
 
 const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, links, subLinks, children }) => {
-  const { isMobile, isTablet, isDesktop } = useMatchBreakpoints();
-  const isSmallerScreen = isMobile || isTablet;
-  const [isPushed, setIsPushed] = useState(!isSmallerScreen);
+  const { isDesktop } = useMatchBreakpoints();
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
 
@@ -95,12 +104,7 @@ const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, 
     <Wrapper>
       <StyledNav showMenu={showMenu}>
         <Flex>
-          <Logo
-            isPushed={isPushed}
-            togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-            isDark={isDark}
-            href={homeLink?.href ?? "/"}
-          />
+          <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
           {isDesktop && <MenuItems items={links} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
