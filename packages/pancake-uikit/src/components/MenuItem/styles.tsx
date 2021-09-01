@@ -11,7 +11,7 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   padding: 8px 16px;
 
   &:hover {
-    background: #eff4f5;
+    background: ${({ theme }) => theme.menuItem.backgroundColor};
     border-radius: 16px;
   }
 `;

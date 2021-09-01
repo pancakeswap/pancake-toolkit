@@ -1,5 +1,6 @@
 export type MenuItemTheme = {
   textColor: string;
+  backgroundColor: string;
 };
 
 export interface MenuItemProps {
