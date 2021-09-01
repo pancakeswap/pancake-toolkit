@@ -6,6 +6,7 @@ import { dark as darkRadio } from "../components/Radio/theme";
 import { dark as darkToggle } from "../components/Toggle/theme";
 import { dark as darkMenuItem } from "../components/MenuItem/theme";
 import { dark as darkSubMenuItems } from "../components/SubMenuItems/theme";
+import { dark as darkDropdownMenuItem } from "../components/DropdownMenu/theme";
 import { dark as darkNav } from "../widgets/Menu/theme";
 import { dark as darkModal } from "../widgets/Modal/theme";
 import { dark as darkTooltip } from "../components/Tooltip/theme";
@@ -22,6 +23,7 @@ const darkTheme: DefaultTheme = {
   nav: darkNav,
   menuItem: darkMenuItem,
   subMenuItems: darkSubMenuItems,
+  dropdownMenuItem: darkDropdownMenuItem,
   modal: darkModal,
   pancakeToggle: darkPancakeToggle,
   radio: darkRadio,

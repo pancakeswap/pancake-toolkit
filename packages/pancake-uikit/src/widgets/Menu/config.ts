@@ -30,6 +30,7 @@ export const links: MenuItemsType[] = [
       {
         label: "Exchange",
         href: "https://exchange.pancakeswap.finance",
+        isActive: true,
       },
       {
         label: "Liquidity",

@@ -1,12 +1,20 @@
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 import { StyledDropdownMenuItemProps } from "./types";
+
+const getTextColor = ({ isActive, disabled, theme }: StyledDropdownMenuItemProps & { theme: DefaultTheme }) => {
+  if (disabled) return theme.dropdownMenuItem.disabledTextColor;
+  if (isActive) return theme.dropdownMenuItem.activeTextColor;
+
+  return theme.dropdownMenuItem.textColor;
+};
 
 export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps>`
   align-items: center;
   border: 0;
   background: transparent;
-  color: ${({ theme, disabled }) => theme.colors[disabled ? "textDisabled" : "textSubtle"]};
+  color: ${({ theme, disabled, isActive }) => getTextColor({ theme, disabled, isActive })};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  font-weight: ${({ isActive = false }) => (isActive ? "600" : "400")};
   display: flex;
   font-size: 16px;
   height: 48px;

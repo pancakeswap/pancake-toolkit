@@ -6,7 +6,7 @@ type StyledMenuItemProps = Pick<MenuItemProps, "isActive" | "variant">;
 const StyledMenuItem = styled.a<StyledMenuItemProps>`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.menuItem.textColor};
+  color: ${({ theme, isActive }) => (isActive ? theme.menuItem.activeTextColor : theme.menuItem.textColor)};
   font-size: 16px;
   font-weight: ${({ isActive }) => (isActive ? "600" : "400")};
 

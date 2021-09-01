@@ -1,5 +1,6 @@
 export type MenuItemTheme = {
   textColor: string;
+  activeTextColor: string;
   backgroundColor: string;
   borderColor: string;
 };
