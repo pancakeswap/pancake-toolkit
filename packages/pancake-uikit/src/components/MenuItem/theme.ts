@@ -1,5 +1,11 @@
 import { darkColors, lightColors } from "../../theme/colors";
-import { MenuItemTheme } from "./types";
+
+export type MenuItemTheme = {
+  textColor: string;
+  activeTextColor: string;
+  backgroundColor: string;
+  borderColor: string;
+};
 
 export const light: MenuItemTheme = {
   textColor: lightColors.textSubtle,
