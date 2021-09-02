@@ -1,4 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
+import { Box } from "../Box";
 import { StyledDropdownMenuItemProps } from "./types";
 
 const getTextColor = ({ isActive, disabled, theme }: StyledDropdownMenuItemProps & { theme: DefaultTheme }) => {
@@ -41,14 +42,18 @@ export const DropdownMenuDivider = styled.hr`
   margin: 4px 0;
 `;
 
-export const StyledDropdownMenu = styled.div<{ isOpen: boolean }>`
+export const StyledDropdownMenu = styled.div<{ isOpen: boolean; isBottomNav: boolean }>`
   background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 16px;
   padding-bottom: 4px;
   padding-top: 4px;
   pointer-events: auto;
-  width: 280px;
+  width: ${({ isBottomNav }) => (isBottomNav ? "calc(100% - 32px)" : "280px")};
+  ${({ isBottomNav }) =>
+    isBottomNav &&
+    `
+  `}
   visibility: visible;
   z-index: 1001;
 

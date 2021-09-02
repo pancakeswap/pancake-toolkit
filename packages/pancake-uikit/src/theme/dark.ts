@@ -10,6 +10,8 @@ import { dark as darkDropdownMenuItem } from "../components/DropdownMenu/theme";
 import { dark as darkNav } from "../widgets/Menu/theme";
 import { dark as darkModal } from "../widgets/Modal/theme";
 import { dark as darkTooltip } from "../components/Tooltip/theme";
+import { dark as darkBottomNavItem } from "../components/BottomNavItem/theme";
+import { dark as darkBottomNav } from "../components/BottomNav/theme";
 import base from "./base";
 import { darkColors } from "./colors";
 
@@ -24,6 +26,8 @@ const darkTheme: DefaultTheme = {
   menuItem: darkMenuItem,
   subMenuItems: darkSubMenuItems,
   dropdownMenuItem: darkDropdownMenuItem,
+  bottomNavItem: darkBottomNavItem,
+  bottomNav: darkBottomNav,
   modal: darkModal,
   pancakeToggle: darkPancakeToggle,
   radio: darkRadio,
