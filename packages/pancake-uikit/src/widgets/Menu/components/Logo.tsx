@@ -1,15 +1,12 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import { LogoIcon } from "../../../components/Svg";
+import styled, { keyframes } from "styled-components";
 import Flex from "../../../components/Box/Flex";
-import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText } from "../icons";
-import MenuButton from "./MenuButton";
+import { LogoIcon } from "../../../components/Svg";
+import { LogoIcon as LogoWithText } from "../icons";
 
 interface Props {
-  isPushed: boolean;
   isDark: boolean;
-  togglePush: () => void;
   href: string;
 }
 
@@ -48,7 +45,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
+const Logo: React.FC<Props> = ({ isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
@@ -59,13 +56,6 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
 
   return (
     <Flex>
-      <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
-        {isPushed ? (
-          <HamburgerCloseIcon width="24px" color="textSubtle" />
-        ) : (
-          <HamburgerIcon width="24px" color="textSubtle" />
-        )}
-      </MenuButton>
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} aria-label="Pancake home page">
           {innerLogo}
@@ -79,4 +69,4 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   );
 };
 
-export default React.memo(Logo, (prev, next) => prev.isPushed === next.isPushed && prev.isDark === next.isDark);
+export default React.memo(Logo, (prev, next) => prev.isDark === next.isDark);

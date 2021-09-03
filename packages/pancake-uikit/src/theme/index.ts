@@ -4,7 +4,7 @@ import { PancakeToggleTheme } from "../components/PancakeToggle/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";
-import { NavTheme } from "../widgets/Menu/types";
+import { NavThemeType } from "../widgets/Menu/theme";
 import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
 
@@ -14,7 +14,7 @@ export interface PancakeTheme {
   alert: AlertTheme;
   colors: Colors;
   card: CardTheme;
-  nav: NavTheme;
+  nav: NavThemeType;
   modal: ModalTheme;
   pancakeToggle: PancakeToggleTheme;
   radio: RadioTheme;
