@@ -3,6 +3,7 @@ import Box from "../Box/Box";
 import Flex from "../Box/Flex";
 import Text from "../Text/Text";
 import Svg from "./Svg";
+import IconComponent from "./IconComponent";
 
 export default {
   title: "Components/Svg Icons",
@@ -66,4 +67,23 @@ export const Icons: React.FC = () => {
       })}
     </Flex>
   );
+};
+
+const IconComponentTemplate: React.FC = (args) => {
+  return (
+    <Box background="white" height="48px" width="48px">
+      <IconComponent
+        activeBackgroundColor="backgroundAlt"
+        iconName="CheckmarkCircle"
+        height="48px"
+        width="48px"
+        {...args}
+      />
+    </Box>
+  );
+};
+
+export const IconComponentStory = IconComponentTemplate.bind({});
+IconComponentStory.args = {
+  isActive: false,
 };

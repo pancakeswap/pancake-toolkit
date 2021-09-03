@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import MAX_TIME_PRESSED from "../BottomNav/constants";
 import { Flex } from "../Box";
 import IconComponent from "../Svg/IconComponent";
-import { Text } from "../Text";
 import { StyledBottomNavItem, StyledBottomNavText } from "./styles";
 import { BottomNavItemProps } from "./types";
 
@@ -30,7 +29,16 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({ label, iconName, href, is
       {...props}
     >
       <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%">
-        {iconName && <IconComponent iconName={iconName} height="19px" color={isActive ? "secondary" : "textSubtle"} />}
+        {iconName && (
+          <IconComponent
+            iconName={iconName}
+            height="19px"
+            width="20px"
+            color={isActive ? "secondary" : "textSubtle"}
+            isActive={isActive}
+            activeBackgroundColor="backgroundAlt"
+          />
+        )}
         <StyledBottomNavText
           color={isActive ? "text" : "textSubtle"}
           fontWeight={isActive ? "600" : "400"}

@@ -2,33 +2,27 @@ import ItemsMock from "../DropdownMenu/mock";
 
 const MenuItemsMock = [
   {
-    label: "Home",
-    href: "/",
-    icon: "HomeIcon",
-    items: ItemsMock,
-  },
-  {
     label: "Earn",
     href: "/",
-    icon: "EarnIcon",
+    icon: "Earn",
     items: ItemsMock,
   },
   {
     label: "Win",
     href: "/",
-    icon: "TrophyIcon",
+    icon: "Trophy",
     items: ItemsMock,
   },
   {
     label: "NFT",
     href: "/",
-    icon: "NftIcon",
+    icon: "Nft",
     items: ItemsMock,
   },
   {
     label: "More",
     href: "/",
-    icon: "MoreIcon",
+    icon: "More",
     items: ItemsMock,
   },
 ];

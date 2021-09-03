@@ -23,6 +23,6 @@ export const Default = Template.bind({});
 Default.args = {
   label: "Trade",
   href: "/",
-  iconName: "SwapIcon",
+  iconName: "Swap",
   isActive: false,
 };
