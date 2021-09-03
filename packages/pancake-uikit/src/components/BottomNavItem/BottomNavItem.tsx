@@ -2,7 +2,7 @@ import React, { PointerEvent, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import MAX_TIME_PRESSED from "../BottomNav/constants";
 import { Flex } from "../Box";
-import IconComponent from "../Svg/IconComponent";
+import AnimatedIconComponent from "../Svg/AnimatedIconComponent";
 import { StyledBottomNavItem, StyledBottomNavText } from "./styles";
 import { BottomNavItemProps } from "./types";
 
@@ -30,7 +30,7 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({ label, iconName, href, is
     >
       <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%">
         {iconName && (
-          <IconComponent
+          <AnimatedIconComponent
             iconName={iconName}
             height="19px"
             width="20px"

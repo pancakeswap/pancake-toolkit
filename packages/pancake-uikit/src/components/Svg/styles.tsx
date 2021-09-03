@@ -6,7 +6,7 @@ export const StyledIconContainer = styled.div<{ activeBackgroundColor?: keyof Co
     activeBackgroundColor ? theme.colors[activeBackgroundColor] : "transparent"};
 `;
 
-export const StyledIconComponent = styled.div<{
+export const StyledAnimatedIconComponent = styled.div<{
   isActive: boolean;
   height?: string;
   width?: string;
