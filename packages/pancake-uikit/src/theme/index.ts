@@ -1,8 +1,5 @@
 import { AlertTheme } from "../components/Alert/types";
 import { CardTheme } from "../components/Card/types";
-import { MenuItemTheme } from "../components/MenuItem/theme";
-import { SubMenuItemsTheme } from "../components/SubMenuItems/types";
-import { DropdownMenuItemTheme } from "../components/DropdownMenu/theme";
 import { PancakeToggleTheme } from "../components/PancakeToggle/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
@@ -18,9 +15,6 @@ export interface PancakeTheme {
   colors: Colors;
   card: CardTheme;
   nav: NavThemeType;
-  menuItem: MenuItemTheme;
-  subMenuItems: SubMenuItemsTheme;
-  dropdownMenuItem: DropdownMenuItemTheme;
   modal: ModalTheme;
   pancakeToggle: PancakeToggleTheme;
   radio: RadioTheme;

@@ -4,9 +4,9 @@ import MenuItem from "../MenuItem/MenuItem";
 import StyledSubMenuItems from "./styles";
 import { SubMenuItemsProps } from "./types";
 
-const MenuItems: React.FC<SubMenuItemsProps> = ({ items = [], ...props }) => {
+const SubMenuItems: React.FC<SubMenuItemsProps> = ({ items = [], ...props }) => {
   return (
-    <StyledSubMenuItems justifyContent={["start", "start", "center"]} {...props} pl={["12px", "12px", "0px"]}>
+    <StyledSubMenuItems justifyContent={["start", null, "center"]} {...props} pl={["12px", null, "0px"]}>
       {items.map(({ label, href, isActive }) => (
         <Box key={label} mr="20px">
           <MenuItem href={href} isActive={isActive} variant="subMenu">
@@ -18,4 +18,4 @@ const MenuItems: React.FC<SubMenuItemsProps> = ({ items = [], ...props }) => {
   );
 };
 
-export default MenuItems;
+export default SubMenuItems;

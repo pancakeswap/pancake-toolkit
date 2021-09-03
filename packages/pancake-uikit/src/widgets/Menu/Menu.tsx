@@ -64,7 +64,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 `;
 
 const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, links, subLinks, children }) => {
-  const { isDesktop } = useMatchBreakpoints();
+  const { isMobile } = useMatchBreakpoints();
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
 
@@ -105,12 +105,14 @@ const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, 
       <StyledNav showMenu={showMenu}>
         <Flex>
           <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-          {isDesktop && <MenuItems items={links} ml="24px" />}
+          {!isMobile && <MenuItems items={links} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
-          <Box mr="12px">
-            <CakePrice cakePriceUsd={cakePriceUsd} />
-          </Box>
+          {!isMobile && (
+            <Box mr="12px">
+              <CakePrice cakePriceUsd={cakePriceUsd} />
+            </Box>
+          )}
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>

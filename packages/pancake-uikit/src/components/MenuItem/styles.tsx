@@ -7,7 +7,7 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   position: relative;
   display: flex;
   align-items: center;
-  color: ${({ theme, isActive }) => (isActive ? theme.menuItem.activeTextColor : theme.menuItem.textColor)};
+  color: ${({ theme, isActive }) => (isActive ? theme.colors.secondary : theme.colors.textSubtle)};
   font-size: 16px;
   font-weight: ${({ isActive }) => (isActive ? "600" : "400")};
 
@@ -41,11 +41,11 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
     variant === "subMenu" &&
     `
     border-radius: 2px;
-    border-bottom: 4px solid ${theme.menuItem.borderColor};
+    border-bottom: 4px solid ${theme.colors.primary};
   `};
 
   &:hover {
-    background: ${({ theme }) => theme.menuItem.backgroundColor};
+    background: ${({ theme }) => theme.colors.tertiary};
     ${({ variant }) => variant === "default" && "border-radius: 16px;"};
   }
 `;

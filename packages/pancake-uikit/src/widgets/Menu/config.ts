@@ -82,11 +82,11 @@ export const links: MenuItemsType[] = [
     icon: "MoreIcon",
     items: [
       {
-        label: "Info & Analystics",
+        label: "Info & Analytics",
         href: "/",
       },
       {
-        label: "IFO TOken Sales",
+        label: "IFO Token Sales",
         href: "/",
         status: status.SOON,
       },
