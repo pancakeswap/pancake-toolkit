@@ -1,12 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../..";
-import { MenuItemVariant } from "./types";
-
-type StyledMenuItemProps = {
-  $isActive?: boolean;
-  $variant?: MenuItemVariant;
-  $statusColor?: keyof Colors;
-};
+import { StyledMenuItemProps } from "./types";
 
 const StyledMenuItem = styled.a<StyledMenuItemProps>`
   position: relative;

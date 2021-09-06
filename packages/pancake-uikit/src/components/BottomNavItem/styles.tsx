@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { Text } from "../Text";
-import { BottomNavItemProps } from "./types";
 
-export const StyledBottomNavItem = styled.button<BottomNavItemProps>`
+export const StyledBottomNavItem = styled.button`
   display: block;
   border: 0;
   background: transparent;

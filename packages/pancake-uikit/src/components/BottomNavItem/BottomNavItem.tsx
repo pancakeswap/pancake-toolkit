@@ -25,7 +25,6 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({ label, iconName, href, is
       onPointerUp={handlePointerUp}
       type="button"
       key={label}
-      isActive={isActive}
       {...props}
     >
       <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%">
