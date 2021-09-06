@@ -122,11 +122,14 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
           style={styles.popper}
           ref={setTooltipRef}
           {...attributes.popper}
-          isBottomNav={isBottomNav}
-          isOpen={isOpen}
+          $isBottomNav={isBottomNav}
+          $isOpen={isOpen}
         >
           {items.map(
-            ({ type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, ...itemProps }, index) => {
+            (
+              { type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, isActive = false, ...itemProps },
+              index
+            ) => {
               const MenuItemContent = (
                 <>
                   {label}
@@ -140,17 +143,17 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
               return (
                 <div key={index}>
                   {type === DropdownMenuItemType.BUTTON && (
-                    <DropdownMenuItem type="button" {...itemProps}>
+                    <DropdownMenuItem $isActive={isActive} type="button" {...itemProps}>
                       {MenuItemContent}
                     </DropdownMenuItem>
                   )}
                   {type === DropdownMenuItemType.INTERNAL_LINK && (
-                    <DropdownMenuItem as={Link} to={href} {...itemProps}>
+                    <DropdownMenuItem $isActive={isActive} as={Link} to={href} {...itemProps}>
                       {MenuItemContent}
                     </DropdownMenuItem>
                   )}
                   {type === DropdownMenuItemType.EXTERNAL_LINK && (
-                    <DropdownMenuItem as="a" href={href} target="_blank" {...itemProps}>
+                    <DropdownMenuItem $isActive={isActive} as="a" href={href} target="_blank" {...itemProps}>
                       {MenuItemContent}
                     </DropdownMenuItem>
                   )}

@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { Text } from "../Text";
 import { BottomNavItemProps } from "./types";
 
-type StyledBottomNavItemProps = Pick<BottomNavItemProps, "isActive">;
-
-export const StyledBottomNavItem = styled.button<StyledBottomNavItemProps>`
+export const StyledBottomNavItem = styled.button<BottomNavItemProps>`
   display: block;
   border: 0;
   background: transparent;
