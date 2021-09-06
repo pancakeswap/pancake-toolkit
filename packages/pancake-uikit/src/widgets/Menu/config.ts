@@ -1,9 +1,8 @@
 import { noop } from "lodash";
 import { DropdownMenuItems, DropdownMenuItemType } from "../../components/DropdownMenu/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
-import { LinkStatus } from "./types";
 import { SubMenuItemsType } from "../../components/SubMenuItems/types";
-import { FooterLinkType } from "../../components/Footer/types";
+import { LinkStatus } from "./types";
 
 export const status = {
   LIVE: <LinkStatus>{
