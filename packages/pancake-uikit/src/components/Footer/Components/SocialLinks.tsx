@@ -1,15 +1,16 @@
 import React from "react";
-import { SvgProps } from "../../../components/Svg";
-import Flex from "../../../components/Box/Flex";
-import Dropdown from "../../../components/Dropdown/Dropdown";
-import Link from "../../../components/Link/Link";
-import * as IconModule from "../icons";
+import { SvgProps } from "../../Svg";
+import Flex from "../../Box/Flex";
+import Dropdown from "../../Dropdown/Dropdown";
+import Link from "../../Link/Link";
+import * as IconModule from "../../../widgets/Menu/icons";
 import { socials } from "../config";
+import { FlexProps } from "../../Box";
 
 const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
-const SocialLinks: React.FC = () => (
-  <Flex>
+const SocialLinks: React.FC<FlexProps> = ({ ...props }) => (
+  <Flex {...props}>
     {socials.map((social, index) => {
       const Icon = Icons[social.icon];
       const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };

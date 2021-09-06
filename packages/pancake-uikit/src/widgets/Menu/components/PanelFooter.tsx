@@ -6,7 +6,6 @@ import { MENU_ENTRY_HEIGHT } from "../config";
 import { PanelProps, PushedProps } from "../types";
 import CakePrice from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
-import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
 
 interface Props extends PanelProps, PushedProps {}
@@ -58,7 +57,6 @@ const PanelFooter: React.FC<Props> = ({
     <Container>
       <SocialEntry>
         <CakePrice cakePriceUsd={cakePriceUsd} />
-        <SocialLinks />
       </SocialEntry>
       <SettingsEntry>
         <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
