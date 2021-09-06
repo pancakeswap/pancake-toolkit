@@ -54,4 +54,5 @@ export interface NavProps extends CommonNavProps {
   globalMenu?: ReactElement;
   links: Array<MenuItemsType>;
   subLinks: Array<SubMenuItemsType>;
+  activeItem: string;
 }

@@ -22,7 +22,12 @@ import { Language, NavProps } from "./types";
 export default {
   title: "Widgets/Menu",
   component: Menu,
-  argTypes: {},
+  argTypes: {
+    activeItem: {
+      options: ["Trade", "Earn", "Win"],
+      control: { type: "select" },
+    },
+  },
 };
 
 const langs: Language[] = [...Array(20)].map((_, i) => ({
@@ -86,6 +91,7 @@ const defaultProps = {
   profile: null,
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
+  activeItem: "Trade",
 };
 
 const ConnectedTemplate: React.FC<NavProps> = (args) => {
