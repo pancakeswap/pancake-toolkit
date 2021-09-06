@@ -39,6 +39,7 @@ it("renders correctly", () => {
         cakePriceUsd={0.23158668932877668}
         links={menuConfig}
         subLinks={subMenuConfig}
+        activeItem="Trade"
       >
         body
       </Menu>
