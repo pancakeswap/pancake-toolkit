@@ -102,6 +102,7 @@ export { default as TicketFillIcon } from "./Icons/TicketFill";
 export { default as TicketRound } from "./Icons/TicketRound";
 export { default as TimerIcon } from "./Icons/Timer";
 export { default as TokenPocketIcon } from "./Icons/TokenPocket";
+export { default as BitKeepIcon } from "./Icons/BitKeep";
 export { default as TradeIcon } from "./Icons/Trade";
 export { default as TradeFilledIcon } from "./Icons/TradeFilled";
 export { default as TrophyGoldIcon } from "./Icons/TrophyGold";
