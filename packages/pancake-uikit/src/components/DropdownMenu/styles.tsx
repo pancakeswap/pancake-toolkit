@@ -1,20 +1,24 @@
 import styled, { DefaultTheme } from "styled-components";
 import { StyledDropdownMenuItemProps } from "./types";
 
-const getTextColor = ({ isActive, disabled, theme }: StyledDropdownMenuItemProps & { theme: DefaultTheme }) => {
+const getTextColor = ({
+  $isActive,
+  disabled,
+  theme,
+}: StyledDropdownMenuItemProps & { theme: DefaultTheme; $isActive: boolean }) => {
   if (disabled) return theme.colors.textDisabled;
-  if (isActive) return theme.colors.secondary;
+  if ($isActive) return theme.colors.secondary;
 
   return theme.colors.textSubtle;
 };
 
-export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps>`
+export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $isActive: boolean }>`
   align-items: center;
   border: 0;
   background: transparent;
-  color: ${({ theme, disabled, isActive }) => getTextColor({ theme, disabled, isActive })};
+  color: ${({ theme, disabled, $isActive }) => getTextColor({ theme, disabled, $isActive })};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  font-weight: ${({ isActive = false }) => (isActive ? "600" : "400")};
+  font-weight: ${({ $isActive = false }) => ($isActive ? "600" : "400")};
   display: flex;
   font-size: 16px;
   height: 48px;
@@ -41,19 +45,23 @@ export const DropdownMenuDivider = styled.hr`
   margin: 4px 0;
 `;
 
-export const StyledDropdownMenu = styled.div<{ isOpen: boolean }>`
+export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: boolean }>`
   background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 16px;
   padding-bottom: 4px;
   padding-top: 4px;
   pointer-events: auto;
-  width: 280px;
+  width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "280px")};
+  ${({ $isBottomNav }) =>
+    $isBottomNav &&
+    `
+  `}
   visibility: visible;
   z-index: 1001;
 
-  ${({ isOpen }) =>
-    !isOpen &&
+  ${({ $isOpen }) =>
+    !$isOpen &&
     `
     pointer-events: none;
     visibility: hidden;

@@ -1,6 +1,7 @@
 import throttle from "lodash/throttle";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import BottomNav from "../../components/BottomNav";
 import { Box } from "../../components/Box";
 import Flex from "../../components/Box/Flex";
 import MenuItems from "../../components/MenuItems/MenuItems";
@@ -63,7 +64,16 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   }
 `;
 
-const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, links, subLinks, children }) => {
+const Menu: React.FC<NavProps> = ({
+  userMenu,
+  globalMenu,
+  isDark,
+  cakePriceUsd,
+  links,
+  subLinks,
+  activeItem,
+  children,
+}) => {
   const { isMobile } = useMatchBreakpoints();
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
@@ -122,6 +132,7 @@ const Menu: React.FC<NavProps> = ({ userMenu, globalMenu, isDark, cakePriceUsd, 
           {children}
         </Inner>
       </BodyWrapper>
+      <BottomNav items={links} activeItem={activeItem} />
     </Wrapper>
   );
 };

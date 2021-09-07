@@ -1,4 +1,3 @@
-import React from "react";
 import { noop } from "lodash";
 import { DropdownMenuItems, DropdownMenuItemType } from "../../components/DropdownMenu/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
@@ -24,7 +23,7 @@ export const links: MenuItemsType[] = [
   {
     label: "Trade",
     href: "/",
-    icon: "TradeIcon",
+    icon: "Swap",
     isActive: true,
     items: [
       {
@@ -41,7 +40,7 @@ export const links: MenuItemsType[] = [
   {
     label: "Earn",
     href: "/",
-    icon: "EarnIcon",
+    icon: "Earn",
     items: [
       {
         label: "Earn",
@@ -60,7 +59,7 @@ export const links: MenuItemsType[] = [
   {
     label: "Win",
     href: "/",
-    icon: "WinIcon",
+    icon: "Trophy",
     items: [
       {
         label: "Win",
@@ -79,8 +78,28 @@ export const links: MenuItemsType[] = [
   {
     label: "...",
     href: "/",
-    icon: "MoreIcon",
+    icon: "More",
     items: [
+      {
+        label: "Info & Analytics",
+        href: "/",
+      },
+      {
+        label: "IFO Token Sales",
+        href: "/",
+        status: status.SOON,
+      },
+      {
+        type: DropdownMenuItemType.DIVIDER,
+      },
+      {
+        label: "NFT Collectibles",
+        href: "/",
+      },
+      {
+        label: "Team Leaderboard",
+        href: "/",
+      },
       {
         label: "Info & Analytics",
         href: "/",

@@ -8,3 +8,9 @@ export interface MenuItemProps {
   variant?: MenuItemVariant;
   statusColor?: keyof Colors;
 }
+
+export type StyledMenuItemProps = {
+  $isActive?: boolean;
+  $variant?: MenuItemVariant;
+  $statusColor?: keyof Colors;
+};

@@ -22,6 +22,7 @@ const Template: React.FC<MenuItemProps> = ({ children, ...args }) => {
 export const Default = Template.bind({});
 Default.args = {
   isActive: false,
+  href: "/",
   children: "Trade",
-  hoverVariant: "default",
+  variant: "default",
 };
