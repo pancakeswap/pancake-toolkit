@@ -1,4 +1,3 @@
-import { CommonNavProps } from "../../widgets/Menu/types";
 import { FlexProps } from "../Box";
 
 export interface Language {
@@ -12,4 +11,13 @@ export type FooterLinkType = {
   items: { label: string; href?: string; isHighlighted?: boolean }[];
 };
 
-export type FooterProps = { items: FooterLinkType[]; buyCakeLabel: string } & CommonNavProps & FlexProps;
+export type FooterProps = {
+  items: FooterLinkType[];
+  buyCakeLabel: string;
+  isDark: boolean;
+  toggleTheme: (isDark: boolean) => void;
+  cakePriceUsd?: number;
+  currentLang: string;
+  langs: Language[];
+  setLang: (lang: Language) => void;
+} & FlexProps;

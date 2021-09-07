@@ -11,7 +11,7 @@ import SubMenuItems from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
 import CakePrice from "./components/CakePrice";
 import Logo from "./components/Logo";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL, MOBILE_MENU_HEIGHT } from "./config";
+import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
 
 const Wrapper = styled.div`

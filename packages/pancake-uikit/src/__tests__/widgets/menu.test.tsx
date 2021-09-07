@@ -3,6 +3,7 @@ import noop from "lodash/noop";
 import { BrowserRouter } from "react-router-dom";
 import { renderWithTheme } from "../../testHelpers";
 import { Menu, menuConfig, subMenuConfig, Language } from "../../widgets/Menu";
+import { footerLinks } from "../../components/Footer/config";
 
 /**
  * @see https://jestjs.io/docs/en/manual-mocks
@@ -39,6 +40,7 @@ it("renders correctly", () => {
         cakePriceUsd={0.23158668932877668}
         links={menuConfig}
         subLinks={subMenuConfig}
+        footerLinks={footerLinks}
         activeItem="Trade"
       >
         body
