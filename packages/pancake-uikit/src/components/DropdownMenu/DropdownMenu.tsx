@@ -33,7 +33,6 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   useEffect(() => {
     const showTooltip = (evt: MouseEvent | TouchEvent) => {
       setIsOpen(true);
-      console.log("🚀 ~ file: DropdownMenu.tsx ~ line 38 ~ showTooltip ~ true", true);
 
       if (evt.target === targetRef) {
         clearTimeout(hideTimeout.current);
