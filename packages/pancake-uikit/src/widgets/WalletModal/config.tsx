@@ -40,7 +40,12 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
     priority: 999,
   },
-
+  {
+    title: "BitKeep",
+    icon: BitKeep,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
   {
     title: "Binance Chain",
     icon: BinanceChain,
