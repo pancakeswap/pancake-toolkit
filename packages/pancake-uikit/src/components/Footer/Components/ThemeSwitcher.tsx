@@ -1,10 +1,6 @@
 import React from "react";
-import * as IconModule from "../../../widgets/Menu/icons";
-import { SvgProps } from "../../Svg";
+import IconComponent from "../../Svg/IconComponent";
 import { Toggle } from "../../Toggle";
-
-const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
-const { MoonIcon, SunIcon } = Icons;
 
 interface Props {
   isDark: boolean;
@@ -18,8 +14,8 @@ const ThemeSwitcher: React.FC<Props> = ({ isDark, toggleTheme }) => (
     checkedColor="textDisabled"
     onChange={() => toggleTheme(!isDark)}
     scale="md"
-    startIcon={(isActive = false) => <SunIcon color={isActive ? "warning" : "backgroundAlt"} />}
-    endIcon={(isActive = false) => <MoonIcon color={isActive ? "secondary" : "backgroundAlt"} />}
+    startIcon={(isActive = false) => <IconComponent iconName="Sun" color={isActive ? "warning" : "backgroundAlt"} />}
+    endIcon={(isActive = false) => <IconComponent iconName="Moon" color={isActive ? "secondary" : "backgroundAlt"} />}
   />
 );
 
