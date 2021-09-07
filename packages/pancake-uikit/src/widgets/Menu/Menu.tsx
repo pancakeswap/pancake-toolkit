@@ -1,15 +1,17 @@
+import { noop } from "lodash";
 import throttle from "lodash/throttle";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import BottomNav from "../../components/BottomNav";
 import { Box } from "../../components/Box";
 import Flex from "../../components/Box/Flex";
+import Footer from "../../components/Footer";
 import MenuItems from "../../components/MenuItems/MenuItems";
 import SubMenuItems from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
 import CakePrice from "./components/CakePrice";
 import Logo from "./components/Logo";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL, MOBILE_MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
 
 const Wrapper = styled.div`
@@ -57,11 +59,6 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-  }
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -71,7 +68,9 @@ const Menu: React.FC<NavProps> = ({
   cakePriceUsd,
   links,
   subLinks,
+  footerLinks,
   activeItem,
+  langs,
   children,
 }) => {
   const { isMobile } = useMatchBreakpoints();
@@ -130,9 +129,21 @@ const Menu: React.FC<NavProps> = ({
       <BodyWrapper>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
+          <Footer
+            items={footerLinks}
+            isDark={isDark}
+            toggleTheme={noop}
+            langs={langs}
+            setLang={noop}
+            currentLang="EN"
+            cakePriceUsd={0.023158668932877668}
+            buyCakeLabel="Buy CAKE"
+            mt="60px"
+            mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
+          />
         </Inner>
       </BodyWrapper>
-      <BottomNav items={links} activeItem={activeItem} />
+      {isMobile && <BottomNav items={links} activeItem={activeItem} />}
     </Wrapper>
   );
 };
