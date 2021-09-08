@@ -1,5 +1,5 @@
 import React from "react";
-import { darkColors } from "../../..";
+import { darkColors } from "../../../theme";
 import { FlexProps } from "../../Box";
 import Flex from "../../Box/Flex";
 import Dropdown from "../../Dropdown/Dropdown";

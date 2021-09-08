@@ -4,7 +4,8 @@ import Dropdown from "../../Dropdown/Dropdown";
 import Button from "../../Button/Button";
 import LanguageIcon from "../../Svg/Icons/Language";
 import MenuButton from "./MenuButton";
-import { darkColors, Language } from "../../..";
+import { darkColors } from "../../../theme";
+import { Language } from "../types";
 
 interface Props {
   currentLang: string;
