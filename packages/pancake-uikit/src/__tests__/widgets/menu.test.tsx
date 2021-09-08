@@ -42,6 +42,7 @@ it("renders correctly", () => {
         subLinks={subMenuConfig}
         footerLinks={footerLinks}
         activeItem="Trade"
+        activeSubItem="Exchange"
       >
         body
       </Menu>
