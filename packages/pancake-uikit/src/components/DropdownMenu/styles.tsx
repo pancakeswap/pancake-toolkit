@@ -40,6 +40,16 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
   }
 `;
 
+export const StyledDropdownMenuItemContainer = styled.div`
+  &:first-child > ${DropdownMenuItem} {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:last-child > ${DropdownMenuItem} {
+    border-radius: 0 0 8px 8px;
+  }
+`;
+
 export const DropdownMenuDivider = styled.hr`
   border-color: ${({ theme }) => theme.colors.cardBorder};
   border-style: solid;
@@ -55,10 +65,6 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   padding-top: 4px;
   pointer-events: auto;
   width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "280px")};
-  ${({ $isBottomNav }) =>
-    $isBottomNav &&
-    `
-  `}
   visibility: visible;
   z-index: 1001;
 
@@ -68,14 +74,6 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
     pointer-events: none;
     visibility: hidden;
   `}
-
-  ${DropdownMenuItem}:first-child {
-    border-radius: 8px 8px 0 0;
-  }
-
-  ${DropdownMenuItem}:last-child {
-    border-radius: 0 0 8px 8px;
-  }
 `;
 
 export const LinkStatus = styled(Text)<{ color: keyof Colors }>`

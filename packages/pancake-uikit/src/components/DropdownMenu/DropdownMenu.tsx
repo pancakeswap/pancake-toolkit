@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 import isTouchDevice from "../../util/isTouchDevice";
 import { Box, Flex } from "../Box";
 import IconComponent from "../Svg/IconComponent";
-import { DropdownMenuDivider, DropdownMenuItem, StyledDropdownMenu, LinkStatus } from "./styles";
+import {
+  DropdownMenuDivider,
+  DropdownMenuItem,
+  StyledDropdownMenu,
+  LinkStatus,
+  StyledDropdownMenuItemContainer,
+} from "./styles";
 import { DropdownMenuItemType, DropdownMenuProps } from "./types";
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
@@ -140,7 +146,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                 </>
               );
               return (
-                <div key={index}>
+                <StyledDropdownMenuItemContainer key={index}>
                   {type === DropdownMenuItemType.BUTTON && (
                     <DropdownMenuItem $isActive={isActive} type="button" {...itemProps}>
                       {MenuItemContent}
@@ -160,7 +166,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                     </DropdownMenuItem>
                   )}
                   {type === DropdownMenuItemType.DIVIDER && <DropdownMenuDivider />}
-                </div>
+                </StyledDropdownMenuItemContainer>
               );
             }
           )}

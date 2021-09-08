@@ -74,30 +74,10 @@ export const links: MenuItemsType[] = [
     ],
   },
   {
-    label: "...",
+    label: "",
     href: "/",
     icon: "More",
     items: [
-      {
-        label: "Info & Analytics",
-        href: "/",
-      },
-      {
-        label: "IFO Token Sales",
-        href: "/",
-        status: status.SOON,
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: "NFT Collectibles",
-        href: "/",
-      },
-      {
-        label: "Team Leaderboard",
-        href: "/",
-      },
       {
         label: "Info & Analytics",
         href: "/",
