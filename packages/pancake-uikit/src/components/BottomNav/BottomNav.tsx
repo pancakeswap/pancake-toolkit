@@ -13,7 +13,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", ...p
         return (
           <DropdownMenu key={label} items={menuItems} isBottomNav openMenuTimeout={MAX_TIME_PRESSED}>
             <Box mr="20px">
-              <BottomNavItem href={href} isActive={label === activeItem} label={label} iconName={icon} />
+              <BottomNavItem href={href} isActive={href === activeItem} label={label} iconName={icon} />
             </Box>
           </DropdownMenu>
         );

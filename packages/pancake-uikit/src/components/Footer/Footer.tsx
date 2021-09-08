@@ -41,10 +41,10 @@ const MenuItem: React.FC<FooterProps> = ({
         alignItems="flex-start"
         mb={["42px", null, "36px"]}
       >
-        {items.map((item) => (
+        {items?.map((item) => (
           <StyledList key={item.label}>
             <StyledListItem>{item.label}</StyledListItem>
-            {item.items.map(({ label, href, isHighlighted = false }) => (
+            {item.items?.map(({ label, href, isHighlighted = false }) => (
               <StyledListItem key={label}>
                 <Link href={href} color={isHighlighted ? baseColors.warning : darkColors.text} bold={false}>
                   {label}

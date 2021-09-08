@@ -7,11 +7,11 @@ import { MenuItemsProps } from "./types";
 const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, ...props }) => {
   return (
     <Flex {...props}>
-      {items.map(({ label, items: menuItems, href }) => {
-        const statusColor = menuItems.find((menuItem) => menuItem.status !== undefined)?.status?.color;
+      {items.map(({ label, items: menuItems = [], href }) => {
+        const statusColor = menuItems?.find((menuItem) => menuItem.status !== undefined)?.status?.color;
         return (
           <DropdownMenu key={label} items={menuItems} py="12px">
-            <MenuItem href={href} isActive={activeItem === label} statusColor={statusColor}>
+            <MenuItem href={href} isActive={activeItem === href} statusColor={statusColor}>
               {label}
             </MenuItem>
           </DropdownMenu>

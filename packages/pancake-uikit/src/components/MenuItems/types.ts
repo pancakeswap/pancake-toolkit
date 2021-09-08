@@ -5,7 +5,7 @@ export type MenuItemsType = {
   label: string;
   href: string;
   icon?: string;
-  items: DropdownMenuItems[];
+  items?: DropdownMenuItems[];
 };
 
 export interface MenuItemsProps extends BoxProps {

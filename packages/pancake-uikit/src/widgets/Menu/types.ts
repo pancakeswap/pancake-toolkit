@@ -22,6 +22,7 @@ export interface NavProps {
   subLinks: Array<SubMenuItemsType>;
   footerLinks: Array<FooterLinkType>;
   activeItem: string;
+  activeSubItem: string;
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
   cakePriceUsd?: number;

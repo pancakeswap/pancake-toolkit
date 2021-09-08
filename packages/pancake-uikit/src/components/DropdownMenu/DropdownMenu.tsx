@@ -3,7 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
 import { Link } from "react-router-dom";
 import isTouchDevice from "../../util/isTouchDevice";
-import { Box } from "../Box";
+import { Box, Flex } from "../Box";
+import IconComponent from "../Svg/IconComponent";
 import { DropdownMenuDivider, DropdownMenuItem, StyledDropdownMenu, LinkStatus } from "./styles";
 import { DropdownMenuItemType, DropdownMenuProps } from "./types";
 
@@ -152,7 +153,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                   )}
                   {type === DropdownMenuItemType.EXTERNAL_LINK && (
                     <DropdownMenuItem $isActive={isActive} as="a" href={href} target="_blank" {...itemProps}>
-                      {MenuItemContent}
+                      <Flex alignItems="center" justifyContent="space-between" width="100%">
+                        {label}
+                        <IconComponent iconName="Logout" />
+                      </Flex>
                     </DropdownMenuItem>
                   )}
                   {type === DropdownMenuItemType.DIVIDER && <DropdownMenuDivider />}

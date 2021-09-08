@@ -55,7 +55,6 @@ const BodyWrapper = styled.div`
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
@@ -65,11 +64,15 @@ const Menu: React.FC<NavProps> = ({
   userMenu,
   globalMenu,
   isDark,
+  toggleTheme,
+  currentLang,
+  setLang,
   cakePriceUsd,
   links,
   subLinks,
   footerLinks,
   activeItem,
+  activeSubItem,
   langs,
   children,
 }) => {
@@ -125,18 +128,18 @@ const Menu: React.FC<NavProps> = ({
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>
-      <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 2}px`} />
+      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 2}px`} activeItem={activeSubItem} />}
       <BodyWrapper>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
           <Footer
             items={footerLinks}
             isDark={isDark}
-            toggleTheme={noop}
+            toggleTheme={toggleTheme}
             langs={langs}
-            setLang={noop}
-            currentLang="EN"
-            cakePriceUsd={0.023158668932877668}
+            setLang={setLang}
+            currentLang={currentLang}
+            cakePriceUsd={cakePriceUsd}
             buyCakeLabel="Buy CAKE"
             mt="60px"
             mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
