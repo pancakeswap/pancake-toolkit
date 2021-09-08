@@ -3,9 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
 import { Link } from "react-router-dom";
 import isTouchDevice from "../../util/isTouchDevice";
-import { LinkStatus } from "../../widgets/Menu/components/MenuEntry";
 import { Box } from "../Box";
-import { DropdownMenuDivider, DropdownMenuItem, StyledDropdownMenu } from "./styles";
+import { DropdownMenuDivider, DropdownMenuItem, StyledDropdownMenu, LinkStatus } from "./styles";
 import { DropdownMenuItemType, DropdownMenuProps } from "./types";
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({

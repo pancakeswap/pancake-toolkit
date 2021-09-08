@@ -20,4 +20,5 @@ const Template: React.FC<MenuItemsProps> = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   items: MenuItemsMock,
+  activeItem: "Trade",
 };

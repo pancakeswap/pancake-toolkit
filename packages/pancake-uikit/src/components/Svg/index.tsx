@@ -76,7 +76,7 @@ export { default as PencilIcon } from "./Icons/Pencil";
 export { default as PancakeRoundIcon } from "./Icons/PancakeRound";
 export { default as PocketWatchIcon } from "./Icons/PocketWatch";
 export { default as PlayCircleOutlineIcon } from "./Icons/PlayCircleOutline";
-export { default as PredictionsIcon } from "../../widgets/Menu/icons/Predictions";
+export { default as PredictionsIcon } from "./Icons/Predictions";
 export { default as PrizeIcon } from "./Icons/Prize";
 export { default as ProposalIcon } from "./Icons/Proposal";
 export { default as RemoveIcon } from "./Icons/Remove";

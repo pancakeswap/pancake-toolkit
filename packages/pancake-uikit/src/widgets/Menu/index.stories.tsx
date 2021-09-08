@@ -11,7 +11,6 @@ import Input from "../../components/Input/Input";
 import { ChevronDownIcon, CogIcon, LanguageCurrencyIcon } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import { Modal, ModalProps, useModal } from "../Modal";
-import { MenuEntry } from "./components/MenuEntry";
 import { LabelText, StyledUserMenu } from "./components/UserMenu";
 import MenuIcon from "./components/UserMenu/MenuIcon";
 import { Variant, variants } from "./components/UserMenu/types";
@@ -174,16 +173,6 @@ export const WithoutConnectButton: React.FC = () => {
         </div>
       </Menu>
     </BrowserRouter>
-  );
-};
-
-export const MenuEntryComponent: React.FC = () => {
-  return (
-    <Flex justifyContent="space-between" p="16px" style={{ backgroundColor: "wheat" }}>
-      <MenuEntry>Default</MenuEntry>
-      <MenuEntry secondary>Secondary</MenuEntry>
-      <MenuEntry isActive>isActive</MenuEntry>
-    </Flex>
   );
 };
 

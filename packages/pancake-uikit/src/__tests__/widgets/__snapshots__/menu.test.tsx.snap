@@ -282,7 +282,7 @@ exports[`renders correctly 1`] = `
   margin-right: 0.5rem;
 }
 
-.c77 {
+.c76 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -345,21 +345,11 @@ exports[`renders correctly 1`] = `
   line-height: 1.5;
 }
 
-.c75 {
+.c74 {
   color: #B8ADD2;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
-}
-
-.c15 {
-  border-radius: 16px;
-  padding: 0 8px;
-  border: 2px solid;
-  border-color: #FFB237;
-  box-shadow: none;
-  color: #FFB237;
-  margin-left: 8px;
 }
 
 .c10 {
@@ -463,6 +453,16 @@ exports[`renders correctly 1`] = `
 
 .c8 .c9:last-child {
   border-radius: 0 0 8px 8px;
+}
+
+.c15 {
+  border-radius: 16px;
+  padding: 0 8px;
+  border: 2px solid;
+  border-color: #FFB237;
+  box-shadow: none;
+  color: #FFB237;
+  margin-left: 8px;
 }
 
 .c40 {
@@ -600,7 +600,7 @@ exports[`renders correctly 1`] = `
   cursor: not-allowed;
 }
 
-.c76 {
+.c75 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -635,11 +635,11 @@ exports[`renders correctly 1`] = `
   color: white;
 }
 
-.c76:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+.c75:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
   opacity: 0.65;
 }
 
-.c76:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+.c75:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
   opacity: 0.85;
   -webkit-transform: translateY(1px);
   -ms-transform: translateY(1px);
@@ -647,8 +647,8 @@ exports[`renders correctly 1`] = `
   box-shadow: none;
 }
 
-.c76:disabled,
-.c76.pancake-button--disabled {
+.c75:disabled,
+.c75.pancake-button--disabled {
   background-color: #E9EAEB;
   border-color: #E9EAEB;
   box-shadow: none;
@@ -813,7 +813,7 @@ exports[`renders correctly 1`] = `
   border-radius: 8px;
 }
 
-.c74 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -824,13 +824,13 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c74 svg {
+.c19 svg {
   -webkit-transition: -webkit-transform 0.3s;
   -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
 }
 
-.c74:hover svg {
+.c19:hover svg {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -966,29 +966,6 @@ exports[`renders correctly 1`] = `
 
 .c24::-webkit-scrollbar {
   display: none;
-}
-
-.c19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c19 svg {
-  -webkit-transition: -webkit-transform 0.3s;
-  -webkit-transition: transform 0.3s;
-  transition: transform 0.3s;
-}
-
-.c19:hover svg {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 .c3 {
@@ -1660,7 +1637,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="c19"
-            href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+            href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
             target="_blank"
           >
             <svg
@@ -2753,7 +2730,7 @@ exports[`renders correctly 1`] = `
                 class="c25"
               >
                 <a
-                  class="c74"
+                  class="c19"
                   href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
                   target="_blank"
                 >
@@ -2900,7 +2877,7 @@ exports[`renders correctly 1`] = `
                     </defs>
                   </svg>
                   <div
-                    class="c75"
+                    class="c74"
                     color="#B8ADD2"
                   >
                     $0.023
@@ -2908,12 +2885,12 @@ exports[`renders correctly 1`] = `
                 </a>
               </div>
               <button
-                class="c76"
+                class="c75"
                 scale="sm"
               >
                 Buy CAKE
                 <svg
-                  class="c77"
+                  class="c76"
                   color="#FFFFFF"
                   viewBox="0 0 24 24"
                   width="20px"

@@ -1,4 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
+import { Colors } from "../../theme";
+import { Text } from "../Text";
 import { StyledDropdownMenuItemProps } from "./types";
 
 const getTextColor = ({
@@ -74,4 +76,14 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   ${DropdownMenuItem}:last-child {
     border-radius: 0 0 8px 8px;
   }
+`;
+
+export const LinkStatus = styled(Text)<{ color: keyof Colors }>`
+  border-radius: ${({ theme }) => theme.radii.default};
+  padding: 0 8px;
+  border: 2px solid;
+  border-color: ${({ theme, color }) => theme.colors[color]};
+  box-shadow: none;
+  color: ${({ theme, color }) => theme.colors[color]};
+  margin-left: 8px;
 `;

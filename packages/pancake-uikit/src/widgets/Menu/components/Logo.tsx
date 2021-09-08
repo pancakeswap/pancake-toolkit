@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import Flex from "../../../components/Box/Flex";
-import { LogoIcon } from "../../../components/Svg";
-import { LogoIcon as LogoWithText } from "../icons";
+import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
 
 interface Props {
   isDark: boolean;
@@ -50,7 +49,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   const innerLogo = (
     <>
       <LogoIcon className="mobile-icon" />
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
     </>
   );
 
