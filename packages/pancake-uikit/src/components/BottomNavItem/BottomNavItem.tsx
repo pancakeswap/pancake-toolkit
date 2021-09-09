@@ -27,12 +27,11 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({ label, iconName, href, is
       key={label}
       {...props}
     >
-      <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%">
+      <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%" minWidth="21px">
         {iconName && (
           <AnimatedIconComponent
             iconName={iconName}
-            height="19px"
-            width="20px"
+            height="22px"
             color={isActive ? "secondary" : "textSubtle"}
             isActive={isActive}
             activeBackgroundColor="backgroundAlt"

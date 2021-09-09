@@ -1,4 +1,5 @@
-import { FooterLinkType, Language } from "./types";
+import { Language } from "../LangSelector/types";
+import { FooterLinkType } from "./types";
 
 export const footerLinks: FooterLinkType[] = [
   {

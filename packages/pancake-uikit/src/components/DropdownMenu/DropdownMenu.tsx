@@ -17,6 +17,7 @@ import { DropdownMenuItemType, DropdownMenuProps } from "./types";
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
   children,
   isBottomNav = false,
+  activeItem = "",
   items = [],
   openMenuTimeout = 0,
   ...props
@@ -131,10 +132,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
           $isOpen={isOpen}
         >
           {items.map(
-            (
-              { type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, isActive = false, ...itemProps },
-              index
-            ) => {
+            ({ type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, ...itemProps }, index) => {
               const MenuItemContent = (
                 <>
                   {label}
@@ -145,6 +143,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                   )}
                 </>
               );
+              const isActive = href === activeItem;
               return (
                 <StyledDropdownMenuItemContainer key={index}>
                   {type === DropdownMenuItemType.BUTTON && (

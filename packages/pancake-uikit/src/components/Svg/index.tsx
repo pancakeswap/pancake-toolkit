@@ -138,8 +138,8 @@ export { default as SunIcon } from "./Icons/Sun";
 export { default as TeamBattleIcon } from "./Icons/TeamBattle";
 export { default as TicketIcon } from "./Icons/Ticket";
 export { default as EarnFillIcon } from "./Icons/EarnFill";
-export { default as TrophyFillIcon } from "./Icons/Trophy";
-export { default as TrophyIcon } from "./Icons/TrophyFill";
+export { default as TrophyIcon } from "./Icons/Trophy";
+export { default as TrophyFillIcon } from "./Icons/TrophyFill";
 
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

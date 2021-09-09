@@ -19,4 +19,6 @@ export const StyledBottomNavItem = styled.button`
 
 export const StyledBottomNavText = styled(Text)`
   user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 `;

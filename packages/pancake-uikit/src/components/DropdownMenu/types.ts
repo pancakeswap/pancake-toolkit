@@ -4,6 +4,7 @@ import { BoxProps } from "../Box";
 
 export interface DropdownMenuProps extends BoxProps {
   items?: DropdownMenuItems[];
+  activeItem?: string;
   isBottomNav?: boolean;
   openMenuTimeout?: number;
 }
@@ -32,5 +33,4 @@ export interface DropdownMenuItems {
   type?: DropdownMenuItemType;
   status?: LinkStatus;
   disabled?: boolean;
-  isActive?: boolean;
 }

@@ -14,7 +14,7 @@ import { Modal, ModalProps, useModal } from "../Modal";
 import { LabelText, StyledUserMenu } from "./components/UserMenu";
 import MenuIcon from "./components/UserMenu/MenuIcon";
 import { Variant, variants } from "./components/UserMenu/types";
-import { links, subLinks, userMenulinks } from "./config";
+import { links, userMenulinks } from "./config";
 import { footerLinks } from "../../components/Footer/config";
 import Menu from "./Menu";
 import { Language, NavProps } from "./types";
@@ -87,13 +87,13 @@ const defaultProps = {
   currentLang: "EN",
   cakePriceUsd: 0.023158668932877668,
   links,
-  subLinks,
+  subLinks: links[0].items,
   footerLinks,
   profile: null,
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
-  activeItem: "Trade",
-  activeSubItem: "Exchange",
+  activeItem: "/swap",
+  activeSubItem: "https://exchange.pancakeswap.finance",
 };
 
 const ConnectedTemplate: React.FC<NavProps> = (args) => {

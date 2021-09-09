@@ -21,7 +21,7 @@ export const StyledAnimatedIconComponent = styled.div<{
     ${({ width }) => `width: ${width || "100%"}`};
     z-index: 0;
   }
-  ${({ hasFillIcon, width }) =>
+  ${({ hasFillIcon }) =>
     hasFillIcon &&
     `
     div, svg {
@@ -32,18 +32,18 @@ export const StyledAnimatedIconComponent = styled.div<{
     }
 
     div:last-child {
-      ${`width: ${width}`};
       height: 0;
       z-index: 5;
       transition: height 0.25s ease;
     }
   `}
 
-  ${({ isActive, height, hasFillIcon }) =>
+  ${({ isActive, height, width, hasFillIcon }) =>
     isActive &&
     `
     div:last-child {
-      ${height && hasFillIcon && `height:${height}`}
+      ${height && hasFillIcon && `height:${height}`};
+      ${`width: ${width || "100%"}`};
     }
   `}
 `;

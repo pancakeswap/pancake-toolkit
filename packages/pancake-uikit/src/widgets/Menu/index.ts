@@ -3,7 +3,7 @@ export type { MenuItemsType } from "../../components/MenuItems/types";
 export { DropdownMenuItemType } from "../../components/DropdownMenu/types";
 export type { SubMenuItemsType } from "../../components/SubMenuItems/types";
 export type { FooterLinkType } from "../../components/Footer/types";
-export { status as menuStatus, links as menuConfig, subLinks as subMenuConfig } from "./config";
+export { status as menuStatus, links as menuConfig } from "./config";
 export type { NavProps, Language } from "./types";
 
 export { default as UserMenu } from "./components/UserMenu";

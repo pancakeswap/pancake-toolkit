@@ -1,7 +1,6 @@
 import { noop } from "lodash";
 import { DropdownMenuItems, DropdownMenuItemType } from "../../components/DropdownMenu/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
-import { SubMenuItemsType } from "../../components/SubMenuItems/types";
 import { LinkStatus } from "./types";
 
 export const status = {
@@ -22,7 +21,7 @@ export const status = {
 export const links: MenuItemsType[] = [
   {
     label: "Trade",
-    href: "/",
+    href: "/swap",
     icon: "Swap",
     items: [
       {
@@ -111,17 +110,6 @@ export const links: MenuItemsType[] = [
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
-  },
-];
-
-export const subLinks: SubMenuItemsType[] = [
-  {
-    label: "Exchange",
-    href: "/",
-  },
-  {
-    label: "Liquidity",
-    href: "/",
   },
 ];
 

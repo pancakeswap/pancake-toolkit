@@ -1,4 +1,3 @@
-import { noop } from "lodash";
 import throttle from "lodash/throttle";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
@@ -13,6 +12,7 @@ import CakePrice from "../../components/CakePrice/CakePrice";
 import Logo from "./components/Logo";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
+import LangSelector from "../../components/LangSelector/LangSelector";
 
 const Wrapper = styled.div`
   position: relative;
@@ -30,22 +30,12 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
-  box-shadow: inset 0px -2px 0px -8px rgba(133, 133, 133, 0.1);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   z-index: 20;
   transform: translate3d(0, 0, 0);
 
-  padding-left: 12px;
-  padding-right: 8px;
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  padding-left: 16px;
+  padding-right: 16px;
 `;
 
 const BodyWrapper = styled.div`
@@ -117,7 +107,7 @@ const Menu: React.FC<NavProps> = ({
       <StyledNav showMenu={showMenu}>
         <Flex>
           <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-          {!isMobile && <MenuItems items={links} activeItem={activeItem} ml="24px" />}
+          {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
           {!isMobile && (
@@ -125,10 +115,19 @@ const Menu: React.FC<NavProps> = ({
               <CakePrice cakePriceUsd={cakePriceUsd} />
             </Box>
           )}
+          <Box mt="4px">
+            <LangSelector
+              currentLang={currentLang}
+              langs={langs}
+              setLang={setLang}
+              buttonScale="xs"
+              color="textSubtle"
+            />
+          </Box>
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>
-      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 2}px`} activeItem={activeSubItem} />}
+      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />}
       <BodyWrapper>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
@@ -141,12 +140,11 @@ const Menu: React.FC<NavProps> = ({
             currentLang={currentLang}
             cakePriceUsd={cakePriceUsd}
             buyCakeLabel="Buy CAKE"
-            mt="60px"
             mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
           />
         </Inner>
       </BodyWrapper>
-      {isMobile && <BottomNav items={links} activeItem={activeItem} />}
+      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
     </Wrapper>
   );
 };

@@ -1,10 +1,5 @@
+import { Language } from "../LangSelector/types";
 import { FlexProps } from "../Box";
-
-export interface Language {
-  code: string;
-  language: string;
-  locale: string;
-}
 
 export type FooterLinkType = {
   label: string;
