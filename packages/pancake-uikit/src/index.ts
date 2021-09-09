@@ -24,7 +24,7 @@ export * from "./components/Slider";
 export * from "./components/Skeleton";
 export * from "./components/Spinner";
 export * from "./components/Stepper";
-export * from "./components/Menu";
+export * from "./components/BaseMenu";
 export * from "./components/Svg";
 export * from "./components/Table";
 export * from "./components/TabMenu";

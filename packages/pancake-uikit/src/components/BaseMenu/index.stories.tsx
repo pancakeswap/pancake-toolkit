@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
-import Menu from "./Menu";
+import InlineMenu from "./InlineMenu";
 import SubMenuComp from "./SubMenu";
 import { SubMenuItem } from "./styles";
 import { LinkExternal } from "../Link";
@@ -16,7 +16,7 @@ export default {
 export const Default: React.FC = () => {
   return (
     <Flex justifyContent="space-around" p="64px">
-      <Menu component={<Button>Menu #1</Button>}>
+      <InlineMenu component={<Button>Inline Menu #1</Button>}>
         <Box p="24px" width="320px">
           <Text>Menu Content</Text>
         </Box>
@@ -32,12 +32,12 @@ export const Default: React.FC = () => {
           <Button variant="secondary">Clear</Button>
           <Button>Apply</Button>
         </Grid>
-      </Menu>
-      <Menu component={<Button variant="tertiary">Menu #2</Button>}>
+      </InlineMenu>
+      <InlineMenu component={<Button variant="tertiary">Menu #2</Button>}>
         <Box p="24px" width="320px">
           <Text>Menu Content #2</Text>
         </Box>
-      </Menu>
+      </InlineMenu>
     </Flex>
   );
 };
@@ -50,14 +50,14 @@ export const Controlled: React.FC = () => {
       <Button variant="success" scale="sm" mr="32px" onClick={() => setIsOpen(!isOpen)}>
         Outside component controlling menu
       </Button>
-      <Menu component={<Button>Controlled Menu</Button>} isOpen={isOpen}>
+      <InlineMenu component={<Button>Controlled Menu</Button>} isOpen={isOpen}>
         <Box p="24px" width="320px">
           <Text mb="8px">Open Initially</Text>
           <Button scale="sm" variant="danger" onClick={() => setIsOpen(false)}>
             Close this menu inside
           </Button>
         </Box>
-      </Menu>
+      </InlineMenu>
     </Box>
   );
 };
