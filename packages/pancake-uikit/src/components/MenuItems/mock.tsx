@@ -19,7 +19,7 @@ const MenuItemsMock = [
   {
     label: "NFT",
     href: "/",
-    items: ItemsMock,
+    items: [ItemsMock[0]],
   },
   {
     label: "...",

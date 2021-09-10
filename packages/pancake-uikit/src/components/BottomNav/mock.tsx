@@ -1,6 +1,7 @@
 import ItemsMock from "../DropdownMenu/mock";
+import { MenuItemsType } from "../MenuItems/types";
 
-const MenuItemsMock = [
+const MenuItemsMock: MenuItemsType[] = [
   {
     label: "Swap",
     href: "/swap",
@@ -12,12 +13,14 @@ const MenuItemsMock = [
     href: "/earn",
     icon: "Earn",
     items: ItemsMock,
+    showItemsOnMobile: true,
   },
   {
-    label: "Win",
+    label: "Gagnez des jetons",
     href: "/win",
     icon: "Trophy",
     items: ItemsMock,
+    showItemsOnMobile: true,
   },
   {
     label: "NFT",
@@ -30,6 +33,7 @@ const MenuItemsMock = [
     href: "/more",
     icon: "More",
     items: ItemsMock,
+    showItemsOnMobile: true,
   },
 ];
 

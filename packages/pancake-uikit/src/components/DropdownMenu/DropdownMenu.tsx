@@ -17,6 +17,7 @@ import { DropdownMenuItemType, DropdownMenuProps } from "./types";
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
   children,
   isBottomNav = false,
+  showItemsOnMobile = false,
   activeItem = "",
   items = [],
   openMenuTimeout = 0,
@@ -129,7 +130,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
           ref={setTooltipRef}
           {...attributes.popper}
           $isBottomNav={isBottomNav}
-          $isOpen={isOpen}
+          $isOpen={isOpen && ((isBottomNav && showItemsOnMobile) || !isBottomNav)}
         >
           {items.map(
             ({ type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, ...itemProps }, index) => {

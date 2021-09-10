@@ -7,6 +7,7 @@ export interface DropdownMenuProps extends BoxProps {
   activeItem?: string;
   isBottomNav?: boolean;
   openMenuTimeout?: number;
+  showItemsOnMobile?: boolean;
 }
 
 export interface StyledDropdownMenuItemProps extends React.ComponentPropsWithoutRef<"button"> {

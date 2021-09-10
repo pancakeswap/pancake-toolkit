@@ -455,11 +455,13 @@ exports[`renders correctly 1`] = `
 }
 
 .c10:first-child > .c11 {
-  border-radius: 8px 8px 0 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .c10:last-child > .c11 {
-  border-radius: 0 0 8px 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .c17 {

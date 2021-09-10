@@ -4,22 +4,27 @@ import StyledBottomNav from "./styles";
 import { Box } from "../Box";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { BottomNavProps } from "./types";
-import MAX_TIME_PRESSED from "./constants";
 
 const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", activeSubItem = "", ...props }) => {
   return (
     <StyledBottomNav justifyContent="space-around" {...props}>
-      {items.map(({ label, items: menuItems, href, icon }) => {
+      {items.map(({ label, items: menuItems, href, icon, showItemsOnMobile }) => {
         return (
           <DropdownMenu
             key={label}
             items={menuItems}
             isBottomNav
-            openMenuTimeout={MAX_TIME_PRESSED}
             activeItem={activeSubItem}
+            showItemsOnMobile={showItemsOnMobile}
           >
             <Box>
-              <BottomNavItem href={href} isActive={href === activeItem} label={label} iconName={icon} />
+              <BottomNavItem
+                href={href}
+                isActive={href === activeItem}
+                label={label}
+                iconName={icon}
+                showItemsOnMobile={showItemsOnMobile}
+              />
             </Box>
           </DropdownMenu>
         );

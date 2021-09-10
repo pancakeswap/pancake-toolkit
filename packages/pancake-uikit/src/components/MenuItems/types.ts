@@ -6,6 +6,7 @@ export type MenuItemsType = {
   href: string;
   icon?: string;
   items?: DropdownMenuItems[];
+  showItemsOnMobile?: boolean;
 };
 
 export interface MenuItemsProps extends BoxProps {
