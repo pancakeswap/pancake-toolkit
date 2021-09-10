@@ -2,7 +2,6 @@ import { noop } from "lodash";
 import { DropdownMenuItems, DropdownMenuItemType } from "../../components/DropdownMenu/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
 import { LinkStatus } from "./types";
-import { SubMenuItemsType } from "../../components/SubMenuItems/types";
 
 export const status = {
   LIVE: <LinkStatus>{
@@ -22,14 +21,12 @@ export const status = {
 export const links: MenuItemsType[] = [
   {
     label: "Trade",
-    href: "/",
+    href: "/swap",
     icon: "Swap",
-    isActive: true,
     items: [
       {
         label: "Exchange",
         href: "https://exchange.pancakeswap.finance",
-        isActive: true,
       },
       {
         label: "Liquidity",
@@ -76,30 +73,10 @@ export const links: MenuItemsType[] = [
     ],
   },
   {
-    label: "...",
+    label: "",
     href: "/",
     icon: "More",
     items: [
-      {
-        label: "Info & Analytics",
-        href: "/",
-      },
-      {
-        label: "IFO Token Sales",
-        href: "/",
-        status: status.SOON,
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: "NFT Collectibles",
-        href: "/",
-      },
-      {
-        label: "Team Leaderboard",
-        href: "/",
-      },
       {
         label: "Info & Analytics",
         href: "/",
@@ -133,18 +110,6 @@ export const links: MenuItemsType[] = [
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
-  },
-];
-
-export const subLinks: SubMenuItemsType[] = [
-  {
-    label: "Exchange",
-    href: "/",
-    isActive: true,
-  },
-  {
-    label: "Liquidity",
-    href: "/",
   },
 ];
 
@@ -190,73 +155,8 @@ export const userMenulinks: DropdownMenuItems[] = [
   },
 ];
 
-export const socials = [
-  {
-    label: "Telegram",
-    icon: "TelegramIcon",
-    items: [
-      {
-        label: "English",
-        href: "https://t.me/pancakeswap",
-      },
-      {
-        label: "Bahasa Indonesia",
-        href: "https://t.me/PancakeSwapIndonesia",
-      },
-      {
-        label: "中文",
-        href: "https://t.me/PancakeSwap_CN",
-      },
-      {
-        label: "Tiếng Việt",
-        href: "https://t.me/PancakeSwapVN",
-      },
-      {
-        label: "Italiano",
-        href: "https://t.me/pancakeswap_ita",
-      },
-      {
-        label: "русский",
-        href: "https://t.me/pancakeswap_ru",
-      },
-      {
-        label: "Türkiye",
-        href: "https://t.me/pancakeswapturkiye",
-      },
-      {
-        label: "Português",
-        href: "https://t.me/PancakeSwapPortuguese",
-      },
-      {
-        label: "Español",
-        href: "https://t.me/PancakeswapEs",
-      },
-      {
-        label: "日本語",
-        href: "https://t.me/pancakeswapjp",
-      },
-      {
-        label: "Français",
-        href: "https://t.me/pancakeswapfr",
-      },
-      {
-        label: "Announcements",
-        href: "https://t.me/PancakeSwapAnn",
-      },
-      {
-        label: "Whale Alert",
-        href: "https://t.me/PancakeSwapWhales",
-      },
-    ],
-  },
-  {
-    label: "Twitter",
-    icon: "TwitterIcon",
-    href: "https://twitter.com/pancakeswap",
-  },
-];
-
 export const MENU_HEIGHT = 56;
 export const MENU_ENTRY_HEIGHT = 48;
+export const MOBILE_MENU_HEIGHT = 44;
 export const SIDEBAR_WIDTH_FULL = 240;
 export const SIDEBAR_WIDTH_REDUCED = 56;

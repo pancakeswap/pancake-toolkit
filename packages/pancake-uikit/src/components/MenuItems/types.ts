@@ -5,10 +5,13 @@ export type MenuItemsType = {
   label: string;
   href: string;
   icon?: string;
-  isActive?: boolean;
-  items: DropdownMenuItems[];
+  items?: DropdownMenuItems[];
+  showOnMobile?: boolean;
+  showItemsOnMobile?: boolean;
 };
 
 export interface MenuItemsProps extends BoxProps {
   items: MenuItemsType[];
+  activeItem?: string;
+  activeSubItem?: string;
 }

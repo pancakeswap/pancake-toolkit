@@ -1,7 +1,4 @@
 import { noop } from "lodash";
-import React from "react";
-import { Flex } from "../Box";
-import { LogoutIcon } from "../Svg";
 import { DropdownMenuItems, DropdownMenuItemType } from "./types";
 
 const ItemsMock: DropdownMenuItems[] = [
@@ -23,16 +20,6 @@ const ItemsMock: DropdownMenuItems[] = [
   },
   {
     label: "Disconnect",
-    onClick: noop,
-    type: DropdownMenuItemType.BUTTON,
-  },
-  {
-    label: (
-      <Flex alignItems="center" justifyContent="space-between" width="100%">
-        Disconnect (as component)
-        <LogoutIcon />
-      </Flex>
-    ),
     onClick: noop,
     type: DropdownMenuItemType.BUTTON,
   },

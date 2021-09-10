@@ -4,18 +4,31 @@ import StyledBottomNav from "./styles";
 import { Box } from "../Box";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { BottomNavProps } from "./types";
-import MAX_TIME_PRESSED from "./constants";
 
-const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", ...props }) => {
+const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", activeSubItem = "", ...props }) => {
   return (
-    <StyledBottomNav justifyContent={["start", "start", "center"]} {...props}>
-      {items.map(({ label, items: menuItems, href, icon }) => {
+    <StyledBottomNav justifyContent="space-around" {...props}>
+      {items.map(({ label, items: menuItems, href, icon, showOnMobile = true, showItemsOnMobile = true }) => {
         return (
-          <DropdownMenu key={label} items={menuItems} isBottomNav openMenuTimeout={MAX_TIME_PRESSED}>
-            <Box mr="20px">
-              <BottomNavItem href={href} isActive={label === activeItem} label={label} iconName={icon} />
-            </Box>
-          </DropdownMenu>
+          showOnMobile && (
+            <DropdownMenu
+              key={label}
+              items={menuItems}
+              isBottomNav
+              activeItem={activeSubItem}
+              showItemsOnMobile={showItemsOnMobile}
+            >
+              <Box>
+                <BottomNavItem
+                  href={href}
+                  isActive={href === activeItem}
+                  label={label}
+                  iconName={icon}
+                  showItemsOnMobile={showItemsOnMobile}
+                />
+              </Box>
+            </DropdownMenu>
+          )
         );
       })}
     </StyledBottomNav>

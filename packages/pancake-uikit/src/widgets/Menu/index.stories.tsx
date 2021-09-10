@@ -11,11 +11,11 @@ import Input from "../../components/Input/Input";
 import { ChevronDownIcon, CogIcon, LanguageCurrencyIcon } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import { Modal, ModalProps, useModal } from "../Modal";
-import { MenuEntry } from "./components/MenuEntry";
 import { LabelText, StyledUserMenu } from "./components/UserMenu";
 import MenuIcon from "./components/UserMenu/MenuIcon";
 import { Variant, variants } from "./components/UserMenu/types";
-import { links, subLinks, userMenulinks } from "./config";
+import { links, userMenulinks } from "./config";
+import { footerLinks } from "../../components/Footer/config";
 import Menu from "./Menu";
 import { Language, NavProps } from "./types";
 
@@ -87,11 +87,14 @@ const defaultProps = {
   currentLang: "EN",
   cakePriceUsd: 0.023158668932877668,
   links,
-  subLinks,
+  subLinks: links[0].items,
+  footerLinks,
   profile: null,
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
-  activeItem: "Trade",
+  activeItem: "/swap",
+  activeSubItem: "https://exchange.pancakeswap.finance",
+  buyCakeLabel: "Buy CAKE",
 };
 
 const ConnectedTemplate: React.FC<NavProps> = (args) => {
@@ -134,6 +137,7 @@ export const NotConnected: React.FC = () => {
         currentLang="EN"
         links={links}
         subLinks={subLinks}
+        footerLinks={footerLinks}
       >
         <div>
           <h1>Page body</h1>
@@ -162,6 +166,7 @@ export const WithoutConnectButton: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         links={links}
+        footerLinks={footerLinks}
         subLinks={subLinks}
       >
         <div>
@@ -170,16 +175,6 @@ export const WithoutConnectButton: React.FC = () => {
         </div>
       </Menu>
     </BrowserRouter>
-  );
-};
-
-export const MenuEntryComponent: React.FC = () => {
-  return (
-    <Flex justifyContent="space-between" p="16px" style={{ backgroundColor: "wheat" }}>
-      <MenuEntry>Default</MenuEntry>
-      <MenuEntry secondary>Secondary</MenuEntry>
-      <MenuEntry isActive>isActive</MenuEntry>
-    </Flex>
   );
 };
 
@@ -195,6 +190,7 @@ export const WithSubmenuSelected: React.FC = () => {
         cakePriceUsd={0.23158668932877668}
         links={links}
         subLinks={subLinks}
+        footerLinks={footerLinks}
       >
         <div>
           <Heading as="h1" mb="8px">

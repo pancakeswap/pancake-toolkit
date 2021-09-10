@@ -3,4 +3,5 @@ export interface BottomNavItemProps {
   href: string;
   iconName?: string;
   isActive?: boolean;
+  showItemsOnMobile?: boolean;
 }

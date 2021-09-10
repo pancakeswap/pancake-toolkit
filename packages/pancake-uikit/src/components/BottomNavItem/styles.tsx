@@ -7,7 +7,7 @@ export const StyledBottomNavItem = styled.button`
   background: transparent;
   cursor: pointer;
   height: 44px;
-  padding: 4px 21px;
+  padding: 4px 12px;
   &:hover {
     border-radius: 16px;
   }
@@ -18,5 +18,11 @@ export const StyledBottomNavItem = styled.button`
 `;
 
 export const StyledBottomNavText = styled(Text)`
+  display: -webkit-box;
+  overflow: hidden;
   user-select: none;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 `;

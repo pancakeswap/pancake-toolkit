@@ -13,7 +13,9 @@ export const Default: React.FC = () => {
   return (
     <BrowserRouter>
       <Box width="300px">
-        <DropdownMenu items={ItemsMock}>Wallet</DropdownMenu>
+        <DropdownMenu items={ItemsMock} activeItem="/swap">
+          Wallet
+        </DropdownMenu>
       </Box>
     </BrowserRouter>
   );

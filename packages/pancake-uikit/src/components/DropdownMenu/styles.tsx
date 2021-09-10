@@ -1,4 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
+import { Colors } from "../../theme";
+import { Text } from "../Text";
 import { StyledDropdownMenuItemProps } from "./types";
 
 const getTextColor = ({
@@ -38,6 +40,18 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
   }
 `;
 
+export const StyledDropdownMenuItemContainer = styled.div`
+  &:first-child > ${DropdownMenuItem} {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &:last-child > ${DropdownMenuItem} {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+`;
+
 export const DropdownMenuDivider = styled.hr`
   border-color: ${({ theme }) => theme.colors.cardBorder};
   border-style: solid;
@@ -53,10 +67,6 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   padding-top: 4px;
   pointer-events: auto;
   width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "280px")};
-  ${({ $isBottomNav }) =>
-    $isBottomNav &&
-    `
-  `}
   visibility: visible;
   z-index: 1001;
 
@@ -66,12 +76,14 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
     pointer-events: none;
     visibility: hidden;
   `}
+`;
 
-  ${DropdownMenuItem}:first-child {
-    border-radius: 8px 8px 0 0;
-  }
-
-  ${DropdownMenuItem}:last-child {
-    border-radius: 0 0 8px 8px;
-  }
+export const LinkStatus = styled(Text)<{ color: keyof Colors }>`
+  border-radius: ${({ theme }) => theme.radii.default};
+  padding: 0 8px;
+  border: 2px solid;
+  border-color: ${({ theme, color }) => theme.colors[color]};
+  box-shadow: none;
+  color: ${({ theme, color }) => theme.colors[color]};
+  margin-left: 8px;
 `;

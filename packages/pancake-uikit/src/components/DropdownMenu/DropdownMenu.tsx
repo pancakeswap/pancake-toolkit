@@ -3,14 +3,22 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
 import { Link } from "react-router-dom";
 import isTouchDevice from "../../util/isTouchDevice";
-import { LinkStatus } from "../../widgets/Menu/components/MenuEntry";
-import { Box } from "../Box";
-import { DropdownMenuDivider, DropdownMenuItem, StyledDropdownMenu } from "./styles";
+import { Box, Flex } from "../Box";
+import IconComponent from "../Svg/IconComponent";
+import {
+  DropdownMenuDivider,
+  DropdownMenuItem,
+  StyledDropdownMenu,
+  LinkStatus,
+  StyledDropdownMenuItemContainer,
+} from "./styles";
 import { DropdownMenuItemType, DropdownMenuProps } from "./types";
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
   children,
   isBottomNav = false,
+  showItemsOnMobile = false,
+  activeItem = "",
   items = [],
   openMenuTimeout = 0,
   ...props
@@ -21,7 +29,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   const hideTimeout = useRef<number>();
   const isHoveringOverTooltip = useRef(false);
   const hasItems = items.length > 0;
-  const clickTimeRef = useRef(0);
+  const clickTimeRef = useRef(openMenuTimeout);
   const { styles, attributes } = usePopper(targetRef, tooltipRef, {
     placement: isBottomNav ? "top" : "bottom-start",
     modifiers: [{ name: "offset", options: { offset: [0, isBottomNav ? 6 : 0] } }],
@@ -59,9 +67,12 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         }
       } else if (isTouchingTooltipRef) {
         // Don't close the menu immediately so it catches the event
-        setTimeout(() => {
-          setIsOpen(false);
-        }, 100);
+        setTimeout(
+          () => {
+            setIsOpen(false);
+          },
+          isBottomNav ? 500 : 100
+        );
       } else {
         setIsOpen(false);
       }
@@ -111,24 +122,21 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         tooltipRef?.removeEventListener("mouseleave", hideTooltip);
       }
     };
-  }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen, openMenuTimeout, isOpen]);
+  }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen, openMenuTimeout, isOpen, isBottomNav]);
 
   return (
-    <Box ref={setTargetRef} {...props}>
-      <Box>{children}</Box>
+    <Box ref={isBottomNav ? null : setTargetRef} {...props}>
+      <Box ref={isBottomNav ? setTargetRef : null}>{children}</Box>
       {hasItems && (
         <StyledDropdownMenu
           style={styles.popper}
           ref={setTooltipRef}
           {...attributes.popper}
           $isBottomNav={isBottomNav}
-          $isOpen={isOpen}
+          $isOpen={isOpen && ((isBottomNav && showItemsOnMobile) || !isBottomNav)}
         >
           {items.map(
-            (
-              { type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, isActive = false, ...itemProps },
-              index
-            ) => {
+            ({ type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, ...itemProps }, index) => {
               const MenuItemContent = (
                 <>
                   {label}
@@ -139,8 +147,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                   )}
                 </>
               );
+              const isActive = href === activeItem;
               return (
-                <div key={index}>
+                <StyledDropdownMenuItemContainer key={index}>
                   {type === DropdownMenuItemType.BUTTON && (
                     <DropdownMenuItem $isActive={isActive} type="button" {...itemProps}>
                       {MenuItemContent}
@@ -153,11 +162,14 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                   )}
                   {type === DropdownMenuItemType.EXTERNAL_LINK && (
                     <DropdownMenuItem $isActive={isActive} as="a" href={href} target="_blank" {...itemProps}>
-                      {MenuItemContent}
+                      <Flex alignItems="center" justifyContent="space-between" width="100%">
+                        {label}
+                        <IconComponent iconName="Logout" />
+                      </Flex>
                     </DropdownMenuItem>
                   )}
                   {type === DropdownMenuItemType.DIVIDER && <DropdownMenuDivider />}
-                </div>
+                </StyledDropdownMenuItemContainer>
               );
             }
           )}

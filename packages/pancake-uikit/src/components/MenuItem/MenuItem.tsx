@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StyledMenuItem from "./styles";
+import StyledMenuItem, { StyledMenuItemContainer } from "./styles";
 import { MenuItemProps } from "./types";
 
 const MenuItem: React.FC<MenuItemProps> = ({
@@ -12,9 +12,11 @@ const MenuItem: React.FC<MenuItemProps> = ({
   ...props
 }) => {
   return (
-    <StyledMenuItem as={Link} to={href} $isActive={isActive} $variant={variant} $statusColor={statusColor} {...props}>
-      {children}
-    </StyledMenuItem>
+    <StyledMenuItemContainer $isActive={isActive} $variant={variant}>
+      <StyledMenuItem as={Link} to={href} $isActive={isActive} $variant={variant} $statusColor={statusColor} {...props}>
+        {children}
+      </StyledMenuItem>
+    </StyledMenuItemContainer>
   );
 };
 

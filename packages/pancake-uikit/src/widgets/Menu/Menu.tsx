@@ -4,13 +4,15 @@ import styled from "styled-components";
 import BottomNav from "../../components/BottomNav";
 import { Box } from "../../components/Box";
 import Flex from "../../components/Box/Flex";
+import Footer from "../../components/Footer";
 import MenuItems from "../../components/MenuItems/MenuItems";
 import SubMenuItems from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
-import CakePrice from "./components/CakePrice";
+import CakePrice from "../../components/CakePrice/CakePrice";
 import Logo from "./components/Logo";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
+import LangSelector from "../../components/LangSelector/LangSelector";
 
 const Wrapper = styled.div`
   position: relative;
@@ -28,22 +30,12 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
-  box-shadow: inset 0px -2px 0px -8px rgba(133, 133, 133, 0.1);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   z-index: 20;
   transform: translate3d(0, 0, 0);
 
-  padding-left: 12px;
-  padding-right: 8px;
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  padding-left: 16px;
+  padding-right: 16px;
 `;
 
 const BodyWrapper = styled.div`
@@ -53,25 +45,26 @@ const BodyWrapper = styled.div`
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-  }
 `;
 
 const Menu: React.FC<NavProps> = ({
   userMenu,
   globalMenu,
   isDark,
+  toggleTheme,
+  currentLang,
+  setLang,
   cakePriceUsd,
   links,
   subLinks,
+  footerLinks,
   activeItem,
+  activeSubItem,
+  langs,
+  buyCakeLabel,
   children,
 }) => {
   const { isMobile } = useMatchBreakpoints();
@@ -115,7 +108,7 @@ const Menu: React.FC<NavProps> = ({
       <StyledNav showMenu={showMenu}>
         <Flex>
           <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-          {!isMobile && <MenuItems items={links} ml="24px" />}
+          {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
           {!isMobile && (
@@ -123,16 +116,37 @@ const Menu: React.FC<NavProps> = ({
               <CakePrice cakePriceUsd={cakePriceUsd} />
             </Box>
           )}
+          <Box mt="4px">
+            <LangSelector
+              currentLang={currentLang}
+              langs={langs}
+              setLang={setLang}
+              buttonScale="xs"
+              color="textSubtle"
+              hideLanguage
+            />
+          </Box>
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>
-      <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 2}px`} />
+      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />}
       <BodyWrapper>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
+          <Footer
+            items={footerLinks}
+            isDark={isDark}
+            toggleTheme={toggleTheme}
+            langs={langs}
+            setLang={setLang}
+            currentLang={currentLang}
+            cakePriceUsd={cakePriceUsd}
+            buyCakeLabel={buyCakeLabel}
+            mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
+          />
         </Inner>
       </BodyWrapper>
-      <BottomNav items={links} activeItem={activeItem} />
+      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
     </Wrapper>
   );
 };

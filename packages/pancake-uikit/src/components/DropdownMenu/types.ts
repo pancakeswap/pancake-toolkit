@@ -4,8 +4,10 @@ import { BoxProps } from "../Box";
 
 export interface DropdownMenuProps extends BoxProps {
   items?: DropdownMenuItems[];
+  activeItem?: string;
   isBottomNav?: boolean;
   openMenuTimeout?: number;
+  showItemsOnMobile?: boolean;
 }
 
 export interface StyledDropdownMenuItemProps extends React.ComponentPropsWithoutRef<"button"> {
@@ -32,5 +34,4 @@ export interface DropdownMenuItems {
   type?: DropdownMenuItemType;
   status?: LinkStatus;
   disabled?: boolean;
-  isActive?: boolean;
 }
