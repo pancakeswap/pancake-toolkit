@@ -122,7 +122,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         tooltipRef?.removeEventListener("mouseleave", hideTooltip);
       }
     };
-  }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen, openMenuTimeout, isOpen]);
+  }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen, openMenuTimeout, isOpen, isBottomNav]);
 
   return (
     <Box ref={isBottomNav ? null : setTargetRef} {...props}>

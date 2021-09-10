@@ -47,7 +47,12 @@ const MenuItem: React.FC<FooterProps> = ({
               <StyledListItem>{item.label}</StyledListItem>
               {item.items?.map(({ label, href, isHighlighted = false }) => (
                 <StyledListItem key={label}>
-                  <Link href={href} color={isHighlighted ? baseColors.warning : darkColors.text} bold={false}>
+                  <Link
+                    href={href}
+                    target="_black"
+                    color={isHighlighted ? baseColors.warning : darkColors.text}
+                    bold={false}
+                  >
                     {label}
                   </Link>
                 </StyledListItem>

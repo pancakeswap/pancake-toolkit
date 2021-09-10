@@ -123,6 +123,7 @@ const Menu: React.FC<NavProps> = ({
               setLang={setLang}
               buttonScale="xs"
               color="textSubtle"
+              hideLanguage
             />
           </Box>
           {globalMenu} {userMenu}

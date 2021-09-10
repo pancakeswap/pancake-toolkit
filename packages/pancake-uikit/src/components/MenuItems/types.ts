@@ -6,6 +6,7 @@ export type MenuItemsType = {
   href: string;
   icon?: string;
   items?: DropdownMenuItems[];
+  showOnMobile?: boolean;
   showItemsOnMobile?: boolean;
 };
 
