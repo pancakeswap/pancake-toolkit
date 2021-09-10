@@ -64,16 +64,16 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
       if (isTouchingTargetRef) {
         if (isOpen || openMenuTimeout === 0) {
           setIsOpen((prevOpen) => !prevOpen);
-          console.log("TARGET");
         }
       } else if (isTouchingTooltipRef) {
         // Don't close the menu immediately so it catches the event
-        setTimeout(() => {
-          console.log("TOOLTIP");
-          setIsOpen(false);
-        }, 100);
+        setTimeout(
+          () => {
+            setIsOpen(false);
+          },
+          isBottomNav ? 500 : 100
+        );
       } else {
-        console.log("OUTSIDE");
         setIsOpen(false);
       }
     };
@@ -125,8 +125,8 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen, openMenuTimeout, isOpen]);
 
   return (
-    <Box {...props}>
-      <Box ref={setTargetRef}>{children}</Box>
+    <Box ref={isBottomNav ? null : setTargetRef} {...props}>
+      <Box ref={isBottomNav ? setTargetRef : null}>{children}</Box>
       {hasItems && (
         <StyledDropdownMenu
           style={styles.popper}
