@@ -6,6 +6,7 @@ export * from "./components/Breadcrumbs";
 export * from "./components/Button";
 export * from "./components/ButtonMenu";
 export * from "./components/Card";
+export * from "./components/CakePrice";
 export * from "./components/Checkbox";
 export * from "./components/Dropdown";
 export * from "./components/FallingBunnies";
