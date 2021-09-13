@@ -30,6 +30,7 @@ export * from "./components/Table";
 export * from "./components/TabMenu";
 export * from "./components/Tag";
 export * from "./components/Text";
+export * from "./components/Timeline";
 export * from "./components/Toggle";
 
 // Hooks

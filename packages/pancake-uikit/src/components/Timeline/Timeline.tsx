@@ -1,12 +1,11 @@
 import React from "react";
-import { EventStatus } from ".";
 import { Colors } from "../../theme";
 import { Flex } from "../Box";
 import IconComponent from "../Svg/IconComponent";
 import { Text } from "../Text";
 import InfoTooltip from "./InfoTooltip";
 import { TimelineContainer, TimelineEvent } from "./styles";
-import { TimelineProps } from "./types";
+import { TimelineProps, EventStatus } from "./types";
 
 const getTextColor = (eventStatus: EventStatus): keyof Colors => {
   if (eventStatus === "upcoming") return "textDisabled";
