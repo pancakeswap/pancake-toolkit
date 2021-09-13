@@ -27,6 +27,7 @@ export * from "./components/Stepper";
 export * from "./components/BaseMenu";
 export * from "./components/Svg";
 export * from "./components/Table";
+export * from "./components/ThemeSwitcher";
 export * from "./components/TabMenu";
 export * from "./components/Tag";
 export * from "./components/Text";
