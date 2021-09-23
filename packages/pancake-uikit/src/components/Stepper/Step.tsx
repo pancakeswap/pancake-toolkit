@@ -24,9 +24,14 @@ const Connector = styled.div<StatusProps>`
   position: absolute;
   width: 4px;
   height: 110%;
-  top: 50%;
+  z-index: ${({ $zIndex }) => $zIndex};
+  ${({ $isFirst }) => {
+    if ($isFirst) return "top: 50%;";
+    return "top: -50%;";
+  }}
   left: calc(50% - 2px);
-  background-color: ${({ theme, status }) => theme.colors[status === "past" ? "success" : "textDisabled"]};
+  background-color: ${({ theme, status }) =>
+    theme.colors[status === "past" || status === "current" ? "success" : "textDisabled"]};
 `;
 
 const ChildrenWrapper = styled(Box)<{ isVisible: boolean }>`
@@ -69,7 +74,7 @@ export const StepNumber = styled.div<StatusProps>`
   font-size: 32px;
   width: 48px;
   height: 48px;
-  z-index: 1;
+  z-index: ${({ $zIndex }) => $zIndex};
   ${({ theme }) => theme.mediaQueries.md} {
     font-size: 40px;
     width: 80px;
@@ -87,8 +92,15 @@ export const Step: React.FC<StepProps> = ({ index, status, numberOfSteps = 0, ch
     <StyledStep mb={index < numberOfSteps - 1 ? "16px" : 0}>
       <ChildrenLeftWrapper isVisible={!isIndexPair}>{children}</ChildrenLeftWrapper>
       <Wrapper>
-        <StepNumber status={status}>{index + 1}</StepNumber>
-        {index < numberOfSteps - 1 && <Connector status={status} />}
+        <StepNumber $zIndex={numberOfSteps + 1} status={status}>
+          {index + 1}
+        </StepNumber>
+        <Connector
+          $zIndex={numberOfSteps - index}
+          $isFirst={index === 0}
+          $isLast={index === numberOfSteps - 1}
+          status={status}
+        />
       </Wrapper>
       <ChildrenRightWrapper isVisible={isIndexPair}>{children}</ChildrenRightWrapper>
     </StyledStep>

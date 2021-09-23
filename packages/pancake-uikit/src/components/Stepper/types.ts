@@ -9,6 +9,9 @@ export type Status = "past" | "current" | "future";
 export interface StatusProps extends ThemedProps {
   theme: DefaultTheme;
   status: Status;
+  $isFirst?: boolean;
+  $isLast?: boolean;
+  $zIndex?: number;
 }
 
 export interface StepProps {
