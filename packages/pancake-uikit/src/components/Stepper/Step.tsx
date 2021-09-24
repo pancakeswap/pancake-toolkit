@@ -23,11 +23,11 @@ const StyledStep = styled(Flex)`
 const Connector = styled.div<StatusProps>`
   position: absolute;
   width: 4px;
-  height: 110%;
-  z-index: ${({ $zIndex }) => $zIndex};
-  ${({ $isFirst }) => {
-    if ($isFirst) return "top: 50%;";
-    return "top: -50%;";
+  height: 60%;
+  ${({ $isFirstStep, $isLastStep, $isFirstPart }) => {
+    if ($isFirstStep) return "top: 50%;";
+    if ($isLastStep) return "top: 0;";
+    return $isFirstPart ? "top:0;" : "top:50%;";
   }}
   left: calc(50% - 2px);
   background-color: ${({ theme, status }) =>
@@ -74,7 +74,7 @@ export const StepNumber = styled.div<StatusProps>`
   font-size: 32px;
   width: 48px;
   height: 48px;
-  z-index: ${({ $zIndex }) => $zIndex};
+  z-index: 5;
   ${({ theme }) => theme.mediaQueries.md} {
     font-size: 40px;
     width: 80px;
@@ -86,21 +86,23 @@ export const StepNumber = styled.div<StatusProps>`
  * ChildrenLeftWrapper and ChildrenRightWrapper are used on the non mobile version, to force the alternate layout.
  * One of the child is hidden based on the step number.
  */
-export const Step: React.FC<StepProps> = ({ index, status, numberOfSteps = 0, children }) => {
+export const Step: React.FC<StepProps> = ({
+  index,
+  statusFirstPart,
+  statusSecondPart,
+  numberOfSteps = 0,
+  children,
+}) => {
   const isIndexPair = index % 2 === 0;
+  const isFirst = index === 0;
+  const isLast = index === numberOfSteps - 1;
   return (
     <StyledStep mb={index < numberOfSteps - 1 ? "16px" : 0}>
       <ChildrenLeftWrapper isVisible={!isIndexPair}>{children}</ChildrenLeftWrapper>
       <Wrapper>
-        <StepNumber $zIndex={numberOfSteps + 1} status={status}>
-          {index + 1}
-        </StepNumber>
-        <Connector
-          $zIndex={numberOfSteps - index}
-          $isFirst={index === 0}
-          $isLast={index === numberOfSteps - 1}
-          status={status}
-        />
+        <StepNumber status={statusFirstPart}>{index + 1}</StepNumber>
+        <Connector $isFirstStep={isFirst} $isLastStep={isLast} status={statusFirstPart} $isFirstPart />
+        {!isFirst && !isLast && <Connector $isFirstStep={isFirst} $isLastStep={isLast} status={statusSecondPart} />}
       </Wrapper>
       <ChildrenRightWrapper isVisible={isIndexPair}>{children}</ChildrenRightWrapper>
     </StyledStep>
