@@ -23,7 +23,7 @@ const StyledStep = styled(Flex)`
 const Connector = styled.div<StatusProps>`
   position: absolute;
   width: 4px;
-  height: 60%;
+  height: calc(50% + 20px);
   ${({ $isFirstStep, $isLastStep, $isFirstPart }) => {
     if ($isFirstStep) return "top: 50%;";
     if ($isLastStep) return "top: 0;";
