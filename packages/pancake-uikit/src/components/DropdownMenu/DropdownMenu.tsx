@@ -11,7 +11,6 @@ import {
   StyledDropdownMenu,
   LinkStatus,
   StyledDropdownMenuItemContainer,
-  StyledOverlay,
 } from "./styles";
 import { DropdownMenuItemType, DropdownMenuProps } from "./types";
 
@@ -22,6 +21,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   activeItem = "",
   items = [],
   openMenuTimeout = 0,
+  setShowOverlay,
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -122,10 +122,15 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
     };
   }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen, openMenuTimeout, isOpen, isBottomNav]);
 
+  useEffect(() => {
+    if (setShowOverlay) {
+      setShowOverlay(isOpen);
+    }
+  }, [isOpen, setShowOverlay]);
+
   return (
     <Box ref={isBottomNav ? null : setTargetRef} {...props}>
       <Box ref={isBottomNav ? setTargetRef : null}>{children}</Box>
-      {isBottomNav && isOpen && showItemsOnMobile && <StyledOverlay />}
       {hasItems && (
         <StyledDropdownMenu
           style={styles.popper}
