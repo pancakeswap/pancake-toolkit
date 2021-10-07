@@ -21,7 +21,8 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   activeItem = "",
   items = [],
   openMenuTimeout = 0,
-  setShowOverlay,
+  index,
+  setMenuOpenByIndex,
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,10 +124,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   }, [targetRef, tooltipRef, hideTimeout, isHoveringOverTooltip, setIsOpen, openMenuTimeout, isOpen, isBottomNav]);
 
   useEffect(() => {
-    if (setShowOverlay) {
-      setShowOverlay(isOpen);
+    if (setMenuOpenByIndex && index !== undefined) {
+      setMenuOpenByIndex((prevValue) => ({ ...prevValue, [index]: isOpen }));
     }
-  }, [isOpen, setShowOverlay]);
+  }, [isOpen, setMenuOpenByIndex, index]);
 
   return (
     <Box ref={isBottomNav ? null : setTargetRef} {...props}>

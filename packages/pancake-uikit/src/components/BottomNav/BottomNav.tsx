@@ -7,12 +7,13 @@ import { BottomNavProps } from "./types";
 import { NotificationDot } from "../NotificationDot";
 
 const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", activeSubItem = "", ...props }) => {
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [menuOpenByIndex, setMenuOpenByIndex] = useState({});
+  const isBottomMenuOpen = Object.values(menuOpenByIndex).reduce((acc, value) => acc || value, false);
   return (
     <>
-      {showOverlay && <StyledOverlay />}
+      {isBottomMenuOpen && <StyledOverlay />}
       <StyledBottomNav justifyContent="space-around" {...props}>
-        {items.map(({ label, items: menuItems, href, icon, showOnMobile = true, showItemsOnMobile = true }) => {
+        {items.map(({ label, items: menuItems, href, icon, showOnMobile = true, showItemsOnMobile = true }, index) => {
           const statusColor = menuItems?.find((menuItem) => menuItem.status !== undefined)?.status?.color;
           return (
             showOnMobile && (
@@ -22,7 +23,8 @@ const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", acti
                 isBottomNav
                 activeItem={activeSubItem}
                 showItemsOnMobile={showItemsOnMobile}
-                setShowOverlay={setShowOverlay}
+                setMenuOpenByIndex={setMenuOpenByIndex}
+                index={index}
               >
                 <Box>
                   <NotificationDot show={!!statusColor} color={statusColor}>
