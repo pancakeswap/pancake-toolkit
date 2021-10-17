@@ -1910,5 +1910,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x5fE80d2CD054645b9419657d3d10d26391780A7B.png"
+  },
+  {
+    "name": "MBEP Token",
+    "symbol": "MBEP",
+    "address": "0x5fE80d2CD054645b9419657d3d10d26391780A7B",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://github.com/Blokzinciri/MBEP/blob/main/0x059611daedba5fe0875ac7c76d7ce47ffe5c39c5.png"
   }
 ]
