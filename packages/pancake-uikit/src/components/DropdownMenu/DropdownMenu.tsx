@@ -141,7 +141,18 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
           $isOpen={isOpen && ((isBottomNav && showItemsOnMobile) || !isBottomNav)}
         >
           {items.map(
-            ({ type = DropdownMenuItemType.INTERNAL_LINK, label, href = "/", status, ...itemProps }, itemItem) => {
+            (
+              {
+                type = DropdownMenuItemType.INTERNAL_LINK,
+                label,
+                href = "/",
+                status,
+                isMobileOnly,
+                iconName,
+                ...itemProps
+              },
+              itemItem
+            ) => {
               const MenuItemContent = (
                 <>
                   {label}
