@@ -1614,16 +1614,6 @@ exports[`renders correctly 1`] = `
                   Liquidity
                 </a>
               </div>
-              <div
-                class="c10"
-              >
-                <a
-                  class="c11 c12"
-                  href="/https://exchange.pancakeswap.finance/#/charts"
-                >
-                  Charts
-                </a>
-              </div>
             </div>
           </div>
           <div
