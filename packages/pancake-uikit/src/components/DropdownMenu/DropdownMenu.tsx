@@ -140,55 +140,57 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
           $isBottomNav={isBottomNav}
           $isOpen={isOpen && ((isBottomNav && showItemsOnMobile) || !isBottomNav)}
         >
-          {items.map(
-            (
-              {
-                type = DropdownMenuItemType.INTERNAL_LINK,
-                label,
-                href = "/",
-                status,
-                isMobileOnly,
-                iconName,
-                ...itemProps
-              },
-              itemItem
-            ) => {
-              const MenuItemContent = (
-                <>
-                  {label}
-                  {status && (
-                    <LinkStatus color={status.color} fontSize="14px">
-                      {status.text}
-                    </LinkStatus>
-                  )}
-                </>
-              );
-              const isActive = href === activeItem;
-              return (
-                <StyledDropdownMenuItemContainer key={itemItem}>
-                  {type === DropdownMenuItemType.BUTTON && (
-                    <DropdownMenuItem $isActive={isActive} type="button" {...itemProps}>
-                      {MenuItemContent}
-                    </DropdownMenuItem>
-                  )}
-                  {type === DropdownMenuItemType.INTERNAL_LINK && (
-                    <DropdownMenuItem $isActive={isActive} as={Link} to={href} {...itemProps}>
-                      {MenuItemContent}
-                    </DropdownMenuItem>
-                  )}
-                  {type === DropdownMenuItemType.EXTERNAL_LINK && (
-                    <DropdownMenuItem $isActive={isActive} as="a" href={href} target="_blank" {...itemProps}>
-                      <Flex alignItems="center" justifyContent="space-between" width="100%">
-                        {label}
-                        <IconComponent iconName="Logout" />
-                      </Flex>
-                    </DropdownMenuItem>
-                  )}
-                  {type === DropdownMenuItemType.DIVIDER && <DropdownMenuDivider />}
-                </StyledDropdownMenuItemContainer>
-              );
-            }
-          )}
+          {items
+            .filter((item) => !item.isMobileOnly)
+            .map(
+              (
+                {
+                  type = DropdownMenuItemType.INTERNAL_LINK,
+                  label,
+                  href = "/",
+                  status,
+                  isMobileOnly,
+                  iconName,
+                  ...itemProps
+                },
+                itemItem
+              ) => {
+                const MenuItemContent = (
+                  <>
+                    {label}
+                    {status && (
+                      <LinkStatus color={status.color} fontSize="14px">
+                        {status.text}
+                      </LinkStatus>
+                    )}
+                  </>
+                );
+                const isActive = href === activeItem;
+                return (
+                  <StyledDropdownMenuItemContainer key={itemItem}>
+                    {type === DropdownMenuItemType.BUTTON && (
+                      <DropdownMenuItem $isActive={isActive} type="button" {...itemProps}>
+                        {MenuItemContent}
+                      </DropdownMenuItem>
+                    )}
+                    {type === DropdownMenuItemType.INTERNAL_LINK && (
+                      <DropdownMenuItem $isActive={isActive} as={Link} to={href} {...itemProps}>
+                        {MenuItemContent}
+                      </DropdownMenuItem>
+                    )}
+                    {type === DropdownMenuItemType.EXTERNAL_LINK && (
+                      <DropdownMenuItem $isActive={isActive} as="a" href={href} target="_blank" {...itemProps}>
+                        <Flex alignItems="center" justifyContent="space-between" width="100%">
+                          {label}
+                          <IconComponent iconName="Logout" />
+                        </Flex>
+                      </DropdownMenuItem>
+                    )}
+                    {type === DropdownMenuItemType.DIVIDER && <DropdownMenuDivider />}
+                  </StyledDropdownMenuItemContainer>
+                );
+              }
+            )}
         </StyledDropdownMenu>
       )}
     </Box>
