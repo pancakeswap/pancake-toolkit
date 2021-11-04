@@ -1987,6 +1987,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x1D229B958D5DDFca92146585a8711aECbE56F095.png"
+    },
+    {
+      "name": "Floki Frunkpuppy",
+      "symbol": "Floki",
+      "address": "0xc54895b386064951da82e074247ac7e855ffaba8",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://i.ibb.co/KXHyYxZ/0xc54895b386064951da82e074247ac7e855ffaba8.png"
     }
   ]
 }
