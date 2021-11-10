@@ -2003,6 +2003,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x1D229B958D5DDFca92146585a8711aECbE56F095.png"
+    },
+    {
+    "name": "Catbay",
+    "symbol": "CATP",
+    "address": "0x8179279A4Ce98BF3E7C08e4C8D2C022403fD1E2E",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://camo.githubusercontent.com/ff821cc3361324ddde22e1a3d7412e17a6b46dc1098b3e7014afbb2efcb26c66/68747470733a2f2f77657365617263682e6f73732d61702d6e6f727468656173742d312e616c6979756e63732e636f6d2f4341544241592532306c6f676f2e706e67",
     }
   ]
 }
