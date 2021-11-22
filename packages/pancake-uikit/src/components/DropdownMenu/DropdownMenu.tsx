@@ -36,23 +36,23 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   const isMenuShow = isOpen && ((isBottomNav && showItemsOnMobile) || !isBottomNav);
 
   useEffect(() => {
-    const showTooltip = () => {
+    const showDropdownMenu = () => {
       setIsOpen(true);
     };
 
-    const hideTooltip = (evt: MouseEvent | TouchEvent) => {
+    const hideDropdownMenu = (evt: MouseEvent | TouchEvent) => {
       const target = evt.target as Node;
       return target && !tooltipRef?.contains(target) && setIsOpen(false);
     };
 
-    targetRef?.addEventListener("click", showTooltip);
-    targetRef?.addEventListener("mouseenter", showTooltip);
-    targetRef?.addEventListener("mouseleave", hideTooltip);
+    targetRef?.addEventListener("click", showDropdownMenu);
+    targetRef?.addEventListener("mouseenter", showDropdownMenu);
+    targetRef?.addEventListener("mouseleave", hideDropdownMenu);
 
     return () => {
-      targetRef?.addEventListener("click", showTooltip);
-      targetRef?.removeEventListener("mouseenter", showTooltip);
-      targetRef?.removeEventListener("mouseleave", hideTooltip);
+      targetRef?.addEventListener("click", showDropdownMenu);
+      targetRef?.removeEventListener("mouseenter", showDropdownMenu);
+      targetRef?.removeEventListener("mouseleave", hideDropdownMenu);
     };
   }, [targetRef, tooltipRef, setIsOpen, isBottomNav]);
 
