@@ -6,7 +6,7 @@ import { DrawerContainer, StyledOverlay } from "./styles";
 import { CloseIcon } from "../Svg";
 import { Box } from "../Box";
 import { IconButton } from "../Button";
-import { useMatchBreakpoints } from "../..";
+import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
 
 const portalRoot = document.getElementById("portal-root");
 
