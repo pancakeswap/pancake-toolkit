@@ -28,7 +28,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   const targetRef = useRef<HTMLDivElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
   const hasItems = items.length > 0;
-  const { styles, attributes } = usePopper(targetRef?.current, tooltipRef.current, {
+  const { styles, attributes } = usePopper(targetRef?.current, tooltipRef?.current, {
     strategy: "fixed",
     placement: isBottomNav ? "top" : "bottom-start",
     modifiers: [{ name: "offset", options: { offset: [0, isBottomNav ? 6 : 0] } }],
