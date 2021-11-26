@@ -1,7 +1,8 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
 import { Link } from "react-router-dom";
+import { useOnClickOutside } from "../../hooks";
 import { Box, Flex } from "../Box";
 import IconComponent from "../Svg/IconComponent";
 import {
@@ -24,10 +25,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [targetRef, setTargetRef] = useState<HTMLDivElement | null>(null);
-  const [tooltipRef, setTooltipRef] = useState<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const tooltipRef = useRef<HTMLDivElement | null>(null);
   const hasItems = items.length > 0;
-  const { styles, attributes } = usePopper(targetRef, tooltipRef, {
+  const { styles, attributes } = usePopper(targetRef?.current, tooltipRef.current, {
     strategy: "fixed",
     placement: isBottomNav ? "top" : "bottom-start",
     modifiers: [{ name: "offset", options: { offset: [0, isBottomNav ? 6 : 0] } }],
@@ -36,21 +37,23 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   const isMenuShow = isOpen && ((isBottomNav && showItemsOnMobile) || !isBottomNav);
 
   useEffect(() => {
+    const targetElement = targetRef.current;
+
     const showDropdownMenu = () => {
       setIsOpen(true);
     };
 
     const hideDropdownMenu = (evt: MouseEvent | TouchEvent) => {
       const target = evt.target as Node;
-      return target && !tooltipRef?.contains(target) && setIsOpen(false);
+      return target && !tooltipRef?.current?.contains(target) && setIsOpen(false);
     };
 
-    targetRef?.addEventListener("mouseenter", showDropdownMenu);
-    targetRef?.addEventListener("mouseleave", hideDropdownMenu);
+    targetElement?.addEventListener("mouseenter", showDropdownMenu);
+    targetElement?.addEventListener("mouseleave", hideDropdownMenu);
 
     return () => {
-      targetRef?.removeEventListener("mouseenter", showDropdownMenu);
-      targetRef?.removeEventListener("mouseleave", hideDropdownMenu);
+      targetElement?.removeEventListener("mouseenter", showDropdownMenu);
+      targetElement?.removeEventListener("mouseleave", hideDropdownMenu);
     };
   }, [targetRef, tooltipRef, setIsOpen, isBottomNav]);
 
@@ -60,10 +63,14 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
     }
   }, [isMenuShow, setMenuOpenByIndex, index]);
 
+  useOnClickOutside(targetRef, () => {
+    setIsOpen(false);
+  });
+
   return (
-    <Box ref={setTargetRef} {...props}>
+    <Box ref={targetRef} {...props}>
       <Box
-        onTouchStart={() => {
+        onPointerDown={() => {
           setIsOpen((s) => !s);
         }}
       >
@@ -72,7 +79,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
       {hasItems && (
         <StyledDropdownMenu
           style={styles.popper}
-          ref={setTooltipRef}
+          ref={tooltipRef}
           {...attributes.popper}
           $isBottomNav={isBottomNav}
           $isOpen={isMenuShow}
