@@ -1,22 +1,39 @@
 import styled from "styled-components";
-import { OverlayProps } from "./types";
+import React, { useEffect } from "react";
+import { Box, BoxProps } from "../Box";
 
-const Overlay = styled.div.attrs({ role: "presentation" })<OverlayProps>`
+const StyledOverlay = styled(Box)`
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.overlay};
-  transition: opacity 0.4s;
-  opacity: ${({ show }) => (show ? 0.6 : 0)};
-  z-index: ${({ zIndex }) => zIndex};
-  pointer-events: ${({ show }) => (show ? "initial" : "none")};
+  background-color: ${({ theme }) => `${theme.colors.text}99`};
+  backdrop-filter: blur(2px);
 `;
 
-Overlay.defaultProps = {
-  show: false,
+StyledOverlay.defaultProps = {
   zIndex: 10,
+};
+
+const BodyLock = () => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, []);
+
+  return null;
+};
+
+export const Overlay = (props: BoxProps) => {
+  return (
+    <>
+      <BodyLock />
+      <StyledOverlay role="presentation" zIndex={20} {...props} />;
+    </>
+  );
 };
 
 export default Overlay;
