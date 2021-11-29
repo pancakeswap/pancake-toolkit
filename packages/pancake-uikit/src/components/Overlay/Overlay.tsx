@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import { Box, BoxProps } from "../Box";
 
 const StyledOverlay = styled(Box)`
@@ -27,7 +27,7 @@ const BodyLock = () => {
   return null;
 };
 
-export const Overlay = (props: BoxProps) => {
+export const Overlay: FC<BoxProps> = (props) => {
   return (
     <>
       <BodyLock />
