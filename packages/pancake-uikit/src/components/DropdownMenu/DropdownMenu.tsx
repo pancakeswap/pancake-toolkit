@@ -62,13 +62,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
 
   return (
     <Box ref={setTargetRef} {...props}>
-      <Box
-      // onTouchEnd={() => {
-      //   setIsOpen((s) => !s);
-      // }}
-      >
-        {children}
-      </Box>
+      <Box>{children}</Box>
       {hasItems && (
         <StyledDropdownMenu
           style={styles.popper}
