@@ -10,11 +10,8 @@ const StyledOverlay = styled(Box)`
   height: 100%;
   background-color: ${({ theme }) => `${theme.colors.text}99`};
   backdrop-filter: blur(2px);
+  z-index: 20;
 `;
-
-StyledOverlay.defaultProps = {
-  zIndex: 10,
-};
 
 const BodyLock = () => {
   useEffect(() => {
@@ -31,7 +28,7 @@ export const Overlay: FC<BoxProps> = (props) => {
   return (
     <>
       <BodyLock />
-      <StyledOverlay role="presentation" zIndex={20} {...props} />;
+      <StyledOverlay role="presentation" {...props} />;
     </>
   );
 };
