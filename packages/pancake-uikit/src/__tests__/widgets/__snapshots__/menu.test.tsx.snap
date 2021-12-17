@@ -1838,7 +1838,7 @@ exports[`renders correctly 1`] = `
                 <circle
                   cx="48"
                   cy="48"
-                  fill="url(#paint0_linear_10493:36952)"
+                  fill="url(#paint0_linear_10493)"
                   r="48"
                 />
                 <path
@@ -1862,7 +1862,7 @@ exports[`renders correctly 1`] = `
                 <defs>
                   <lineargradient
                     gradientUnits="userSpaceOnUse"
-                    id="paint0_linear_10493:36952"
+                    id="paint0_linear_10493"
                     x1="48"
                     x2="48"
                     y1="0"
@@ -3009,7 +3009,7 @@ exports[`renders correctly 1`] = `
                       <circle
                         cx="48"
                         cy="48"
-                        fill="url(#paint0_linear_10493:36952)"
+                        fill="url(#paint0_linear_10493)"
                         r="48"
                       />
                       <path
@@ -3033,7 +3033,7 @@ exports[`renders correctly 1`] = `
                       <defs>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="paint0_linear_10493:36952"
+                          id="paint0_linear_10493"
                           x1="48"
                           x2="48"
                           y1="0"
