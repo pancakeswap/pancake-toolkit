@@ -41,17 +41,20 @@ const ModalProvider: React.FC = ({ children }) => {
   const [modalNode, setModalNode] = useState<React.ReactNode>();
   const [nodeId, setNodeId] = useState("");
   const [closeOnOverlayClick, setCloseOnOverlayClick] = useState(true);
+  const [props, setProps] = useState({})
 
-  const handlePresent = (node: React.ReactNode, newNodeId: string) => {
+  const handlePresent = (node: React.ReactNode, newNodeId: string, modalProps: object) => {
     setModalNode(node);
     setIsOpen(true);
     setNodeId(newNodeId);
+    setProps(modalProps)
   };
 
   const handleDismiss = () => {
     setModalNode(undefined);
     setIsOpen(false);
     setNodeId("");
+    setProps({})
   };
 
   const handleOverlayDismiss = () => {
@@ -78,6 +81,7 @@ const ModalProvider: React.FC = ({ children }) => {
           {React.isValidElement(modalNode) &&
             React.cloneElement(modalNode, {
               onDismiss: handleDismiss,
+              ...props,
             })}
         </ModalWrapper>
       )}
