@@ -47,7 +47,13 @@ const useMatchBreakpoints = (): BreakpointChecks => {
   const [state, setState] = useState<State>(() => {
     return Object.keys(mediaQueries).reduce((accum, size) => {
       const key = getKey(size);
-      const mql = window?.matchMedia(mediaQueries[size]);
+      if (typeof window === "undefined") {
+        return {
+          ...accum,
+          [key]: false,
+        };
+      }
+      const mql = window.matchMedia(mediaQueries[size]);
       return { ...accum, [key]: mql?.matches ?? false };
     }, {});
   });
