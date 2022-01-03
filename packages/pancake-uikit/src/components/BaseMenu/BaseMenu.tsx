@@ -66,7 +66,8 @@ const BaseMenu: React.FC<BaseMenuProps> = ({ component, options, children, isOpe
     </div>
   );
 
-  const renderMenu = getPortalRoot() ? createPortal(menu, getPortalRoot()) : menu;
+  const portal = getPortalRoot();
+  const renderMenu = portal ? createPortal(menu, portal) : menu;
 
   return (
     <>

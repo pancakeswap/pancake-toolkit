@@ -189,7 +189,8 @@ const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipR
     </StyledTooltip>
   );
 
-  const tooltipInPortal = getPortalRoot() ? createPortal(tooltip, getPortalRoot()) : null;
+  const portal = getPortalRoot();
+  const tooltipInPortal = portal ? createPortal(tooltip, portal) : null;
 
   return {
     targetRef: setTargetElement,

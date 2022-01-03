@@ -27,22 +27,26 @@ const BottomDrawer: React.FC<BottomDrawerProps> = ({ content, isOpen, setIsOpen 
     return null;
   }
 
+  const portal = getPortalRoot();
+
   return (
     <>
-      {createPortal(
-        <>
-          <Overlay />
-          <DrawerContainer ref={ref} isUnmounting={!isOpen}>
-            <Box position="absolute" right="16px" top="0">
-              <IconButton variant="text" onClick={() => setIsOpen(false)}>
-                <CloseIcon />
-              </IconButton>
-            </Box>
-            {content}
-          </DrawerContainer>
-        </>,
-        getPortalRoot()
-      )}
+      {portal
+        ? createPortal(
+            <>
+              <Overlay />
+              <DrawerContainer ref={ref} isUnmounting={!isOpen}>
+                <Box position="absolute" right="16px" top="0">
+                  <IconButton variant="text" onClick={() => setIsOpen(false)}>
+                    <CloseIcon />
+                  </IconButton>
+                </Box>
+                {content}
+              </DrawerContainer>
+            </>,
+            portal
+          )
+        : null}
     </>
   );
 };
