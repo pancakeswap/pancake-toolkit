@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { breakpointMap } from "../theme/base";
+import { useIsomorphicEffect } from "./useIsomorphicEffect";
 
 type State = {
   [key: string]: boolean;
@@ -46,12 +47,12 @@ const useMatchBreakpoints = (): BreakpointChecks => {
   const [state, setState] = useState<State>(() => {
     return Object.keys(mediaQueries).reduce((accum, size) => {
       const key = getKey(size);
-      const mql = window.matchMedia(mediaQueries[size]);
-      return { ...accum, [key]: mql.matches };
+      const mql = window?.matchMedia(mediaQueries[size]);
+      return { ...accum, [key]: mql?.matches ?? false };
     }, {});
   });
 
-  useEffect(() => {
+  useIsomorphicEffect(() => {
     // Create listeners for each media query returning a function to unsubscribe
     const handlers = Object.keys(mediaQueries).map((size) => {
       const mql = window.matchMedia(mediaQueries[size]);
@@ -82,7 +83,7 @@ const useMatchBreakpoints = (): BreakpointChecks => {
         unsubscribe();
       });
     };
-  }, [setState]);
+  }, []);
 
   return {
     ...state,

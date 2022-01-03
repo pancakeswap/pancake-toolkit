@@ -8,8 +8,7 @@ import { Box } from "../Box";
 import { IconButton } from "../Button";
 import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
 import { Overlay } from "../Overlay";
-
-const portalRoot = document.getElementById("portal-root");
+import getPortalRoot from "../../util/getPortalRoot";
 
 interface BottomDrawerProps {
   content: React.ReactNode;
@@ -42,7 +41,7 @@ const BottomDrawer: React.FC<BottomDrawerProps> = ({ content, isOpen, setIsOpen 
             {content}
           </DrawerContainer>
         </>,
-        portalRoot ?? document.body
+        getPortalRoot()
       )}
     </>
   );
