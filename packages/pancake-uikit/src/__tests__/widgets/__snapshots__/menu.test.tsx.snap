@@ -1176,8 +1176,8 @@ exports[`renders correctly 1`] = `
   -webkit-transform-origin: center 60%;
   -ms-transform-origin: center 60%;
   transform-origin: center 60%;
-  -webkit-animation-name: beoKdG;
-  animation-name: beoKdG;
+  -webkit-animation-name: bEBzQK;
+  animation-name: bEBzQK;
   -webkit-animation-duration: 350ms;
   animation-duration: 350ms;
   -webkit-animation-iteration-count: 1;
@@ -1608,7 +1608,7 @@ exports[`renders correctly 1`] = `
                 >
                   <a
                     class="c12 c13"
-                    href="/https://exchange.pancakeswap.finance"
+                    href="/swap"
                   >
                     Exchange
                   </a>
@@ -1618,7 +1618,7 @@ exports[`renders correctly 1`] = `
                 >
                   <a
                     class="c12 c13"
-                    href="/https://exchange.pancakeswap.finance/#/pool"
+                    href="/liquidity"
                   >
                     Liquidity
                   </a>
@@ -1636,7 +1636,7 @@ exports[`renders correctly 1`] = `
                 >
                   <a
                     class="c9"
-                    href="/"
+                    href="/earn"
                   >
                     Earn
                   </a>
@@ -1651,7 +1651,7 @@ exports[`renders correctly 1`] = `
                 >
                   <a
                     class="c12 c13"
-                    href="/"
+                    href="/earn"
                   >
                     Earn
                   </a>
@@ -1661,7 +1661,7 @@ exports[`renders correctly 1`] = `
                 >
                   <a
                     class="c12 c13"
-                    href="/"
+                    href="/farms"
                   >
                     Yield Farms
                   </a>
@@ -1671,7 +1671,7 @@ exports[`renders correctly 1`] = `
                 >
                   <a
                     class="c12 c13"
-                    href="/"
+                    href="/pools"
                   >
                     Syrup pools
                   </a>
@@ -2219,7 +2219,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               class="c43"
-              href="/https://exchange.pancakeswap.finance"
+              href="/swap"
             >
               Exchange
             </a>
@@ -2233,7 +2233,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               class="c43"
-              href="/https://exchange.pancakeswap.finance/#/pool"
+              href="/liquidity"
             >
               Liquidity
             </a>
@@ -2251,7 +2251,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               class="c43"
-              href="/https://exchange.pancakeswap.finance/#/charts"
+              href="/charts"
             >
               <svg
                 class="c46"
