@@ -130,13 +130,22 @@ export const socials = [
         href: "https://t.me/pancakeswapfr",
       },
       {
+        label: "Datch",
+        href: "https://t.me/PancakeSwap_DE",
+      },
+      {
+        label: "Filipino",
+        href: "https://t.me/Pancakeswap_Ph",
+      },
+      {
+        label: "ქართული ენა",
+        href: "https://t.me/PancakeSwapGeorgia",
+      },
+      {
         label: "Announcements",
         href: "https://t.me/PancakeSwapAnn",
       },
-      {
-        label: "Whale Alert",
-        href: "https://t.me/PancakeSwapWhales",
-      },
+      
     ],
   },
   {
