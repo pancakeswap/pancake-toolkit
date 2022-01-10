@@ -144,7 +144,7 @@ export const socials = [
       {
         label: "Announcements",
         href: "https://t.me/PancakeSwapAnn",
-      }, 
+      },
     ],
   },
   {
