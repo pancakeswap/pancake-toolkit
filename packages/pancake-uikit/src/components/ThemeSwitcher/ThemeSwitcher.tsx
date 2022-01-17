@@ -1,5 +1,5 @@
 import React from "react";
-import IconComponent from "../Svg/IconComponent";
+import { SunIcon, MoonIcon } from "../Svg";
 import { Toggle } from "../Toggle";
 
 export interface Props {
@@ -14,8 +14,8 @@ const ThemeSwitcher: React.FC<Props> = ({ isDark, toggleTheme }) => (
     checkedColor="textDisabled"
     onChange={() => toggleTheme(!isDark)}
     scale="md"
-    startIcon={(isActive = false) => <IconComponent iconName="Sun" color={isActive ? "warning" : "backgroundAlt"} />}
-    endIcon={(isActive = false) => <IconComponent iconName="Moon" color={isActive ? "secondary" : "backgroundAlt"} />}
+    startIcon={(isActive = false) => <SunIcon color={isActive ? "warning" : "backgroundAlt"} />}
+    endIcon={(isActive = false) => <MoonIcon color={isActive ? "secondary" : "backgroundAlt"} />}
   />
 );
 

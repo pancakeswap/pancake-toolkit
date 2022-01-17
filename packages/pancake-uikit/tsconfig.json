@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "esnext",
     "lib": ["dom", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": ["src"],
   "exclude": ["node_modules", "src/**/*.stories.tsx", "src/__tests__/**/*"]

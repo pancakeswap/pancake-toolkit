@@ -225,7 +225,7 @@ export const WithoutConnectButton: React.FC = () => {
         currentLang="EN"
         links={links}
         footerLinks={footerLinks}
-        subLinks={subLinks}
+        subLinks={links[0].items}
       >
         <div>
           <h1>No connect button on top</h1>
@@ -247,7 +247,7 @@ export const WithSubmenuSelected: React.FC = () => {
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
         links={links}
-        subLinks={subLinks}
+        subLinks={links[0].items}
         footerLinks={footerLinks}
       >
         <div>
