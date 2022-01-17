@@ -3,6 +3,7 @@ import Box from "../Box/Box";
 import Flex from "../Box/Flex";
 import Text from "../Text/Text";
 import Svg from "./Svg";
+// eslint-disable-next-line import/no-useless-path-segments
 import { CheckmarkCircleIcon, CheckmarkCircleFillIcon } from "../Svg";
 import AnimatedIconComponent from "./AnimatedIconComponent";
 
