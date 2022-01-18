@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
 import Flex from "../../../components/Box/Flex";
 import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
+import { MenuContext } from "../context";
 
 interface Props {
   isDark: boolean;
@@ -10,11 +10,11 @@ interface Props {
 }
 
 const blink = keyframes`
-  0%,  100% { transform: scaleY(1); } 
-  50% { transform:  scaleY(0.1); } 
+  0%,  100% { transform: scaleY(1); }
+  50% { transform:  scaleY(0.1); }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled("a")`
   display: flex;
   align-items: center;
   .mobile-icon {
@@ -30,12 +30,11 @@ const StyledLink = styled(Link)`
       display: block;
     }
   }
-  .right-eye {
+  .eye {
     animation-delay: 20ms;
   }
   &:hover {
-    .left-eye,
-    .right-eye {
+    .eye {
       transform-origin: center 60%;
       animation-name: ${blink};
       animation-duration: 350ms;
@@ -45,6 +44,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Logo: React.FC<Props> = ({ isDark, href }) => {
+  const { linkComponent } = useContext(MenuContext);
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
@@ -60,7 +60,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink to={href} aria-label="Pancake home page">
+        <StyledLink href={href} as={linkComponent} aria-label="Pancake home page">
           {innerLogo}
         </StyledLink>
       )}
