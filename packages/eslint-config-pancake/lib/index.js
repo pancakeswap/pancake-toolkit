@@ -38,6 +38,11 @@ module.exports = {
     "no-plusplus": 0,
     "prefer-destructuring": ["warn", { object: true, array: false }],
     "no-underscore-dangle": 0,
+    "react/react-in-jsx-scope": 0,
+    "import/prefer-default-export": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-no-bind": 0,
+    "react/no-unused-prop-types": 0,
     // React
     "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
     "react/prop-types": 0,
