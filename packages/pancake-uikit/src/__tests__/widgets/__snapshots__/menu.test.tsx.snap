@@ -2,7 +2,15 @@
 
 exports[`renders correctly 1`] = `
 <DocumentFragment>
-  .c6 {
+  .c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  display: none;
   margin-left: 24px;
 }
 
@@ -13,13 +21,22 @@ exports[`renders correctly 1`] = `
 
 .c22 {
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c24 {
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c26 {
+  display: none;
   margin-right: 12px;
 }
 
@@ -28,6 +45,10 @@ exports[`renders correctly 1`] = `
 }
 
 .c39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 57px;
   padding-left: 12px;
 }
@@ -41,12 +62,20 @@ exports[`renders correctly 1`] = `
 }
 
 .c50 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 40px 16px;
   margin-bottom: 44px;
 }
 
 .c53 {
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c55 {
@@ -54,6 +83,10 @@ exports[`renders correctly 1`] = `
 }
 
 .c57 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 42px;
 }
 
@@ -62,6 +95,10 @@ exports[`renders correctly 1`] = `
 }
 
 .c66 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-bottom: 42px;
   margin-bottom: 0;
 }
@@ -69,24 +106,21 @@ exports[`renders correctly 1`] = `
 .c83 {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c90 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 24px;
 }
 
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -98,10 +132,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -109,10 +139,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
@@ -120,10 +146,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: start;
   -ms-flex-pack: start;
@@ -131,10 +153,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c44 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -142,10 +160,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c51 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -153,20 +167,12 @@ exports[`renders correctly 1`] = `
 }
 
 .c54 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .c58 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -184,20 +190,12 @@ exports[`renders correctly 1`] = `
 }
 
 .c67 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
 }
 
 .c74 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
@@ -211,10 +209,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c76 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -225,10 +219,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c81 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -240,10 +230,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c84 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
@@ -255,10 +241,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c91 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
@@ -390,69 +372,69 @@ exports[`renders correctly 1`] = `
 
 .c15 {
   color: #ED4B9E;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 16px;
   font-size: 14px;
 }
 
 .c19 {
   color: #FFB237;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 16px;
   font-size: 14px;
 }
 
 .c29 {
   color: #7A6EAA;
-  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .c61 {
   color: #F4EEFF;
-  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .c64 {
   color: #FFB237;
-  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .c69 {
   color: #1FC7D4;
-  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
+  font-size: 16px;
   margin-right: 24px;
 }
 
 .c73 {
   color: #1FC7D4;
-  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
+  font-size: 16px;
   margin-right: 0;
 }
 
 .c88 {
   color: #B8ADD2;
-  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .c92 {
   color: #B8ADD2;
-  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .c13 {
@@ -1249,6 +1231,29 @@ exports[`renders correctly 1`] = `
 }
 
 @media screen and (min-width:576px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width:370px) {
+
+}
+
+@media screen and (min-width:576px) {
+  .c26 {
+    display: block;
+  }
+}
+
+@media screen and (min-width:370px) {
+
+}
+
+@media screen and (min-width:576px) {
   .c39 {
     padding-left: 0px;
   }
@@ -1454,10 +1459,12 @@ exports[`renders correctly 1`] = `
         class="c2"
       >
         <div
-          class="c3"
+          class="c3 "
+          display="flex"
         >
           <div
-            class="c3"
+            class="c3 "
+            display="flex"
           >
             <a
               aria-label="Pancake home page"
@@ -1525,7 +1532,8 @@ exports[`renders correctly 1`] = `
             </a>
           </div>
           <div
-            class="c6 c3"
+            class="c6 "
+            display="none,,flex"
           >
             <div
               class="c7"
@@ -1795,6 +1803,7 @@ exports[`renders correctly 1`] = `
                   >
                     <div
                       class="c22 c23"
+                      display="flex"
                       width="100%"
                     >
                       Docs & Guides
@@ -1818,10 +1827,12 @@ exports[`renders correctly 1`] = `
         </div>
         <div
           class="c24 c25"
+          display="flex"
           height="100%"
         >
           <div
             class="c26"
+            display="none,,block"
           >
             <a
               class="c27"
@@ -2059,10 +2070,12 @@ exports[`renders correctly 1`] = `
       </nav>
     </div>
     <div
-      class="c38"
+      class="c3 c38"
+      display="flex"
     >
       <div
         class="c39 c40 c41"
+        display="flex"
       >
         <div
           class="c42"
@@ -2095,6 +2108,7 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         class="c39 c44 c45"
+        display="flex"
       >
         <div
           class="c42"
@@ -2137,9 +2151,11 @@ exports[`renders correctly 1`] = `
         body
         <div
           class="c50 c51 c52"
+          display="flex"
         >
           <div
             class="c53 c54"
+            display="flex"
             width="100%,,1200px;"
           >
             <div
@@ -2180,6 +2196,7 @@ exports[`renders correctly 1`] = `
             </div>
             <div
               class="c57 c58"
+              display="flex"
               order="2,,1"
             >
               <ul
@@ -2426,6 +2443,7 @@ exports[`renders correctly 1`] = `
             </div>
             <div
               class="c66 c67 c68"
+              display="flex"
               order="2"
             >
               <a
@@ -2716,11 +2734,13 @@ exports[`renders correctly 1`] = `
               </a>
             </div>
             <div
-              class="c74 c75"
+              class="c3 c74 c75"
+              display="flex"
               order="1,,3"
             >
               <div
-                class="c76"
+                class="c3 c76"
+                display="flex"
                 order="2,,1"
               >
                 <div
@@ -2738,6 +2758,7 @@ exports[`renders correctly 1`] = `
                   >
                     <div
                       class="c24 c81"
+                      display="flex"
                       height="100%"
                     >
                       <svg
@@ -2781,6 +2802,7 @@ exports[`renders correctly 1`] = `
                   </div>
                   <div
                     class="c83 c84"
+                    display="flex"
                     height="100%"
                     width="100%"
                   >
@@ -3009,6 +3031,7 @@ exports[`renders correctly 1`] = `
               </div>
               <div
                 class="c90 c91"
+                display="flex"
                 order="1,,2"
               >
                 <div

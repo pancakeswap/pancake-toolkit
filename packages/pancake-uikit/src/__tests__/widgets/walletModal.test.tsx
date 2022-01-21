@@ -11,8 +11,19 @@ it("renders ConnectModal correctly", () => {
       min-width: 320px;
     }
 
+    .c3 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
     .c10 {
       width: 320px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
     }
 
     .c12 {
@@ -33,24 +44,24 @@ it("renders ConnectModal correctly", () => {
 
     .c5 {
       color: #280D5F;
-      font-size: 16px;
       font-weight: 600;
       line-height: 1.5;
+      font-size: 16px;
     }
 
     .c18 {
       color: #280D5F;
-      font-size: 14px;
       font-weight: 400;
       line-height: 1.5;
+      font-size: 16px;
       font-size: 14px;
     }
 
     .c21 {
       color: #7A6EAA;
-      font-size: 16px;
       font-weight: 400;
       line-height: 1.5;
+      font-size: 16px;
       margin-bottom: 16px;
       text-align: center;
     }
@@ -272,13 +283,6 @@ it("renders ConnectModal correctly", () => {
       margin-bottom: 8px;
     }
 
-    .c3 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
     .c2 {
       -webkit-align-items: center;
       -webkit-box-align: center;
@@ -379,6 +383,7 @@ it("renders ConnectModal correctly", () => {
         >
           <div
             class="c3 c4"
+            display="flex"
           >
             <h2
               class="c5 c6"
@@ -406,7 +411,8 @@ it("renders ConnectModal correctly", () => {
           </button>
         </div>
         <div
-          class="c10 c3 c11"
+          class="c10 c11"
+          display="flex"
           width="320px,,340px"
         >
           <div

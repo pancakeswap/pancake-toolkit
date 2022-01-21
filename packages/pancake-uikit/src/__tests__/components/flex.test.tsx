@@ -14,7 +14,8 @@ it("renders correctly", () => {
     }
 
     <div
-        class="c0"
+        class="c0 "
+        display="flex"
       >
         flex
       </div>

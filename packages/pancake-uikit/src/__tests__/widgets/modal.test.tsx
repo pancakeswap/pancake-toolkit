@@ -13,9 +13,9 @@ it("renders correctly", () => {
     <DocumentFragment>
       .c5 {
       color: #280D5F;
-      font-size: 16px;
       font-weight: 600;
       line-height: 1.5;
+      font-size: 16px;
     }
 
     .c6 {
@@ -28,15 +28,19 @@ it("renders correctly", () => {
       min-width: 320px;
     }
 
-    .c10 {
-      padding: 24px;
-    }
-
     .c3 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    .c10 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 24px;
     }
 
     .c9 {
@@ -176,6 +180,7 @@ it("renders correctly", () => {
         >
           <div
             class="c3 c4"
+            display="flex"
           >
             <h2
               class="c5 c6"
@@ -203,7 +208,8 @@ it("renders correctly", () => {
           </button>
         </div>
         <div
-          class="c10 c3 c11"
+          class="c10 c11"
+          display="flex"
         >
           body
         </div>

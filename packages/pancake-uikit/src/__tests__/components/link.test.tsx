@@ -8,9 +8,9 @@ it("renders link correctly", () => {
     <DocumentFragment>
       .c0 {
       color: #1FC7D4;
-      font-size: 16px;
       font-weight: 600;
       line-height: 1.5;
+      font-size: 16px;
     }
 
     .c1 {
@@ -49,9 +49,9 @@ it("renders link external link correctly", () => {
     <DocumentFragment>
       .c0 {
       color: #1FC7D4;
-      font-size: 16px;
       font-weight: 600;
       line-height: 1.5;
+      font-size: 16px;
     }
 
     .c1 {

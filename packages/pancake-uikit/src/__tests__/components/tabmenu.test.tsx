@@ -14,17 +14,21 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       padding: 0 4px;
     }
 
-    .c1 {
+    .c2 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
     }
 
-    .c2 {
+    .c1 {
       border-bottom: 2px solid #eeeaf4;
       overflow-x: scroll;
       -ms-overflow-style: none;
@@ -34,7 +38,7 @@ it("renders correctly", () => {
       scrollbar-width: none;
     }
 
-    .c2::-webkit-scrollbar {
+    .c1::-webkit-scrollbar {
       display: none;
     }
 
@@ -135,10 +139,12 @@ it("renders correctly", () => {
     }
 
     <div
-        class="c0 c1 c2"
+        class="c0 c1"
+        display="flex"
       >
         <div
-          class="c1 c3"
+          class="c2 c3"
+          display="flex"
         >
           <button
             class="c4"

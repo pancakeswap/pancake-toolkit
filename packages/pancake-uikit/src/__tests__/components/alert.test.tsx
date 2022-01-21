@@ -19,16 +19,16 @@ it("renders correctly", () => {
 
     .c5 {
       color: #280D5F;
-      font-size: 16px;
       font-weight: 600;
       line-height: 1.5;
+      font-size: 16px;
     }
 
     .c6 {
       color: #280D5F;
-      font-size: 16px;
       font-weight: 400;
       line-height: 1.5;
+      font-size: 16px;
     }
 
     .c0 {
@@ -64,6 +64,7 @@ it("renders correctly", () => {
 
     <div
         class="c0 c1"
+        display="flex"
       >
         <div
           class="c2"
