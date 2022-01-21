@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "importHelpers": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,5 +17,5 @@
     "jsx": "react-jsx"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "src/**/*.stories.tsx", "src/__tests__/**/*"]
+  "exclude": ["node_modules", "src/**/*.stories.tsx", "src/__tests__/**/*", "src/testHelpers.tsx"]
 }

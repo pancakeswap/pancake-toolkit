@@ -3,7 +3,7 @@
   "version": "0.63.1",
   "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
@@ -13,7 +13,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn storybook",
-    "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
+    "build": "rm -rf ./dist && rollup -c && tsc --declaration --outDir dist",
     "watch": "rollup -c -w",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "format:check": "prettier --check --loglevel error 'src/**/*.{js,jsx,ts,tsx}'",
@@ -45,6 +45,7 @@
     "styled-components": "^5.2.3"
   },
   "dependencies": {
+    "tslib": "^2.3.1",
     "@popperjs/core": "^2.9.2",
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
