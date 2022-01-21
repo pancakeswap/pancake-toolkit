@@ -44,10 +44,7 @@ const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
   z-index: 20;
 `;
 
-const TopBannerContainer = styled.div<{ height: number }>`
-  height: ${({ height }) => `${height}px`};
-  min-height: ${({ height }) => `${height}px`};
-  max-height: ${({ height }) => `${height}px`};
+const TopBannerContainer = styled(Box)`
   width: 100%;
 `;
 
@@ -129,18 +126,26 @@ const Menu: React.FC<NavProps> = ({
     <MenuContext.Provider value={{ linkComponent }}>
       <Wrapper>
         <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
-          {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
+          {banner && (
+            <TopBannerContainer height={[TOP_BANNER_HEIGHT_MOBILE, null, TOP_BANNER_HEIGHT]}>
+              {banner}
+            </TopBannerContainer>
+          )}
           <StyledNav>
             <Flex>
               <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-              {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
+              <MenuItems
+                items={links}
+                activeItem={activeItem}
+                activeSubItem={activeSubItem}
+                ml="24px"
+                display={["none", null, "flex"]}
+              />
             </Flex>
             <Flex alignItems="center" height="100%">
-              {!isMobile && (
-                <Box mr="12px">
-                  <CakePrice cakePriceUsd={cakePriceUsd} />
-                </Box>
-              )}
+              <Box mr="12px" display={["none", null, "block"]}>
+                <CakePrice cakePriceUsd={cakePriceUsd} />
+              </Box>
               <Box mt="4px">
                 <LangSelector
                   currentLang={currentLang}
