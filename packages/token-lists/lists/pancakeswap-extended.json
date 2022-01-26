@@ -365,6 +365,14 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0x08ba0619b1e7A582E0BCe5BBE9843322C954C340.png"
     },
     {
+      "name": "Ertha Token",
+      "symbol": "ERTHA",
+      "address": "0x62823659d09F9F9D2222058878f89437425eB261",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x62823659d09F9F9D2222058878f89437425eB261.png"
+    },
+    {
       "name": "Multiplier",
       "symbol": "bMXX",
       "address": "0x4131b87F74415190425ccD873048C708F8005823",
