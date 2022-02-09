@@ -3,6 +3,7 @@ import path from "path";
 import { gql, GraphQLClient } from "graphql-request";
 import { getAddress, isAddress } from "@ethersproject/address";
 import slugify from "slugify";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import "dotenv/config";
 
 const pathToImages = process.env.CI
