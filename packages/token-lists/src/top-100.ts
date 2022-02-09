@@ -80,7 +80,7 @@ const getTokens = async (): Promise<BitqueryEntity[]> => {
         query ($from: ISO8601DateTime, $till: ISO8601DateTime, $blacklist: [String!]) {
           ethereum(network: bsc) {
             dexTrades(
-              options: { desc: "Total_USD", limit: 100 }
+              options: { desc: "Total_USD", limit: 120 } # fetch more than 100
               exchangeName: { is: "Pancake v2" }
               baseCurrency: { notIn: $blacklist }
               date: { since: $from, till: $till }
@@ -134,6 +134,7 @@ const main = async (): Promise<void> => {
 
     const sanitizedTokens = tokens
       .filter((token) => isAddress(token.baseCurrency.address))
+      .slice(0, 100)
       .reduce((list, item: BitqueryEntity) => {
         const checksummedAddress = getAddress(item.baseCurrency.address);
 
@@ -153,6 +154,10 @@ const main = async (): Promise<void> => {
         };
         return [...list, updatedToken];
       }, []);
+
+    if (sanitizedTokens.length !== 100) {
+      throw new Error("Sanitized token list is not 100 tokens");
+    }
 
     const tokenListPath = `${path.resolve()}/src/tokens/pancakeswap-top-100.json`;
     console.info("Saving updated list to ", tokenListPath);
