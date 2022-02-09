@@ -14,7 +14,7 @@ URLs to external lists are stored in `token-lists.json`, if you want your list t
 
 ## How to add new tokens to PancakeSwap (extended) token list
 
-Note - this is not something we expect pull requests for.  
+Note - this is not something we expect pull requests for.
 Unless you've been specifically asked by someone from PCS team please do no submit PRs to be listed on default PCS list. You can still trade your tokens on PCS exchange by pasting your address into the token field.
 
 - Add new tokens to `src/tokens/pancakeswap-extended.json` file
@@ -35,6 +35,8 @@ For list to be considered valid it need to satisfy the following criteria:
 Note - this is not something we expect pull requests for.
 
 ```shell script
+# add BIT_QUERY_HEADER on .env
+
 # Fetch the Top100 Tokens on PancakeSwap v2, and update list.
 $ yarn fetch:pcs-top-100
 

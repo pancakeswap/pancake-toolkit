@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
-import { request, gql } from "graphql-request";
-import { getAddress } from "@ethersproject/address";
+import { gql, GraphQLClient } from "graphql-request";
+import { getAddress, isAddress } from "@ethersproject/address";
 import slugify from "slugify";
+import "dotenv/config";
 
 const pathToImages = process.env.CI
   ? path.join(process.env.GITHUB_WORKSPACE, "packages", "token-lists", "lists", "images")
@@ -58,6 +59,12 @@ const getDateRange = (): string[] => {
   return [todayISO, monthAgoISO];
 };
 
+const client = new GraphQLClient("https://graphql.bitquery.io/", {
+  headers: {
+    "X-API-KEY": process.env.BIT_QUERY_HEADER,
+  },
+});
+
 /**
  * Fetch Top100 Tokens traded on PancakeSwap v2, ordered by trading volume,
  * for the past 30 days, filtered to remove default / broken tokens.
@@ -68,8 +75,7 @@ const getTokens = async (): Promise<BitqueryEntity[]> => {
   try {
     const [today, monthAgo] = getDateRange();
 
-    const { ethereum } = await request(
-      "https://graphql.bitquery.io/",
+    const { ethereum } = await client.request(
       gql`
         query ($from: ISO8601DateTime, $till: ISO8601DateTime, $blacklist: [String!]) {
           ethereum(network: bsc) {
@@ -126,25 +132,27 @@ const main = async (): Promise<void> => {
   try {
     const tokens = await getTokens();
 
-    const sanitizedTokens = tokens.reduce((list, item: BitqueryEntity) => {
-      const checksummedAddress = getAddress(item.baseCurrency.address);
+    const sanitizedTokens = tokens
+      .filter((token) => isAddress(token.baseCurrency.address))
+      .reduce((list, item: BitqueryEntity) => {
+        const checksummedAddress = getAddress(item.baseCurrency.address);
 
-      const updatedToken = {
-        name: slugify(item.baseCurrency.name, {
-          replacement: " ",
-          remove: /[^\w\s.]/g,
-        }),
-        symbol: slugify(item.baseCurrency.symbol, {
-          replacement: "-",
-          remove: /[^\w\s.]/g,
-        }).toUpperCase(),
-        address: checksummedAddress,
-        chainId: 56,
-        decimals: item.baseCurrency.decimals,
-        logoURI: getTokenLogo(checksummedAddress),
-      };
-      return [...list, updatedToken];
-    }, []);
+        const updatedToken = {
+          name: slugify(item.baseCurrency.name, {
+            replacement: " ",
+            remove: /[^\w\s.]/g,
+          }),
+          symbol: slugify(item.baseCurrency.symbol, {
+            replacement: "-",
+            remove: /[^\w\s.]/g,
+          }).toUpperCase(),
+          address: checksummedAddress,
+          chainId: 56,
+          decimals: item.baseCurrency.decimals,
+          logoURI: getTokenLogo(checksummedAddress),
+        };
+        return [...list, updatedToken];
+      }, []);
 
     const tokenListPath = `${path.resolve()}/src/tokens/pancakeswap-top-100.json`;
     console.info("Saving updated list to ", tokenListPath);
