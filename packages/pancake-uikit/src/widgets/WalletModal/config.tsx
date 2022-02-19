@@ -63,7 +63,7 @@ const connectors: Config[] = [
   {
     title: "Blocto",
     icon: Blocto,
-    connectorId: ConnectorNames.Blocto,
+    connectorId: ConnectorNames.Injected,
     priority: 999,
   },
 ];
