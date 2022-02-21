@@ -20,6 +20,7 @@
     "test": "lerna run test",
     "lint": "lerna run lint",
     "format:check": "lerna run format:check",
+    "storybook": "lerna run storybook",
     "storybook:build": "lerna run storybook:build",
     "release": "yarn build && yarn lerna publish",
     "prepare": "husky install"
