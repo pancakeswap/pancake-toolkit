@@ -168,8 +168,8 @@ export const socials = [
     href: "https://discord.gg/pancakeswap",
   },
   {
-    label: "Resources",
-    icon: "Resources",
+    label: "Medium",
+    icon: "Medium",
     href: "https://pancakeswap.medium.com/",
   },
 ];
