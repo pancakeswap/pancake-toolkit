@@ -27,8 +27,7 @@ const lists = {
     list: pancakeswapDefault,
     name: "PancakeSwap Default",
     keywords: ["pancakeswap", "default"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+    logoURI: "https://pancakeswap.finance/logo.png",
     sort: false,
     currentVersion: pancakeswapDefaultVersion,
   },
@@ -36,8 +35,7 @@ const lists = {
     list: pancakeswapExtended,
     name: "PancakeSwap Extended",
     keywords: ["pancakeswap", "extended"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+    logoURI: "https://pancakeswap.finance/logo.png",
     sort: true,
     currentVersion: pancakeswapExtendedVersion,
   },
@@ -45,8 +43,7 @@ const lists = {
     list: pancakeswapTop100,
     name: "PancakeSwap Top 100",
     keywords: ["pancakeswap", "top 100"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+    logoURI: "https://pancakeswap.finance/logo.png",
     sort: true,
     currentVersion: pancakeswapTop100Version,
   },
@@ -54,8 +51,7 @@ const lists = {
     list: pancakeswapTop15,
     name: "PancakeSwap Top 15",
     keywords: ["pancakeswap", "top 15"],
-    logoURI:
-      "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+    logoURI: "https://pancakeswap.finance/logo.png",
     sort: true,
     currentVersion: pancakeswapTop15Version,
   },

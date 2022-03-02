@@ -1,12 +1,12 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-02-18T02:46:55.230Z",
+  "timestamp": "2022-03-01T08:36:50.539Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 73
+    "patch": 74
   },
-  "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+  "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
     "pancakeswap",
     "extended"

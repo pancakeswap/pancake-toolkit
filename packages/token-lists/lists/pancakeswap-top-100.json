@@ -1,12 +1,12 @@
 {
   "name": "PancakeSwap Top 100",
-  "timestamp": "2022-02-09T15:35:22.266Z",
+  "timestamp": "2022-03-01T08:36:38.679Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 11
+    "patch": 12
   },
-  "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+  "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
     "pancakeswap",
     "top 100"
