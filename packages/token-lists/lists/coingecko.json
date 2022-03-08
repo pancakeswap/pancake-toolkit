@@ -1,10 +1,10 @@
 {
   "name": "CoinGecko",
-  "timestamp": "2022-03-08T05:59:11.505Z",
+  "timestamp": "2022-03-08T07:45:34.648Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 6
+    "patch": 7
   },
   "logoURI": "https://www.coingecko.com/assets/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
   "keywords": [
@@ -6245,6 +6245,14 @@
     },
     {
       "chainId": 56,
+      "address": "0x7c73967dC8c804Ea028247f5A953052f0CD5Fd58",
+      "name": "CyBloc Battery Toke",
+      "symbol": "CBT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/24167/thumb/CBT_200x200.png?1646714918"
+    },
+    {
+      "chainId": 56,
       "address": "0x0853eABE53157D911E0137a9ef987874289ae9d0",
       "name": "CryptoBlast",
       "symbol": "CBT",
@@ -11309,19 +11317,19 @@
     },
     {
       "chainId": 56,
-      "address": "0xEA340B35207b2C795C5CCF9a1B78bEfC838516E8",
-      "name": "LittleGhosts Ectopl",
-      "symbol": "ECTO",
-      "decimals": 9,
-      "logoURI": "https://assets.coingecko.com/coins/images/21325/thumb/PDjB5PI.png?1638945800"
-    },
-    {
-      "chainId": 56,
       "address": "0x670ddE11A0AD3D10acf3E6B5EBC742A55718F315",
       "name": "Ghost Block",
       "symbol": "ECTO",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/22400/thumb/17023.png?1641793669"
+    },
+    {
+      "chainId": 56,
+      "address": "0xEA340B35207b2C795C5CCF9a1B78bEfC838516E8",
+      "name": "LittleGhosts Ectopl",
+      "symbol": "ECTO",
+      "decimals": 9,
+      "logoURI": "https://assets.coingecko.com/coins/images/21325/thumb/PDjB5PI.png?1638945800"
     },
     {
       "chainId": 56,
@@ -12517,19 +12525,19 @@
     },
     {
       "chainId": 56,
-      "address": "0xB0228Eb6c0b49f8265e6E161c3a987eeD7471F42",
-      "name": "Fanspel",
-      "symbol": "FAN",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/19102/thumb/fanspel.PNG?1634505348"
-    },
-    {
-      "chainId": 56,
       "address": "0xb6d48FCEf36E19681EE29896B19c1b6CbD1eAB1B",
       "name": "Fanadise",
       "symbol": "FAN",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/17417/thumb/logo_fanadise_new_200x200.png?1638260115"
+    },
+    {
+      "chainId": 56,
+      "address": "0xB0228Eb6c0b49f8265e6E161c3a987eeD7471F42",
+      "name": "Fanspel",
+      "symbol": "FAN",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/19102/thumb/fanspel.PNG?1634505348"
     },
     {
       "chainId": 56,
@@ -16173,19 +16181,19 @@
     },
     {
       "chainId": 56,
-      "address": "0x78C3AdE403438B37638304F9FbbFB1b76608c1BD",
-      "name": "BinaHero",
-      "symbol": "HERO",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/21890/thumb/binahero.jpg?1640248087"
-    },
-    {
-      "chainId": 56,
       "address": "0xD40bEDb44C081D2935eebA6eF5a3c8A31A1bBE13",
       "name": "Metahero",
       "symbol": "HERO",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/16911/thumb/icon200x200.png?1625618542"
+    },
+    {
+      "chainId": 56,
+      "address": "0x78C3AdE403438B37638304F9FbbFB1b76608c1BD",
+      "name": "BinaHero",
+      "symbol": "HERO",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/21890/thumb/binahero.jpg?1640248087"
     },
     {
       "chainId": 56,
@@ -17570,14 +17578,6 @@
       "symbol": "IOTX",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/15978/thumb/iotex-logo.png?1622527411"
-    },
-    {
-      "chainId": 56,
-      "address": "0x9678E42ceBEb63F23197D726B29b1CB20d0064E5",
-      "name": "IoTeX",
-      "symbol": "IOTX",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/3334/thumb/iotex-logo.png?1547037941"
     },
     {
       "chainId": 56,
@@ -30578,14 +30578,6 @@
       "symbol": "SCUSD",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/19306/thumb/scUSD_logo.jpeg?1634972614"
-    },
-    {
-      "chainId": 56,
-      "address": "0x1eCEc64957A7f83F90e77bD1B1816Ab40DF4f615",
-      "name": "Super CoinView Toke",
-      "symbol": "SCV",
-      "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/8840/thumb/Hpio6etr_400x400.jpg?1562036775"
     },
     {
       "chainId": 56,

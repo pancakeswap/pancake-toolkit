@@ -23,11 +23,14 @@ const main = async (): Promise<void> => {
     const tokens = await getTokens();
   
     const sanitizedTokens = tokens
-      .filter((token) => isAddress(token.address))
-      .map(token => ({
-        ...token,
-        address: getAddress(token.address)
-      }))
+    .filter((token, index, array) => {
+      const isNotDuplicate = array.findIndex((t) => t.address === token.address) === index
+      return isNotDuplicate && isAddress(token.address)
+    })
+    .map(token => ({
+      ...token,
+      address: getAddress(token.address)
+    }))
   
     const tokenListPath = `${path.resolve()}/src/tokens/coingecko.json`;
     console.info("Saving updated list to ", tokenListPath);
