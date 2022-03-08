@@ -29,7 +29,6 @@ const main = async (): Promise<void> => {
         address: getAddress(token.address)
       }))
   
-
     const tokenListPath = `${path.resolve()}/src/tokens/coingecko.json`;
     console.info("Saving updated list to ", tokenListPath);
     const stringifiedList = JSON.stringify(sanitizedTokens, null, 2);
@@ -38,5 +37,5 @@ const main = async (): Promise<void> => {
     console.error(`Error when fetching Coingecko Tokens, error: ${error.message}`);
   }
 };
-main()
+
 export default main;
