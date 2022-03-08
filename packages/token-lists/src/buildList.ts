@@ -5,10 +5,12 @@ import { version as pancakeswapDefaultVersion } from "../lists/pancakeswap-defau
 import { version as pancakeswapExtendedVersion } from "../lists/pancakeswap-extended.json";
 import { version as pancakeswapTop15Version } from "../lists/pancakeswap-top-15.json";
 import { version as pancakeswapTop100Version } from "../lists/pancakeswap-top-100.json";
+import { version as coingeckoVersion } from "../lists/coingecko.json";
 import pancakeswapDefault from "./tokens/pancakeswap-default.json";
 import pancakeswapExtended from "./tokens/pancakeswap-extended.json";
 import pancakeswapTop100 from "./tokens/pancakeswap-top-100.json";
 import pancakeswapTop15 from "./tokens/pancakeswap-top-15.json";
+import coingecko from './tokens/coingecko.json'
 
 export enum VersionBump {
   "major" = "major",
@@ -55,6 +57,14 @@ const lists = {
     sort: true,
     currentVersion: pancakeswapTop15Version,
   },
+  "coingecko": {
+    list: coingecko,
+    name: "CoinGecko",
+    keywords: ["defi"],
+    logoURI: "https://www.coingecko.com/assets/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
+    sort: true,
+    currentVersion: coingeckoVersion,
+  }
 };
 
 const getNextVersion = (currentVersion: Version, versionBump?: VersionBump) => {

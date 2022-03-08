@@ -8,6 +8,7 @@ import currentPancakeswapDefaultList from "../lists/pancakeswap-default.json";
 import currentPancakeswapExtendedtList from "../lists/pancakeswap-extended.json";
 import currentPancakeswapTop15List from "../lists/pancakeswap-top-15.json";
 import currentPancakeswapTop100tList from "../lists/pancakeswap-top-100.json";
+import currentCoingeckoList from '../lists/coingecko.json'
 import { buildList, VersionBump } from "../src/buildList";
 
 const currentLists = {
@@ -15,6 +16,7 @@ const currentLists = {
   "pancakeswap-extended": currentPancakeswapExtendedtList,
   "pancakeswap-top-100": currentPancakeswapTop100tList,
   "pancakeswap-top-15": currentPancakeswapTop15List,
+  "coingecko": currentCoingeckoList
 };
 
 const ajv = new Ajv({ allErrors: true, format: "full" });
