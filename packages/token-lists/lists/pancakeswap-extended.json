@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-01T08:36:50.539Z",
+  "timestamp": "2022-03-09T04:38:56.254Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 74
+    "patch": 75
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -899,6 +899,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x84e9a6F9D240FdD33801f7135908BfA16866939A.png"
+    },
+    {
+      "name": "Green Metaverse Token",
+      "symbol": "GMT",
+      "address": "0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1.png"
     },
     {
       "name": "Gourmet Galaxy",
