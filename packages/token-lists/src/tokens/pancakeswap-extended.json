@@ -2150,5 +2150,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x6f9F0c4ad9Af7EbD61Ac5A1D4e0F2227F7B0E5f9.png"
+  },
+  {
+    "name": "Green Metaverse Token",
+    "symbol": "GMT",
+    "address": "0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1",
+    "chainId": 56,
+    "decimals": 8,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1.png"
   }
 ]
