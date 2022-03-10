@@ -6,11 +6,15 @@ import { version as pancakeswapExtendedVersion } from "../lists/pancakeswap-exte
 import { version as pancakeswapTop15Version } from "../lists/pancakeswap-top-15.json";
 import { version as pancakeswapTop100Version } from "../lists/pancakeswap-top-100.json";
 import { version as coingeckoVersion } from "../lists/coingecko.json";
+import { version as pancakeswapMiniVersion } from "../lists/pancakeswap-mini.json";
+import { version as pancakeswapMiniExtendedVersion } from "../lists/pancakeswap-mini-extended.json";
 import pancakeswapDefault from "./tokens/pancakeswap-default.json";
 import pancakeswapExtended from "./tokens/pancakeswap-extended.json";
 import pancakeswapTop100 from "./tokens/pancakeswap-top-100.json";
 import pancakeswapTop15 from "./tokens/pancakeswap-top-15.json";
 import coingecko from './tokens/coingecko.json'
+import pancakeswapMini from "./tokens/pancakeswap-mini.json";
+import pancakeswapMiniExtended from "./tokens/pancakeswap-mini-extended.json";
 
 export enum VersionBump {
   "major" = "major",
@@ -64,7 +68,23 @@ const lists = {
     logoURI: "https://www.coingecko.com/assets/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
     sort: true,
     currentVersion: coingeckoVersion,
-  }
+  },
+  "pancakeswap-mini": {
+    list: pancakeswapMini,
+    name: "PancakeSwap Mini",
+    keywords: ["pancakeswap", "binance", "mini program", "mini"],
+    logoURI: "https://pancakeswap.finance/logo.png",
+    sort: true,
+    currentVersion: pancakeswapMiniVersion,
+  },
+  "pancakeswap-mini-extended": {
+    list: pancakeswapMiniExtended,
+    name: "PancakeSwap Mini Ext",
+    keywords: ["pancakeswap", "binance", "mini program", "mini", "extended"],
+    logoURI: "https://pancakeswap.finance/logo.png",
+    sort: true,
+    currentVersion: pancakeswapMiniExtendedVersion,
+  },
 };
 
 const getNextVersion = (currentVersion: Version, versionBump?: VersionBump) => {

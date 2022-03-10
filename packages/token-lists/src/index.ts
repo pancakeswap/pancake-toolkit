@@ -3,6 +3,7 @@ import checksumAddresses from "./checksum";
 import ciCheck from "./ci-check";
 import topTokens from "./top-100";
 import coingeckoTokens from "./coingecko";
+import getTokensChainData from "./utils/getTokensChainData";
 
 const command = process.argv[2];
 const listName = process.argv[3];
@@ -21,6 +22,9 @@ switch (command) {
     break;
   case "ci-check":
     ciCheck();
+    break;
+  case "get-list-from-addresses":
+    getTokensChainData("pancakeswap-mini-extended");
     break;
   default:
     console.info("Unknown command");
