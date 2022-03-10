@@ -22,18 +22,27 @@
     "checksum:pcs-mini": "yarn build && node ./dist checksum pancakeswap-mini",
     "generate:pcs-mini": "yarn test && yarn build && node ./dist generate pancakeswap-mini",
     "makelist:pcs-mini": "yarn checksum:pcs-mini && yarn generate:pcs-mini",
+    "checksum:pcs-mini-extended": "yarn build && node ./dist checksum pancakeswap-mini-extended",
+    "generate:pcs-mini-extended": "yarn test && yarn build && node ./dist generate pancakeswap-mini-extended",
+    "makelist:pcs-mini-extended": "yarn checksum:pcs-mini-extended && yarn generate:pcs-mini-extended",
+    "from-addresses:pcs-mini-extended": "yarn build && node ./dist get-list-from-addresses",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "fetch:pcs-top-100": "yarn build && node ./dist fetch",
     "test": "jest",
-    "ci-check": "yarn build && node ./dist ci-check"
+    "ci-check": "yarn build && node ./dist ci-check",
+    "postinstall": "yarn run typechain",
+    "typechain": "typechain --out-dir src/utils/abi/types --target=ethers-v5 \"src/utils/abi/*.json\""
   },
   "dependencies": {
     "@ethersproject/address": "^5.1.0",
     "@uniswap/token-lists": "^1.0.0-beta.21",
     "ajv": "6.12.2",
+    "ethers": "^5.5.4",
     "graphql": "^15.5.0",
     "graphql-request": "^3.4.0",
-    "slugify": "^1.6.0"
+    "slugify": "^1.6.0",
+    "typechain": "^7.0.0",
+    "@typechain/ethers-v5": "^9.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",

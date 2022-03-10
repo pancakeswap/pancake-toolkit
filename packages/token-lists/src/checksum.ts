@@ -6,6 +6,7 @@ import pancakeswapExtended from "./tokens/pancakeswap-extended.json";
 import pancakeswapTop100 from "./tokens/pancakeswap-top-100.json";
 import pancakeswapTop15 from "./tokens/pancakeswap-top-15.json";
 import pancakeswapMini from "./tokens/pancakeswap-mini.json";
+import pancakeswapMiniExtended from "./tokens/pancakeswap-mini-extended.json";
 
 const lists = {
   "pancakeswap-default": pancakeswapDefault,
@@ -13,6 +14,7 @@ const lists = {
   "pancakeswap-top-100": pancakeswapTop100,
   "pancakeswap-top-15": pancakeswapTop15,
   "pancakeswap-mini": pancakeswapMini,
+  "pancakeswap-mini-extended": pancakeswapMiniExtended,
 };
 
 const checksumAddresses = (listName: string): void => {

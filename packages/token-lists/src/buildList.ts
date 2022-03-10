@@ -6,11 +6,13 @@ import { version as pancakeswapExtendedVersion } from "../lists/pancakeswap-exte
 import { version as pancakeswapTop15Version } from "../lists/pancakeswap-top-15.json";
 import { version as pancakeswapTop100Version } from "../lists/pancakeswap-top-100.json";
 import { version as pancakeswapMiniVersion } from "../lists/pancakeswap-mini.json";
+import { version as pancakeswapMiniExtendedVersion } from "../lists/pancakeswap-mini-extended.json";
 import pancakeswapDefault from "./tokens/pancakeswap-default.json";
 import pancakeswapExtended from "./tokens/pancakeswap-extended.json";
 import pancakeswapTop100 from "./tokens/pancakeswap-top-100.json";
 import pancakeswapTop15 from "./tokens/pancakeswap-top-15.json";
 import pancakeswapMini from "./tokens/pancakeswap-mini.json";
+import pancakeswapMiniExtended from "./tokens/pancakeswap-mini-extended.json";
 
 export enum VersionBump {
   "major" = "major",
@@ -64,6 +66,14 @@ const lists = {
     logoURI: "https://pancakeswap.finance/logo.png",
     sort: true,
     currentVersion: pancakeswapMiniVersion,
+  },
+  "pancakeswap-mini-extended": {
+    list: pancakeswapMiniExtended,
+    name: "PancakeSwap Mini Ext",
+    keywords: ["pancakeswap", "binance", "mini program", "mini", "extended"],
+    logoURI: "https://pancakeswap.finance/logo.png",
+    sort: true,
+    currentVersion: pancakeswapMiniExtendedVersion,
   },
 };
 
