@@ -11,6 +11,7 @@ import currentPancakeswapTop100tList from "../lists/pancakeswap-top-100.json";
 import currentPancakeswapMiniList from "../lists/pancakeswap-mini.json";
 import currentPancakeswapMiniExtendedList from "../lists/pancakeswap-mini-extended.json";
 import { buildList, VersionBump } from "../src/buildList";
+import getTokenChainData from "../src/utils/getTokensChainData";
 
 const currentLists = {
   "pancakeswap-default": currentPancakeswapDefaultList,
@@ -166,6 +167,17 @@ describe.each([
   it("all tokens have correct logos", () => {
     for (const token of defaultTokenList.tokens) {
       expect(token).toBeValidLogo();
+    }
+  });
+
+  it("all tokens have correct decimals", async () => {
+    const addressArray = defaultTokenList.tokens.map((token) => token.address);
+    const tokensChainData = await getTokenChainData("test", addressArray);
+    for (const token of defaultTokenList.tokens) {
+      const realDecimals = tokensChainData.find(
+        (t) => t.address.toLowerCase() === token.address.toLowerCase()
+      )?.decimals;
+      expect(token.decimals).toEqual(realDecimals);
     }
   });
 

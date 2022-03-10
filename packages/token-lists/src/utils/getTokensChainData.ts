@@ -8,11 +8,12 @@ const rawLists = {
   "pcs-mini-extended": rawMiniExtended,
 };
 
-const getTokensChainData = async (listName: string): Promise<void> => {
-  const tokens = rawLists[listName];
+const getTokensChainData = async (listName: string, addressArray?: string[]): Promise<any[]> => {
+  const isTest = addressArray && addressArray.length > 0;
+  const tokens = isTest ? addressArray : rawLists[listName];
   if (!tokens) {
     console.error("No raw address list found");
-    return;
+    return [];
   }
   const tokenInfoCalls = tokens.flatMap((address) => [
     {
@@ -37,10 +38,13 @@ const getTokensChainData = async (listName: string): Promise<void> => {
     decimals: tokenInfoResponse[i * 3 + 2][0],
     logoURI: `https://assets.trustwalletapp.com/blockchains/smartchain/assets/${address}/logo.png`,
   }));
-  const tokenListPath = `${path.resolve()}/src/tokens/${listName}.json`;
-  const stringifiedList = JSON.stringify(tokensWithChainData, null, 2);
-  fs.writeFileSync(tokenListPath, stringifiedList);
-  console.info("Generated token list source json to ", tokenListPath);
+  if (!isTest) {
+    const tokenListPath = `${path.resolve()}/src/tokens/${listName}.json`;
+    const stringifiedList = JSON.stringify(tokensWithChainData, null, 2);
+    fs.writeFileSync(tokenListPath, stringifiedList);
+    console.info("Generated token list source json to ", tokenListPath);
+  }
+  return tokensWithChainData;
 };
 
 export default getTokensChainData;
