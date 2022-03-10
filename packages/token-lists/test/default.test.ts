@@ -9,6 +9,7 @@ import currentPancakeswapExtendedtList from "../lists/pancakeswap-extended.json"
 import currentPancakeswapTop15List from "../lists/pancakeswap-top-15.json";
 import currentPancakeswapTop100tList from "../lists/pancakeswap-top-100.json";
 import currentPancakeswapMiniList from "../lists/pancakeswap-mini.json";
+import currentPancakeswapMiniExtendedList from "../lists/pancakeswap-mini-extended.json";
 import { buildList, VersionBump } from "../src/buildList";
 
 const currentLists = {
@@ -17,6 +18,7 @@ const currentLists = {
   "pancakeswap-top-100": currentPancakeswapTop100tList,
   "pancakeswap-top-15": currentPancakeswapTop15List,
   "pancakeswap-mini": currentPancakeswapMiniList,
+  "pancakeswap-mini-extended": currentPancakeswapMiniExtendedList,
 };
 
 const ajv = new Ajv({ allErrors: true, format: "full" });
@@ -111,6 +113,7 @@ describe.each([
   ["pancakeswap-top-100"],
   ["pancakeswap-top-15"],
   ["pancakeswap-mini"],
+  ["pancakeswap-mini-extended"],
 ])("buildList %s", (listName) => {
   const defaultTokenList = buildList(listName);
 

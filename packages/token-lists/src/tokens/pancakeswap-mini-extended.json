@@ -456,8 +456,8 @@
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x352Cb5E19b12FC216548a2677bD0fce83BaE434B/logo.png"
   },
   {
-    "name": "BitTorrent",
-    "symbol": "BTT",
+    "name": "BitTorrent Old",
+    "symbol": "BTTOLD",
     "address": "0x8595F9dA7b868b1822194fAEd312235E43007b49",
     "chainId": 56,
     "decimals": 18,
@@ -976,7 +976,7 @@
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xC0eFf7749b125444953ef89682201Fb8c6A917CD/logo.png"
   },
   {
-    "name": "Impossible Decentralized Incubator Access Token",
+    "name": "IDIA Token",
     "symbol": "IDIA",
     "address": "0x0b15Ddf19D47E6a86A56148fb4aFFFc6929BcB89",
     "chainId": 56,
@@ -1736,16 +1736,16 @@
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x47BEAd2563dCBf3bF2c9407fEa4dC236fAbA485A/logo.png"
   },
   {
-    "name": "τBitcoin",
-    "symbol": "τBTC",
+    "name": "tBitcoin",
+    "symbol": "tBTC",
     "address": "0x2cD1075682b0FCCaADd0Ca629e138E64015Ba11c",
     "chainId": 56,
     "decimals": 9,
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x2cD1075682b0FCCaADd0Ca629e138E64015Ba11c/logo.png"
   },
   {
-    "name": "τDogecoin",
-    "symbol": "τDOGE",
+    "name": "tDogecoin",
+    "symbol": "tDOGE",
     "address": "0xe550a593d09FBC8DCD557b5C88Cea6946A8b404A",
     "chainId": 56,
     "decimals": 8,
