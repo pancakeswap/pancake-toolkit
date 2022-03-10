@@ -1,10 +1,10 @@
 {
   "name": "CoinGecko",
-  "timestamp": "2022-03-08T09:27:18.099Z",
+  "timestamp": "2022-03-10T09:40:58.833Z",
   "version": {
-    "major": 2,
-    "minor": 16,
-    "patch": 8
+    "major": 1,
+    "minor": 0,
+    "patch": 0
   },
   "logoURI": "https://www.coingecko.com/assets/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
   "keywords": [
