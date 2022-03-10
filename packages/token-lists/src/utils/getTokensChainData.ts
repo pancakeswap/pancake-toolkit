@@ -25,12 +25,12 @@ const getTokensChainData = async (listName: string, addressArray?: string[]): Pr
     return [];
   }
   
-  const chunkSize = 1200
+  const chunkSize = 200
   const chunkArray = tokens.length >= chunkSize ? sliceIntoChunks(tokens, chunkSize) : [tokens]
 
   const tokensWithChainData = []
-  for (const index in chunkArray) {
-    const tokenInfoCalls = chunkArray[index].flatMap((address) => [
+  for (const chunk of chunkArray) {
+    const tokenInfoCalls = chunk.flatMap((address) => [
       {
         address,
         name: "symbol",
@@ -45,7 +45,7 @@ const getTokensChainData = async (listName: string, addressArray?: string[]): Pr
       },
     ]);
     const tokenInfoResponse = await multicallv2(erc20, tokenInfoCalls);
-    const data = chunkArray[index].map((address, i) => ({
+    const data = chunk.map((address, i) => ({
       name: tokenInfoResponse[i * 3 + 1][0],
       symbol: tokenInfoResponse[i * 3][0],
       address,

@@ -11,4 +11,5 @@ export default {
     "!**/node_modules/**",
     "!**/dist/**",
   ],
+  testTimeout: 60000
 };
