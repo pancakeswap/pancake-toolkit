@@ -180,6 +180,8 @@ describe.each([
       const realDecimals = tokensChainData.find(
         (t) => t.address.toLowerCase() === token.address.toLowerCase()
       )?.decimals;
+      expect(token.decimals).toBeGreaterThan(0);
+      expect(token.decimals).toBeLessThanOrEqual(18);
       expect(token.decimals).toEqual(realDecimals);
     }
   });
