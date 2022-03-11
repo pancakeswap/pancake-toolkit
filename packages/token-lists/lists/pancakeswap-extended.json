@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-09T04:38:56.254Z",
+  "timestamp": "2022-03-11T08:43:25.463Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 75
+    "patch": 76
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -715,6 +715,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0xE69cAef10A488D7AF31Da46c89154d025546e990.png"
+    },
+    {
+      "name": "Duet Governance Token",
+      "symbol": "DUET",
+      "address": "0x95EE03e1e2C5c4877f9A298F1C0D6c98698FAB7B",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x95EE03e1e2C5c4877f9A298F1C0D6c98698FAB7B.png"
     },
     {
       "name": "Dusk",

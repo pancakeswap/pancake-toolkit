@@ -2158,5 +2158,13 @@
     "chainId": 56,
     "decimals": 8,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1.png"
+  },
+  {
+    "name": "Duet Governance Token",
+    "symbol": "DUET",
+    "address": "0x95EE03e1e2C5c4877f9A298F1C0D6c98698FAB7B",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x95EE03e1e2C5c4877f9A298F1C0D6c98698FAB7B.png"
   }
 ]
