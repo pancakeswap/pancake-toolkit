@@ -8,7 +8,7 @@ import currentPancakeswapDefaultList from "../lists/pancakeswap-default.json";
 import currentPancakeswapExtendedtList from "../lists/pancakeswap-extended.json";
 import currentPancakeswapTop15List from "../lists/pancakeswap-top-15.json";
 import currentPancakeswapTop100tList from "../lists/pancakeswap-top-100.json";
-import currentCoingeckoList from '../lists/coingecko.json'
+import currentCoingeckoList from "../lists/coingecko.json";
 import currentPancakeswapMiniList from "../lists/pancakeswap-mini.json";
 import currentPancakeswapMiniExtendedList from "../lists/pancakeswap-mini-extended.json";
 import { buildList, VersionBump } from "../src/buildList";
@@ -19,7 +19,7 @@ const currentLists = {
   "pancakeswap-extended": currentPancakeswapExtendedtList,
   "pancakeswap-top-100": currentPancakeswapTop100tList,
   "pancakeswap-top-15": currentPancakeswapTop15List,
-  "coingecko": currentCoingeckoList,
+  coingecko: currentCoingeckoList,
   "pancakeswap-mini": currentPancakeswapMiniList,
   "pancakeswap-mini-extended": currentPancakeswapMiniExtendedList,
 };
@@ -115,10 +115,10 @@ describe.each([
   ["pancakeswap-extended"],
   ["pancakeswap-top-100"],
   ["pancakeswap-top-15"],
-  ["coingecko"],
+  ["coingecko", { skipLogo: true }],
   ["pancakeswap-mini"],
   ["pancakeswap-mini-extended"],
-])("buildList %s", (listName) => {
+])("buildList %s", (listName, opt = undefined) => {
   const defaultTokenList = buildList(listName);
 
   it("validates", () => {
@@ -168,8 +168,10 @@ describe.each([
   });
 
   it("all tokens have correct logos", () => {
-    for (const token of defaultTokenList.tokens) {
-      expect(token).toBeValidLogo();
+    if (opt && opt.skipLogo === false) {
+      for (const token of defaultTokenList.tokens) {
+        expect(token).toBeValidLogo();
+      }
     }
   });
 

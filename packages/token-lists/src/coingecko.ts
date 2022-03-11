@@ -26,13 +26,13 @@ const getTokens = async (): Promise<Token[]> => {
   return data.tokens;
 };
 
-const getTokenLogo = (address: string): string => {
+const getTokenLogo = (address: string, fallback): string => {
   // Note: fs.existsSync can't be used here because its not case sensetive
   if (logoFiles.includes(`${address}.png`)) {
     return `https://tokens.pancakeswap.finance/images/${address}.png`;
   }
 
-  return `https://assets.trustwalletapp.com/blockchains/smartchain/assets/${address}/logo.png`;
+  return fallback;
 };
 
 const main = async (): Promise<void> => {
@@ -73,7 +73,7 @@ const main = async (): Promise<void> => {
         return {
           ...token,
           address: checksummedAddress,
-          logoURI: getTokenLogo(checksummedAddress),
+          logoURI: getTokenLogo(checksummedAddress, token.logoURI),
         };
       });
 
