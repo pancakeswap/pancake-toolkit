@@ -168,7 +168,7 @@ describe.each([
   });
 
   it("all tokens have correct logos", () => {
-    if (opt && opt.skipLogo === false) {
+    if (!opt || !opt.skipLogo) {
       for (const token of defaultTokenList.tokens) {
         expect(token).toBeValidLogo();
       }
