@@ -1,10 +1,10 @@
 {
   "name": "CoinGecko",
-  "timestamp": "2022-03-10T14:33:24.081Z",
+  "timestamp": "2022-03-11T02:11:07.961Z",
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 1
+    "patch": 2
   },
   "logoURI": "https://www.coingecko.com/assets/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
   "keywords": [
@@ -10877,19 +10877,19 @@
     },
     {
       "chainId": 56,
-      "address": "0x47d42E0e864ceFf8C4270F7b6E1f6F91Da45882C",
-      "name": "EverEarn",
-      "symbol": "EARN",
-      "decimals": 18,
-      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x47d42E0e864ceFf8C4270F7b6E1f6F91Da45882C/logo.png"
-    },
-    {
-      "chainId": 56,
       "address": "0x839153689469Fe23236d1E0671430c8d7feE0337",
       "name": "Earnable v2",
       "symbol": "EARN",
       "decimals": 9,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x839153689469Fe23236d1E0671430c8d7feE0337/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x47d42E0e864ceFf8C4270F7b6E1f6F91Da45882C",
+      "name": "EverEarn",
+      "symbol": "EARN",
+      "decimals": 18,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x47d42E0e864ceFf8C4270F7b6E1f6F91Da45882C/logo.png"
     },
     {
       "chainId": 56,
@@ -12301,19 +12301,19 @@
     },
     {
       "chainId": 56,
-      "address": "0xb6d48FCEf36E19681EE29896B19c1b6CbD1eAB1B",
-      "name": "Fanadise",
-      "symbol": "FAN",
-      "decimals": 18,
-      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xb6d48FCEf36E19681EE29896B19c1b6CbD1eAB1B/logo.png"
-    },
-    {
-      "chainId": 56,
       "address": "0xB0228Eb6c0b49f8265e6E161c3a987eeD7471F42",
       "name": "Fanspel",
       "symbol": "FAN",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xB0228Eb6c0b49f8265e6E161c3a987eeD7471F42/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0xb6d48FCEf36E19681EE29896B19c1b6CbD1eAB1B",
+      "name": "Fanadise",
+      "symbol": "FAN",
+      "decimals": 18,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xb6d48FCEf36E19681EE29896B19c1b6CbD1eAB1B/logo.png"
     },
     {
       "chainId": 56,
@@ -14781,19 +14781,19 @@
     },
     {
       "chainId": 56,
-      "address": "0x7a59cE9c4248F8B078Fd96D9965E6E5dC8e6F0a8",
-      "name": "GreekMythology",
-      "symbol": "GMT",
-      "decimals": 9,
-      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x7a59cE9c4248F8B078Fd96D9965E6E5dC8e6F0a8/logo.png"
-    },
-    {
-      "chainId": 56,
       "address": "0x99e92123eB77Bc8f999316f622e5222498438784",
       "name": "Gambit",
       "symbol": "GMT",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x99e92123eB77Bc8f999316f622e5222498438784/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x7a59cE9c4248F8B078Fd96D9965E6E5dC8e6F0a8",
+      "name": "GreekMythology",
+      "symbol": "GMT",
+      "decimals": 9,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x7a59cE9c4248F8B078Fd96D9965E6E5dC8e6F0a8/logo.png"
     },
     {
       "chainId": 56,
@@ -15786,6 +15786,14 @@
       "symbol": "HDOGE",
       "decimals": 8,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xEeCa2DA13907c50308Dc6D6Fe68E6FE5aBFFcF78/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x8Cd0d76C0ad377378aB6Ce878a7BE686223497eE",
+      "name": "Hydraverse",
+      "symbol": "HDV",
+      "decimals": 5,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x8Cd0d76C0ad377378aB6Ce878a7BE686223497eE/logo.png"
     },
     {
       "chainId": 56,
@@ -19045,19 +19053,19 @@
     },
     {
       "chainId": 56,
-      "address": "0xAe59Cbc550890bC621ef0749D7d841994986Ec51",
-      "name": "Lotus Capital",
-      "symbol": "LC",
-      "decimals": 18,
-      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xAe59Cbc550890bC621ef0749D7d841994986Ec51/logo.png"
-    },
-    {
-      "chainId": 56,
       "address": "0x39BD64E5b9e025b0C8D91ee2CFec9125A388894B",
       "name": "Light Year",
       "symbol": "LC",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x39BD64E5b9e025b0C8D91ee2CFec9125A388894B/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0xAe59Cbc550890bC621ef0749D7d841994986Ec51",
+      "name": "Lotus Capital",
+      "symbol": "LC",
+      "decimals": 18,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xAe59Cbc550890bC621ef0749D7d841994986Ec51/logo.png"
     },
     {
       "chainId": 56,
