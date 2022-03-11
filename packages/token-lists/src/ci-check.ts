@@ -2,12 +2,14 @@ import srcDefault from "./tokens/pancakeswap-default.json";
 import srcExtended from "./tokens/pancakeswap-extended.json";
 import srcTop100 from "./tokens/pancakeswap-top-100.json";
 import srcTop15 from "./tokens/pancakeswap-top-15.json";
+import srcCoingecko from "./tokens/coingecko.json";
 import srcMini from "./tokens/pancakeswap-mini.json";
 import srcMiniExtended from "./tokens/pancakeswap-mini-extended.json";
 import defaultList from "../lists/pancakeswap-default.json";
 import extendedtList from "../lists/pancakeswap-extended.json";
 import top15List from "../lists/pancakeswap-top-15.json";
 import top100tList from "../lists/pancakeswap-top-100.json";
+import coingeckoList from "../lists/coingecko.json";
 import miniList from "../lists/pancakeswap-mini.json";
 import miniExtendedList from "../lists/pancakeswap-mini-extended.json";
 
@@ -31,6 +33,11 @@ const lists = [
     name: "pancakeswap-top-100",
     src: srcTop100,
     actual: top100tList,
+  },
+  {
+    name: "coingeckoList",
+    src: srcCoingecko,
+    actual: coingeckoList
   },
   {
     name: "pancakeswap-mini",

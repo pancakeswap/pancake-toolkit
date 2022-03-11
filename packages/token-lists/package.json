@@ -19,6 +19,9 @@
     "checksum:pcs-top-15": "yarn build && node ./dist checksum pancakeswap-top-15",
     "generate:pcs-top-15": "yarn test && yarn build && node ./dist generate pancakeswap-top-15",
     "makelist:pcs-top-15": "yarn checksum:pcs-top-15 && yarn generate:pcs-top-15",
+    "checksum:coingecko": "yarn build && node ./dist checksum coingecko",
+    "generate:coingecko": "yarn test && yarn build && node ./dist generate coingecko",
+    "makelist:coingecko": "yarn checksum:coingecko && yarn generate:coingecko",
     "checksum:pcs-mini": "yarn build && node ./dist checksum pancakeswap-mini",
     "generate:pcs-mini": "yarn test && yarn build && node ./dist generate pancakeswap-mini",
     "makelist:pcs-mini": "yarn checksum:pcs-mini && yarn generate:pcs-mini",
@@ -28,6 +31,7 @@
     "from-addresses:pcs-mini-extended": "yarn build && node ./dist get-list-from-addresses",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "fetch:pcs-top-100": "yarn build && node ./dist fetch",
+    "fetch:coingekco": "yarn build && node ./dist fetch",
     "test": "jest",
     "ci-check": "yarn build && node ./dist ci-check",
     "postinstall": "yarn run typechain",
@@ -35,14 +39,16 @@
   },
   "dependencies": {
     "@ethersproject/address": "^5.1.0",
+    "@typechain/ethers-v5": "^9.0.0",
     "@uniswap/token-lists": "^1.0.0-beta.21",
     "ajv": "6.12.2",
+    "axios": "^0.26.0",
     "ethers": "^5.5.4",
     "graphql": "^15.5.0",
     "graphql-request": "^3.4.0",
+    "lodash": "^4.17.21",
     "slugify": "^1.6.0",
-    "typechain": "^7.0.0",
-    "@typechain/ethers-v5": "^9.0.0"
+    "typechain": "^7.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",

@@ -2,6 +2,7 @@ import { buildList, saveList, VersionBump } from "./buildList";
 import checksumAddresses from "./checksum";
 import ciCheck from "./ci-check";
 import topTokens from "./top-100";
+import coingeckoTokens from "./coingecko";
 import getTokensChainData from "./utils/getTokensChainData";
 
 const command = process.argv[2];
@@ -17,6 +18,7 @@ switch (command) {
     break;
   case "fetch":
     topTokens();
+    coingeckoTokens();
     break;
   case "ci-check":
     ciCheck();
