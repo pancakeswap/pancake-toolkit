@@ -2126,5 +2126,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x1D229B958D5DDFca92146585a8711aECbE56F095/logo.png"
+  },
+  {
+    "name": "WardenSwap Token",
+    "symbol": "Warden",
+    "address": "0x0fEAdcC3824E7F3c12f40E324a60c23cA51627fc",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x0fEAdcC3824E7F3c12f40E324a60c23cA51627fc.png"
   }
 ]
