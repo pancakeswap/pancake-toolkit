@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import _ from "lodash"; 
+import _ from "lodash";
 import multicallv2 from "./multicall";
 import erc20 from "./abi/erc20.json";
 import rawMiniExtended from "../rawAddresses/mini-extended";
@@ -9,7 +9,6 @@ const rawLists = {
   "pcs-mini-extended": rawMiniExtended,
 };
 
-
 const getTokensChainData = async (listName: string, addressArray?: string[]): Promise<any[]> => {
   const isTest = addressArray && addressArray.length > 0;
   const tokens = isTest ? addressArray : rawLists[listName];
@@ -17,11 +16,11 @@ const getTokensChainData = async (listName: string, addressArray?: string[]): Pr
     console.error("No raw address list found");
     return [];
   }
-  
-  const chunkSize = 200
-  const chunkArray = tokens.length >= chunkSize ? _.chunk(tokens, chunkSize) : [tokens]
 
-  const tokensWithChainData = []
+  const chunkSize = 200;
+  const chunkArray = tokens.length >= chunkSize ? _.chunk(tokens, chunkSize) : [tokens];
+
+  const tokensWithChainData = [];
   // eslint-disable-next-line no-restricted-syntax
   for (const chunk of chunkArray) {
     const tokenInfoCalls = chunk.flatMap((address) => [
@@ -48,7 +47,7 @@ const getTokensChainData = async (listName: string, addressArray?: string[]): Pr
       decimals: tokenInfoResponse[i * 3 + 2][0],
       logoURI: `https://assets.trustwalletapp.com/blockchains/smartchain/assets/${address}/logo.png`,
     }));
-    tokensWithChainData.push(...data)
+    tokensWithChainData.push(...data);
   }
 
   if (!isTest) {

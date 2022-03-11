@@ -1,10 +1,10 @@
 {
   "name": "CoinGecko",
-  "timestamp": "2022-03-11T02:11:07.961Z",
+  "timestamp": "2022-03-11T03:39:31.367Z",
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 2
+    "patch": 3
   },
   "logoURI": "https://www.coingecko.com/assets/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
   "keywords": [
@@ -1429,6 +1429,14 @@
     },
     {
       "chainId": 56,
+      "address": "0x5B5214c6110a2B538C2541998b243ec1CC517E24",
+      "name": "Apes of Empires",
+      "symbol": "AOE",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x5B5214c6110a2B538C2541998b243ec1CC517E24/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x40C8225329Bd3e28A043B029E0D07a5344d2C27C",
       "name": "AgeOfGods",
       "symbol": "AOG",
@@ -2117,6 +2125,14 @@
     },
     {
       "chainId": 56,
+      "address": "0xC0C6e4C6E70c6231b20979Bda581a66f062A7967",
+      "name": "Atari",
+      "symbol": "ATRI",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xC0C6e4C6E70c6231b20979Bda581a66f062A7967/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x71e1611075800E89A460463FCDfbA3d0FEA8c01d",
       "name": "Aerotyne",
       "symbol": "ATYNE",
@@ -2490,6 +2506,14 @@
       "symbol": "BABYDOGEZILLA",
       "decimals": 9,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0fbc08905c1d683Cf7530bb2a70Bb0BDE231E5B9/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x6eB52Af9541BC5a7e9f671dAeCd300Cb55831A1E",
+      "name": "Baby Dogo Coin",
+      "symbol": "BABYDOGO",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x6eB52Af9541BC5a7e9f671dAeCd300Cb55831A1E/logo.png"
     },
     {
       "chainId": 56,
@@ -4138,6 +4162,14 @@
       "symbol": "BLT",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x3b1394c1542A797e98B4ff4E049E434d820D8299/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0xF188Bc2F00Dc53F32028778C3829A218a4b010dA",
+      "name": "Blubber Coin",
+      "symbol": "BLUB",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xF188Bc2F00Dc53F32028778C3829A218a4b010dA/logo.png"
     },
     {
       "chainId": 56,
@@ -5989,6 +6021,14 @@
     },
     {
       "chainId": 56,
+      "address": "0x3B3691d4C3EC75660f203F41adC6296a494404d0",
+      "name": "CatCoin Token",
+      "symbol": "CATS",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x3B3691d4C3EC75660f203F41adC6296a494404d0/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0xbfBEe3dAc982148aC793161f7362344925506903",
       "name": "CatzCoin",
       "symbol": "CATZ",
@@ -6642,6 +6682,14 @@
       "symbol": "CHG",
       "decimals": 9,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x6E1b4BA8F5bE7708cD475795FC23924eD078A8d2/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x0000000000004946c0e9F43F4Dee607b0eF1fA1c",
+      "name": "Chi Gastoken  BSC ",
+      "symbol": "CHI",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0000000000004946c0e9F43F4Dee607b0eF1fA1c/logo.png"
     },
     {
       "chainId": 56,
@@ -7917,6 +7965,14 @@
     },
     {
       "chainId": 56,
+      "address": "0xcA76A652AC3c3F3b8669Bd41E22A9257bc6a6Bc6",
+      "name": "CrowdHero",
+      "symbol": "CRWD",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xcA76A652AC3c3F3b8669Bd41E22A9257bc6a6Bc6/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x97a30C692eCe9C317235d48287d23d358170FC40",
       "name": "CryptEx",
       "symbol": "CRX",
@@ -8114,6 +8170,14 @@
       "symbol": "CTF",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x655A46cd88e18a338ECE048228a388c25BFdA9f3/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x55E00121241d6870324a8e6DFFaabbe2E0359863",
+      "name": "Coin To Fish",
+      "symbol": "CTFT",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x55E00121241d6870324a8e6DFFaabbe2E0359863/logo.png"
     },
     {
       "chainId": 56,
@@ -15869,6 +15933,14 @@
     },
     {
       "chainId": 56,
+      "address": "0x2f1ad6Ec7D2Da4cd4CF679a781cA376d7f091e30",
+      "name": "Hedge4 AI",
+      "symbol": "HEJJ",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x2f1ad6Ec7D2Da4cd4CF679a781cA376d7f091e30/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x948d2a81086A075b3130BAc19e4c6DEe1D2E3fE8",
       "name": "Helmet Insure",
       "symbol": "HELMET",
@@ -18338,6 +18410,14 @@
       "symbol": "KITE",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xeDe26a1ee14281b58A5238a3ff246b02358A13B6/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x0812C7045D69cd3A881BecAB80E23C222cfbE032",
+      "name": "Kitten Coin",
+      "symbol": "KITTENS",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x0812C7045D69cd3A881BecAB80E23C222cfbE032/logo.png"
     },
     {
       "chainId": 56,
@@ -22125,6 +22205,14 @@
     },
     {
       "chainId": 56,
+      "address": "0x2A0F5257F4bfE6c75cd58A14A0e7c4651E2160DE",
+      "name": "Koala Token",
+      "symbol": "MKOALA",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x2A0F5257F4bfE6c75cd58A14A0e7c4651E2160DE/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x6967ddA12BC22315749Cb6eBe8689Fb7D9B8E629",
       "name": "MedikhanaX",
       "symbol": "MKX",
@@ -23994,6 +24082,14 @@
       "symbol": "NEKO",
       "decimals": 9,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x2c5f1769B819B5e70AA7106c989D38Ad71ba2546/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x43ce64A4FBa3c30C0164E935B0095862a67dc0c9",
+      "name": "Nekocoin",
+      "symbol": "NEKOS",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x43ce64A4FBa3c30C0164E935B0095862a67dc0c9/logo.png"
     },
     {
       "chainId": 56,
@@ -26826,6 +26922,14 @@
       "symbol": "POG",
       "decimals": 9,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xd4513Bb02e5613A599B959e5CEd0065C5948A873/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x1BcCcd1Aac451Df2cE62EaE7aD9b235BbdECD2e5",
+      "name": "Pogged Finance",
+      "symbol": "POG",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x1BcCcd1Aac451Df2cE62EaE7aD9b235BbdECD2e5/logo.png"
     },
     {
       "chainId": 56,
@@ -30941,6 +31045,14 @@
     },
     {
       "chainId": 56,
+      "address": "0xa0cB0Ce7C6d93A7EBD72952Feb4407Dddee8a194",
+      "name": "Shibaken Finance",
+      "symbol": "SHIBAKEN",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xa0cB0Ce7C6d93A7EBD72952Feb4407Dddee8a194/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x40d6F307cd6869262cAA82907a80bDA3317B9501",
       "name": "Shiba Maki",
       "symbol": "SHIBAMAKI",
@@ -32581,6 +32693,14 @@
     },
     {
       "chainId": 56,
+      "address": "0x17fd3cAa66502C6F1CbD5600D8448f3aF8f2ABA1",
+      "name": "Smarty Pay",
+      "symbol": "SPY",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x17fd3cAa66502C6F1CbD5600D8448f3aF8f2ABA1/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0xdc95937F687F74f8A8a33bb79F5676914eF4B6F2",
       "name": "Squoge Coin",
       "symbol": "SQC",
@@ -33394,6 +33514,14 @@
       "symbol": "SWHAL",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x4048A31e0A4fA577D343290835b34eBB4e3dBB1b/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0xe061618F0d3Df5Cb05fBF91455018f2D64074C85",
+      "name": "SwinCoin",
+      "symbol": "SWIN",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xe061618F0d3Df5Cb05fBF91455018f2D64074C85/logo.png"
     },
     {
       "chainId": 56,
@@ -35917,6 +36045,14 @@
     },
     {
       "chainId": 56,
+      "address": "0x8597ba143AC509189E89aaB3BA28d661A5dD9830",
+      "name": "Vancat",
+      "symbol": "VANCAT",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x8597ba143AC509189E89aaB3BA28d661A5dD9830/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x8F9b482b74Afc0B7E8AEfc704f1f04DF208EE332",
       "name": "Vanci Finance",
       "symbol": "VANCII",
@@ -37109,6 +37245,14 @@
     },
     {
       "chainId": 56,
+      "address": "0xcA1262e77Fb25c0a4112CFc9bad3ff54F617f2e6",
+      "name": "Jax Network",
+      "symbol": "WJXN",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xcA1262e77Fb25c0a4112CFc9bad3ff54F617f2e6/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0x5344C20FD242545F31723689662AC12b9556fC3d",
       "name": "Wakanda Inu",
       "symbol": "WKD",
@@ -37517,11 +37661,27 @@
     },
     {
       "chainId": 56,
+      "address": "0x46D502Fac9aEA7c5bC7B13C8Ec9D02378C33D36F",
+      "name": "WolfSafePoorPeople",
+      "symbol": "WSPP",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x46D502Fac9aEA7c5bC7B13C8Ec9D02378C33D36F/logo.png"
+    },
+    {
+      "chainId": 56,
       "address": "0xaAdFf17d56d80312b392Ced903f3E8dBE5c3ece7",
       "name": "Wisteria Swap",
       "symbol": "WST",
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xaAdFf17d56d80312b392Ced903f3E8dBE5c3ece7/logo.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0xC72cC401122dBDC812EC88a2150AAD5a39467401",
+      "name": "Wallet Swap",
+      "symbol": "WSWAP",
+      "decimals": 0,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xC72cC401122dBDC812EC88a2150AAD5a39467401/logo.png"
     },
     {
       "chainId": 56,
