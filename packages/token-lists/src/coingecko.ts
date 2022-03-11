@@ -6,11 +6,6 @@ import _ from "lodash";
 import multicallv2 from "./utils/multicall";
 import erc20 from "./utils/abi/erc20.json";
 
-const pathToImages = process.env.CI
-  ? path.join(process.env.GITHUB_WORKSPACE, "packages", "token-lists", "lists", "images")
-  : path.join(path.resolve(), "lists", "images");
-const logoFiles = fs.readdirSync(pathToImages);
-
 interface Token {
   chainId: number;
   address: string;
@@ -24,15 +19,6 @@ const getTokens = async (): Promise<Token[]> => {
   const url = "https://tokens.coingecko.com/binance-smart-chain/all.json";
   const { data } = await axios.get(url);
   return data.tokens;
-};
-
-const getTokenLogo = (address: string, fallback): string => {
-  // Note: fs.existsSync can't be used here because its not case sensetive
-  if (logoFiles.includes(`${address}.png`)) {
-    return `https://tokens.pancakeswap.finance/images/${address}.png`;
-  }
-
-  return fallback;
 };
 
 const main = async (): Promise<void> => {
@@ -73,7 +59,6 @@ const main = async (): Promise<void> => {
         return {
           ...token,
           address: checksummedAddress,
-          logoURI: getTokenLogo(checksummedAddress, token.logoURI),
         };
       });
 
