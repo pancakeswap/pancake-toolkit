@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-11T08:43:25.463Z",
+  "timestamp": "2022-03-14T09:47:16.403Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 76
+    "patch": 77
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -443,6 +443,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x5Ac52EE5b2a633895292Ff6d8A89bB9190451587.png"
+    },
+    {
+      "name": "Biswap",
+      "symbol": "BSW",
+      "address": "0x965F527D9159dCe6288a2219DB51fc6Eef120dD1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x965F527D9159dCe6288a2219DB51fc6Eef120dD1.png"
     },
     {
       "name": "Binance Pegged Bitcoin",

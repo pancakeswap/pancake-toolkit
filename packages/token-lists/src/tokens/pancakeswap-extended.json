@@ -2166,5 +2166,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x95EE03e1e2C5c4877f9A298F1C0D6c98698FAB7B.png"
+  },
+  {
+    "name": "Biswap",
+    "symbol": "BSW",
+    "address": "0x965F527D9159dCe6288a2219DB51fc6Eef120dD1",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x965F527D9159dCe6288a2219DB51fc6Eef120dD1.png"
   }
 ]
