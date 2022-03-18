@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-14T09:47:16.403Z",
+  "timestamp": "2022-03-18T06:48:23.214Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 77
+    "patch": 78
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -1811,6 +1811,14 @@
       "chainId": 56,
       "decimals": 8,
       "logoURI": "https://tokens.pancakeswap.finance/images/0xe550a593d09FBC8DCD557b5C88Cea6946A8b404A.png"
+    },
+    {
+      "name": "TemplarDAO",
+      "symbol": "TEM",
+      "address": "0x19e6BfC1A6e4B042Fb20531244D47E252445df01",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x19e6BfC1A6e4B042Fb20531244D47E252445df01.png"
     },
     {
       "name": "Tenet",
