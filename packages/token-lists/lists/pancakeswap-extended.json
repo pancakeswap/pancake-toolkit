@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-18T06:48:23.214Z",
+  "timestamp": "2022-03-18T11:15:44.816Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 78
+    "patch": 79
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -1987,6 +1987,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x5F84ce30DC3cF7909101C69086c50De191895883.png"
+    },
+    {
+      "name": "WardenSwap Token",
+      "symbol": "Warden",
+      "address": "0x0fEAdcC3824E7F3c12f40E324a60c23cA51627fc",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x0fEAdcC3824E7F3c12f40E324a60c23cA51627fc.png"
     },
     {
       "name": "Yieldwatch",
