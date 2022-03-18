@@ -2174,5 +2174,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x965F527D9159dCe6288a2219DB51fc6Eef120dD1.png"
+  },
+  {
+    "name": "TemplarDAO",
+    "symbol": "TEM",
+    "address": "0x19e6BfC1A6e4B042Fb20531244D47E252445df01",
+    "chainId": 56,
+    "decimals": 9,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x19e6BfC1A6e4B042Fb20531244D47E252445df01.png"
   }
 ]
