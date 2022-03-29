@@ -9,6 +9,7 @@ import currentPancakeswapExtendedtList from "../lists/pancakeswap-extended.json"
 import currentPancakeswapTop15List from "../lists/pancakeswap-top-15.json";
 import currentPancakeswapTop100tList from "../lists/pancakeswap-top-100.json";
 import currentCoingeckoList from "../lists/coingecko.json";
+import currentCmcList from "../lists/cmc.json";
 import currentPancakeswapMiniList from "../lists/pancakeswap-mini.json";
 import currentPancakeswapMiniExtendedList from "../lists/pancakeswap-mini-extended.json";
 import { buildList, VersionBump } from "../src/buildList";
@@ -20,6 +21,7 @@ const currentLists = {
   "pancakeswap-top-100": currentPancakeswapTop100tList,
   "pancakeswap-top-15": currentPancakeswapTop15List,
   coingecko: currentCoingeckoList,
+  cmc: currentCmcList,
   "pancakeswap-mini": currentPancakeswapMiniList,
   "pancakeswap-mini-extended": currentPancakeswapMiniExtendedList,
 };
@@ -116,6 +118,7 @@ describe.each([
   ["pancakeswap-top-100"],
   ["pancakeswap-top-15"],
   ["coingecko", { skipLogo: true }],
+  ["cmc", { skipLogo: true }],
   ["pancakeswap-mini"],
   ["pancakeswap-mini-extended"],
 ])("buildList %s", (listName, opt = undefined) => {
@@ -148,8 +151,8 @@ describe.each([
   it("contains no duplicate names", () => {
     const map = {};
     for (const token of defaultTokenList.tokens) {
-      const key = `${token.chainId}-${token.name.toLowerCase()}`;
-      expect(map[key]).toBeDeclaredOnce("name", token.name.toLowerCase(), token.chainId);
+      const key = `${token.chainId}-${token.name}`;
+      expect(map[key]).toBeDeclaredOnce("name", token.name, token.chainId);
       map[key] = true;
     }
   });
