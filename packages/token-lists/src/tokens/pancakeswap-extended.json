@@ -2182,5 +2182,13 @@
     "chainId": 56,
     "decimals": 9,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x19e6BfC1A6e4B042Fb20531244D47E252445df01.png"
+  },
+  {
+    "name": "Gamifi",
+    "symbol": "GMI",
+    "address": "0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846.png"
   }
 ]

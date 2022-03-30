@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-18T06:48:23.214Z",
+  "timestamp": "2022-03-30T05:01:34.275Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 78
+    "patch": 79
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -915,6 +915,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x84e9a6F9D240FdD33801f7135908BfA16866939A.png"
+    },
+    {
+      "name": "Gamifi",
+      "symbol": "GMI",
+      "address": "0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846.png"
     },
     {
       "name": "Green Metaverse Token",
