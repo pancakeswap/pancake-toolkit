@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-30T05:01:34.275Z",
+  "timestamp": "2022-03-31T07:33:50.445Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 79
+    "patch": 82
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -1491,6 +1491,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x0F9E4D49f25de22c2202aF916B681FBB3790497B.png"
+    },
+    {
+      "name": "PearDAO",
+      "symbol": "PEX",
+      "address": "0x6a0b66710567b6beb81A71F7e9466450a91a384b",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x6a0b66710567b6beb81A71F7e9466450a91a384b.png"
     },
     {
       "name": "Phala Network",

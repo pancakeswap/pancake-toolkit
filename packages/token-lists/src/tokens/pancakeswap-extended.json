@@ -2176,6 +2176,14 @@
     "logoURI": "https://tokens.pancakeswap.finance/images/0x965F527D9159dCe6288a2219DB51fc6Eef120dD1.png"
   },
   {
+    "name": "PearDAO",
+    "symbol": "PEX",
+    "address": "0x6a0b66710567b6beb81A71F7e9466450a91a384b",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x6a0b66710567b6beb81A71F7e9466450a91a384b.png"
+  },
+  {
     "name": "TemplarDAO",
     "symbol": "TEM",
     "address": "0x19e6BfC1A6e4B042Fb20531244D47E252445df01",
