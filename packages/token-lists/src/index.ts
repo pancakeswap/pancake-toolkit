@@ -2,7 +2,7 @@ import { buildList, saveList, VersionBump } from "./buildList";
 import checksumAddresses from "./checksum";
 import ciCheck from "./ci-check";
 import topTokens from "./top-100";
-import coingeckoTokens from "./coingecko";
+import fetchThirdPartyList from "./fetchThirdPartyList";
 import getTokensChainData from "./utils/getTokensChainData";
 
 const command = process.argv[2];
@@ -17,8 +17,10 @@ switch (command) {
     saveList(buildList(listName, versionBump as VersionBump), listName);
     break;
   case "fetch":
-    topTokens();
-    coingeckoTokens();
+    if (listName === "pcs-top-100") {
+      topTokens();
+    }
+    fetchThirdPartyList(listName);
     break;
   case "ci-check":
     ciCheck();
