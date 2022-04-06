@@ -2184,6 +2184,14 @@
     "logoURI": "https://tokens.pancakeswap.finance/images/0x6a0b66710567b6beb81A71F7e9466450a91a384b.png"
   },
   {
+    "name": "YEL",
+    "symbol": "YEL",
+    "address": "0xD3b71117E6C1558c1553305b44988cd944e97300",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xD3b71117E6C1558c1553305b44988cd944e97300.png"
+  },
+  {
     "name": "TemplarDAO",
     "symbol": "TEM",
     "address": "0x19e6BfC1A6e4B042Fb20531244D47E252445df01",

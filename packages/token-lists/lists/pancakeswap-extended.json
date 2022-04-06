@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-03-31T07:33:50.445Z",
+  "timestamp": "2022-04-01T07:12:40.542Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 82
+    "patch": 83
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -2163,6 +2163,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x6b23C89196DeB721e6Fd9726E6C76E4810a464bc.png"
+    },
+    {
+      "name": "YEL",
+      "symbol": "YEL",
+      "address": "0xD3b71117E6C1558c1553305b44988cd944e97300",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xD3b71117E6C1558c1553305b44988cd944e97300.png"
     },
     {
       "name": "yearn.finance",
