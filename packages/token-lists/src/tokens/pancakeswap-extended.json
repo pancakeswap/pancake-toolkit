@@ -2206,5 +2206,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846.png"
+  },
+  {
+    "name": "Tiny Coin",
+    "symbol": "TINC",
+    "address": "0x05aD6E30A855BE07AfA57e08a4f30d00810a402e",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x05aD6E30A855BE07AfA57e08a4f30d00810a402e.png"
   }
 ]
