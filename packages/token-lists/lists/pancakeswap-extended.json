@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-04-01T07:12:40.542Z",
+  "timestamp": "2022-04-07T03:55:32.681Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 83
+    "patch": 84
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -1851,6 +1851,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x9fD87aEfe02441B123c3c32466cD9dB4c578618f.png"
+    },
+    {
+      "name": "Tiny Coin",
+      "symbol": "TINC",
+      "address": "0x05aD6E30A855BE07AfA57e08a4f30d00810a402e",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x05aD6E30A855BE07AfA57e08a4f30d00810a402e.png"
     },
     {
       "name": "TitanSwap",
