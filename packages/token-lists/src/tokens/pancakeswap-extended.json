@@ -2214,5 +2214,29 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x05aD6E30A855BE07AfA57e08a4f30d00810a402e.png"
+  },
+  {
+    "name": "CEEK",
+    "symbol": "CEEK",
+    "address": "0xe0F94Ac5462997D2BC57287Ac3a3aE4C31345D66",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xe0F94Ac5462997D2BC57287Ac3a3aE4C31345D66.png"
+  },
+  {
+    "name": "HappyFans",
+    "symbol": "HAPPY",
+    "address": "0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d.png"
+  },
+  {
+    "name": "Wizardia Coin",
+    "symbol": "WZRD",
+    "address": "0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4.png"
   }
 ]

@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-04-07T03:55:32.681Z",
+  "timestamp": "2022-04-014T010:48:21.523Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 84
+    "patch": 85
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -525,6 +525,14 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0x211FfbE424b90e25a15531ca322adF1559779E45.png"
     },
     {
+      "name": "CEEK",
+      "symbol": "CEEK",
+      "address": "0xe0F94Ac5462997D2BC57287Ac3a3aE4C31345D66",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xe0F94Ac5462997D2BC57287Ac3a3aE4C31345D66.png"
+    },
+    {
       "name": "Coin98",
       "symbol": "C98",
       "address": "0xaEC945e04baF28b135Fa7c640f624f8D90F1C3a6",
@@ -963,6 +971,14 @@
       "chainId": 56,
       "decimals": 6,
       "logoURI": "https://tokens.pancakeswap.finance/images/0xf79037F6f6bE66832DE4E7516be52826BC3cBcc4.png"
+    },
+    {
+      "name": "HappyFans",
+      "symbol": "HAPPY",
+      "address": "0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d.png"
     },
     {
       "name": "Helmet.insure",
@@ -2163,6 +2179,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63.png"
+    },
+    {
+      "name": "Wizardia Coin",
+      "symbol": "WZRD",
+      "address": "0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4.png"
     },
     {
       "name": "X World Games",
