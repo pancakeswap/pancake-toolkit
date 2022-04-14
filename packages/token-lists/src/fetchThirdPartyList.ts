@@ -24,6 +24,10 @@ const getTokens = async (listName: string): Promise<Token[]> => {
   return data.tokens;
 };
 
+const COINGEKKO_BAD_TOKENS = [
+  '0x92a0d359c87b8f3fe383aa0a42c19d1a2afe6be0'
+]
+
 const CMC_BAD_TOKENS = [
   "0x6B8C76b277Eb34A22e24d603ef0448D9ad1c5a7d", // self destruct
   "0x58b8e295fc5b705bcbb48c5978b2b389332e0414", // unverified
@@ -32,7 +36,7 @@ const CMC_BAD_TOKENS = [
 ].map((a) => a.toLowerCase());
 
 const badTokens = {
-  coingecko: [],
+  coingecko: COINGEKKO_BAD_TOKENS,
   cmc: CMC_BAD_TOKENS,
 };
 
