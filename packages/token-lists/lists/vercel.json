@@ -1,9 +1,14 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [{ "source": "/", "destination": "/pancakeswap-default.json", "permanent": true }],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=360, stale-while-revalidate"
+        },
         {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
