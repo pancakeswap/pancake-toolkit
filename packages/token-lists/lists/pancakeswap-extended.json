@@ -4,7 +4,7 @@
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 86
+    "patch": 87
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -1391,10 +1391,10 @@
     {
       "name": "APENFT",
       "symbol": "NFT",
-      "address": "0x1fC9004eC7E5722891f5f38baE7678efCB11d34D",
+      "address": "0x20eE7B720f4E4c4FFcB00C4065cdae55271aECCa",
       "chainId": 56,
       "decimals": 6,
-      "logoURI": "https://tokens.pancakeswap.finance/images/0x1fC9004eC7E5722891f5f38baE7678efCB11d34D.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x20eE7B720f4E4c4FFcB00C4065cdae55271aECCa.png"
     },
     {
       "name": "Nerve Finance",
