@@ -7,7 +7,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "maxage=600, stale-while-revalidate"
+          "value": "max-age=600, stale-while-revalidate"
         },
         {
           "key": "Access-Control-Allow-Origin",
