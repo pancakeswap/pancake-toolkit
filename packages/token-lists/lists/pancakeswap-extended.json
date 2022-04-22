@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Extended",
-  "timestamp": "2022-04-14T09:32:18.354Z",
+  "timestamp": "2022-04-22T04:15:20.342Z",
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 87
+    "patch": 88
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -27,6 +27,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0xFeea0bDd3D07eb6FE305938878C0caDBFa169042.png"
+    },
+    {
+      "name": "Ankr BNB Reward Bearing Certificate",
+      "symbol": "aBNBc",
+      "address": "0xE85aFCcDaFBE7F2B096f268e31ccE3da8dA2990A",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xE85aFCcDaFBE7F2B096f268e31ccE3da8dA2990A.png"
     },
     {
       "name": "Alchemy Token",
