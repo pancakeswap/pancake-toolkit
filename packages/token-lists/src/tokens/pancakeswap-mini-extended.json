@@ -2126,5 +2126,77 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x1D229B958D5DDFca92146585a8711aECbE56F095/logo.png"
+  },
+  {
+    "name": "The Sandbox",
+    "symbol": "SAND",
+    "address": "0x67b725d7e342d7B611fa85e859Df9697D9378B2e",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x67b725d7e342d7B611fa85e859Df9697D9378B2e.png"
+  },
+  {
+    "name": "ApeCoin",
+    "symbol": "APE",
+    "address": "0xC762043E211571eB34f1ef377e5e8e76914962f9",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xC762043E211571eB34f1ef377e5e8e76914962f9.png"
+  },
+  {
+    "name": "JasmyCoin",
+    "symbol": "JASMY",
+    "address": "0x15669CF161946C09a8B207650BfBB00e3d8A2E3E",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x15669CF161946C09a8B207650BfBB00e3d8A2E3E.png"
+  },
+  {
+    "name": "Decentraland",
+    "symbol": "MANA",
+    "address": "0x26433c8127d9b4e9B71Eaa15111DF99Ea2EeB2f8",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x26433c8127d9b4e9B71Eaa15111DF99Ea2EeB2f8.png"
+  },
+  {
+    "name": "VeChain",
+    "symbol": "VET",
+    "address": "0x6FDcdfef7c496407cCb0cEC90f9C5Aaa1Cc8D888",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x6FDcdfef7c496407cCb0cEC90f9C5Aaa1Cc8D888.png"
+  },
+  {
+    "name": "ConstitutionDAO",
+    "symbol": "PEOPLE",
+    "address": "0x2c44b726ADF1963cA47Af88B284C06f30380fC78",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x2c44b726ADF1963cA47Af88B284C06f30380fC78.png"
+  },
+  {
+    "name": "MovieBloc",
+    "symbol": "MBL",
+    "address": "0x18E37F96628dB3037d633FE4D469Fb1933a63C5B",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x18E37F96628dB3037d633FE4D469Fb1933a63C5B.png"
+  },
+  {
+    "name": "LooksRare",
+    "symbol": "LOOKS",
+    "address": "0x590D11c0696b0023176f5D7587d6b2f502a08047",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x590D11c0696b0023176f5D7587d6b2f502a08047.png"
+  },
+  {
+    "name": "Dogelon Mars",
+    "symbol": "ELON",
+    "address": "0x7bd6FaBD64813c48545C9c0e312A0099d9be2540",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x7bd6FaBD64813c48545C9c0e312A0099d9be2540.png"
   }
 ]
