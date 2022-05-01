@@ -1541,6 +1541,15 @@ const tokens = {
     decimals: 9,
     projectLink: "https://www.ampleforth.org/",
   },
+  usdd: {
+    symbol: "USDD",
+    address: {
+      56: "0xd17479997F34dd9156Deef8F95A52D81D265be9c",
+      97: "",
+    },
+    decimals: 18,
+    projectLink: "https://usdd.io/",
+  },
 };
 
 export default tokens;
