@@ -2214,6 +2214,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x1D229B958D5DDFca92146585a8711aECbE56F095/logo.png"
+    },
+    {
+      "name": "Decentralized USD",
+      "symbol": "USDD",
+      "address": "0xd17479997F34dd9156Deef8F95A52D81D265be9c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xd17479997F34dd9156Deef8F95A52D81D265be9c/logo.png"
     }
   ]
 }
