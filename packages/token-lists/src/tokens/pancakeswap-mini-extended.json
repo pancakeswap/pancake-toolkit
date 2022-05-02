@@ -2198,5 +2198,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x7bd6FaBD64813c48545C9c0e312A0099d9be2540.png"
+  },
+  {
+    "name": "Decentralized USD",
+    "symbol": "USDD",
+    "address": "0xd17479997F34dd9156Deef8F95A52D81D265be9c",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xd17479997F34dd9156Deef8F95A52D81D265be9c.png"
   }
 ]
