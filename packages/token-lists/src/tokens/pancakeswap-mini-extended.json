@@ -2198,5 +2198,13 @@
     "chainId": 56,
     "decimals": 18,
     "logoURI": "https://tokens.pancakeswap.finance/images/0x7bd6FaBD64813c48545C9c0e312A0099d9be2540.png"
+  },
+  {
+    "name": "Project Galaxy",
+    "symbol": "GAL",
+    "address": "0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5.png"
   }
 ]
