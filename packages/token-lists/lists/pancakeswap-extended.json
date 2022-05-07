@@ -4,7 +4,7 @@
   "version": {
     "major": 2,
     "minor": 16,
-    "patch": 90
+    "patch": 91
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -2075,6 +2075,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
+    },
+    {
+      "name": "Decentralized USD",
+      "symbol": "USDD",
+      "address": "0xd17479997F34dd9156Deef8F95A52D81D265be9c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xd17479997F34dd9156Deef8F95A52D81D265be9c.png"
     },
     {
       "name": "Binance Pegged USDT",
