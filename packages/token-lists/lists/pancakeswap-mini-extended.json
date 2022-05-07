@@ -1,10 +1,10 @@
 {
   "name": "PancakeSwap Mini Ext",
-  "timestamp": "2022-04-25T06:41:27.244Z",
+  "timestamp": "2022-05-05T10:38:08.712Z",
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 1
+    "patch": 2
   },
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": [
@@ -870,6 +870,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x5857c96DaE9cF8511B08Cb07f85753C472D36Ea3/logo.png"
+    },
+    {
+      "name": "Project Galaxy",
+      "symbol": "GAL",
+      "address": "0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5.png"
     },
     {
       "name": "MetaGear Token",
