@@ -41348,5 +41348,13 @@
     "chainId": 56,
     "decimals": 7,
     "logoURI": "https://assets.coingecko.com/coins/images/1943/thumb/ZlGXwUDv_400x400.jpg?1571388675"
+  },
+  {
+    "name": "Decentralized USD",
+    "symbol": "USDD",
+    "address": "0xd17479997F34dd9156Deef8F95A52D81D265be9c",
+    "chainId": 56,
+    "decimals": 18,
+    "logoURI": "https://assets.coingecko.com/coins/images/25380/small/UUSD.jpg?1651823371"
   }
 ]
