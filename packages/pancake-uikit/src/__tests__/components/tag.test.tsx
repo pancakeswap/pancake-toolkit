@@ -26,7 +26,7 @@ it("renders correctly", () => {
     }
 
     .c0 > svg {
-      fill: currentColor;
+      fill: #1FC7D4;
     }
 
     <div

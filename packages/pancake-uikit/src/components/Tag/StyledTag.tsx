@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-import { space, variant, typography } from "styled-system";
+import { space, typography, variant as styledSystemVariant } from "styled-system";
 import { Colors } from "../../theme/types";
 import { scaleVariants, styleVariants } from "./theme";
 import { TagProps, variants } from "./types";
@@ -32,16 +32,16 @@ export const StyledTag = styled.div<ThemedProps>`
   white-space: nowrap;
 
   & > svg {
-    fill: currentColor;
+    fill: ${({ theme, variant }) => (variant ? theme.colors[variant] : theme.colors[variants.PRIMARY])};
   }
 
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
 
-  ${variant({
+  ${styledSystemVariant({
     prop: "scale",
     variants: scaleVariants,
   })}
-  ${variant({
+  ${styledSystemVariant({
     variants: styleVariants,
   })}
   ${space}
