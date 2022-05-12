@@ -10,8 +10,8 @@ const useModal = (
   modalId = "defaultNodeId"
 ): [Handler, Handler] => {
   const { isOpen, nodeId, modalNode, setModalNode, onPresent, onDismiss, setCloseOnOverlayClick } = useContext(Context);
-  const onPresentCallback = useCallback(() => {
-    onPresent(modal, modalId);
+  const onPresentCallback = useCallback((props: object) => {
+    onPresent(modal, modalId, props);
   }, [modal, modalId, onPresent]);
 
   // Updates the "modal" component if props are changed
